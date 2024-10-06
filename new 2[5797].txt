@@ -1,0 +1,2374 @@
+CREATE TABLE "obi"."actn" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_actn" integer NOT NULL,
+	"typ_orig_actn" char(1) NOT NULL,
+	"no_ncnf" char(7) NULL,
+	"no_int_pl_actn" integer NULL,
+	"no_int_dem_actn" integer NULL,
+	"cd_actn" char(7) NULL,
+	"cd_cl" char(7) NULL,
+	"cd_fo" char(7) NULL,
+	"cd_typ_doc" char(7) NULL,
+	"cd_decis" char(7) NULL,
+	"typ_moy" char(1) NULL DEFAULT 'C',
+	"cd_moy" char(8) NULL,
+	"cd_unit_qte" char(3) NULL,
+	"cd_unit_tps" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"cd_mon_forf" char(3) NULL,
+	"cd_mon_mnt" char(3) NULL,
+	"cd_unit_base" char(3) NULL,
+	"cd_unit_px_unia" char(3) NULL,
+	"cd_perso" char(7) NULL,
+	"cd_ser" char(7) NULL,
+	"cd_fnct" char(7) NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	"no_aff_actn" integer NULL,
+	"cd_doc_ref_actn" char(25) NULL,
+	"ident_act" char(35) NULL,
+	"dte_actn" timestamp NULL,
+	"qte_actn" numeric(19,6) NULL,
+	"fmt_qte_actn" char(20) NULL,
+	"tps_actn" numeric(19,6) NULL,
+	"fmt_tps_actn" char(20) NULL,
+	"ident_result" varchar(2048) NULL,
+	"base_calc_actn" numeric(19,6) NULL,
+	"fmt_base_calc_actn" char(20) NULL,
+	"px_unia_actn" numeric(19,6) NULL,
+	"fmt_px_unia_actn" char(20) NULL,
+	"forf_actn" numeric(19,6) NULL,
+	"fmt_forf_actn" char(20) NULL,
+	"mnt_actn" numeric(19,6) NULL,
+	"fmt_mnt_actn" char(20) NULL,
+	"dte_valid" timestamp NULL,
+	"ident_valid" varchar(2048) NULL,
+	"dte_imput_chif" timestamp NULL,
+	"tx_mon_actn" numeric(19,6) NULL,
+	"typ_actn" char(1) NULL,
+	"pt_act" char(1) NULL,
+	"pt_act_int" char(1) NULL,
+	"pt_act_ext" char(1) NULL,
+	"no_int_amdec" integer NULL,
+	"cd_cpte_evl" char(7) NULL,
+	"cd_sect" char(7) NULL,
+	"cd_anal" char(7) NULL,
+	"mnt_est" numeric(19,6) NULL,
+	"gain_est" numeric(19,6) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_actn", "typ_orig_actn" )
+);
+COMMENT ON COLUMN "obi"."actn"."no_ste" IS 'N° de société';
+COMMENT ON COLUMN "obi"."actn"."no_int_actn" IS 'No interne action';
+COMMENT ON COLUMN "obi"."actn"."typ_orig_actn" IS 'Origine action N=non conformité, P=plan action, D=divers';
+COMMENT ON COLUMN "obi"."actn"."no_ncnf" IS 'no de non conformite';
+COMMENT ON COLUMN "obi"."actn"."no_int_pl_actn" IS 'No de plan action';
+COMMENT ON COLUMN "obi"."actn"."no_int_dem_actn" IS 'No de damande action';
+COMMENT ON COLUMN "obi"."actn"."cd_actn" IS 'Code action';
+COMMENT ON COLUMN "obi"."actn"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."actn"."cd_fo" IS 'Code fournisseur';
+COMMENT ON COLUMN "obi"."actn"."cd_typ_doc" IS 'Code document';
+COMMENT ON COLUMN "obi"."actn"."cd_decis" IS 'Code decideur';
+COMMENT ON COLUMN "obi"."actn"."typ_moy" IS 'Type de moyen';
+COMMENT ON COLUMN "obi"."actn"."cd_moy" IS 'Code moyen';
+COMMENT ON COLUMN "obi"."actn"."cd_unit_qte" IS 'Unite de quantite';
+COMMENT ON COLUMN "obi"."actn"."cd_unit_tps" IS 'Unite de temps';
+COMMENT ON COLUMN "obi"."actn"."cd_mon" IS 'Code monnaie';
+COMMENT ON COLUMN "obi"."actn"."cd_mon_forf" IS 'Code monnaie Montant forfaitaire';
+COMMENT ON COLUMN "obi"."actn"."cd_mon_mnt" IS 'Code monnaie Montant';
+COMMENT ON COLUMN "obi"."actn"."cd_unit_base" IS 'Unite de base';
+COMMENT ON COLUMN "obi"."actn"."cd_unit_px_unia" IS 'Unite Prix unitaire';
+COMMENT ON COLUMN "obi"."actn"."cd_perso" IS 'Code personnel';
+COMMENT ON COLUMN "obi"."actn"."cd_ser" IS 'Code service';
+COMMENT ON COLUMN "obi"."actn"."cd_fnct" IS 'Code fonction';
+COMMENT ON COLUMN "obi"."actn"."dte_hre_crea" IS 'Date creation';
+COMMENT ON COLUMN "obi"."actn"."dte_hre_modif" IS 'Date modification';
+COMMENT ON COLUMN "obi"."actn"."aut_modif" IS 'Auteur modification';
+COMMENT ON COLUMN "obi"."actn"."no_aff_actn" IS 'No affichage';
+COMMENT ON COLUMN "obi"."actn"."cd_doc_ref_actn" IS 'Code doc de reference';
+COMMENT ON COLUMN "obi"."actn"."ident_act" IS 'Identifiant action';
+COMMENT ON COLUMN "obi"."actn"."dte_actn" IS 'Date action';
+COMMENT ON COLUMN "obi"."actn"."qte_actn" IS 'Quantite';
+COMMENT ON COLUMN "obi"."actn"."fmt_qte_actn" IS 'Format quantite';
+COMMENT ON COLUMN "obi"."actn"."tps_actn" IS 'Temps';
+COMMENT ON COLUMN "obi"."actn"."fmt_tps_actn" IS 'Format temps';
+COMMENT ON COLUMN "obi"."actn"."ident_result" IS 'Identifiant resultat';
+COMMENT ON COLUMN "obi"."actn"."base_calc_actn" IS 'Base de calcul';
+COMMENT ON COLUMN "obi"."actn"."fmt_base_calc_actn" IS 'Format base de calcul';
+COMMENT ON COLUMN "obi"."actn"."px_unia_actn" IS 'Prix unitaire';
+COMMENT ON COLUMN "obi"."actn"."fmt_px_unia_actn" IS 'Format prix unitaire';
+COMMENT ON COLUMN "obi"."actn"."forf_actn" IS 'Montant forfait';
+COMMENT ON COLUMN "obi"."actn"."fmt_forf_actn" IS 'Format montant forfait';
+COMMENT ON COLUMN "obi"."actn"."mnt_actn" IS 'Montant';
+COMMENT ON COLUMN "obi"."actn"."fmt_mnt_actn" IS 'Format montant';
+COMMENT ON COLUMN "obi"."actn"."dte_valid" IS 'Date de validation';
+COMMENT ON COLUMN "obi"."actn"."ident_valid" IS 'Identifiant validation';
+COMMENT ON COLUMN "obi"."actn"."dte_imput_chif" IS 'Date imputation chiffrage';
+COMMENT ON COLUMN "obi"."actn"."tx_mon_actn" IS 'Taux';
+COMMENT ON COLUMN "obi"."actn"."typ_actn" IS 'Type action';
+COMMENT ON COLUMN "obi"."actn"."pt_act" IS 'Pointeur act';
+COMMENT ON COLUMN "obi"."actn"."pt_act_int" IS 'Pointeur act interne';
+COMMENT ON COLUMN "obi"."actn"."pt_act_ext" IS 'Pointeur ect externe';
+COMMENT ON COLUMN "obi"."actn"."no_int_amdec" IS 'No interne amdec';
+COMMENT ON COLUMN "obi"."actn"."cd_cpte_evl" IS 'Code de compte evaluation';
+COMMENT ON COLUMN "obi"."actn"."cd_sect" IS 'Code secteur';
+COMMENT ON COLUMN "obi"."actn"."cd_anal" IS 'Code analytique';
+COMMENT ON COLUMN "obi"."actn"."mnt_est" IS 'montant estime';
+COMMENT ON COLUMN "obi"."actn"."gain_est" IS 'gain estime';
+CREATE TABLE "obi"."actnlog" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cpt_actn_log" integer NOT NULL,
+	"cd_prog_drt" char(50) NULL,
+	"typ_prog_drt" char(3) NULL,
+	"niv" char(1) NULL,
+	"aut_dec_actn_log" char(7) NULL,
+	"ident_actn_log" char(2048) NULL,
+	"typ_actn_log" char(1) NULL,
+	"ver_dec" char(35) NULL,
+	"prepa_real" char(12) NULL,
+	"act_real_actn_log" char(7) NULL,
+	"dte_liv_prev_actn_log" "datetime" NULL,
+	"etu" char(2048) NULL,
+	"pt_clos" char(1) NULL,
+	"ver_real" char(35) NULL,
+	"act_real_reel_actn_log" char(7) NULL,
+	"dte_liv_reel_actn_log" "datetime" NULL,
+	"com_int_real" char(2048) NULL,
+	"pt_prise_dif_ext" char(1) NULL,
+	"dif_ext" char(2048) NULL,
+	"cd_proj" char(7) NULL,
+	"aut_modif" char(7) NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"cd_mdl" char(7) NULL,
+	PRIMARY KEY ( "no_ste", "cpt_actn_log" )
+);
+COMMENT ON COLUMN "obi"."actnlog"."cpt_actn_log" IS 'No action logicielle';
+COMMENT ON COLUMN "obi"."actnlog"."cd_prog_drt" IS 'Code programme';
+COMMENT ON COLUMN "obi"."actnlog"."niv" IS 'Niveau';
+COMMENT ON COLUMN "obi"."actnlog"."aut_dec_actn_log" IS 'Auteur découverte';
+COMMENT ON COLUMN "obi"."actnlog"."dte_liv_prev_actn_log" IS 'Date livraison prévue';
+COMMENT ON COLUMN "obi"."actnlog"."etu" IS 'etude';
+COMMENT ON COLUMN "obi"."actnlog"."pt_clos" IS 'Cloture';
+COMMENT ON COLUMN "obi"."actnlog"."ver_real" IS 'Version réalisation';
+COMMENT ON COLUMN "obi"."actnlog"."act_real_reel_actn_log" IS 'Acteur réalisation';
+COMMENT ON COLUMN "obi"."actnlog"."dte_liv_reel_actn_log" IS 'Date livraison réelle';
+COMMENT ON COLUMN "obi"."actnlog"."com_int_real" IS 'Commentaire réalisation';
+COMMENT ON COLUMN "obi"."actnlog"."pt_prise_dif_ext" IS 'Action diffusable en externe';
+COMMENT ON COLUMN "obi"."actnlog"."dif_ext" IS 'Commentaire diffusion externe';
+COMMENT ON COLUMN "obi"."actnlog"."aut_modif" IS 'Auteur modif.';
+COMMENT ON COLUMN "obi"."actnlog"."dte_hre_modif" IS 'Date modification';
+COMMENT ON COLUMN "obi"."actnlog"."dte_hre_crea" IS 'Date modification';
+COMMENT ON COLUMN "obi"."actnlog"."cd_mdl" IS 'Code module';
+CREATE TABLE "obi"."af" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_af" "t_cd" NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"des_af" "t_des_gen" NULL,
+	"cd_perso" char(7) NULL,
+	"dte_hre_af" "datetime" NULL,
+	"mnt_af" numeric(19,6) NULL,
+	"statut_af" char(1) NULL,
+	"cd_cl" char(7) NULL,
+	"no_cl_adr" integer NULL,
+	"cd_actn_orig" char(7) NULL,
+	"com" char(2048) NULL,
+	"cd_fam_orig" "t_cd" NULL,
+	"cd_stat1" char(35) NULL,
+	"cd_stat2" char(35) NULL,
+	PRIMARY KEY ( "no_ste", "cd_af" )
+);
+COMMENT ON TABLE "obi"."af" IS 'Affaire';
+COMMENT ON COLUMN "obi"."af"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."af"."cd_af" IS 'Code de l''affaire';
+COMMENT ON COLUMN "obi"."af"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."af"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."af"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."af"."des_af" IS 'Désignation de l''affaire';
+COMMENT ON COLUMN "obi"."af"."cd_perso" IS 'Responsabe';
+COMMENT ON COLUMN "obi"."af"."dte_hre_af" IS 'date affaire';
+COMMENT ON COLUMN "obi"."af"."mnt_af" IS 'Montant affaire';
+COMMENT ON COLUMN "obi"."af"."statut_af" IS 'statut affaire';
+COMMENT ON COLUMN "obi"."af"."cd_cl" IS 'code client';
+COMMENT ON COLUMN "obi"."af"."no_cl_adr" IS 'adresse client';
+COMMENT ON COLUMN "obi"."af"."cd_actn_orig" IS 'Origine action';
+COMMENT ON COLUMN "obi"."af"."com" IS 'commentaire';
+CREATE TABLE "DBA"."AFFAIRE" (
+	"NAF" varchar(100) NULL,
+	"COCDE" varchar(100) NULL,
+	"COCLI" varchar(100) NULL,
+	"PIECE" varchar(100) NULL,
+	"MODELE" varchar(100) NULL,
+	"DESA" varchar(100) NULL,
+	"DESA2" varchar(100) NULL,
+	"DESA3" varchar(100) NULL,
+	"QTEAF" varchar(100) NULL,
+	"UNITEPRIX" varchar(100) NULL,
+	"BLOCAGE" varchar(100) NULL,
+	"QTEAFREST" varchar(100) NULL,
+	"REM" varchar(100) NULL,
+	"REM2" varchar(100) NULL,
+	"PRIXB" varchar(100) NULL,
+	"PRIXAF" varchar(100) NULL,
+	"PRIXMON" varchar(100) NULL,
+	"COMON" varchar(100) NULL,
+	"PCONSTANT" varchar(100) NULL,
+	"TACLEUNIK" varchar(100) NULL,
+	"EXCLU" varchar(100) NULL,
+	"DATEAF" varchar(100) NULL,
+	"DDP" varchar(100) NULL,
+	"DELAI" varchar(100) NULL,
+	"DELAIINIT" varchar(100) NULL,
+	"ETATAF" varchar(100) NULL,
+	"TYPEAF" varchar(100) NULL,
+	"NDEV" varchar(100) NULL,
+	"ACHETEUR" varchar(100) NULL,
+	"APPROVISIO" varchar(100) NULL,
+	"PREPARATOR" varchar(100) NULL,
+	"COACT" varchar(100) NULL,
+	"CODEEMP" varchar(100) NULL,
+	"REPRESENT1" varchar(100) NULL,
+	"TAUXREP1" varchar(100) NULL,
+	"REPRESENT2" varchar(100) NULL,
+	"TAUXREP2" varchar(100) NULL,
+	"DOSSIER" varchar(100) NULL,
+	"URGENCE" varchar(100) NULL,
+	"ASSQ" varchar(100) NULL,
+	"ADRLIV" varchar(100) NULL,
+	"ADRFAC" varchar(100) NULL,
+	"EDITDESA" varchar(100) NULL,
+	"QTEFAB" varchar(100) NULL,
+	"NBHR" varchar(100) NULL,
+	"OBS" varchar(100) NULL,
+	"OBSINTERNE" varchar(100) NULL,
+	"GRATUIT" varchar(100) NULL,
+	"FACT" varchar(100) NULL,
+	"POSTE" varchar(100) NULL,
+	"COEF" varchar(100) NULL,
+	"DTDEBPL" varchar(100) NULL,
+	"DELAIPL" varchar(100) NULL,
+	"DELAIINTER" varchar(100) NULL,
+	"DELAIATELIER" varchar(100) NULL,
+	"PLUSTARD" varchar(100) NULL,
+	"MODIFMAN" varchar(100) NULL,
+	"NUPL" varchar(100) NULL,
+	"INDPL" varchar(100) NULL,
+	"INDPCE" varchar(100) NULL,
+	"ECHANTILL" varchar(100) NULL,
+	"FLAG" varchar(100) NULL,
+	"NUMEXOTVA" varchar(100) NULL,
+	"MAGASIN" varchar(100) NULL,
+	"EstPDP" varchar(100) NULL,
+	"LIGNE" varchar(100) NULL,
+	"Couleur" varchar(100) NULL,
+	"GACLEUNIK" varchar(100) NULL,
+	"DATEORDOOLD" varchar(100) NULL,
+	"PTDECHARGEMENT" varchar(100) NULL,
+	"COFA" varchar(100) NULL,
+	"PIECEETAT" varchar(100) NULL,
+	"COCDENAF" varchar(100) NULL,
+	"ETATDATEAF" varchar(100) NULL,
+	"PIECEDATENAF" varchar(100) NULL,
+	"PIECEDELAI" varchar(100) NULL,
+	"ETATDELAI" varchar(100) NULL,
+	"COCLIDELAI" varchar(100) NULL,
+	"DATEAFNAF" varchar(100) NULL,
+	"DELAINAF" varchar(100) NULL,
+	"dateafnv" "datetime" NULL,
+	"intnaf" integer NULL
+);
+COMMENT ON COLUMN "DBA"."AFFAIRE"."COCLI" IS 'xx';
+COMMENT ON COLUMN "DBA"."AFFAIRE"."PIECE" IS 'xx';
+COMMENT ON COLUMN "DBA"."AFFAIRE"."NUPL" IS 'xx';
+CREATE TABLE "DBA"."affairemaxnaf" (
+	"cocli" varchar(100) NULL,
+	"piece" varchar(100) NULL,
+	"nupl" varchar(100) NULL
+);
+CREATE TABLE "obi"."amdec" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_amdec" integer NOT NULL,
+	"no_int_art" integer NULL,
+	"cd_proc" char(35) NULL,
+	"typ_moy" char(1) NULL,
+	"cd_moy" char(8) NULL,
+	"typ_amdec" char(1) NOT NULL,
+	"seuil_npr" integer NOT NULL,
+	"dte_hre_valid" timestamp NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_amdec" )
+);
+COMMENT ON TABLE "obi"."amdec" IS 'Entête étude AMDEC';
+COMMENT ON COLUMN "obi"."amdec"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."amdec"."no_int_amdec" IS 'Numéro interne AMDEC';
+COMMENT ON COLUMN "obi"."amdec"."no_int_art" IS 'Numéro interne article technique';
+COMMENT ON COLUMN "obi"."amdec"."cd_proc" IS 'Code du processus';
+COMMENT ON COLUMN "obi"."amdec"."typ_moy" IS 'Type du moyen';
+COMMENT ON COLUMN "obi"."amdec"."cd_moy" IS 'Code du moyen';
+COMMENT ON COLUMN "obi"."amdec"."typ_amdec" IS 'Type AMDEC (M=moyen, A=article technique, P=processus)';
+COMMENT ON COLUMN "obi"."amdec"."seuil_npr" IS 'Seuil du NPR';
+COMMENT ON COLUMN "obi"."amdec"."dte_hre_valid" IS 'Date de validation étude AMDEC';
+COMMENT ON COLUMN "obi"."amdec"."dte_hre_crea" IS 'Date et heure de création';
+COMMENT ON COLUMN "obi"."amdec"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "obi"."amdec"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."amdec_cau_effet" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_cau" char(7) NOT NULL,
+	"cd_effet" char(7) NOT NULL,
+	"no_int_amdec_def" integer NOT NULL,
+	"no_int_amdec" integer NOT NULL,
+	"des_moy_amdec" char(35) NULL,
+	"val_detect" integer NOT NULL,
+	"val_freq" integer NOT NULL,
+	"val_tmp_detect" integer NULL,
+	"val_tmp_freq" integer NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	PRIMARY KEY ( "no_ste", "cd_cau", "cd_effet", "no_int_amdec_def", "no_int_amdec" )
+);
+COMMENT ON TABLE "obi"."amdec_cau_effet" IS 'AMDEC cause et effet probable du défaut étudié';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."cd_cau" IS 'Code de la cause';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."cd_effet" IS 'Code effet';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."no_int_amdec_def" IS 'Numéro interne du défaut AMDEC';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."no_int_amdec" IS 'Numéro interne AMDEC';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."des_moy_amdec" IS 'Moyen de détection du mode de défaillance';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."val_detect" IS 'Valeur de la détection du mode de défaillance';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."val_freq" IS 'Valeur de la fréquence apparition du mode de défaillance';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."val_tmp_detect" IS 'Valeur temporaire de la détection';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."val_tmp_freq" IS 'Valeur temporaire de la fréquence apparition';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."dte_hre_crea" IS 'Date et heure de création';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "obi"."amdec_cau_effet"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."amdec_def" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_amdec_def" integer NOT NULL,
+	"no_int_amdec" integer NOT NULL,
+	"val_gravite" integer NULL,
+	"no_n_cnf" char(7) NOT NULL,
+	"no_int_n_cnf_def" integer NOT NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_amdec_def", "no_int_amdec" )
+);
+COMMENT ON TABLE "obi"."amdec_def" IS 'AMDEC Défaut étudié';
+COMMENT ON COLUMN "obi"."amdec_def"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."amdec_def"."no_int_amdec_def" IS 'Numéro interne du défaut';
+COMMENT ON COLUMN "obi"."amdec_def"."no_int_amdec" IS 'Numéro interne AMDEC';
+COMMENT ON COLUMN "obi"."amdec_def"."val_gravite" IS 'Valeur de la gravité';
+COMMENT ON COLUMN "obi"."amdec_def"."no_n_cnf" IS 'Numéro de FNC';
+COMMENT ON COLUMN "obi"."amdec_def"."no_int_n_cnf_def" IS 'Numéro interne de défaut FNC';
+COMMENT ON COLUMN "obi"."amdec_def"."dte_hre_crea" IS 'Date et heure de création';
+COMMENT ON COLUMN "obi"."amdec_def"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "obi"."amdec_def"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."amdec_reunion" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_reunion" integer NOT NULL,
+	"no_int_amdec" integer NOT NULL,
+	"dte_hre_deb" timestamp NOT NULL,
+	"dte_hre_fin" timestamp NULL,
+	"obj_reunion" varchar(2048) NULL,
+	"lieu_reunion" char(35) NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_reunion", "no_int_amdec" )
+);
+COMMENT ON TABLE "obi"."amdec_reunion" IS 'AMDEC cause et effet probable du défaut étudié';
+COMMENT ON COLUMN "obi"."amdec_reunion"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."amdec_reunion"."no_int_reunion" IS 'Numéro interne de réunion';
+COMMENT ON COLUMN "obi"."amdec_reunion"."no_int_amdec" IS 'Numéro interne AMDEC';
+COMMENT ON COLUMN "obi"."amdec_reunion"."dte_hre_fin" IS 'Date et heure de fin';
+COMMENT ON COLUMN "obi"."amdec_reunion"."obj_reunion" IS 'Objet de la réunion';
+COMMENT ON COLUMN "obi"."amdec_reunion"."lieu_reunion" IS 'Lieu de la réunion';
+COMMENT ON COLUMN "obi"."amdec_reunion"."dte_hre_crea" IS 'Date et heure de création';
+COMMENT ON COLUMN "obi"."amdec_reunion"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "obi"."amdec_reunion"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."amdec_reunion_perso" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_reunion" integer NOT NULL,
+	"no_int_amdec" integer NOT NULL,
+	"cd_perso" char(7) NOT NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_reunion", "no_int_amdec", "cd_perso" )
+);
+COMMENT ON TABLE "obi"."amdec_reunion_perso" IS 'AMDEC participants d une réunion';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."no_int_reunion" IS 'Numéro interne de réunion';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."no_int_amdec" IS 'Numéro interne AMDEC';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."cd_perso" IS 'Code du personnel';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."dte_hre_crea" IS 'Date et heure de création';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "obi"."amdec_reunion_perso"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."amdec_suivi" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_amdec_suivi" integer NOT NULL,
+	"no_int_art" integer NULL,
+	"cd_proc" char(35) NULL,
+	"typ_moy" char(1) NULL,
+	"cd_moy" char(8) NULL,
+	"cd_def" char(7) NOT NULL,
+	"cd_car" char(7) NULL,
+	"pd_financier" integer NOT NULL,
+	"val_gravite" integer NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_amdec_suivi" )
+);
+COMMENT ON TABLE "obi"."amdec_suivi" IS 'AMDEC suivi du savoir faire';
+COMMENT ON COLUMN "obi"."amdec_suivi"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."amdec_suivi"."no_int_amdec_suivi" IS 'Numéro interne de réunion';
+COMMENT ON COLUMN "obi"."amdec_suivi"."no_int_art" IS 'Numéro interne d article';
+COMMENT ON COLUMN "obi"."amdec_suivi"."cd_proc" IS 'Code du processus';
+COMMENT ON COLUMN "obi"."amdec_suivi"."typ_moy" IS 'Type du moyen technique';
+COMMENT ON COLUMN "obi"."amdec_suivi"."cd_moy" IS 'Code du moyen technique';
+COMMENT ON COLUMN "obi"."amdec_suivi"."cd_def" IS 'Code du défaut';
+COMMENT ON COLUMN "obi"."amdec_suivi"."cd_car" IS 'Caractéristique suivie';
+COMMENT ON COLUMN "obi"."amdec_suivi"."pd_financier" IS 'Estimation du poids financier';
+COMMENT ON COLUMN "obi"."amdec_suivi"."val_gravite" IS 'Valeur de la gravité';
+COMMENT ON COLUMN "obi"."amdec_suivi"."dte_hre_crea" IS 'Date et heure de création';
+COMMENT ON COLUMN "obi"."amdec_suivi"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "obi"."amdec_suivi"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."art" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art" "t_cpt" NOT NULL,
+	"cd_cl" "t_cd" NULL,
+	"cd_art_stat" "t_cd" NULL,
+	"cd_art_stat_ql" char(7) NULL,
+	"cd_mon" char(3) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_unit_util" char(3) NULL,
+	"cd_unit_base_n_ql" char(3) NULL,
+	"cd_ident" "t_cd" NULL,
+	"cd_cat_art" "t_typ2" NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"cd_art" "t_cd_art" NOT NULL,
+	"ind_pr_art" "t_ind" NULL,
+	"des_art_a" "t_des_art" NULL,
+	"des_art_b" "t_des_art" NULL,
+	"des_ct_art" char(15) NULL,
+	"cd_pl" "t_cd_art" NULL,
+	"ind_pl" "t_ind" NULL,
+	"nrm_art_a" "t_des_art" NULL,
+	"nrm_art_b" "t_des_art" NULL,
+	"com" "t_com" NULL,
+	"px_unia_n_ql" "t_px_unia" NULL,
+	"fmt_px_unia_n_ql" "t_fmt" NULL,
+	"pt_valid_tech" "t_pt_n" NULL DEFAULT '0',
+	"coef_unit" numeric(19,6) NULL DEFAULT 1,
+	"indice" char(4) NULL,
+	"num_identa" numeric(19,6) NULL,
+	"num_identb" numeric(19,6) NULL,
+	"num_identc" numeric(19,6) NULL,
+	"num_identd" numeric(19,6) NULL,
+	"num_idente" numeric(19,6) NULL,
+	"num_identf" numeric(19,6) NULL,
+	"cd_unit_cond" "t_cd" NULL,
+	"cd_unit_pds" char(3) NULL,
+	"cd_compt" "t_cd" NULL,
+	"cd_fo" "t_cd" NULL,
+	"cd_identa" "t_cd_art" NULL,
+	"cd_identb" char(25) NULL,
+	"cd_identc" char(25) NULL,
+	"cd_identd" char(25) NULL,
+	"typ_appro" char(1) NULL,
+	"pt_sto" "t_pt_n" NULL DEFAULT '0',
+	"pt_lot" "t_pt_n" NULL DEFAULT '0',
+	"pt_emp" "t_pt_n" NULL DEFAULT '0',
+	"pt_fifo" "t_pt_n" NULL DEFAULT '0',
+	"nb_pie_col" numeric(19,6) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL DEFAULT 1,
+	"qte_sto_min" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"typ_sto_sor" char(1) NULL,
+	"px_appro" numeric(19,6) NULL DEFAULT 0,
+	"px_fab" numeric(19,6) NULL DEFAULT 0,
+	"coef_appro" "t_coef_conv" NULL DEFAULT 1,
+	"coef_sto" "t_coef_conv" NULL DEFAULT 1,
+	"px_revie" "t_mnt" NULL DEFAULT 0,
+	"px_moy_pond" numeric(19,6) NULL DEFAULT 0,
+	"qte_appro" numeric(19,6) NULL DEFAULT 0,
+	"del" "t_qte" NULL DEFAULT 0,
+	"coef_sec" "t_coef_conv" NULL DEFAULT 1,
+	"dur_vie" "t_qte" NULL DEFAULT 0,
+	"cd_anal" "t_cd" NULL,
+	"cd_sect" "t_cd" NULL,
+	"dte_hre_valid" "datetime" NULL,
+	"no_valid" char(25) NULL,
+	"cd_art_etat" "t_pt_n" NULL DEFAULT '0',
+	"cd_anal_appro" "t_cd" NULL,
+	"cd_sect_appro" "t_cd" NULL,
+	"pt_prov" "t_pt_n" NULL DEFAULT '0',
+	"cd_typ_etat" char(3) NULL,
+	"cd_etat" char(25) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"pt_trac" "t_pt" NULL DEFAULT '0',
+	"mode_trac" char(1) NULL,
+	"pt_col" "t_pt_n" NULL DEFAULT '0',
+	"coef_depr_sto" "t_coef_conv" NULL DEFAULT 1,
+	"cd_typ_etat_ci" char(3) NULL,
+	"cd_etat_ci" char(25) NULL,
+	"nb_ex" smallint NULL DEFAULT 0,
+	"pt_imp_real" "t_pt_n" NULL DEFAULT '0',
+	"pt_imp_prev" "t_pt_n" NULL DEFAULT '0',
+	"com_ent" "t_com" NULL,
+	"com_pied" "t_com" NULL,
+	"coef_unitappro" numeric(19,6) NULL,
+	"cd_calc_appro" char(1) NULL,
+	"cd_emp" char(7) NULL,
+	"cpt_bn_recep" integer NULL,
+	"no_int_lig_bnrecep" integer NULL,
+	"pxach_dern" "t_tx" NULL,
+	"dte_pxach_dern" "datetime" NULL,
+	"px_fab_dern" "t_tx" NULL,
+	"dte_px_fab_dern" "datetime" NULL,
+	"dte_px_revie" "datetime" NULL,
+	"dte_px_fab" "datetime" NULL,
+	"clas_art" char(1) NULL DEFAULT '2',
+	"cd_cr_art_clas" char(8) NULL,
+	"dte_hre_clas" "datetime" NULL,
+	"cd_unit_sto_bis" char(3) NULL,
+	"coef_unit_sto_bis" numeric(19,6) NULL,
+	"pt_emp_oblig" "t_pt_n" NULL DEFAULT '0',
+	"pt_lot_oblig" "t_pt_n" NULL DEFAULT '0',
+	"pt_trac_oblig" "t_pt_n" NULL DEFAULT '0',
+	"no_int_syrgltqual" integer NULL,
+	"cd_fam_pdp" char(7) NULL,
+	"cd_fam_pic" char(7) NULL,
+	"pdp_form" char(1) NULL,
+	"pdp_coef" numeric(19,6) NULL,
+	"mrp_zf" integer NULL,
+	"mrp_couv" integer NULL,
+	"mrp_avanc" integer NULL,
+	"mrp_recul" integer NULL,
+	"coef_fam_pdp" numeric(19,6) NULL,
+	"coef_fam_pic" numeric(19,6) NULL,
+	"pt_amdec" "t_pt_n" NULL DEFAULT '0',
+	"no_lot_int" integer NULL,
+	"cd_emp_usuel" char(7) NULL,
+	"resp_sto" char(7) NULL,
+	"resp_appro" char(7) NULL,
+	"pt_seria" "t_pt_n" NULL DEFAULT '0',
+	"dte_hre_invent" timestamp NULL,
+	"typ_sto_resrv" char(1) NULL,
+	"typ_qte_resrv" char(1) NULL,
+	"pt_peremp" char(1) NULL DEFAULT '0',
+	"typ_peremp" char(1) NULL DEFAULT '0',
+	"pt_hors_inv" char(1) NULL,
+	"pt_dodo" "t_pt_n" NULL DEFAULT '0',
+	"cd_idente" char(25) NULL,
+	"cd_identf" char(25) NULL,
+	"pt_liv_dir" char(1) NULL DEFAULT '0',
+	"coef_prix" numeric(19,6) NULL,
+	"pxvte" numeric(19,6) NULL,
+	"dte_pxvte" "datetime" NULL,
+	"pxvte_cpt_bn_liv" integer NULL,
+	"pxvte_no_int_lig_bnliv" integer NULL,
+	"pt_comp_px" char(1) NULL DEFAULT '0',
+	"cpt_lot_art" integer NULL,
+	"dte_clas" date NULL,
+	"no_int_ord_fab" integer NULL,
+	"cd_unit_manu" char(7) NULL,
+	"cd_typ_etat_um" char(3) NULL,
+	"cd_etat_um" char(25) NULL,
+	"nb_col_um" decimal(19,6) NULL,
+	"pt_gest_int" char(1) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art" )
+);
+COMMENT ON TABLE "obi"."art" IS 'Article à gérer en fabrication et en stock';
+COMMENT ON COLUMN "obi"."art"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art"."no_int_art" IS 'Compteur interne de l''article technique';
+COMMENT ON COLUMN "obi"."art"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."art"."cd_art_stat" IS 'Code de la famille statistique d''article';
+COMMENT ON COLUMN "obi"."art"."cd_art_stat_ql" IS 'Code de la famille d''article';
+COMMENT ON COLUMN "obi"."art"."cd_mon" IS 'Code monnaie';
+COMMENT ON COLUMN "obi"."art"."cd_unit_sto" IS 'Code de l''unité de stock';
+COMMENT ON COLUMN "obi"."art"."cd_unit_util" IS 'Code de l''unité d''utilisation';
+COMMENT ON COLUMN "obi"."art"."cd_unit_base_n_ql" IS 'Code de l''unité de mesure';
+COMMENT ON COLUMN "obi"."art"."cd_ident" IS 'Code identification';
+COMMENT ON COLUMN "obi"."art"."cd_cat_art" IS 'Code de la catégorie d''article';
+COMMENT ON COLUMN "obi"."art"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."art"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art"."cd_art" IS 'Référence de l''article technique';
+COMMENT ON COLUMN "obi"."art"."ind_pr_art" IS 'Indice produit';
+COMMENT ON COLUMN "obi"."art"."des_art_a" IS '1ère ligne de la désignation de l''article';
+COMMENT ON COLUMN "obi"."art"."des_art_b" IS '2 ième ligne de la désignation de l''article';
+COMMENT ON COLUMN "obi"."art"."des_ct_art" IS 'Désignation courte pour représentation sur la nomenclature';
+COMMENT ON COLUMN "obi"."art"."cd_pl" IS 'Référence du plan';
+COMMENT ON COLUMN "obi"."art"."ind_pl" IS 'Indice plan article';
+COMMENT ON COLUMN "obi"."art"."nrm_art_a" IS 'Norme 1';
+COMMENT ON COLUMN "obi"."art"."nrm_art_b" IS 'Norme 2';
+COMMENT ON COLUMN "obi"."art"."com" IS 'Commentaire général';
+COMMENT ON COLUMN "obi"."art"."px_unia_n_ql" IS 'Prix unitaire permettant de valoriser la non qualité de l''article';
+COMMENT ON COLUMN "obi"."art"."fmt_px_unia_n_ql" IS 'Format de présentation du prix non qualité';
+COMMENT ON COLUMN "obi"."art"."pt_valid_tech" IS 'Validation de la référence par le service technique (O/N)';
+COMMENT ON COLUMN "obi"."art"."coef_unit" IS 'Coefficient de conversion de l''unité d''utilisation en unité de stock';
+COMMENT ON COLUMN "obi"."art"."indice" IS 'Indice géré en clé unique';
+COMMENT ON COLUMN "obi"."art"."num_identa" IS 'Valeur identification numérique 1';
+COMMENT ON COLUMN "obi"."art"."num_identb" IS 'Valeur identification numérique 2';
+COMMENT ON COLUMN "obi"."art"."num_identc" IS 'Valeur identification numérique 3';
+COMMENT ON COLUMN "obi"."art"."num_identd" IS 'Valeur identification numérique 4';
+COMMENT ON COLUMN "obi"."art"."num_idente" IS 'Valeur identification numérique 5';
+COMMENT ON COLUMN "obi"."art"."num_identf" IS 'Valeur identification numérique 6';
+COMMENT ON COLUMN "obi"."art"."cd_unit_cond" IS 'Code de l''unité de conditionnement';
+COMMENT ON COLUMN "obi"."art"."cd_unit_pds" IS 'Code de l''unité de poids';
+COMMENT ON COLUMN "obi"."art"."cd_compt" IS 'Code de la compétence';
+COMMENT ON COLUMN "obi"."art"."cd_fo" IS 'Code du fournisseur';
+COMMENT ON COLUMN "obi"."art"."cd_identa" IS 'Valeur identification alphanumérique  1';
+COMMENT ON COLUMN "obi"."art"."cd_identb" IS 'Valeur identification alphanumérique  2';
+COMMENT ON COLUMN "obi"."art"."cd_identc" IS 'Valeur identification alphanumérique  3';
+COMMENT ON COLUMN "obi"."art"."cd_identd" IS 'Valeur identification alphanumérique  4';
+COMMENT ON COLUMN "obi"."art"."typ_appro" IS 'A-ACheté, C-fourni par Client, F-Fabriqué, H-Fantome';
+COMMENT ON COLUMN "obi"."art"."pt_sto" IS 'Article géré en stock (Oui/Non)';
+COMMENT ON COLUMN "obi"."art"."pt_lot" IS 'Article géré en traçabilité (Oui/Non)';
+COMMENT ON COLUMN "obi"."art"."pt_emp" IS 'Article géré par emplacement (Oui/Non)';
+COMMENT ON COLUMN "obi"."art"."pt_fifo" IS 'Sortie en stock de type FIFO (Oui/Non)';
+COMMENT ON COLUMN "obi"."art"."nb_pie_col" IS 'Nombre de pièce par colis';
+COMMENT ON COLUMN "obi"."art"."pds_net" IS 'Poids net';
+COMMENT ON COLUMN "obi"."art"."qte_sto_sec" IS 'Quantité stock sécurité';
+COMMENT ON COLUMN "obi"."art"."qte_sto_min" IS 'Quantité stock minimum';
+COMMENT ON COLUMN "obi"."art"."qte_sto_max" IS 'Quantité stock maximum';
+COMMENT ON COLUMN "obi"."art"."typ_sto_sor" IS 'D-Début, F-Fin, O-Opération, M-Manuel,S-sortie sans saisie';
+COMMENT ON COLUMN "obi"."art"."px_appro" IS 'Prix d''approvisionnement';
+COMMENT ON COLUMN "obi"."art"."px_fab" IS 'Prix standard fabrication';
+COMMENT ON COLUMN "obi"."art"."coef_appro" IS 'Coefficient d''appro';
+COMMENT ON COLUMN "obi"."art"."coef_sto" IS 'Coefficient de stockage';
+COMMENT ON COLUMN "obi"."art"."px_revie" IS 'Prix de revient';
+COMMENT ON COLUMN "obi"."art"."px_moy_pond" IS 'Prix moyen pondéré';
+COMMENT ON COLUMN "obi"."art"."qte_appro" IS 'Quantité économique d''approvisionnement';
+COMMENT ON COLUMN "obi"."art"."del" IS 'Délai d''approvisionnement';
+COMMENT ON COLUMN "obi"."art"."coef_sec" IS 'Coefficient de sécurité';
+COMMENT ON COLUMN "obi"."art"."dur_vie" IS 'Durée de vie';
+COMMENT ON COLUMN "obi"."art"."cd_anal" IS 'Code analytique';
+COMMENT ON COLUMN "obi"."art"."cd_sect" IS 'Code section';
+COMMENT ON COLUMN "obi"."art"."dte_hre_valid" IS 'Date de validation';
+COMMENT ON COLUMN "obi"."art"."no_valid" IS 'Numéro d''agrément';
+COMMENT ON COLUMN "obi"."art"."cd_art_etat" IS 'Code état';
+COMMENT ON COLUMN "obi"."art"."cd_anal_appro" IS 'Code analytique';
+COMMENT ON COLUMN "obi"."art"."cd_sect_appro" IS 'Code section appro';
+COMMENT ON COLUMN "obi"."art"."pt_prov" IS 'Pointeur Provisoire';
+COMMENT ON COLUMN "obi"."art"."cd_typ_etat" IS 'Code du type d''état des étiquettes de conditionnement';
+COMMENT ON COLUMN "obi"."art"."cd_etat" IS 'Code de l''état  des étiquettes de conditionnement';
+COMMENT ON COLUMN "obi"."art"."cd_unit_px_sto" IS 'Code de l''unité de mesure de prix du stock';
+COMMENT ON COLUMN "obi"."art"."pt_trac" IS 'Pointeur traçabilité';
+COMMENT ON COLUMN "obi"."art"."mode_trac" IS 'Mode Gestion traçabilité';
+COMMENT ON COLUMN "obi"."art"."pt_col" IS 'Pointeur gestion des colis';
+COMMENT ON COLUMN "obi"."art"."coef_depr_sto" IS 'Coefficient depreciation du stock';
+COMMENT ON COLUMN "obi"."art"."cd_typ_etat_ci" IS 'Code du type d''état du contrôle intégré';
+COMMENT ON COLUMN "obi"."art"."cd_etat_ci" IS 'Code de l''état du contrôle intégré';
+COMMENT ON COLUMN "obi"."art"."nb_ex" IS 'Nombre d''exemplaires d''impression';
+COMMENT ON COLUMN "obi"."art"."pt_imp_real" IS 'Pointeur impression de la demande déjà réalisée';
+COMMENT ON COLUMN "obi"."art"."pt_imp_prev" IS 'Impression à prévoir';
+COMMENT ON COLUMN "obi"."art"."com_ent" IS 'Commentaire d''entête de BL';
+COMMENT ON COLUMN "obi"."art"."com_pied" IS 'Commentaire de pied de BL';
+COMMENT ON COLUMN "obi"."art"."coef_unitappro" IS 'Coefficient de conversion entre unités de prix et de stock';
+COMMENT ON COLUMN "obi"."art"."cd_emp" IS 'Code de l''emplacement';
+COMMENT ON COLUMN "obi"."art"."cpt_bn_recep" IS 'Dernier BL fournisseur recu';
+COMMENT ON COLUMN "obi"."art"."no_int_lig_bnrecep" IS 'Derniere ligne BL fournisseur recu';
+COMMENT ON COLUMN "obi"."art"."pxach_dern" IS 'Prix derniere reception fournisseur';
+COMMENT ON COLUMN "obi"."art"."dte_pxach_dern" IS 'Date derniere reception fournisseur';
+COMMENT ON COLUMN "obi"."art"."px_fab_dern" IS 'Prix dernier OF soldé';
+COMMENT ON COLUMN "obi"."art"."dte_px_fab_dern" IS 'Date dernier OF soldé';
+COMMENT ON COLUMN "obi"."art"."dte_px_revie" IS 'Date prix de revient';
+COMMENT ON COLUMN "obi"."art"."dte_px_fab" IS 'Date du prix de fabrication';
+COMMENT ON COLUMN "obi"."art"."clas_art" IS 'Classement de la fourniture extérieure';
+COMMENT ON COLUMN "obi"."art"."cd_cr_art_clas" IS 'Règles de classement de la fourniture extérieure';
+COMMENT ON COLUMN "obi"."art"."dte_hre_clas" IS 'Date de la dernière réévaluation du classement de la fourniture extérieure';
+COMMENT ON COLUMN "obi"."art"."cd_unit_sto_bis" IS 'unite stock secondaire';
+COMMENT ON COLUMN "obi"."art"."coef_unit_sto_bis" IS 'coefficient vers unite stock secondaire';
+COMMENT ON COLUMN "obi"."art"."pt_emp_oblig" IS 'Emplacement obligatoire en entree de stock';
+COMMENT ON COLUMN "obi"."art"."pt_lot_oblig" IS 'Lot obligatoire en entree de stock';
+COMMENT ON COLUMN "obi"."art"."pt_trac_oblig" IS 'No traçabilite obligatoire en entree de stock';
+COMMENT ON COLUMN "obi"."art"."no_int_syrgltqual" IS 'Numéro interne de la règlementation qualité associée';
+COMMENT ON COLUMN "obi"."art"."cd_fam_pdp" IS 'Famille regroupemnt PDP';
+COMMENT ON COLUMN "obi"."art"."cd_fam_pic" IS 'Famille vérification PIC';
+COMMENT ON COLUMN "obi"."art"."pdp_form" IS 'Formule actualisation automatique PDP';
+COMMENT ON COLUMN "obi"."art"."pdp_coef" IS 'Coefficient actualisation automatique PDP';
+COMMENT ON COLUMN "obi"."art"."mrp_zf" IS 'MRP - Zone ferme';
+COMMENT ON COLUMN "obi"."art"."mrp_couv" IS 'MRP - Période de couverture';
+COMMENT ON COLUMN "obi"."art"."mrp_avanc" IS 'MRP - Période où taire avancer OF';
+COMMENT ON COLUMN "obi"."art"."mrp_recul" IS 'MRP - Période où taire de reculer OF';
+COMMENT ON COLUMN "obi"."art"."coef_fam_pdp" IS 'Coefficient unité de stock vers unité famille PDP';
+COMMENT ON COLUMN "obi"."art"."coef_fam_pic" IS 'Coefficient unité de stock vers unité famille PIC';
+COMMENT ON COLUMN "obi"."art"."pt_amdec" IS 'Pointeur sur le module AMDEC';
+COMMENT ON COLUMN "obi"."art"."no_lot_int" IS 'derniere valeur de lot interne pour l article';
+COMMENT ON COLUMN "obi"."art"."cd_emp_usuel" IS 'Code emplacement usuel';
+COMMENT ON COLUMN "obi"."art"."resp_sto" IS 'Responsable des stocks';
+COMMENT ON COLUMN "obi"."art"."resp_appro" IS 'Responsable des approvisionnements';
+COMMENT ON COLUMN "obi"."art"."pt_seria" IS 'Pointeur article serialise';
+COMMENT ON COLUMN "obi"."art"."dte_hre_invent" IS 'Date et heure du dernier inventaire';
+COMMENT ON COLUMN "obi"."art"."typ_sto_resrv" IS 'Mode de réservation, D-Début, F-Fin, O-Opération';
+COMMENT ON COLUMN "obi"."art"."typ_qte_resrv" IS 'Mode de réservation quantité , D-Brut OF, F-Besoin OF, O-Brut opération';
+COMMENT ON COLUMN "obi"."art"."pt_peremp" IS 'Perissable';
+COMMENT ON COLUMN "obi"."art"."typ_peremp" IS 'type de peremption';
+COMMENT ON COLUMN "obi"."art"."pt_hors_inv" IS 'Pointeur à exclure de l inventaire physique';
+COMMENT ON COLUMN "obi"."art"."pt_dodo" IS 'Pointeur de mise en sommeil';
+COMMENT ON COLUMN "obi"."art"."cd_idente" IS 'Critere identification 5';
+COMMENT ON COLUMN "obi"."art"."cd_identf" IS 'Critere identification 6';
+COMMENT ON COLUMN "obi"."art"."pt_liv_dir" IS 'Pointeur livraison directe';
+COMMENT ON COLUMN "obi"."art"."coef_prix" IS 'Coeff sur prix vente';
+COMMENT ON COLUMN "obi"."art"."pxvte" IS 'Dernier prix de vente';
+COMMENT ON COLUMN "obi"."art"."dte_pxvte" IS 'Date du dernier prix de vente';
+COMMENT ON COLUMN "obi"."art"."pxvte_cpt_bn_liv" IS 'No de BL du dernier prix de vente';
+COMMENT ON COLUMN "obi"."art"."pxvte_no_int_lig_bnliv" IS 'No de ligne de BL du dernier prix de vente';
+COMMENT ON COLUMN "obi"."art"."pt_comp_px" IS 'Composant utilisation dernier prix';
+COMMENT ON COLUMN "obi"."art"."cpt_lot_art" IS 'Compteur lot article';
+COMMENT ON COLUMN "obi"."art"."no_int_ord_fab" IS 'Dernier OF en entrée';
+CREATE TABLE "obi"."art_bes" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art" "t_cpt" NOT NULL,
+	"dte_hre_bes" "datetime" NOT NULL,
+	"typ_appro" "t_typ1" NULL,
+	"dte_hre_dem" "datetime" NULL,
+	"aut_modif" "t_auteur" NULL,
+	"dte_hre_crea" "datetime" NULL,
+	"qte" "t_qte" NULL DEFAULT 0,
+	PRIMARY KEY ( "no_ste", "no_int_art", "dte_hre_bes" )
+);
+COMMENT ON TABLE "obi"."art_bes" IS 'art_bes';
+COMMENT ON COLUMN "obi"."art_bes"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_bes"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_bes"."dte_hre_bes" IS 'Date du besoin';
+COMMENT ON COLUMN "obi"."art_bes"."typ_appro" IS 'Type appro  (acheté ou fabriqué)';
+COMMENT ON COLUMN "obi"."art_bes"."dte_hre_dem" IS 'Date de la demande';
+COMMENT ON COLUMN "obi"."art_bes"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_bes"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_bes"."qte" IS 'Date et heure de la création de l''enregistrement';
+CREATE TABLE "obi"."art_car" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_car" integer NOT NULL,
+	"no_int_art" "t_cpt" NOT NULL,
+	"cd_critc" char(10) NULL,
+	"cd_unit" char(3) NULL,
+	"cd_rego_edit" char(7) NULL,
+	"typ_orig" char(1) NULL,
+	"typ_princ" char(1) NULL,
+	"typ_tol" char(1) NOT NULL DEFAULT 'R',
+	"tol_sup" numeric(19,6) NULL,
+	"tol_inf" numeric(19,6) NULL,
+	"fmt_tol" "t_fmt" NOT NULL,
+	"val_nml" numeric(19,6) NOT NULL,
+	"lim_usur" numeric(19,6) NULL,
+	"fmt_val_nml" "t_fmt" NOT NULL,
+	"typ_ctrl_car" char(1) NOT NULL DEFAULT 'M',
+	"typ_tol_car" char(1) NOT NULL DEFAULT 'B',
+	"repe_pl" char(7) NULL,
+	"com" "t_com" NULL,
+	"no_affic_car" integer NULL,
+	"cd_car" "t_cd" NOT NULL,
+	"aut_modif" "t_auteur" NULL,
+	"dte_hre_crea" "datetime" NULL,
+	"dte_hre_modif" "datetime" NULL,
+	"loi_stat" char(1) NULL,
+	"moy_ref" numeric(19,6) NULL,
+	"etal" numeric(19,6) NULL,
+	"lscx" numeric(19,6) NULL,
+	"licx" numeric(19,6) NULL,
+	"lscs" numeric(19,6) NULL,
+	"lics" numeric(19,6) NULL,
+	"lssx" numeric(19,6) NULL,
+	"lisx" numeric(19,6) NULL,
+	"lsss" numeric(19,6) NULL,
+	"liss" numeric(19,6) NULL,
+	"aff_lim_prel" char(1) NULL,
+	"seuil_cp" numeric(19,6) NULL,
+	"seuil_cpk" numeric(19,6) NULL,
+	"seuil_cam" numeric(19,6) NULL,
+	"nb_cla_histo" integer NULL DEFAULT 16,
+	"tol_repet" numeric(19,6) NULL,
+	"aberr" integer NULL,
+	"typ_crt" char(1) NULL,
+	"typ_crt_suivi" char(1) NULL,
+	"calcul_lim" char(1) NULL DEFAULT '1',
+	"cible" char(1) NULL DEFAULT '0',
+	"barregra" char(1) NULL DEFAULT '0',
+	"analyse_spc" integer NULL DEFAULT 1,
+	"typ_crt_spc" char(1) NULL,
+	"taille_echmob" integer NULL DEFAULT 5,
+	"flg_aff_01" char(1) NULL,
+	"flg_aff_02" char(1) NULL,
+	"flg_aff_03" char(1) NULL,
+	"flg_aff_04" char(1) NULL,
+	"flg_aff_05" char(1) NULL,
+	"flg_aff_06" char(1) NULL,
+	"flg_aff_07" char(1) NULL,
+	"flg_aff_08" char(1) NULL,
+	"flg_aff_09" char(1) NULL,
+	"flg_aff_10" char(1) NULL,
+	"flg_aff_11" char(1) NULL,
+	"flg_aff_12" char(1) NULL,
+	"flg_aff_13" char(1) NULL,
+	"flg_aff_14" char(1) NULL,
+	"flg_aff_15" char(1) NULL,
+	"flg_aff_16" char(1) NULL,
+	"flg_aff_17" char(1) NULL,
+	"flg_aff_18" char(1) NULL,
+	"flg_aff_19" char(1) NULL,
+	"flg_aff_20" char(1) NULL,
+	"flg_aff_21" char(1) NULL,
+	"flg_aff_22" char(1) NULL,
+	"flg_aff_23" char(1) NULL,
+	"flg_aff_24" char(1) NULL,
+	"flg_aff_25" char(1) NULL,
+	"flg_aff_26" char(1) NULL,
+	"flg_aff_27" char(1) NULL,
+	"flg_aff_28" char(1) NULL,
+	"flg_aff_29" char(1) NULL,
+	"flg_aff_30" char(1) NULL,
+	"flg_aff_31" char(1) NULL,
+	"flg_aff_32" char(1) NULL,
+	"flag_qs_stat" char(1) NULL DEFAULT '0',
+	"flag_securite" char(1) NULL DEFAULT '0',
+	"flag_tri_bosch" char(1) NULL DEFAULT '0',
+	"compl_aff" char(1) NULL,
+	"flag_lim_inf" char(1) NULL DEFAULT '0',
+	"flag_crit_01" char(1) NULL,
+	"flag_crit_02" char(1) NULL,
+	"flag_crit_03" char(1) NULL,
+	"flag_crit_04" char(1) NULL,
+	"flag_crit_05" char(1) NULL,
+	"flag_crit_06" char(1) NULL,
+	"flag_crit_07" char(1) NULL,
+	"flag_crit_08" char(1) NULL,
+	"flag_crit_09" char(1) NULL,
+	"flag_crit_10" char(1) NULL,
+	"flag_crit_11" char(1) NULL,
+	"flag_crit_12" char(1) NULL,
+	"flag_crit_13" char(1) NULL,
+	"flag_crit_14" char(1) NULL,
+	"flag_crit_15" char(1) NULL,
+	"flag_crit_16" char(1) NULL,
+	"capa_eff" char(1) NULL,
+	"indice" integer NULL,
+	"code_cpk" char(1) NULL,
+	"nbmin_lim" integer NULL DEFAULT 2,
+	"nbmin_capa" integer NULL DEFAULT 2,
+	"no_int_car_liee1" integer NULL,
+	"no_int_car_liee2" integer NULL,
+	"no_int_car_liee3" integer NULL,
+	"nbcla_tri" integer NULL DEFAULT 10,
+	"cdcla_tri" char(19) NULL,
+	"fond_cla" char(19) NULL,
+	"texte_cla" char(19) NULL,
+	"borne_sup_01" numeric(19,6) NULL,
+	"borne_sup_02" numeric(19,6) NULL,
+	"borne_sup_03" numeric(19,6) NULL,
+	"borne_sup_04" numeric(19,6) NULL,
+	"borne_sup_05" numeric(19,6) NULL,
+	"borne_sup_06" numeric(19,6) NULL,
+	"borne_sup_07" numeric(19,6) NULL,
+	"borne_sup_08" numeric(19,6) NULL,
+	"borne_sup_09" numeric(19,6) NULL,
+	"borne_sup_10" numeric(19,6) NULL,
+	"borne_sup_11" numeric(19,6) NULL,
+	"borne_sup_12" numeric(19,6) NULL,
+	"borne_sup_13" numeric(19,6) NULL,
+	"borne_sup_14" numeric(19,6) NULL,
+	"borne_sup_15" numeric(19,6) NULL,
+	"borne_sup_16" numeric(19,6) NULL,
+	"borne_sup_17" numeric(19,6) NULL,
+	"borne_sup_18" numeric(19,6) NULL,
+	"borne_sup_19" numeric(19,6) NULL,
+	"borne_inf_01" numeric(19,6) NULL,
+	"borne_inf_02" numeric(19,6) NULL,
+	"borne_inf_03" numeric(19,6) NULL,
+	"borne_inf_04" numeric(19,6) NULL,
+	"borne_inf_05" numeric(19,6) NULL,
+	"borne_inf_06" numeric(19,6) NULL,
+	"borne_inf_07" numeric(19,6) NULL,
+	"borne_inf_08" numeric(19,6) NULL,
+	"borne_inf_09" numeric(19,6) NULL,
+	"borne_inf_10" numeric(19,6) NULL,
+	"borne_inf_11" numeric(19,6) NULL,
+	"borne_inf_12" numeric(19,6) NULL,
+	"borne_inf_13" numeric(19,6) NULL,
+	"borne_inf_14" numeric(19,6) NULL,
+	"borne_inf_15" numeric(19,6) NULL,
+	"borne_inf_16" numeric(19,6) NULL,
+	"borne_inf_17" numeric(19,6) NULL,
+	"borne_inf_18" numeric(19,6) NULL,
+	"borne_inf_19" numeric(19,6) NULL,
+	"fich_tri" char(20) NULL,
+	"cd_pop_st" char(8) NULL,
+	"no_int_res_st" integer NULL,
+	"flg_tfr_auto_qs_stat" char(1) NULL,
+	"impauto" char(1) NULL,
+	"flg_certif" char(1) NULL DEFAULT '0',
+	"des_d50" char(20) NULL,
+	"no_int_syrgltqual" integer NULL,
+	"des_car" char(35) NULL,
+	"des_iso" char(12) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_car", "no_int_art", "cd_car" )
+);
+COMMENT ON TABLE "obi"."art_car" IS 'Caractéristique suivie';
+COMMENT ON COLUMN "obi"."art_car"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_car"."no_int_car" IS 'No interne de la caractéristique';
+COMMENT ON COLUMN "obi"."art_car"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_car"."cd_critc" IS 'Code criticité';
+COMMENT ON COLUMN "obi"."art_car"."cd_unit" IS 'Code de l''unité de mesure';
+COMMENT ON COLUMN "obi"."art_car"."cd_rego_edit" IS 'Code de regroupement';
+COMMENT ON COLUMN "obi"."art_car"."typ_orig" IS 'Provenance: fournisseur, client ou fabriqué';
+COMMENT ON COLUMN "obi"."art_car"."typ_princ" IS 'Type principal ou secondaire';
+COMMENT ON COLUMN "obi"."art_car"."typ_tol" IS 'Tolérance absolue ou relative';
+COMMENT ON COLUMN "obi"."art_car"."tol_sup" IS 'Tolérance supérieure';
+COMMENT ON COLUMN "obi"."art_car"."tol_inf" IS 'Tolérance inférieure';
+COMMENT ON COLUMN "obi"."art_car"."fmt_tol" IS 'Format des tolérances';
+COMMENT ON COLUMN "obi"."art_car"."val_nml" IS 'Valeur nominale';
+COMMENT ON COLUMN "obi"."art_car"."lim_usur" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_car"."fmt_val_nml" IS 'Format de la valeur nominale';
+COMMENT ON COLUMN "obi"."art_car"."typ_ctrl_car" IS 'mesure, attribut binaire, attribut aux mesures, attribut multiple';
+COMMENT ON COLUMN "obi"."art_car"."typ_tol_car" IS 'Tolérancement bilatéral, unilatéral supérieur, ou unilatéral inférieur';
+COMMENT ON COLUMN "obi"."art_car"."repe_pl" IS 'Numéro de repère sur le plan';
+COMMENT ON COLUMN "obi"."art_car"."com" IS 'Commentaire général';
+COMMENT ON COLUMN "obi"."art_car"."no_affic_car" IS 'Numéro d''ordre d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."cd_car" IS 'Code de la caractéristique';
+COMMENT ON COLUMN "obi"."art_car"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_car"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_car"."dte_hre_modif" IS 'Date et heure modification';
+COMMENT ON COLUMN "obi"."art_car"."loi_stat" IS 'Modèle de distribution statistique';
+COMMENT ON COLUMN "obi"."art_car"."moy_ref" IS 'Moyenne de référence';
+COMMENT ON COLUMN "obi"."art_car"."etal" IS 'Valeur de l''étalon';
+COMMENT ON COLUMN "obi"."art_car"."lscx" IS 'Limite de contrôle supérieure pour le centrage';
+COMMENT ON COLUMN "obi"."art_car"."licx" IS 'Limite de contrôle inférieure pour le centrage';
+COMMENT ON COLUMN "obi"."art_car"."lscs" IS 'Limite de contrôle supérieure pour la dispersion';
+COMMENT ON COLUMN "obi"."art_car"."lics" IS 'Limite de contrôle inférieure pour la dispersion';
+COMMENT ON COLUMN "obi"."art_car"."lssx" IS 'Limite de surveillance supérieure pour le centrage';
+COMMENT ON COLUMN "obi"."art_car"."lisx" IS 'Limite de surveillance inférieure pour le centrage';
+COMMENT ON COLUMN "obi"."art_car"."lsss" IS 'Limite de surveillance supérieure pour la dispersion';
+COMMENT ON COLUMN "obi"."art_car"."liss" IS 'Limite de surveillance inférieure pour la dispersion';
+COMMENT ON COLUMN "obi"."art_car"."aff_lim_prel" IS 'Afichage des limites par prélèvement';
+COMMENT ON COLUMN "obi"."art_car"."seuil_cp" IS 'Seuil de capabilité';
+COMMENT ON COLUMN "obi"."art_car"."seuil_cpk" IS 'Seuil de capabilité centrée';
+COMMENT ON COLUMN "obi"."art_car"."seuil_cam" IS 'Seuil de capabilité CNOMO';
+COMMENT ON COLUMN "obi"."art_car"."nb_cla_histo" IS 'Nombre de classes dans l''histogramme de capabilité';
+COMMENT ON COLUMN "obi"."art_car"."tol_repet" IS 'Tolérance de répétabilité des mesures';
+COMMENT ON COLUMN "obi"."art_car"."aberr" IS 'Pourcentage d''aberration';
+COMMENT ON COLUMN "obi"."art_car"."typ_crt" IS 'Type de carte à afficher';
+COMMENT ON COLUMN "obi"."art_car"."typ_crt_suivi" IS 'Type de carte à suivre si effectif = 1';
+COMMENT ON COLUMN "obi"."art_car"."calcul_lim" IS 'Mode de calcul des limites';
+COMMENT ON COLUMN "obi"."art_car"."cible" IS 'Cible';
+COMMENT ON COLUMN "obi"."art_car"."barregra" IS 'Choix d''affichage des barres-graphes';
+COMMENT ON COLUMN "obi"."art_car"."analyse_spc" IS 'Choix d''analyse des cartes SPC';
+COMMENT ON COLUMN "obi"."art_car"."typ_crt_spc" IS 'Type de carte SPC à piloter';
+COMMENT ON COLUMN "obi"."art_car"."taille_echmob" IS 'Taille de l''échantillon mobile';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_01" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_02" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_03" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_04" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_05" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_06" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_07" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_08" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_09" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_10" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_11" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_12" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_13" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_14" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_15" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_16" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_17" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_18" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_19" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_20" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_21" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_22" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_23" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_24" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_25" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_26" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_27" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_28" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_29" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_30" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_31" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flg_aff_32" IS '1 parmi les 32 choix d''affichage';
+COMMENT ON COLUMN "obi"."art_car"."flag_qs_stat" IS 'Interfaçage à qs-STAT';
+COMMENT ON COLUMN "obi"."art_car"."flag_securite" IS 'Flag caractéristique de sécurité';
+COMMENT ON COLUMN "obi"."art_car"."flag_tri_bosch" IS 'Flag tri BOSCH à 100%';
+COMMENT ON COLUMN "obi"."art_car"."compl_aff" IS 'Flag type de carte calculé dans COM';
+COMMENT ON COLUMN "obi"."art_car"."flag_lim_inf" IS 'Flag limite inférieure de contrôle';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_01" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_02" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_03" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_04" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_05" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_06" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_07" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_08" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_09" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_10" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_11" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_12" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_13" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_14" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_15" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."flag_crit_16" IS '1 parmi 16 critères de déclenchement';
+COMMENT ON COLUMN "obi"."art_car"."capa_eff" IS 'Capabilité à calculer si effctif = 1';
+COMMENT ON COLUMN "obi"."art_car"."indice" IS 'Indice de recalcul des limites';
+COMMENT ON COLUMN "obi"."art_car"."code_cpk" IS 'Code du sigle de capabilité centrée à utiliser';
+COMMENT ON COLUMN "obi"."art_car"."nbmin_lim" IS 'Nombre minimal d''échantillons avant le calcul des limites';
+COMMENT ON COLUMN "obi"."art_car"."nbmin_capa" IS 'Nombre minimal d''échantillons avant le calcul des capabilités';
+COMMENT ON COLUMN "obi"."art_car"."no_int_car_liee1" IS 'Numéro interne de la première caractéristique liée';
+COMMENT ON COLUMN "obi"."art_car"."no_int_car_liee2" IS 'Numéro interne de la deuxième caractéristique liée';
+COMMENT ON COLUMN "obi"."art_car"."no_int_car_liee3" IS 'Numéro interne de la troisième caractéristique liée';
+COMMENT ON COLUMN "obi"."art_car"."nbcla_tri" IS 'Nombre de classes pour le tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."cdcla_tri" IS '19 codes pour le tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."fond_cla" IS 'Couleurs de fond pour les classes de tri';
+COMMENT ON COLUMN "obi"."art_car"."texte_cla" IS 'Couleurs de texte pour les classes de tri';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_01" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_02" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_03" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_04" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_05" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_06" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_07" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_08" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_09" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_10" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_11" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_12" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_13" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_14" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_15" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_16" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_17" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_18" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_sup_19" IS 'Borne supérieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_01" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_02" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_03" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_04" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_05" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_06" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_07" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_08" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_09" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_10" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_11" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_12" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_13" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_14" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_15" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_16" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_17" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_18" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."borne_inf_19" IS 'Borne inférieure de la classe de tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."fich_tri" IS 'Fichier résultat du tri des mesures';
+COMMENT ON COLUMN "obi"."art_car"."cd_pop_st" IS 'Code de la population statistique';
+COMMENT ON COLUMN "obi"."art_car"."no_int_res_st" IS 'Numéro interne de résultat statistique';
+COMMENT ON COLUMN "obi"."art_car"."flg_tfr_auto_qs_stat" IS 'Transfert automatique vers qs-STAT tous les 1200 prélèvements';
+COMMENT ON COLUMN "obi"."art_car"."impauto" IS 'Chois d''impression automatique des cartes';
+COMMENT ON COLUMN "obi"."art_car"."flg_certif" IS 'Flag pour impression dans les certificats qualité';
+COMMENT ON COLUMN "obi"."art_car"."des_d50" IS 'Désignation D50';
+COMMENT ON COLUMN "obi"."art_car"."no_int_syrgltqual" IS 'Numéro interne de la règlementation qualité associée';
+COMMENT ON COLUMN "obi"."art_car"."des_car" IS 'Désignation de la caractéristique de l''article';
+COMMENT ON COLUMN "obi"."art_car"."des_iso" IS 'Désignation ISO des tolérances (ex. : 32H7)';
+CREATE TABLE "admin"."art_coef_depr_sto_pump" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_cat_art" char(7) NOT NULL,
+	"coef_depr_sto_pump" float NULL,
+	"dte_hre_crea" "datetime" NOT NULL DEFAULT current timestamp,
+	"dte_hre_modif" "datetime" NOT NULL DEFAULT current timestamp,
+	"aut_modif" "t_auteur" NOT NULL DEFAULT current user,
+	PRIMARY KEY ( "no_ste", "cd_cat_art" )
+);
+CREATE TABLE "admin"."art_com" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art" integer NOT NULL,
+	"com_pb_tech" char(255) NULL,
+	"com" varchar(2048) NULL,
+	"dte_hre_crea" "datetime" NOT NULL DEFAULT current timestamp,
+	"dte_hre_modif" "datetime" NOT NULL DEFAULT current timestamp,
+	"aut_modif" "t_auteur" NOT NULL DEFAULT current user,
+	"com_qual" varchar(2048) NULL,
+	"cd_ident_ident" char(7) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art" )
+);
+COMMENT ON COLUMN "admin"."art_com"."no_ste" IS 'Numero de la societe';
+COMMENT ON COLUMN "admin"."art_com"."no_int_art" IS 'Numero interne article';
+COMMENT ON COLUMN "admin"."art_com"."com_pb_tech" IS 'Commentaire sur le probleme technique de la reference';
+COMMENT ON COLUMN "admin"."art_com"."com" IS 'Commentaire generale';
+COMMENT ON COLUMN "admin"."art_com"."dte_hre_crea" IS 'Date et heure de creation';
+COMMENT ON COLUMN "admin"."art_com"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "admin"."art_com"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."art_cp" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_art" integer NOT NULL,
+	"cd_cl" char(7) NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_art_stat_ql" char(7) NULL,
+	"cd_mon" char(3) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_unit_util" char(3) NULL,
+	"cd_unit_base_n_ql" char(3) NULL,
+	"cd_ident" char(7) NULL,
+	"cd_cat_art" char(2) NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	"cd_art" char(25) NOT NULL,
+	"ind_pr_art" char(4) NULL,
+	"des_art_a" char(35) NULL,
+	"des_art_b" char(35) NULL,
+	"des_ct_art" char(15) NULL,
+	"cd_pl" char(25) NULL,
+	"ind_pl" char(4) NULL,
+	"nrm_art_a" char(35) NULL,
+	"nrm_art_b" char(35) NULL,
+	"com" varchar(2048) NULL,
+	"px_unia_n_ql" numeric(19,6) NULL,
+	"fmt_px_unia_n_ql" char(20) NULL,
+	"pt_valid_tech" char(1) NULL,
+	"coef_unit" numeric(19,6) NULL,
+	"indice" char(4) NULL,
+	"num_identa" numeric(19,6) NULL,
+	"num_identb" numeric(19,6) NULL,
+	"num_identc" numeric(19,6) NULL,
+	"num_identd" numeric(19,6) NULL,
+	"num_idente" numeric(19,6) NULL,
+	"num_identf" numeric(19,6) NULL,
+	"cd_unit_cond" char(7) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"cd_compt" char(7) NULL,
+	"cd_fo" char(7) NULL,
+	"cd_identa" char(25) NULL,
+	"cd_identb" char(25) NULL,
+	"cd_identc" char(25) NULL,
+	"cd_identd" char(25) NULL,
+	"typ_appro" char(1) NULL,
+	"pt_sto" char(1) NULL,
+	"pt_lot" char(1) NULL,
+	"pt_emp" char(1) NULL,
+	"pt_fifo" char(1) NULL,
+	"nb_pie_col" numeric(19,6) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_min" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"typ_sto_sor" char(1) NULL,
+	"px_appro" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"coef_appro" numeric(19,6) NULL,
+	"coef_sto" numeric(19,6) NULL,
+	"px_revie" numeric(19,6) NULL,
+	"px_moy_pond" numeric(19,6) NULL,
+	"qte_appro" numeric(19,6) NULL,
+	"del" numeric(19,6) NULL,
+	"coef_sec" numeric(19,6) NULL,
+	"dur_vie" numeric(19,6) NULL,
+	"cd_anal" char(7) NULL,
+	"cd_sect" char(7) NULL,
+	"dte_hre_valid" timestamp NULL,
+	"no_valid" char(25) NULL,
+	"cd_art_etat" char(1) NULL,
+	"cd_anal_appro" char(7) NULL,
+	"cd_sect_appro" char(7) NULL,
+	"pt_prov" char(1) NULL,
+	"cd_typ_etat" char(3) NULL,
+	"cd_etat" char(25) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"pt_trac" char(1) NULL,
+	"mode_trac" char(1) NULL,
+	"pt_col" char(1) NULL,
+	"coef_depr_sto" numeric(19,6) NULL,
+	"cd_typ_etat_ci" char(3) NULL,
+	"cd_etat_ci" char(25) NULL,
+	"nb_ex" smallint NULL,
+	"pt_imp_real" char(1) NULL,
+	"pt_imp_prev" char(1) NULL,
+	"com_ent" varchar(2048) NULL,
+	"com_pied" varchar(2048) NULL,
+	"coef_unitappro" numeric(19,6) NULL,
+	"cd_calc_appro" char(1) NULL,
+	"cd_emp" char(7) NULL,
+	"cpt_bn_recep" integer NULL,
+	"no_int_lig_bnrecep" integer NULL,
+	"pxach_dern" numeric(19,6) NULL,
+	"dte_pxach_dern" timestamp NULL,
+	"px_fab_dern" numeric(19,6) NULL,
+	"dte_px_fab_dern" timestamp NULL,
+	"dte_px_revie" timestamp NULL,
+	"dte_px_fab" timestamp NULL,
+	"clas_art" char(1) NULL,
+	"cd_cr_art_clas" char(8) NULL,
+	"dte_hre_clas" timestamp NULL,
+	"cd_unit_sto_bis" char(3) NULL,
+	"coef_unit_sto_bis" numeric(19,6) NULL,
+	"pt_emp_oblig" char(1) NULL,
+	"pt_lot_oblig" char(1) NULL,
+	"pt_trac_oblig" char(1) NULL,
+	"no_int_syrgltqual" integer NULL,
+	"cd_fam_pdp" char(7) NULL,
+	"cd_fam_pic" char(7) NULL,
+	"pdp_form" char(1) NULL,
+	"pdp_coef" numeric(19,6) NULL,
+	"mrp_zf" integer NULL,
+	"mrp_couv" integer NULL,
+	"mrp_avanc" integer NULL,
+	"mrp_recul" integer NULL,
+	"coef_fam_pdp" numeric(19,6) NULL,
+	"coef_fam_pic" numeric(19,6) NULL,
+	"pt_amdec" char(1) NULL,
+	"no_lot_int" integer NULL,
+	"cd_emp_usuel" char(7) NULL,
+	"resp_sto" char(7) NULL,
+	"resp_appro" char(7) NULL,
+	"pt_seria" char(1) NULL,
+	"dte_hre_invent" timestamp NULL,
+	"typ_sto_resrv" char(1) NULL,
+	"typ_qte_resrv" char(1) NULL,
+	"pt_peremp" char(1) NULL,
+	"typ_peremp" char(1) NULL,
+	"pt_hors_inv" char(1) NULL,
+	"pt_dodo" char(1) NULL,
+	"cd_idente" char(25) NULL,
+	"cd_identf" char(25) NULL,
+	"pt_liv_dir" char(1) NULL,
+	"coef_prix" numeric(19,6) NULL,
+	"pxvte" numeric(19,6) NULL,
+	"dte_pxvte" timestamp NULL,
+	"pxvte_cpt_bn_liv" integer NULL,
+	"pxvte_no_int_lig_bnliv" integer NULL,
+	"pt_comp_px" char(1) NULL,
+	"cpt_lot_art" integer NULL,
+	"dte_clas" date NULL,
+	"no_int_ord_fab" integer NULL,
+	"cd_unit_manu" char(7) NULL,
+	"cd_typ_etat_um" char(3) NULL,
+	"cd_etat_um" char(25) NULL,
+	"nb_col_um" decimal(19,6) NULL,
+	"pt_gest_int" char(1) NULL
+);
+CREATE TABLE "admin"."art_dbcar" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art" integer NOT NULL,
+	"cd_car" "t_cd" NOT NULL,
+	"no_affic_car" integer NULL,
+	"val_nml" char(20) NULL,
+	"typ_tol" char(1) NULL,
+	"typ_tol_car" char(1) NULL,
+	"tol_inf" char(20) NULL,
+	"tol_sup" char(20) NULL,
+	"com" varchar(2048) NULL,
+	"dte_hre_crea" "datetime" NOT NULL DEFAULT current timestamp,
+	"aut_modif" "t_auteur" NOT NULL DEFAULT current user,
+	"dte_hre_modif" "datetime" NOT NULL DEFAULT current timestamp,
+	"cd_typ_car" char(7) NOT NULL,
+	"cd_moy_ctrl" char(7) NULL,
+	"cd_freq_ctrl" char(7) NULL,
+	"cd_unit_ctrl" char(3) NULL,
+	"no_obj" integer NULL,
+	"cd_moycontrol" char(7) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art", "cd_car", "cd_typ_car" )
+);
+CREATE TABLE "obi"."art_dbemp" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_art" integer NOT NULL,
+	"cd_emp" char(7) NOT NULL,
+	"sto_mini" numeric(19,6) NULL,
+	"sto_maxi" numeric(19,6) NULL,
+	"sto_secu" numeric(19,6) NULL,
+	"aut_modif" char(7) NULL,
+	"dte_hre_crea" "datetime" NULL,
+	"dte_hre_modif" "datetime" NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art", "cd_emp" )
+);
+COMMENT ON COLUMN "obi"."art_dbemp"."no_ste" IS 'NÝ de société';
+COMMENT ON COLUMN "obi"."art_dbemp"."no_int_art" IS 'NÝ interne article';
+COMMENT ON COLUMN "obi"."art_dbemp"."cd_emp" IS 'Code emplacement';
+COMMENT ON COLUMN "obi"."art_dbemp"."sto_mini" IS 'Valeur du stock mini';
+COMMENT ON COLUMN "obi"."art_dbemp"."sto_maxi" IS 'Valeur du stock maxi';
+COMMENT ON COLUMN "obi"."art_dbemp"."sto_secu" IS 'Valeur du stock sécurité';
+COMMENT ON COLUMN "obi"."art_dbemp"."aut_modif" IS 'Auteur de modification';
+COMMENT ON COLUMN "obi"."art_dbemp"."dte_hre_crea" IS 'Date/heure création';
+COMMENT ON COLUMN "obi"."art_dbemp"."dte_hre_modif" IS 'Date/heure modification';
+CREATE TABLE "obi"."art_fo" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_art" integer NOT NULL,
+	"cd_fo" char(7) NOT NULL,
+	"pou_repar" numeric(19,6) NOT NULL,
+	"del_appro" integer NOT NULL,
+	"coef_sec" numeric(19,6) NULL,
+	"cd_calc_appro" char(1) NOT NULL,
+	"qte_appro" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"aut_modif" char(7) NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art", "cd_fo" )
+);
+COMMENT ON TABLE "obi"."art_fo" IS 'Eclatement des approvisionnement';
+COMMENT ON COLUMN "obi"."art_fo"."no_ste" IS 'Société';
+COMMENT ON COLUMN "obi"."art_fo"."no_int_art" IS 'No interne article technique';
+COMMENT ON COLUMN "obi"."art_fo"."cd_fo" IS 'Fournisseur par défaut';
+COMMENT ON COLUMN "obi"."art_fo"."pou_repar" IS 'Pourcentage de répartition';
+COMMENT ON COLUMN "obi"."art_fo"."del_appro" IS 'Délai approvisionnement';
+COMMENT ON COLUMN "obi"."art_fo"."coef_sec" IS 'Coefficient de sécurité';
+COMMENT ON COLUMN "obi"."art_fo"."cd_calc_appro" IS 'B-Besoin net,M-Lot minimum, L - Lot entier';
+COMMENT ON COLUMN "obi"."art_fo"."qte_appro" IS 'Quantité du lot';
+COMMENT ON COLUMN "obi"."art_fo"."no_aff" IS 'Ordre affichage et préférence à % égal';
+COMMENT ON COLUMN "obi"."art_fo"."aut_modif" IS 'Auteur dernière modification';
+COMMENT ON COLUMN "obi"."art_fo"."dte_hre_modif" IS 'Date et heure dernière modification';
+COMMENT ON COLUMN "obi"."art_fo"."dte_hre_crea" IS 'Date et heure création';
+CREATE TABLE "admin"."art_indice" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art" integer NOT NULL,
+	"indice" char(10) NOT NULL,
+	"com_ind_motif" char(255) NULL,
+	"cd_perso_creation" char(25) NULL,
+	"cd_perso_verification" char(25) NULL,
+	"cd_perso_approbation" char(25) NULL,
+	"dte_hre_perso_creation" "datetime" NULL DEFAULT current timestamp,
+	"dte_hre_perso_verification" "datetime" NULL,
+	"dte_hre_perso_approbation" "datetime" NULL,
+	"no_obj_pl_fab" integer NULL,
+	"no_obj_pl_ctrl" integer NULL,
+	"dte_hre_crea" "datetime" NOT NULL DEFAULT current timestamp,
+	"dte_hre_modif" "datetime" NOT NULL DEFAULT current timestamp,
+	"aut_modif" "t_auteur" NOT NULL DEFAULT current user,
+	PRIMARY KEY ( "no_ste", "no_int_art", "indice" )
+);
+COMMENT ON COLUMN "admin"."art_indice"."no_ste" IS 'Numero de la societe';
+COMMENT ON COLUMN "admin"."art_indice"."no_int_art" IS 'Numero interne article';
+COMMENT ON COLUMN "admin"."art_indice"."indice" IS 'indice';
+COMMENT ON COLUMN "admin"."art_indice"."com_ind_motif" IS 'Commentaire sur la modification d indice';
+COMMENT ON COLUMN "admin"."art_indice"."cd_perso_creation" IS 'Auteur de l evolution d indice';
+COMMENT ON COLUMN "admin"."art_indice"."cd_perso_verification" IS 'Auteur de la verification d indice';
+COMMENT ON COLUMN "admin"."art_indice"."cd_perso_approbation" IS 'Auteur de l approbation d indice';
+COMMENT ON COLUMN "admin"."art_indice"."dte_hre_perso_creation" IS 'Date de l evolution d indice';
+COMMENT ON COLUMN "admin"."art_indice"."dte_hre_perso_verification" IS 'Date de la verification d indice';
+COMMENT ON COLUMN "admin"."art_indice"."dte_hre_perso_approbation" IS 'Date de l approbationd indice';
+COMMENT ON COLUMN "admin"."art_indice"."no_obj_pl_fab" IS 'Lien avec  l objet OLE de fabrication';
+COMMENT ON COLUMN "admin"."art_indice"."no_obj_pl_ctrl" IS 'Lien avec  l objet OLE de controle';
+COMMENT ON COLUMN "admin"."art_indice"."dte_hre_crea" IS 'Date et heure de creation';
+COMMENT ON COLUMN "admin"."art_indice"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "admin"."art_indice"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."art_invtour" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_invtour" integer NOT NULL,
+	"no_int_art" integer NOT NULL,
+	"typ_inv" char(2) NULL,
+	"cd_emp" char(7) NULL,
+	"no_unit_cond" integer NULL,
+	"no_unit_manu" integer NULL,
+	"cd_lot" char(25) NULL,
+	"no_lot" char(25) NULL,
+	"dte_hre_orig" "datetime" NULL,
+	"dte_hre_peremp" "datetime" NULL,
+	"dte_hre_mvt" "datetime" NULL,
+	"qte" numeric(19,6) NULL DEFAULT 0,
+	"qte_bis" numeric(19,6) NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	"cd_emp_pro" char(7) NULL,
+	"qte_pro" decimal(19,6) NULL DEFAULT 0,
+	"qte_bis_pro" decimal(19,6) NULL DEFAULT 0,
+	PRIMARY KEY ( "no_ste", "no_int_invtour" )
+);
+COMMENT ON TABLE "obi"."art_invtour" IS 'Stockage saisie SFAO inventaire tournant';
+COMMENT ON COLUMN "obi"."art_invtour"."no_ste" IS 'No société';
+COMMENT ON COLUMN "obi"."art_invtour"."no_int_invtour" IS 'No interne saisie';
+COMMENT ON COLUMN "obi"."art_invtour"."no_int_art" IS 'No interne article';
+COMMENT ON COLUMN "obi"."art_invtour"."typ_inv" IS 'Type inventaire: P-Pièce,E-Emplacement';
+COMMENT ON COLUMN "obi"."art_invtour"."cd_emp" IS 'Code emplacement';
+COMMENT ON COLUMN "obi"."art_invtour"."no_unit_cond" IS 'No interne UC';
+COMMENT ON COLUMN "obi"."art_invtour"."no_unit_manu" IS 'No interne UM';
+COMMENT ON COLUMN "obi"."art_invtour"."cd_lot" IS 'Code traçabilité';
+COMMENT ON COLUMN "obi"."art_invtour"."no_lot" IS 'No lot';
+COMMENT ON COLUMN "obi"."art_invtour"."dte_hre_orig" IS 'Date origine traçabilité et lot';
+COMMENT ON COLUMN "obi"."art_invtour"."dte_hre_peremp" IS 'Date péremption traçabilité et lot';
+COMMENT ON COLUMN "obi"."art_invtour"."dte_hre_mvt" IS 'Date de la saisie';
+COMMENT ON COLUMN "obi"."art_invtour"."qte" IS 'Quantité inventaire';
+COMMENT ON COLUMN "obi"."art_invtour"."qte_bis" IS 'Quantité inventaire en unité secondaire de stock';
+COMMENT ON COLUMN "obi"."art_invtour"."dte_hre_crea" IS 'Date création';
+COMMENT ON COLUMN "obi"."art_invtour"."dte_hre_modif" IS 'Date de modification';
+COMMENT ON COLUMN "obi"."art_invtour"."aut_modif" IS 'Auteur dernière modification';
+COMMENT ON COLUMN "obi"."art_invtour"."cd_emp_pro" IS 'Emplacement PROCOST';
+COMMENT ON COLUMN "obi"."art_invtour"."qte_pro" IS 'Quantité PROCOST';
+COMMENT ON COLUMN "obi"."art_invtour"."qte_bis_pro" IS 'Quantité PROCOST en unité secondaire de stock';
+CREATE TABLE "obi"."art_lib" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_art" integer NOT NULL,
+	"cd_lang" char(3) NOT NULL,
+	"des_art_a" char(35) NULL,
+	"des_art_b" char(35) NULL,
+	"aut_modif" char(7) NOT NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art", "cd_lang" )
+);
+COMMENT ON COLUMN "obi"."art_lib"."no_ste" IS 'N° de société';
+COMMENT ON COLUMN "obi"."art_lib"."no_int_art" IS 'N° interne article';
+COMMENT ON COLUMN "obi"."art_lib"."des_art_a" IS 'Suite designation article';
+COMMENT ON COLUMN "obi"."art_lib"."aut_modif" IS 'Auteur de modification';
+COMMENT ON COLUMN "obi"."art_lib"."dte_hre_crea" IS 'Date/heure création';
+COMMENT ON COLUMN "obi"."art_lib"."dte_hre_modif" IS 'Date/heure modification';
+CREATE TABLE "obi"."art_mvt" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_mvt" integer NOT NULL,
+	"no_int_art" "t_cpt" NOT NULL,
+	"typ_orig_mvt" char(1) NULL,
+	"typ_orig_ref_mvt" "t_typ_orig_ref" NULL,
+	"no_doc_mvt" integer NULL,
+	"no_lig_mvt" integer NULL,
+	"no_cad_mvt" integer NULL,
+	"pt_sld" integer NULL,
+	"qte_mvt" "t_qte" NULL DEFAULT 0,
+	"qte_real" "t_qte" NULL DEFAULT 0,
+	"aut_modif" "t_auteur" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"dte_hre_mvt" "datetime" NULL,
+	"cpt_cde_cl" integer NULL,
+	"no_int_lig_cde_cl" integer NULL,
+	"no_int_cde_cad_cl" integer NULL,
+	"no_int_ord_fab" integer NULL,
+	"no_lien_ordfab_nomlien" integer NULL,
+	"cpt_cde_fo" integer NULL,
+	"no_int_lig_cde_fo" integer NULL,
+	"no_int_cde_cad_fo" integer NULL,
+	"no_occ_mvt" integer NULL DEFAULT 1,
+	PRIMARY KEY ( "no_ste", "no_int_mvt" )
+);
+COMMENT ON TABLE "obi"."art_mvt" IS 'Mouvement global de stock';
+COMMENT ON COLUMN "obi"."art_mvt"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_mvt" IS 'Numéro interne de mouvement global';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_mvt"."typ_orig_mvt" IS 'Origine du mouvement';
+COMMENT ON COLUMN "obi"."art_mvt"."typ_orig_ref_mvt" IS 'Type origine référence';
+COMMENT ON COLUMN "obi"."art_mvt"."no_doc_mvt" IS 'Numéro de document';
+COMMENT ON COLUMN "obi"."art_mvt"."no_lig_mvt" IS 'Numéro de ligne';
+COMMENT ON COLUMN "obi"."art_mvt"."no_cad_mvt" IS 'Numéro de cadence';
+COMMENT ON COLUMN "obi"."art_mvt"."pt_sld" IS 'Pointeur pour savoir si le mouvement est soldé';
+COMMENT ON COLUMN "obi"."art_mvt"."qte_mvt" IS 'Quantité du mouvement';
+COMMENT ON COLUMN "obi"."art_mvt"."qte_real" IS 'Cumul des quantités réalisées';
+COMMENT ON COLUMN "obi"."art_mvt"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_mvt"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_mvt"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_mvt"."dte_hre_mvt" IS 'Date et heure de transaction du mouvement';
+COMMENT ON COLUMN "obi"."art_mvt"."cpt_cde_cl" IS 'No commande client';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_lig_cde_cl" IS 'No ligne de commande client';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_cde_cad_cl" IS 'No cadence de ligne de commande client';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_ord_fab" IS 'No OF';
+COMMENT ON COLUMN "obi"."art_mvt"."no_lien_ordfab_nomlien" IS 'No ligne de nomenclature OF';
+COMMENT ON COLUMN "obi"."art_mvt"."cpt_cde_fo" IS 'No commande fournisseur';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_lig_cde_fo" IS 'No ligne de commande fournisseur';
+COMMENT ON COLUMN "obi"."art_mvt"."no_int_cde_cad_fo" IS 'No cadence de ligne de commande fournisseur';
+COMMENT ON COLUMN "obi"."art_mvt"."no_occ_mvt" IS 'Document - occurence';
+CREATE TABLE "obi"."art_mvtprev" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_mvt" integer NOT NULL,
+	"no_int_mvt_prev" integer NOT NULL,
+	"no_int_art" "t_cpt" NOT NULL,
+	"no_int_mvt_lie" integer NULL,
+	"no_int_mvt_prev_lie" integer NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"typ_mvt_prev" char(3) NULL,
+	"dte_hre_mvt_prev" "datetime" NULL,
+	"dte_hre_fin_mvt_prev" "datetime" NULL,
+	"qte_mvt_prev" "t_qte" NULL DEFAULT 0,
+	"des_mvt_prev" "t_des_gen" NULL,
+	"com" "t_com" NULL,
+	"typ_prev" "t_typ1" NULL,
+	PRIMARY KEY ( "no_ste", "no_int_mvt", "no_int_mvt_prev" )
+);
+COMMENT ON TABLE "obi"."art_mvtprev" IS 'Mouvement prévisionnel de stock';
+COMMENT ON COLUMN "obi"."art_mvtprev"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_mvtprev"."no_int_mvt" IS 'Numéro interne de mouvement global';
+COMMENT ON COLUMN "obi"."art_mvtprev"."no_int_mvt_prev" IS 'Numéro interne du mouvement prévisionnel';
+COMMENT ON COLUMN "obi"."art_mvtprev"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_mvtprev"."no_int_mvt_lie" IS 'Numéro interne de mouvement global';
+COMMENT ON COLUMN "obi"."art_mvtprev"."no_int_mvt_prev_lie" IS 'Numéro interne du mouvement prévisionnel';
+COMMENT ON COLUMN "obi"."art_mvtprev"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_mvtprev"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_mvtprev"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_mvtprev"."typ_mvt_prev" IS 'Type du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtprev"."dte_hre_mvt_prev" IS 'Date et heure de transaction du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtprev"."dte_hre_fin_mvt_prev" IS 'Date fin mouvt prév';
+COMMENT ON COLUMN "obi"."art_mvtprev"."qte_mvt_prev" IS 'Quantité du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtprev"."des_mvt_prev" IS 'Libellé du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtprev"."com" IS 'Commentaire général';
+COMMENT ON COLUMN "obi"."art_mvtprev"."typ_prev" IS 'Commentaire général';
+CREATE TABLE "obi"."art_mvtreel" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_mvt_reel" "t_cpt" NOT NULL,
+	"no_int_art" "t_cpt" NOT NULL,
+	"cd_emp" "t_cd" NULL,
+	"cd_unit_cond" "t_cd" NULL,
+	"no_unit_manu" "t_cpt" NULL,
+	"cd_unit_manu" "t_cd" NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"typ_mvt" char(3) NULL,
+	"dte_hre_mvt" "datetime" NULL,
+	"qte_mvt" "t_qte" NULL DEFAULT 0,
+	"des_mvt" varchar(50) NULL,
+	"com" "t_com" NULL,
+	"typ_genr" "t_typ1" NULL,
+	"no_int_mvt" integer NULL,
+	"cd_cl" "t_cd" NULL,
+	"typ_orig_ref_mvt" "t_typ_orig_ref" NULL,
+	"no_doc_mvt" integer NULL,
+	"no_lig_mvt" integer NULL,
+	"no_cad_mvt" integer NULL,
+	"cd_lot" char(25) NULL,
+	"typ_orig_ref_resrv" "t_typ_orig_ref" NULL,
+	"no_doc_resrv" integer NULL,
+	"no_lig_resrv" integer NULL,
+	"no_cad_resrv" integer NULL,
+	"no_lot_trac" char(10) NULL,
+	"no_lot" char(25) NULL,
+	"dte_hre_orig" "datetime" NULL,
+	"cpt_cl_bnliv" integer NULL,
+	"no_int_lig_bnliv" integer NULL,
+	"no_int_ord_fab" integer NULL,
+	"no_lien_ordfab_nomlien" integer NULL,
+	"cpt_bn_recep" integer NULL,
+	"no_int_lig_bnrecep" integer NULL,
+	"px_vte" "t_tx" NULL,
+	"px_moy_pond" "t_tx" NULL,
+	"px_revie" "t_tx" NULL,
+	"px_ach" "t_tx" NULL,
+	"pt_ann" "t_pt_n" NULL DEFAULT '0',
+	"qte_mvt_bis" numeric(19,6) NULL DEFAULT 0,
+	"no_us_mvt" integer NULL,
+	"cd_cau_mvt" char(7) NULL,
+	"dte_peremp" "datetime" NULL,
+	PRIMARY KEY ( "no_ste", "no_int_mvt_reel" )
+);
+COMMENT ON TABLE "obi"."art_mvtreel" IS 'Mouvement réel de stock';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_int_mvt_reel" IS 'Numéro interne de mouvement réel de stock';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cd_emp" IS 'Code de l''emplacement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cd_unit_cond" IS 'Code de l''unité de conditionnement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_unit_manu" IS 'Numéro de l''unité de manutention';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cd_unit_manu" IS 'Code de l''unité de conditionnement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_mvtreel"."typ_mvt" IS 'Type du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."dte_hre_mvt" IS 'Date et heure de transaction du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."qte_mvt" IS 'Quantité du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."des_mvt" IS 'Libellé du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."com" IS 'Commentaire général';
+COMMENT ON COLUMN "obi"."art_mvtreel"."typ_genr" IS 'Type de génération (automatique ou manuel)';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_int_mvt" IS 'Numéro interne de mouvement global';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."art_mvtreel"."typ_orig_ref_mvt" IS 'Type origine référence';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_doc_mvt" IS 'Numéro de document';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_lig_mvt" IS 'Numéro de ligne';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_cad_mvt" IS 'Numéro de cadence';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cd_lot" IS 'Numéro de traçabilité';
+COMMENT ON COLUMN "obi"."art_mvtreel"."typ_orig_ref_resrv" IS 'Type origine référence réservé';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_doc_resrv" IS 'Numéro document réservé';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_lig_resrv" IS 'Numéro de ligne réservée';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_cad_resrv" IS 'Numéro cadence réservé';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_lot_trac" IS 'Numéro de lot';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cpt_cl_bnliv" IS 'No BL client';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_int_lig_bnliv" IS 'No ligne BL client';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_int_ord_fab" IS 'No OF';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_lien_ordfab_nomlien" IS 'No ligne de nomenclature OF';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cpt_bn_recep" IS 'No reception fournisseur';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_int_lig_bnrecep" IS 'No ligne reception fournisseur';
+COMMENT ON COLUMN "obi"."art_mvtreel"."px_vte" IS 'Prix de vente de ligne de BL';
+COMMENT ON COLUMN "obi"."art_mvtreel"."px_moy_pond" IS 'Prix moyen pondere lors du mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."px_revie" IS 'Prix revient theorique pour mouvement OF';
+COMMENT ON COLUMN "obi"."art_mvtreel"."px_ach" IS 'Prix achat de ligne de bon reception';
+COMMENT ON COLUMN "obi"."art_mvtreel"."pt_ann" IS 'Pointeur annulation';
+COMMENT ON COLUMN "obi"."art_mvtreel"."qte_mvt_bis" IS 'quantite en unite stok secondaire';
+COMMENT ON COLUMN "obi"."art_mvtreel"."no_us_mvt" IS 'Numero US liee au mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."cd_cau_mvt" IS 'Code cause liee au mouvement';
+COMMENT ON COLUMN "obi"."art_mvtreel"."dte_peremp" IS 'date de peremption';
+CREATE TABLE "obi"."art_obj" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art" "t_cpt" NOT NULL,
+	"cd_obj" char(7) NOT NULL,
+	"des_obj" char(35) NULL,
+	"typ_obj" char(100) NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"cd_repert_obj" char(100) NULL,
+	"typ_sto_obj" char(1) NULL,
+	"no_int_obj" integer NULL,
+	"pt_syst" "t_pt_n" NULL DEFAULT '0',
+	"pt_imp" char(1) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art", "cd_obj" )
+);
+COMMENT ON TABLE "obi"."art_obj" IS 'ART_OBJ';
+COMMENT ON COLUMN "obi"."art_obj"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_obj"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_obj"."cd_obj" IS 'Code de l''objet';
+COMMENT ON COLUMN "obi"."art_obj"."des_obj" IS 'Désignation de l''objet';
+COMMENT ON COLUMN "obi"."art_obj"."typ_obj" IS 'Type objet';
+COMMENT ON COLUMN "obi"."art_obj"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_obj"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_obj"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_obj"."cd_repert_obj" IS 'Répertoire de l''objet';
+COMMENT ON COLUMN "obi"."art_obj"."typ_sto_obj" IS 'Type de stockage objet';
+COMMENT ON COLUMN "obi"."art_obj"."no_int_obj" IS 'no objet';
+COMMENT ON COLUMN "obi"."art_obj"."pt_syst" IS 'Pointeur de stockage  (système ou utilisateur)';
+CREATE TABLE "obi"."art_pdp" (
+	"no_ste" char(2) NOT NULL,
+	"no_int_pdp" integer NOT NULL,
+	"cd_fam_pdp" char(7) NULL,
+	"no_int_art" integer NULL,
+	"dte_deb_perio" "datetime" NOT NULL,
+	"dte_fin_perio" "datetime" NOT NULL,
+	"qte" numeric(19,6) NOT NULL,
+	"aut_modif" char(7) NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	PRIMARY KEY ( "no_ste", "no_int_pdp" )
+);
+COMMENT ON TABLE "obi"."art_pdp" IS 'PDP ou PIC';
+COMMENT ON COLUMN "obi"."art_pdp"."no_ste" IS 'Société';
+COMMENT ON COLUMN "obi"."art_pdp"."no_int_pdp" IS 'No interne ligne de PDP ou PIC';
+COMMENT ON COLUMN "obi"."art_pdp"."cd_fam_pdp" IS 'Code famile PDP ou PIC';
+COMMENT ON COLUMN "obi"."art_pdp"."no_int_art" IS 'No interne article';
+COMMENT ON COLUMN "obi"."art_pdp"."dte_deb_perio" IS 'Début de la période';
+COMMENT ON COLUMN "obi"."art_pdp"."dte_fin_perio" IS 'Fin de la période';
+COMMENT ON COLUMN "obi"."art_pdp"."qte" IS 'Quantite a fabriquer';
+COMMENT ON COLUMN "obi"."art_pdp"."aut_modif" IS 'Auteur dernière modification';
+COMMENT ON COLUMN "obi"."art_pdp"."dte_hre_modif" IS 'Date et heure dernière modification';
+COMMENT ON COLUMN "obi"."art_pdp"."dte_hre_crea" IS 'Date et heure création';
+CREATE TABLE "obi"."art_pxvte" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_art_pxvte" "t_cpt" NOT NULL,
+	"no_int_art" "t_cpt" NULL,
+	"no_int_art_cl" "t_cpt" NULL,
+	"no_int_art_ctl" "t_cpt" NULL,
+	"cd_ctl" "t_cd" NULL,
+	"cd_proc" char(35) NULL,
+	"no_int_cl_dmd" integer NULL,
+	"no_int_cl_dmd_lig" integer NULL,
+	"cd_vti" char(3) NULL,
+	"typ_art_vte" "t_typ1" NOT NULL,
+	"qte" "t_qte" NULL DEFAULT 0,
+	"aut_modif" "t_auteur" NOT NULL,
+	"dte_hre_crea" "datetime" NULL,
+	"dte_hre_modif" "datetime" NULL,
+	"coef_unit_qte" "t_coef_conv" NULL DEFAULT 1,
+	"typ_prise_cpte" "t_typ2" NULL,
+	"typ_px_fact" char(2) NULL DEFAULT 'CD',
+	"typ_sais_tf" char(2) NULL,
+	"pt_imp" "t_pt_o" NULL DEFAULT '1',
+	"no_int_tf" integer NULL,
+	"pt_forf" "t_pt_n" NULL DEFAULT '0',
+	"qte_frs" "t_qte" NULL DEFAULT 0,
+	"des_tf" char(35) NULL,
+	"coef" numeric(19,6) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_art_pxvte" )
+);
+COMMENT ON TABLE "obi"."art_pxvte" IS 'Prix de vente article';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_art_pxvte" IS 'Numéro interne du prix de vente';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_art" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_art_cl" IS 'Numéro interne de l''article (système)';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_art_ctl" IS 'Compteur interne article';
+COMMENT ON COLUMN "obi"."art_pxvte"."cd_ctl" IS 'Code catalogue';
+COMMENT ON COLUMN "obi"."art_pxvte"."cd_proc" IS 'Code processus';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_cl_dmd" IS 'no interne demande';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_cl_dmd_lig" IS 'no interne ligne demande';
+COMMENT ON COLUMN "obi"."art_pxvte"."cd_vti" IS 'Code ventilation comptable';
+COMMENT ON COLUMN "obi"."art_pxvte"."typ_art_vte" IS 'Type Article vente';
+COMMENT ON COLUMN "obi"."art_pxvte"."qte" IS 'Quantité';
+COMMENT ON COLUMN "obi"."art_pxvte"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."art_pxvte"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_pxvte"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."art_pxvte"."coef_unit_qte" IS 'Coefficient de conversion pour l''unité de quantité';
+COMMENT ON COLUMN "obi"."art_pxvte"."typ_prise_cpte" IS 'Type prise en compte';
+COMMENT ON COLUMN "obi"."art_pxvte"."typ_px_fact" IS 'Type de valorisation  (date de commande, date de livraison prévue,...)';
+COMMENT ON COLUMN "obi"."art_pxvte"."typ_sais_tf" IS 'Lieu de saisie';
+COMMENT ON COLUMN "obi"."art_pxvte"."pt_imp" IS 'Pointeur impression  à réaliser';
+COMMENT ON COLUMN "obi"."art_pxvte"."no_int_tf" IS 'Numéro interne de tarif';
+COMMENT ON COLUMN "obi"."art_pxvte"."des_tf" IS 'Désignation de la ligne de prix';
+COMMENT ON COLUMN "obi"."art_pxvte"."coef" IS 'Coefficient prix';
+CREATE TABLE "DBA"."ARTICLEM" (
+	"AMCLEUNIK" varchar(100) NULL,
+	"COARTI" varchar(100) NULL,
+	"DESA1" varchar(100) NULL,
+	"DESA2" varchar(100) NULL,
+	"DESA3" varchar(100) NULL,
+	"LOTIE" varchar(100) NULL,
+	"FLAGCC" varchar(100) NULL,
+	"DIM1" varchar(100) NULL,
+	"DIM2" varchar(100) NULL,
+	"DIM3" varchar(100) NULL,
+	"DIM4" varchar(100) NULL,
+	"DIM5" varchar(100) NULL,
+	"NUANCE" varchar(100) NULL,
+	"ETATMAT" varchar(100) NULL,
+	"CODENATURE" varchar(100) NULL,
+	"QSECURITE" varchar(100) NULL,
+	"QMAX" varchar(100) NULL,
+	"QTEMAXI" varchar(100) NULL,
+	"PCONSTANT" varchar(100) NULL,
+	"PRIXART" varchar(100) NULL,
+	"FOURN" varchar(100) NULL,
+	"COFA" varchar(100) NULL,
+	"DEPRECIATION" varchar(100) NULL,
+	"NBDEPRECIE" varchar(100) NULL,
+	"DATDEPRECIE" varchar(100) NULL,
+	"DAT" varchar(100) NULL,
+	"DATINVENT" varchar(100) NULL,
+	"NBLFOURN" varchar(100) NULL,
+	"COBC" varchar(100) NULL,
+	"QTECDE" varchar(100) NULL,
+	"PMP" varchar(100) NULL,
+	"OBS" varchar(100) NULL,
+	"OBSINTERNE" varchar(100) NULL,
+	"BESOIN" varchar(100) NULL,
+	"NAF" varchar(100) NULL,
+	"SORTIE" varchar(100) NULL,
+	"KGMT" varchar(100) NULL,
+	"POIDSNET" varchar(100) NULL,
+	"POIDS" varchar(100) NULL,
+	"NUPL" varchar(100) NULL,
+	"FIMAGE" varchar(100) NULL,
+	"UniteGest" varchar(100) NULL,
+	"TYPREAP" varchar(100) NULL,
+	"TPSREAP" varchar(100) NULL,
+	"QMINREAP" varchar(100) NULL,
+	"DELAIREGRP" varchar(100) NULL,
+	"COMPT" varchar(100) NULL,
+	"COMPTECEE" varchar(100) NULL,
+	"COMPTEETRANGER" varchar(100) NULL,
+	"ANALYTIQ" varchar(100) NULL,
+	"COMPTEEXOTVA" varchar(100) NULL,
+	"DERNPRIX" varchar(100) NULL,
+	"LIBRETXT1" varchar(100) NULL,
+	"LIBRETXT2" varchar(100) NULL,
+	"LIBRETXT3" varchar(100) NULL,
+	"LIBRETXT4" varchar(100) NULL,
+	"LIBRETXT5" varchar(100) NULL,
+	"LIBRETXT6" varchar(100) NULL,
+	"LIBRETXT7" varchar(100) NULL,
+	"LIBRENUM1" varchar(100) NULL,
+	"LIBRENUM2" varchar(100) NULL,
+	"LIBREOBS" varchar(100) NULL,
+	"CHUTE" varchar(100) NULL,
+	"MAGASIN" varchar(100) NULL,
+	"BLOCAGE" varchar(100) NULL,
+	"ABC" varchar(100) NULL,
+	"CODEDOUANE" varchar(100) NULL,
+	"NBJRELANCE" varchar(100) NULL,
+	"COFOU" varchar(100) NULL,
+	"COEF" varchar(100) NULL,
+	"DATESO" varchar(100) NULL,
+	"GestionStock" varchar(100) NULL,
+	"REFPALETTE" varchar(100) NULL,
+	"NBCARPALETTE" varchar(100) NULL,
+	"CODEGESTION" varchar(100) NULL,
+	"UnitePrix" varchar(100) NULL,
+	"COMPTDOMTOM" varchar(100) NULL,
+	"NPV" varchar(100) NULL,
+	"GESTIONNAIRE" varchar(100) NULL,
+	"QMIN" varchar(100) NULL,
+	"STOCKFINH" varchar(100) NULL,
+	"DATEFINH" varchar(100) NULL,
+	"VOLUME" varchar(100) NULL,
+	"FAMNUANCE1" varchar(100) NULL,
+	"FAMNUANCE2" varchar(100) NULL,
+	"COFACOARTI" varchar(100) NULL,
+	"COFADESA1" varchar(100) NULL,
+	"COFALIBRETXT1" varchar(100) NULL
+);
+CREATE TABLE "admin"."cd_couleur" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_couleur" integer NOT NULL,
+	"des_couleur" char(50) NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL DEFAULT current user,
+	PRIMARY KEY ( "no_ste", "cd_couleur" )
+);
+COMMENT ON COLUMN "admin"."cd_couleur"."no_ste" IS 'Numero de la societe';
+COMMENT ON COLUMN "admin"."cd_couleur"."cd_couleur" IS 'Code couleur definie par access';
+COMMENT ON COLUMN "admin"."cd_couleur"."des_couleur" IS 'Designation couleur';
+COMMENT ON COLUMN "admin"."cd_couleur"."dte_hre_crea" IS 'Date et heure de creation';
+COMMENT ON COLUMN "admin"."cd_couleur"."dte_hre_modif" IS 'Date et heure de modification';
+COMMENT ON COLUMN "admin"."cd_couleur"."aut_modif" IS 'Auteur de la modification';
+CREATE TABLE "obi"."certif" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_certif" integer NOT NULL,
+	"no_affic" integer NULL,
+	"no_certif" integer NULL,
+	"no_lot" char(12) NULL,
+	"com" "t_com" NULL,
+	"dte_hre_crea" timestamp NOT NULL,
+	"dte_hre_modif" timestamp NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"no_int_art" integer NULL,
+	"no_int_ord_fab" integer NULL,
+	"cpt_cde_cl" integer NULL,
+	"no_int_lig_cde_cl" integer NULL,
+	"pt_imp" char(1) NULL DEFAULT '1',
+	"pt_imp_certif" char(1) NULL DEFAULT '0',
+	"nb_ex" smallint NULL DEFAULT 0,
+	"cd_cde_man" char(25) NULL,
+	"dte_hre_cde_man" timestamp NULL,
+	"cd_cl" char(7) NULL,
+	"cpt_bn_liv" integer NULL,
+	"no_int_ctrl" integer NULL,
+	"no_int_art_cl" integer NULL,
+	"no_cl_adr" integer NULL,
+	"no_int_lig_bnliv" integer NULL,
+	"cd_etat" char(25) NULL,
+	"des_etat" char(35) NULL,
+	"cd_typ_etat" char(3) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_certif" )
+);
+COMMENT ON COLUMN "obi"."certif"."no_ste" IS 'No société';
+COMMENT ON COLUMN "obi"."certif"."no_int_certif" IS 'No interne de certificat qualité';
+COMMENT ON COLUMN "obi"."certif"."no_affic" IS 'No ordre affichage';
+COMMENT ON COLUMN "obi"."certif"."no_certif" IS 'No certificat qualité';
+COMMENT ON COLUMN "obi"."certif"."no_lot" IS 'No de lot';
+COMMENT ON COLUMN "obi"."certif"."com" IS 'Commentaire';
+COMMENT ON COLUMN "obi"."certif"."dte_hre_crea" IS 'Date création';
+COMMENT ON COLUMN "obi"."certif"."dte_hre_modif" IS 'Date modification';
+COMMENT ON COLUMN "obi"."certif"."aut_modif" IS 'Auteur';
+COMMENT ON COLUMN "obi"."certif"."no_int_art" IS 'No article technique';
+COMMENT ON COLUMN "obi"."certif"."no_int_ord_fab" IS 'No ordre fabrication';
+COMMENT ON COLUMN "obi"."certif"."cpt_cde_cl" IS 'No commande client';
+COMMENT ON COLUMN "obi"."certif"."no_int_lig_cde_cl" IS 'No ligne commande client';
+COMMENT ON COLUMN "obi"."certif"."pt_imp" IS 'A imprimer';
+COMMENT ON COLUMN "obi"."certif"."pt_imp_certif" IS 'Imprimé';
+COMMENT ON COLUMN "obi"."certif"."nb_ex" IS 'Nombre exemplaires';
+COMMENT ON COLUMN "obi"."certif"."cd_cde_man" IS 'No commande manuelle';
+COMMENT ON COLUMN "obi"."certif"."dte_hre_cde_man" IS 'Date commande manuelle';
+COMMENT ON COLUMN "obi"."certif"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."certif"."cpt_bn_liv" IS 'No de BL';
+COMMENT ON COLUMN "obi"."certif"."no_int_ctrl" IS 'No interne contrôle';
+COMMENT ON COLUMN "obi"."certif"."no_int_art_cl" IS 'No interne article client';
+COMMENT ON COLUMN "obi"."certif"."no_cl_adr" IS 'No adresse client';
+COMMENT ON COLUMN "obi"."certif"."no_int_lig_bnliv" IS 'No de ligne de BL';
+COMMENT ON COLUMN "obi"."certif"."cd_etat" IS 'Code état';
+COMMENT ON COLUMN "obi"."certif"."des_etat" IS 'Désignation état';
+COMMENT ON COLUMN "obi"."certif"."cd_typ_etat" IS 'Type état';
+CREATE TABLE "obi"."certif_lig" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"no_int_certif" integer NOT NULL,
+	"no_certif_lig" integer NOT NULL,
+	"no_int_car" integer NULL,
+	"cd_car" char(7) NULL,
+	"no_int_art" integer NULL,
+	"cd_decis" char(7) NULL,
+	"fmt_val_nml" char(20) NULL,
+	"fmt_tol" char(20) NULL,
+	"eff" integer NULL,
+	"nb_echant" integer NULL,
+	"val_nml" numeric(19,6) NULL,
+	"tol_inf" numeric(19,6) NULL,
+	"tol_sup" numeric(19,6) NULL,
+	"mes_min" numeric(19,6) NULL,
+	"mes_max" numeric(19,6) NULL,
+	"nb_ht_inf" numeric(19,6) NULL,
+	"nb_ht_sup" numeric(19,6) NULL,
+	"cd_critc" char(10) NULL,
+	"cp" numeric(19,6) NULL,
+	"cpk" numeric(19,6) NULL,
+	"cam" numeric(19,6) NULL,
+	"moyenne" numeric(19,6) NULL,
+	"ec_typ" numeric(19,6) NULL,
+	"typ_ctrl_car" char(1) NULL,
+	PRIMARY KEY ( "no_ste", "no_int_certif", "no_certif_lig" )
+);
+COMMENT ON COLUMN "obi"."certif_lig"."no_ste" IS 'No société';
+COMMENT ON COLUMN "obi"."certif_lig"."no_int_certif" IS 'No certificat qualité';
+COMMENT ON COLUMN "obi"."certif_lig"."no_certif_lig" IS 'No ligne de certificat qualité';
+COMMENT ON COLUMN "obi"."certif_lig"."no_int_car" IS 'No interne caractéristique';
+COMMENT ON COLUMN "obi"."certif_lig"."cd_car" IS 'Code caractéristique';
+COMMENT ON COLUMN "obi"."certif_lig"."cd_decis" IS 'Code décision';
+COMMENT ON COLUMN "obi"."certif_lig"."fmt_val_nml" IS 'Format valeur nominale';
+COMMENT ON COLUMN "obi"."certif_lig"."fmt_tol" IS 'Format tolérances';
+COMMENT ON COLUMN "obi"."certif_lig"."eff" IS 'Effectif';
+COMMENT ON COLUMN "obi"."certif_lig"."nb_echant" IS 'Nombre échantillons';
+COMMENT ON COLUMN "obi"."certif_lig"."val_nml" IS 'Valeur nominale';
+COMMENT ON COLUMN "obi"."certif_lig"."tol_inf" IS 'Tolérance inférieure';
+COMMENT ON COLUMN "obi"."certif_lig"."tol_sup" IS 'Tolérance supérieure';
+COMMENT ON COLUMN "obi"."certif_lig"."mes_min" IS 'Mesure minimale';
+COMMENT ON COLUMN "obi"."certif_lig"."mes_max" IS 'Mesure maximale';
+COMMENT ON COLUMN "obi"."certif_lig"."nb_ht_inf" IS 'Nombre hors tolérance inférieure';
+COMMENT ON COLUMN "obi"."certif_lig"."nb_ht_sup" IS 'Nombre hors tolérance supérieure';
+COMMENT ON COLUMN "obi"."certif_lig"."cd_critc" IS 'Code de la criticité';
+COMMENT ON COLUMN "obi"."certif_lig"."cp" IS 'Cp ou CAP';
+COMMENT ON COLUMN "obi"."certif_lig"."cpk" IS 'Cpk';
+COMMENT ON COLUMN "obi"."certif_lig"."cam" IS 'CAM';
+COMMENT ON COLUMN "obi"."certif_lig"."moyenne" IS 'Moyenne';
+COMMENT ON COLUMN "obi"."certif_lig"."ec_typ" IS 'Ecart-type';
+COMMENT ON COLUMN "obi"."certif_lig"."typ_ctrl_car" IS 'Mode de contrôle';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"c_no_int_proc_gamope" integer NULL,
+	"c_cd_unit" char(3) NULL,
+	"c_cd_unit_tps_prod" char(3) NULL,
+	"c_cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"c_qte" numeric(19,6) NULL,
+	"c_typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"c_no_aff" integer NULL,
+	"c_no_int_ressopeproc" integer NULL,
+	"c_cd_moy" char(8) NULL,
+	"c_typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_typ_ress" char(1) NULL,
+	"c_pt_def" char(1) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"c_cd_cat_art_comp" char(2) NULL,
+	"c_cd_art_comp" char(25) NULL,
+	"c_indice_comp" char(4) NULL,
+	"c_cd_unit_sto_comp" char(3) NULL,
+	"c_qte_comp" numeric(19,6) NULL,
+	"c_no_affic" integer NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_1" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"no_int_proc_gamope" integer NULL,
+	"cd_unit" char(3) NULL,
+	"cd_unit_tps_prod" char(3) NULL,
+	"cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"qte" numeric(19,6) NULL,
+	"typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"no_int_ressopeproc" integer NULL,
+	"cd_moy" char(8) NULL,
+	"typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_ress_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"typ_ress" char(1) NULL,
+	"pt_def" char(1) NULL,
+	"c_dbctchar_cd_ctchar" char(7) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_1" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_2" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"no_int_proc_gamope" integer NULL,
+	"cd_unit" char(3) NULL,
+	"cd_unit_tps_prod" char(3) NULL,
+	"cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"qte" numeric(19,6) NULL,
+	"typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"no_int_ressopeproc" integer NULL,
+	"cd_moy" char(8) NULL,
+	"typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_ress_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"typ_ress" char(1) NULL,
+	"pt_def" char(1) NULL,
+	"c_dbctchar_cd_ctchar" char(7) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_2" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_3" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"no_int_proc_gamope" integer NULL,
+	"cd_unit" char(3) NULL,
+	"cd_unit_tps_prod" char(3) NULL,
+	"cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"qte" numeric(19,6) NULL,
+	"typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"no_int_ressopeproc" integer NULL,
+	"c_cd_moy" char(8) NULL,
+	"c_typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_ress_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"typ_ress" char(1) NULL,
+	"pt_def" char(1) NULL,
+	"c_dbctchar_cd_ctchar" char(7) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_3" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_4" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"no_int_proc_gamope" integer NULL,
+	"cd_unit" char(3) NULL,
+	"cd_unit_tps_prod" char(3) NULL,
+	"cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"qte" numeric(19,6) NULL,
+	"typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"no_int_ressopeproc" integer NULL,
+	"c_cd_moy" char(8) NULL,
+	"c_typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_ress_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"typ_ress" char(1) NULL,
+	"pt_def" char(1) NULL,
+	"c_dbctchar_cd_ctchar" char(7) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_4" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_5" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"no_int_proc_gamope" integer NULL,
+	"cd_unit" char(3) NULL,
+	"cd_unit_tps_prod" char(3) NULL,
+	"cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"qte" numeric(19,6) NULL,
+	"typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"no_int_ressopeproc" integer NULL,
+	"c_cd_moy" char(8) NULL,
+	"c_typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_ress_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"typ_ress" char(1) NULL,
+	"pt_def" char(1) NULL,
+	"c_dbctchar_cd_ctchar" char(7) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_5" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_6" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"cd_art_stat" char(7) NULL,
+	"cd_unit_sto" char(3) NULL,
+	"cd_cat_art" char(2) NULL,
+	"cd_art" char(25) NULL,
+	"nrm_art_b" char(35) NULL,
+	"indice" char(4) NULL,
+	"cd_unit_pds" char(3) NULL,
+	"typ_appro" char(1) NULL,
+	"pds_net" numeric(19,6) NULL,
+	"qte_sto_sec" numeric(19,6) NULL,
+	"qte_sto_max" numeric(19,6) NULL,
+	"px_fab" numeric(19,6) NULL,
+	"cd_unit_px_sto" char(3) NULL,
+	"cd_mon" char(3) NULL,
+	"c_proces_qte_fab" numeric(19,6) NULL,
+	"no_int_proc_gamope" integer NULL,
+	"cd_unit" char(3) NULL,
+	"cd_unit_tps_prod" char(3) NULL,
+	"cd_oper" char(8) NULL,
+	"c_proc_gamope_des" char(35) NULL,
+	"qte" numeric(19,6) NULL,
+	"typ_dur" char(1) NULL,
+	"c_proc_gamope_qte_fab" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"no_int_ressopeproc" integer NULL,
+	"c_cd_moy" char(8) NULL,
+	"c_typ_moy" char(1) NULL,
+	"c_cd_perso" char(7) NULL,
+	"c_ress_cd_ctchar" char(7) NULL,
+	"c_cd_fo" char(7) NULL,
+	"c_cd_compt" char(7) NULL,
+	"typ_ress" char(1) NULL,
+	"pt_def" char(1) NULL,
+	"c_dbctchar_cd_ctchar" char(7) NULL,
+	"c_cd_ctchar" char(7) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_6" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "obi"."cgr_art_proc_gam_nom_det_7" (
+	"no_ste" char(2) NULL,
+	"no_int_art" integer NULL,
+	"c_cd_cat_art_comp" char(2) NULL,
+	"c_no_int_art_comp" integer NULL,
+	"c_cd_art_comp" char(25) NULL,
+	"c_indice_comp" char(4) NULL,
+	"qte" numeric(19,6) NULL,
+	"c_coef_unit_comp" numeric(19,6) NULL,
+	"coef_rebut" numeric(19,6) NULL,
+	"qte_rebut" numeric(19,6) NULL,
+	"c_cd_unit_sto_comp" char(3) NULL,
+	"qte_conv" numeric(19,6) NULL,
+	"no_affic" integer NULL,
+	"c_coef_comp" numeric(19,6) NULL,
+	"c_qte_comp" numeric(19,6) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_art_proc_gam_nom_det_7" IS 'Table utilisée dans cgr_art_proc_gam_nom';
+CREATE TABLE "admin"."cgr_banques" (
+	"no_ste" char(2) NOT NULL,
+	"code" char(10) NOT NULL,
+	"nom_banque" char(100) NULL,
+	"Chaine1" char(10) NULL,
+	"IBAN" char(100) NULL,
+	"Chaine2" char(10) NULL,
+	"BIC" char(100) NULL,
+	"mention_libre" char(30) NULL,
+	PRIMARY KEY ( "no_ste", "code" )
+);
+CREATE TABLE "obi"."cgr_bes_prev_fo" (
+	"no_ste" char(2) NULL,
+	"c_cd_cat_art_comp" "t_typ2" NULL,
+	"c_cd_art_comp" "t_cd_art" NULL,
+	"c_indice_comp" char(4) NULL,
+	"c_no_int_art_comp" "t_cpt" NULL,
+	"c_pt_multi_fo" char(1) NULL,
+	"c_cd_unit_sto_comp" char(3) NULL,
+	"c_annmois" char(7) NULL,
+	"c_nb_mois_per" "t_qte" NULL DEFAULT 0,
+	"c_cumul_rar" numeric(19,6) NULL,
+	"c_bes_prev_mois" numeric(19,6) NULL,
+	"c_qte_restante_mois" numeric(19,6) NULL,
+	"c_bes_prev_mois_fo" numeric(19,6) NULL,
+	"no_int_art_fo" integer NULL,
+	"cd_fo" "t_cd" NULL,
+	"des_fo" char(35) NULL,
+	"cd_lang" char(3) NULL,
+	"cd_art" "t_cd_art" NULL,
+	"indice" char(4) NULL,
+	"des_art_a" "t_des_art" NULL,
+	"des_art_b" "t_des_art" NULL,
+	"cpt_cde_fo" "t_cpt" NULL,
+	"no_int_lig_cde_fo" integer NULL,
+	"des_ste" char(35) NULL,
+	"c_adr" char(180) NULL,
+	"c_tel_fax" char(50) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_bes_prev_fo" IS 'Table utilisée dans cgr_bes_prev_fournisseur';
+CREATE TABLE "obi"."cgr_bes_prev_fo_art_fo" (
+	"no_ste" char(2) NULL,
+	"no_int_art" "t_cpt" NULL,
+	"typ_appro" char(1) NULL,
+	"c_pt_multi_fo" char(1) NULL,
+	"no_int_art_fo" integer NULL,
+	"cd_fo" "t_cd" NULL,
+	"des_fo" char(35) NULL,
+	"cd_lang" char(3) NULL,
+	"cd_art" "t_cd_art" NULL,
+	"indice" char(4) NULL,
+	"des_art_a" "t_des_art" NULL,
+	"des_art_b" "t_des_art" NULL,
+	"pou_repar" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"cpt_cde_fo" "t_cpt" NULL,
+	"no_int_lig_cde_fo" integer NULL,
+	"typ_art_fo_cde_fo" char(1) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_bes_prev_fo_art_fo" IS 'Table utilisée dans cgr_bes_prev_fournisseur';
+CREATE TABLE "obi"."cgr_bes_prev_fo_art_fo_1" (
+	"no_ste" char(2) NULL,
+	"no_int_art" "t_cpt" NULL,
+	"typ_appro" char(1) NULL,
+	"c_pt_multi_fo" char(1) NULL,
+	"no_int_art_fo" integer NULL,
+	"cd_fo" "t_cd" NULL,
+	"des_fo" char(35) NULL,
+	"cd_lang" char(3) NULL,
+	"cd_art" "t_cd_art" NULL,
+	"indice" char(4) NULL,
+	"des_art_a" "t_des_art" NULL,
+	"des_art_b" "t_des_art" NULL,
+	"pou_repar" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"cpt_cde_fo" "t_cpt" NULL,
+	"typ_cde" char(1) NULL,
+	"no_int_lig_cde_fo" integer NULL,
+	"typ_art_fo_cde_fo" char(1) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_bes_prev_fo_art_fo_1" IS 'Table utilisée dans cgr_bes_prev_fournisseur';
+CREATE TABLE "obi"."cgr_bes_prev_fo_art_fo_2" (
+	"no_ste" char(2) NULL,
+	"no_int_art" "t_cpt" NULL,
+	"typ_appro" char(1) NULL,
+	"c_pt_multi_fo" char(1) NULL,
+	"no_int_art_fo" integer NULL,
+	"cd_fo" "t_cd" NULL,
+	"des_fo" char(35) NULL,
+	"cd_lang" char(3) NULL,
+	"cd_art" "t_cd_art" NULL,
+	"indice" char(4) NULL,
+	"des_art_a" "t_des_art" NULL,
+	"des_art_b" "t_des_art" NULL,
+	"pou_repar" numeric(19,6) NULL,
+	"no_aff" integer NULL,
+	"cpt_cde_fo" "t_cpt" NULL,
+	"typ_cde" char(1) NULL,
+	"no_int_lig_cde_fo" integer NULL,
+	"typ_art_fo_cde_fo" char(1) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_bes_prev_fo_art_fo_2" IS 'Table utilisée dans cgr_bes_prev_fournisseur';
+CREATE TABLE "obi"."cgr_bes_prev_fo_det" (
+	"no_ste" char(2) NULL,
+	"c_cd_cat_art_comp" "t_typ2" NULL,
+	"c_cd_art_comp" "t_cd_art" NULL,
+	"c_indice_comp" char(4) NULL,
+	"c_no_int_art_comp" "t_cpt" NULL,
+	"c_cd_unit_sto_comp" char(3) NULL,
+	"c_delta_stock_sec" numeric(19,6) NULL,
+	"c_annmois" char(7) NULL,
+	"c_no_mois" integer NULL,
+	"c_cumul_qte" numeric(19,6) NULL,
+	"c_nb_mois_per" "t_qte" NULL DEFAULT 0,
+	"c_cumul_rar" numeric(19,6) NULL,
+	"c_qte_restante_mois_ant" numeric(19,6) NULL,
+	"c_cumul_qte_mois" numeric(19,6) NULL,
+	"c_bes_prev_mois" numeric(19,6) NULL,
+	"c_qte_restante_mois" numeric(19,6) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_bes_prev_fo_det" IS 'Table utilisée dans cgr_bes_prev_fournisseur';
+CREATE TABLE "obi"."cgr_bes_prev_fo_det_1" (
+	"no_ste" char(2) NULL,
+	"c_cd_cat_art_comp" "t_typ2" NULL,
+	"c_cd_art_comp" "t_cd_art" NULL,
+	"c_indice_comp" char(4) NULL,
+	"c_no_int_art_comp" "t_cpt" NULL,
+	"c_coef_unit_comp" numeric(19,6) NULL,
+	"c_cd_unit_sto_comp" char(3) NULL,
+	"c_delta_stock_sec" numeric(19,6) NULL,
+	"c_annmois_integer" integer NULL,
+	"c_annmois_today_integer" integer NULL,
+	"c_annmois" char(7) NULL,
+	"c_no_mois" integer NULL,
+	"c_cumul_qte" numeric(19,6) NULL,
+	"c_nb_mois_per" "t_qte" NULL DEFAULT 0,
+	"c_cumul_rar" numeric(19,6) NULL,
+	"c_dte_hre_fin_calcul" "datetime" NULL
+);
+COMMENT ON TABLE "obi"."cgr_bes_prev_fo_det_1" IS 'Table utilisée dans cgr_bes_prev_fournisseur';

@@ -1,0 +1,6 @@
+D:\Scripts\C#\70483\threading1.1\list1.3\bin\Debug\list1.3.exe.config
+D:\Scripts\C#\70483\threading1.1\list1.3\bin\Debug\list1.3.exe
+D:\Scripts\C#\70483\threading1.1\list1.3\bin\Debug\list1.3.pdb
+D:\Scripts\C#\70483\threading1.1\list1.3\obj\Debug\list1.3.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\70483\threading1.1\list1.3\obj\Debug\list1.3.exe
+D:\Scripts\C#\70483\threading1.1\list1.3\obj\Debug\list1.3.pdb

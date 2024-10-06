@@ -1,0 +1,231 @@
+CREATE TABLE "obi"."cl" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_cl" "t_cd" NOT NULL,
+	"cd_rep" "t_cd" NULL,
+	"cd_reg" "t_cd" NULL,
+	"cd_sectr_cl" "t_cd" NULL,
+	"cd_cnd_emb" char(2) NULL,
+	"cd_cnd_port" char(1) NULL,
+	"cd_mode_tro" numeric(2,0) NULL,
+	"cd_rub_prof" char(7) NULL,
+	"cd_inc" char(3) NULL,
+	"cd_cl_rego" "t_cd" NULL,
+	"cd_ctl" "t_cd" NULL,
+	"cd_mon" char(3) NULL,
+	"cd_cl_tf" "t_cd" NULL,
+	"cd_stat_cl" "t_cd" NULL,
+	"cd_lang" char(3) NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"aut_modif" "t_auteur" NOT NULL,
+	"tx_rem_neg" "t_tx" NULL,
+	"des_cl" "t_des_gen" NULL,
+	"cd_intl_pays" char(4) NULL,
+	"cd_intl_pays_intcom" char(4) NULL,
+	"cd_org" char(14) NULL,
+	"cd_cptl_cl" char(10) NULL,
+	"no_facto" char(10) NULL,
+	"fmt_px" "t_fmt" NULL,
+	"fmt_mnt" "t_fmt" NULL,
+	"com" "t_com" NULL,
+	"dte_deb_valid_com" "datetime" NULL,
+	"dte_fin_valid_com" "datetime" NULL,
+	"dte_liv_cpte" numeric(2,0) NULL,
+	"jo_ar_fact" numeric(2,0) NULL,
+	"mnt_max_rel" "t_mnt" NULL DEFAULT 0,
+	"jo_ar_rel_cl" numeric(2,0) NULL,
+	"tx_rem" "t_tx" NULL,
+	"tx_esc" "t_tx" NULL,
+	"txe_parf" "t_tx" NULL,
+	"des_bnq" "t_des_gen" NULL,
+	"vil" "t_des_gen" NULL,
+	"cd_bnq" char(5) NULL,
+	"cd_gui" char(5) NULL,
+	"cd_cpte" char(11) NULL,
+	"rib" char(2) NULL,
+	"mnt_max_ass_cred" "t_mnt" NULL DEFAULT 0,
+	"typ_rego_imp_liv" "t_typ1" NULL,
+	"typ_rego_imp_fact" "t_typ1" NULL,
+	"typ_liv" "t_typ1" NULL DEFAULT '0',
+	"tol_liv" "t_tx" NULL,
+	"typ_del" "t_typ1" NULL,
+	"pt_dero" "t_pt_n" NULL DEFAULT '0',
+	"pt_rel" "t_pt_n" NULL DEFAULT '0',
+	"freq_fact" char(1) NULL,
+	"typ_dero" char(1) NULL,
+	"pt_valid" "t_pt" NULL DEFAULT '0',
+	"cd_cptl_gene" char(10) NULL,
+	"typ_cde_gcf" char(1) NULL,
+	"typ_cde_avret" char(1) NULL,
+	"typ_cde_mod_synch" char(1) NULL,
+	"typ_cde_maj" char(1) NULL,
+	"typ_cde_anal_ecart" char(1) NULL,
+	"typ_liv_affec_cad" char(1) NULL,
+	"typ_liv_cad_prev" char(1) NULL,
+	"cd_freq_fact" char(1) NULL,
+	"dte_hre_fact" "datetime" NULL,
+	"pt_frs_fixe" "t_pt_n" NULL DEFAULT '0',
+	"edi_cd_vend" char(20) NULL,
+	"edi_cd_vend_lg" integer NULL,
+	"mrp_dur1" integer NULL,
+	"mrp_dur2" integer NULL,
+	"mrp_pt_eclat1" "t_pt_n" NULL DEFAULT '0',
+	"mrp_pt_eclat2" "t_pt_o" NULL DEFAULT '1',
+	"mrp_pt_eclat3" "t_pt_o" NULL DEFAULT '1',
+	"mrp_typ_perio1" char(1) NULL,
+	"mrp_typ_perio2" char(1) NULL,
+	"mrp_typ_perio3" char(1) NULL,
+	"mrp_typ_dte1" "t_pt_n" NULL DEFAULT '0',
+	"mrp_typ_dte2" "t_pt_n" NULL DEFAULT '0',
+	"mrp_typ_dte3" "t_pt_n" NULL DEFAULT '0',
+	"mrp_perio_eclat" "t_pt_n" NULL DEFAULT '0',
+	"typ_cl" char(1) NULL,
+	"aut_prefact" char(7) NULL,
+	"pt_prefact" char(1) NULL DEFAULT '0',
+	"com_ent" char(2048) NULL,
+	"com_pied" char(2048) NULL,
+	"typ_supp_cad" char(1) NULL,
+	"nb_sal" integer NULL,
+	"pour_tol_ferme" "t_tx" NULL,
+	"pour_tol_prev" "t_tx" NULL,
+	"nb_jour_mvt" integer NULL,
+	"cd_delins" char(50) NULL,
+	"cd_deljit" char(50) NULL,
+	"cd_orders" char(50) NULL,
+	"cd_aviexp" char(50) NULL,
+	"cd_invoice" char(50) NULL,
+	"val_retar" char(50) NULL,
+	"typ_supp_cad_apr" char(1) NULL,
+	"tx_rem_fact" numeric(19,6) NULL,
+	"pt_edi_prev" "t_pt_n" NULL DEFAULT '0',
+	"cd_subro" char(10) NULL,
+	"typ_tva" char(1) NULL,
+	"cd_ape" char(5) NULL,
+	"pt_bloq" char(1) NULL,
+	"indic_recep_edi" integer NULL,
+	"cd_ident" char(7) NULL,
+	"cd_identa" char(25) NULL,
+	"cd_identb" char(25) NULL,
+	"cd_identc" char(25) NULL,
+	"cd_identd" char(25) NULL,
+	"cd_identk" char(25) NULL,
+	"cd_identl" char(25) NULL,
+	"num_identa" numeric(19,6) NULL,
+	"num_identb" numeric(19,6) NULL,
+	"num_identc" numeric(19,6) NULL,
+	"num_identd" numeric(19,6) NULL,
+	"num_idente" numeric(19,6) NULL,
+	"num_identf" numeric(19,6) NULL,
+	"mnt_max_enc" numeric(19,6) NULL,
+	"pt_auto_fact" char(1) NULL,
+	"no_dern_fact" integer NULL,
+	PRIMARY KEY ( "no_ste", "cd_cl" )
+);
+COMMENT ON TABLE "obi"."cl" IS 'Client';
+COMMENT ON COLUMN "obi"."cl"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."cl"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."cl"."cd_rep" IS 'Code représentant';
+COMMENT ON COLUMN "obi"."cl"."cd_reg" IS 'Code règlement';
+COMMENT ON COLUMN "obi"."cl"."cd_sectr_cl" IS 'Code du secteur d''activité pour analyse des clients';
+COMMENT ON COLUMN "obi"."cl"."cd_cnd_emb" IS 'Code de l''emballage';
+COMMENT ON COLUMN "obi"."cl"."cd_cnd_port" IS 'Code condition port';
+COMMENT ON COLUMN "obi"."cl"."cd_mode_tro" IS 'Code du mode de transport (Galia)';
+COMMENT ON COLUMN "obi"."cl"."cd_rub_prof" IS 'Code de la rubrique professionnelle';
+COMMENT ON COLUMN "obi"."cl"."cd_inc" IS 'Code de l''incoterm';
+COMMENT ON COLUMN "obi"."cl"."cd_cl_rego" IS 'Code client';
+COMMENT ON COLUMN "obi"."cl"."cd_ctl" IS 'Code catalogue';
+COMMENT ON COLUMN "obi"."cl"."cd_mon" IS 'Code monnaie';
+COMMENT ON COLUMN "obi"."cl"."cd_cl_tf" IS 'Code client';
+COMMENT ON COLUMN "obi"."cl"."cd_stat_cl" IS 'Code de la famille regroupant les clients pour analyse statistiques';
+COMMENT ON COLUMN "obi"."cl"."cd_lang" IS 'Code de la langue';
+COMMENT ON COLUMN "obi"."cl"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."cl"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."cl"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."cl"."tx_rem_neg" IS 'Taux de remise pour les pièces de type négoce';
+COMMENT ON COLUMN "obi"."cl"."des_cl" IS 'Désignation de l''adresse du client';
+COMMENT ON COLUMN "obi"."cl"."cd_intl_pays" IS 'Désignateur du code international (1ère partie du code d''identification)';
+COMMENT ON COLUMN "obi"."cl"."cd_intl_pays_intcom" IS 'Désignateur intracommunautaire (1ère partie du code d''identification)';
+COMMENT ON COLUMN "obi"."cl"."cd_org" IS 'Code organisation (en France le no SIREN, 2ième partie du code d''identification)';
+COMMENT ON COLUMN "obi"."cl"."cd_cptl_cl" IS 'Code comptable du client';
+COMMENT ON COLUMN "obi"."cl"."no_facto" IS 'Numéro de factoring';
+COMMENT ON COLUMN "obi"."cl"."fmt_px" IS 'Format de présentation des prix';
+COMMENT ON COLUMN "obi"."cl"."fmt_mnt" IS 'Format de présentation des montants';
+COMMENT ON COLUMN "obi"."cl"."com" IS 'Commentaire général';
+COMMENT ON COLUMN "obi"."cl"."dte_deb_valid_com" IS 'Date de début de validité du commentaire';
+COMMENT ON COLUMN "obi"."cl"."dte_fin_valid_com" IS 'Date de fin de validité du commentaire';
+COMMENT ON COLUMN "obi"."cl"."dte_liv_cpte" IS 'Date de prise en compte des livraisons';
+COMMENT ON COLUMN "obi"."cl"."jo_ar_fact" IS 'Jour d''arrêt de la facturation';
+COMMENT ON COLUMN "obi"."cl"."mnt_max_rel" IS 'Montant maximum admis sur un relevé de factures';
+COMMENT ON COLUMN "obi"."cl"."jo_ar_rel_cl" IS 'Jour d''arrêté sur relevé';
+COMMENT ON COLUMN "obi"."cl"."tx_rem" IS 'Taux de remise pour les références clients (hors pièce de négoce)';
+COMMENT ON COLUMN "obi"."cl"."tx_esc" IS 'Taux d''escompte applicable';
+COMMENT ON COLUMN "obi"."cl"."txe_parf" IS 'Taxe parafiscale';
+COMMENT ON COLUMN "obi"."cl"."des_bnq" IS 'Nom de la banque du client';
+COMMENT ON COLUMN "obi"."cl"."vil" IS 'Ville';
+COMMENT ON COLUMN "obi"."cl"."cd_bnq" IS 'Code de la banque du client';
+COMMENT ON COLUMN "obi"."cl"."cd_gui" IS 'Code guichet de la banque du client';
+COMMENT ON COLUMN "obi"."cl"."cd_cpte" IS 'Code du compte de banque du client';
+COMMENT ON COLUMN "obi"."cl"."rib" IS 'Clé RIB';
+COMMENT ON COLUMN "obi"."cl"."mnt_max_ass_cred" IS 'Montant du plafond d''assurance crédit (solvabilité)';
+COMMENT ON COLUMN "obi"."cl"."typ_rego_imp_liv" IS 'Type regroupement livraison';
+COMMENT ON COLUMN "obi"."cl"."typ_rego_imp_fact" IS 'Type regroupement facturation';
+COMMENT ON COLUMN "obi"."cl"."typ_liv" IS 'Mode de livraison (sur livraison...)';
+COMMENT ON COLUMN "obi"."cl"."tol_liv" IS 'Tolérance de livraison';
+COMMENT ON COLUMN "obi"."cl"."typ_del" IS 'Expression du délai de commande';
+COMMENT ON COLUMN "obi"."cl"."pt_dero" IS 'Pointeur ligne de BL bloquée car dépassement dérogation';
+COMMENT ON COLUMN "obi"."cl"."pt_rel" IS 'Pointeur relevé';
+COMMENT ON COLUMN "obi"."cl"."freq_fact" IS 'Fréquence de facturation';
+COMMENT ON COLUMN "obi"."cl"."typ_dero" IS 'Type dérogation';
+COMMENT ON COLUMN "obi"."cl"."pt_valid" IS 'Type de valideur (interne ou externe)';
+COMMENT ON COLUMN "obi"."cl"."cd_cptl_gene" IS 'Code comptable centralisation';
+COMMENT ON COLUMN "obi"."cl"."typ_cde_gcf" IS 'Remplacement de commande ferme (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."typ_cde_avret" IS 'Expression du retard (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."typ_cde_mod_synch" IS 'Mode de contrôle de la synchronisation (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."typ_cde_maj" IS 'Mode de mise à jour des programmes (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."typ_cde_anal_ecart" IS 'Alerte sur les écarts (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."typ_liv_affec_cad" IS 'Mode d''affecation des livraison sur les cadences (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."typ_liv_cad_prev" IS 'Livraison répartie sur des cadences prévisionnelles (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl"."cd_freq_fact" IS 'Frequence facturation';
+COMMENT ON COLUMN "obi"."cl"."dte_hre_fact" IS 'Date de facture';
+COMMENT ON COLUMN "obi"."cl"."pt_frs_fixe" IS 'Frais fixe (Oui/Non)';
+COMMENT ON COLUMN "obi"."cl"."edi_cd_vend" IS 'Code vendeur';
+COMMENT ON COLUMN "obi"."cl"."edi_cd_vend_lg" IS 'Longueur de contrôle pour CSG3347 (nul Totalité)';
+COMMENT ON COLUMN "obi"."cl"."mrp_dur1" IS 'Durée court terme';
+COMMENT ON COLUMN "obi"."cl"."mrp_dur2" IS 'Durée moyen terme';
+COMMENT ON COLUMN "obi"."cl"."mrp_pt_eclat1" IS 'Eclatement du court terme';
+COMMENT ON COLUMN "obi"."cl"."mrp_pt_eclat2" IS 'Eclatement du moyen terme';
+COMMENT ON COLUMN "obi"."cl"."mrp_pt_eclat3" IS 'Eclatement du long terme';
+COMMENT ON COLUMN "obi"."cl"."mrp_typ_perio1" IS 'Horizon cadence court terme 0-Jour, 1-Semaine, 2-Mois';
+COMMENT ON COLUMN "obi"."cl"."mrp_typ_perio2" IS 'Horizon cadence moyen terme 0-Jour, 1-Semaine, 2-Mois';
+COMMENT ON COLUMN "obi"."cl"."mrp_typ_perio3" IS 'Horizon cadence long terme 0-Jour, 1-Semaine, 2-Mois';
+COMMENT ON COLUMN "obi"."cl"."mrp_typ_dte1" IS 'Expression délai court terme 0-Début, 1-Fin';
+COMMENT ON COLUMN "obi"."cl"."mrp_typ_dte2" IS 'Expression délai moyen terme 0-Début, 1-Fin';
+COMMENT ON COLUMN "obi"."cl"."mrp_typ_dte3" IS 'Expression délai long terme 0-Début, 1-Fin';
+COMMENT ON COLUMN "obi"."cl"."mrp_perio_eclat" IS 'Eclatement cadence 0-Jour, 1-Semaine';
+COMMENT ON COLUMN "obi"."cl"."typ_cl" IS 'Type de client';
+COMMENT ON COLUMN "obi"."cl"."aut_prefact" IS 'Auteur de la pré-facturation';
+COMMENT ON COLUMN "obi"."cl"."pt_prefact" IS 'Pré-facturation en cours ';
+COMMENT ON COLUMN "obi"."cl"."com_ent" IS 'Commentaire ent facture';
+COMMENT ON COLUMN "obi"."cl"."com_pied" IS 'Commentaire pied facture';
+COMMENT ON COLUMN "obi"."cl"."typ_supp_cad" IS 'Gestion des cadences hors horizon';
+COMMENT ON COLUMN "obi"."cl"."nb_sal" IS 'Nombre de salaries';
+COMMENT ON COLUMN "obi"."cl"."pour_tol_ferme" IS 'Pourcentage de tolérance variation cadence ferme';
+COMMENT ON COLUMN "obi"."cl"."pour_tol_prev" IS 'Pourcentage de tolérance variation cadence prévisionnelle';
+COMMENT ON COLUMN "obi"."cl"."nb_jour_mvt" IS 'Nb de jour pour previsionnelle a mouvementer';
+COMMENT ON COLUMN "obi"."cl"."cd_delins" IS 'Interface delins';
+COMMENT ON COLUMN "obi"."cl"."cd_deljit" IS 'Interface deljit';
+COMMENT ON COLUMN "obi"."cl"."cd_orders" IS 'Interface orders';
+COMMENT ON COLUMN "obi"."cl"."cd_aviexp" IS 'Interface aviexp';
+COMMENT ON COLUMN "obi"."cl"."cd_invoice" IS 'Interface invoice';
+COMMENT ON COLUMN "obi"."cl"."val_retar" IS 'Critère de reconnaissance des cadences retard';
+COMMENT ON COLUMN "obi"."cl"."typ_supp_cad_apr" IS 'Suppression des cadences après horizon';
+COMMENT ON COLUMN "obi"."cl"."tx_rem_fact" IS 'Taux de remise sur facture';
+COMMENT ON COLUMN "obi"."cl"."pt_edi_prev" IS 'Pilotage des cadences previsionnelles avec le message EDI';
+COMMENT ON COLUMN "obi"."cl"."cd_subro" IS 'Code de subrogation';
+COMMENT ON COLUMN "obi"."cl"."typ_tva" IS 'D = TVA au debit, E = TVA a l encaisssement';
+COMMENT ON COLUMN "obi"."cl"."cd_ape" IS 'Code APE';
+COMMENT ON COLUMN "obi"."cl"."pt_bloq" IS 'Pointeur de blocage client';
+COMMENT ON COLUMN "obi"."cl"."indic_recep_edi" IS 'periode reception programme';
+COMMENT ON COLUMN "obi"."cl"."mnt_max_enc" IS 'montant maximum encours';
+COMMENT ON COLUMN "obi"."cl"."pt_auto_fact" IS 'Pointeur auto facturation';
+COMMENT ON COLUMN "obi"."cl"."no_dern_fact" IS 'N° dernière facture';

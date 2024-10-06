@@ -1,0 +1,166 @@
+CREATE TABLE "obi"."cl_adr" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_cl" "t_cd" NOT NULL,
+	"no_cl_adr" "t_cpt" NOT NULL,
+	"cd_pays" char(2) NOT NULL,
+	"cd_tre" "t_cd" NULL,
+	"aut_modif" "t_auteur" NULL,
+	"dte_hre_crea" "datetime" NULL,
+	"dte_hre_modif" "datetime" NULL,
+	"no_aff_cl_adr" "t_cpt" NOT NULL,
+	"des_cl_adr" "t_des_gen" NULL,
+	"no_cl_adr_ext" char(10) NULL,
+	"cd_fo_cl" char(17) NULL,
+	"deno" "t_deno_ste" NULL,
+	"adr_lig_a" "t_des_gen" NULL,
+	"adr_lig_b" "t_des_gen" NULL,
+	"cd_post" char(10) NULL,
+	"vil" "t_des_gen" NULL,
+	"tlf" "t_tlf_tlc_tlx" NULL,
+	"tlc" "t_tlf_tlc_tlx" NULL,
+	"tlx" "t_tlf_tlc_tlx" NULL,
+	"nic" char(5) NULL,
+	"del_trans" "t_qte" NULL DEFAULT 0,
+	"e_mail" char(50) NULL,
+	"adr_internet" char(50) NULL,
+	"typ_cde_gcf" char(1) NULL,
+	"typ_cde_avret" char(1) NULL,
+	"pt_synch" char(1) NULL DEFAULT '0',
+	"typ_cde_mod_synch" char(1) NULL,
+	"typ_cde_maj" char(1) NULL,
+	"typ_cde_anal_ecart" char(1) NULL,
+	"typ_liv_affec_cad" char(1) NULL,
+	"typ_liv_cad_prev" char(1) NULL,
+	"edi_cd_achet" char(20) NULL,
+	"edi_cd_achet_lg" integer NULL,
+	"edi_nom_achet" char(35) NULL,
+	"edi_nom_achet_lg" integer NULL,
+	"edi_dest_cd_ser" char(37) NULL,
+	"edi_dest_cd_ser_lg" integer NULL,
+	"db_cd_pt_dest" integer NULL,
+	"lg_cd_pt_dest" integer NULL,
+	"edi_cd_fact" char(35) NULL,
+	"edi_cd_fact_lg" integer NULL,
+	"edi_cd_exp" char(35) NULL,
+	"edi_dest_cd" char(35) NULL,
+	"edi_dest_lieu" char(17) NULL,
+	"edi_cd_vend" char(20) NULL,
+	"edi_cd_vend_lg" integer NULL,
+	"cd_dest_iso_odt" char(2) NULL,
+	"edi_cd_btl" char(35) NULL,
+	"cd_zongeo" char(7) NULL,
+	"no_cee" char(14) NULL,
+	"pt_txe" char(1) NULL,
+	"pour_tol_ferme" "t_tx" NULL,
+	"pour_tol_prev" "t_tx" NULL,
+	"tel_abr" char(17) NULL,
+	"fax_abr" char(17) NULL,
+	"nb_jour_mvt" integer NULL,
+	"no_contr" char(35) NULL,
+	"no_ent" char(35) NULL,
+	"nat_cont" char(35) NULL,
+	"serveur" char(35) NULL,
+	"telem" char(35) NULL,
+	"Spec_perso" char(7) NULL,
+	"Spec" char(2048) NULL,
+	"avancement" char(2048) NULL,
+	"Com_tech" char(2048) NULL,
+	"pt_edi_prev" "t_pt_n" NULL DEFAULT '0',
+	"cd_cl_liv" char(7) NULL,
+	"no_cl_adr_liv" integer NULL,
+	"cd_cl_fact" char(7) NULL,
+	"no_cl_adr_fact" integer NULL,
+	"cd_txe" char(7) NULL,
+	"pt_imp_uc_prepa" "t_pt_n" NULL DEFAULT '0',
+	"pt_enlev" "t_pt_n" NULL DEFAULT '0',
+	"cd_delins" char(50) NULL,
+	"cd_deljit" char(50) NULL,
+	"cd_orders" char(50) NULL,
+	"cd_aviexp" char(50) NULL,
+	"cd_invoice" char(50) NULL,
+	"cd_reg_tva" char(7) NULL,
+	"des_reg_tva" char(35) NULL,
+	"com_install" char(2048) NULL,
+	PRIMARY KEY ( "no_ste", "cd_cl", "no_cl_adr" )
+);
+COMMENT ON TABLE "obi"."cl_adr" IS 'Adresse client';
+COMMENT ON COLUMN "obi"."cl_adr"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."cl_adr"."no_cl_adr" IS 'Numero de l''adresse client (ordre de création)';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_pays" IS 'Code pays';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_tre" IS 'Code du transporteur';
+COMMENT ON COLUMN "obi"."cl_adr"."aut_modif" IS 'Auteur de la dernière modification';
+COMMENT ON COLUMN "obi"."cl_adr"."dte_hre_crea" IS 'Date et heure de la création de l''enregistrement';
+COMMENT ON COLUMN "obi"."cl_adr"."dte_hre_modif" IS 'Date et heure de la modification de l''enregistrement';
+COMMENT ON COLUMN "obi"."cl_adr"."no_aff_cl_adr" IS 'Numéro d''adresse (affichage)';
+COMMENT ON COLUMN "obi"."cl_adr"."des_cl_adr" IS 'Désignation adresse client';
+COMMENT ON COLUMN "obi"."cl_adr"."no_cl_adr_ext" IS 'Numéro d''adresse donnée par le client';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_fo_cl" IS 'Référence en tant que fournisseur chez le client';
+COMMENT ON COLUMN "obi"."cl_adr"."deno" IS 'Dénomination d''une société';
+COMMENT ON COLUMN "obi"."cl_adr"."adr_lig_a" IS '1ère ligne de l''adresse';
+COMMENT ON COLUMN "obi"."cl_adr"."adr_lig_b" IS '2ième ligne de l''adresse';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_post" IS 'Code postal';
+COMMENT ON COLUMN "obi"."cl_adr"."vil" IS 'Ville';
+COMMENT ON COLUMN "obi"."cl_adr"."tlf" IS 'Numéro de téléphone';
+COMMENT ON COLUMN "obi"."cl_adr"."tlc" IS 'Numéro de télécopie';
+COMMENT ON COLUMN "obi"."cl_adr"."tlx" IS 'Numéro de télex';
+COMMENT ON COLUMN "obi"."cl_adr"."nic" IS 'NIC (complément du numéro de Siren pour construire le numéro de Siret)';
+COMMENT ON COLUMN "obi"."cl_adr"."del_trans" IS 'Délai de transport (jours)';
+COMMENT ON COLUMN "obi"."cl_adr"."e_mail" IS 'Adresse E-mail';
+COMMENT ON COLUMN "obi"."cl_adr"."adr_internet" IS 'Adresse Internet';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_cde_gcf" IS 'Remplacement de commande ferme (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_cde_avret" IS 'Expression du retard (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."pt_synch" IS 'Gestion de la synchronisation pour cette adresse (0-non,1-oui) (commandes ouvertes)';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_cde_mod_synch" IS 'Mode de contrôle de la synchronisation (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_cde_maj" IS 'Mode de mise à jour des programmes (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_cde_anal_ecart" IS 'Alerte sur les écarts (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_liv_affec_cad" IS 'Mode d''affecation des livraison sur les cadences (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."typ_liv_cad_prev" IS 'Livraison répartie sur des cadences prévisionnelles (Commande ouverte)';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_achet" IS 'Code Acheteur';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_achet_lg" IS 'Longueur de contrôle pour edi_cd_achet (nul Totalité)';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_nom_achet" IS 'Acheteur partie nom';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_nom_achet_lg" IS 'Longueur de contrôle pour edi_nom_achet (nul Totalité)';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_dest_cd_ser" IS 'Destinataire code et lieu (CSG31333+CSG3921)';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_dest_cd_ser_lg" IS 'Longueur de contrôle pour edi_dest_cd_ser (nul Totalité)';
+COMMENT ON COLUMN "obi"."cl_adr"."db_cd_pt_dest" IS 'Position de début dans CSG31333+CSG3921 du code du point de destination (nul pas de point de destination)';
+COMMENT ON COLUMN "obi"."cl_adr"."lg_cd_pt_dest" IS 'Longueur dans CSG31333+CSG3921 du code du point de destination(nul toute la longueur restante)';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_fact" IS 'Adresse facturation : département ou correspondant';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_fact_lg" IS 'Longueur de controle pour edi_cd_fact (nultotalité)';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_exp" IS 'EDI expéditeur code';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_dest_cd" IS 'EDI destinataire code';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_dest_lieu" IS 'EDI destinataire lieu';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_vend" IS 'Code vendeur';
+COMMENT ON COLUMN "obi"."cl_adr"."edi_cd_vend_lg" IS 'Longueur de contrôle pour CSG3347 (nul Totalité)';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_dest_iso_odt" IS 'Codif ISO ou Codif ODT';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_zongeo" IS 'zone geographique';
+COMMENT ON COLUMN "obi"."cl_adr"."no_cee" IS 'N° intracom';
+COMMENT ON COLUMN "obi"."cl_adr"."pt_txe" IS 'Pointeur force taxe';
+COMMENT ON COLUMN "obi"."cl_adr"."pour_tol_ferme" IS 'Pourcentage de tolérance variation cadence ferme';
+COMMENT ON COLUMN "obi"."cl_adr"."pour_tol_prev" IS 'Pourcentage de tolérance variation cadence prévisionnelle';
+COMMENT ON COLUMN "obi"."cl_adr"."tel_abr" IS 'No telephone abrege';
+COMMENT ON COLUMN "obi"."cl_adr"."fax_abr" IS 'No fax abrege';
+COMMENT ON COLUMN "obi"."cl_adr"."nb_jour_mvt" IS 'Nb de jour pour previsionnelle a mouvementer';
+COMMENT ON COLUMN "obi"."cl_adr"."no_contr" IS 'No de contrat';
+COMMENT ON COLUMN "obi"."cl_adr"."no_ent" IS 'No entite';
+COMMENT ON COLUMN "obi"."cl_adr"."nat_cont" IS 'Nature contrat';
+COMMENT ON COLUMN "obi"."cl_adr"."serveur" IS 'Serveur';
+COMMENT ON COLUMN "obi"."cl_adr"."telem" IS 'telemmaintennance';
+COMMENT ON COLUMN "obi"."cl_adr"."Spec_perso" IS 'Spec_perso';
+COMMENT ON COLUMN "obi"."cl_adr"."Spec" IS 'Spec';
+COMMENT ON COLUMN "obi"."cl_adr"."avancement" IS 'avancement';
+COMMENT ON COLUMN "obi"."cl_adr"."Com_tech" IS 'Commentaire technique';
+COMMENT ON COLUMN "obi"."cl_adr"."pt_edi_prev" IS 'Pilotage des cadences previsionnelles avec le message EDI';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_cl_liv" IS 'Client livre';
+COMMENT ON COLUMN "obi"."cl_adr"."no_cl_adr_liv" IS 'adresse Client livre';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_cl_fact" IS 'Client facture';
+COMMENT ON COLUMN "obi"."cl_adr"."no_cl_adr_fact" IS 'Adresse Client facture';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_txe" IS 'Code taxe';
+COMMENT ON COLUMN "obi"."cl_adr"."pt_imp_uc_prepa" IS 'Impression des UC/UM en préparation';
+COMMENT ON COLUMN "obi"."cl_adr"."pt_enlev" IS 'Gestion des dates enlevement';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_delins" IS 'Interface delins';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_deljit" IS 'Interface deljit';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_orders" IS 'Interface orders';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_aviexp" IS 'Interface aviexp';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_invoice" IS 'Interface invoice';
+COMMENT ON COLUMN "obi"."cl_adr"."cd_reg_tva" IS 'Code regime TVA';
+COMMENT ON COLUMN "obi"."cl_adr"."des_reg_tva" IS 'Libelle regime TVA';

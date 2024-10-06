@@ -1,0 +1,53 @@
+{
+    "parameters": {
+        "20190113": {
+            "synchronizationTime": "12:30",
+            "weatherForecast": {
+                "rainIsLightAndUnlikely": true,
+                "rainIsHeavyAndVeryLikely": false
+            },
+            "humiditiesThresholds": {
+                "5b322d26985f548d2e502c0d": {
+                    "highThreshold": 45
+                }A
+            },
+            "consumptionsThresholds": {
+                "5b22853710b43fe735c25bc3": {
+                    "highThreshold": 6,
+                    "lowThreshold": 4
+                }
+            }
+        }
+    },
+    "reports": {
+        "20190114": {
+            "lastHumidityMeasures": {
+                "5b322d26985f548d2e502c0d": {
+                    "//": "LR-MS",
+                    "lastHumidityMeasure": {
+                        "timestamp": "2018-10-10T16:18:41.333Z",
+                        "value": 50.2
+                    }
+                }
+            },
+            "wateringModules": {
+                "5b22853510b43fe735c25bbe": {
+                    "//": "LR-IP",
+                    "offCommandSentAt": "2018-10-10T16:18:41.333Z",
+                    "waterConsumptionExpected": true
+                }
+            },
+            "waterConsumptions": {
+                "5b22853710b43fe735c25bc3": {
+                    "//": "LR-FL",
+                    "total": 105,
+                    "insideWateringWindow": 0,
+                    "outsideWateringWindow": 105,
+                     "///": "the following are optional",
+                    "overconsumptionDetectedAt": "2018-10-10T16:18:41.333Z",
+                    "underconsumptionDetectedAt": "2018-10-10T16:18:41.333Z"
+                }
+            }
+        }
+    }
+}

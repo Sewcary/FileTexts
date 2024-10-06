@@ -1,0 +1,11 @@
+-------------------------------------
+parent log started
+version: 55.0.3.0
+changelist 424159341 with baseline 420341591 in a mint client based on //depot/branches/drive_fs_release_branch/420341591.1/google3
+-------------------------------------
+2022-02-22T20:58:32.526ZI [19376:log_writer_thread] instrumentation.cc:111:OpenLogFileInDirectory Logging to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\parent.txt
+2022-02-22T20:58:32.527ZI [18648:NonCelloThread] drive_fs_main.cc:154:LogExistingCrashReports No existing crash reports found.
+2022-02-22T20:58:32.527ZI [18648:NonCelloThread] drive_fs_main.cc:356:PrintCommandLine C:\Program Files\Google\Drive File Stream\55.0.3.0\GoogleDriveFS.exe --startup_mode 
+2022-02-22T20:58:59.429ZE [18648:NonCelloThread] drive_fs_main.cc:594:RunDriveFSChildProcess Process exited with code: 0x11
+2022-03-03T00:59:13.319ZE [18648:NonCelloThread] drive_fs_main.cc:594:RunDriveFSChildProcess Process exited with code: 0x11
+2022-03-07T12:00:02.070ZE [18648:NonCelloThread] drive_fs_main.cc:594:RunDriveFSChildProcess Process exited with code: 0x11

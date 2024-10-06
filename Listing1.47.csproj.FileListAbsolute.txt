@@ -1,0 +1,6 @@
+D:\Scripts\C#\70483\Listing1.47\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+D:\Scripts\C#\70483\Listing1.47\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+D:\Scripts\C#\70483\Listing1.47\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+D:\Scripts\C#\70483\Listing1.47\ConsoleApp1\obj\Debug\Listing1.47.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\70483\Listing1.47\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+D:\Scripts\C#\70483\Listing1.47\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

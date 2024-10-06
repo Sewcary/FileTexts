@@ -1,0 +1,8 @@
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\bin\Debug\netcoreapp2.1\GrantManager.Data.deps.json
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\bin\Debug\netcoreapp2.1\GrantManager.Data.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\bin\Debug\netcoreapp2.1\GrantManager.Data.pdb
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\obj\Debug\netcoreapp2.1\GrantManager.Data.csprojAssemblyReference.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\obj\Debug\netcoreapp2.1\GrantManager.Data.AssemblyInfoInputs.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\obj\Debug\netcoreapp2.1\GrantManager.Data.AssemblyInfo.cs
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\obj\Debug\netcoreapp2.1\GrantManager.Data.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Data\obj\Debug\netcoreapp2.1\GrantManager.Data.pdb

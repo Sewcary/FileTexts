@@ -1,0 +1,7 @@
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\bin\Debug\Listing1.46.exe.config
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\bin\Debug\Listing1.46.exe
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\bin\Debug\Listing1.46.pdb
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\obj\Debug\Listing1.46.csprojAssemblyReference.cache
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\obj\Debug\Listing1.46.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\obj\Debug\Listing1.46.exe
+D:\Scripts\C#\70483\Listing1.46\Listing1.46\obj\Debug\Listing1.46.pdb

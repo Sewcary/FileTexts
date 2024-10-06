@@ -1,0 +1,34 @@
+"""
+import requests
+import json
+
+fichier = open('2018-12-26 181831-627000.md', 'r')
+contenu = fichier.read()
+f=open('add.json','r')
+# chaine=f.read().replace('noteText',contenu)
+print (len(contenu))
+i=0
+while (len(contenu)>0 ):
+    i=i+1
+    f=open('add.json','r')
+    envoi  = contenu[0:2000]
+    contenu = contenu[2000:len(contenu)]
+    
+
+    chaine=f.read().replace('noteText',envoi)
+    chaine=chaine.replace('noteTitle',fichier.name[:-3]+ "-" + str( i))
+    f.close()
+
+
+    f=open('add2.json','w')
+    f.write(chaine)
+    f.close()
+    API_ENDPOINT = "https://api.notion.com/v1/pages"
+    HEADERS =  {"Authorization": "secret_SnQthEmOkM2DUKO0CaNu0WXlyzT1zYlROzWJ904aVRB", "Content-Type": "application/json" ,"Notion-Version": "2021-08-16"}
+    with open ("D:\\Downloads\\gkeep2notion-main\\add2.json", 'r') as f:
+        DATA = json.load(f, strict=False)
+    r = requests.post(API_ENDPOINT, data=json.dumps(DATA), headers=HEADERS)
+
+
+    print(r.content)
+    

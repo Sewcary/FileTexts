@@ -1,0 +1,10 @@
+﻿Ce répertoire est un cache d'implémentation. Les fichiers qui s'y trouvent sont en lecture seule grâce aux permissions du système de fichiers. Cela les empêche d'être supprimés normalement.
+
+Si vous souhaitez supprimer une seule implémentation, vous pouvez utiliser cette ligne de commande :
+0install store remove IMPLEMENTATION-ID
+
+Si vous souhaitez supprimer l'ensemble de ce répertoire, vous pouvez utiliser cette ligne de commande :
+0install store purge C:\Users\Sewcary\AppData\Local\0install.net\implementations
+
+Si vous souhaitez supprimer l'intégralité de ce répertoire sans utiliser Zero Install, vous pouvez utiliser cette ligne de commande :
+icacls C:\Users\Sewcary\AppData\Local\0install.net\implementations /t /q /c /reset; rm -Recurse C:\Users\Sewcary\AppData\Local\0install.net\implementations

@@ -1,0 +1,87 @@
+[Execute SQL Task] Error: Executing the query "ALTER INDEX [IDX_RAP.CONTRAT_STG] ON [ tmp].[RAP.C..." failed with the following error: "Cannot find the object " tmp.RAP.CONTRAT_STG" because it does not exist or you do not have permissions.". Possible failure reasons: Problems with the query, "ResultSet" property not set correctly, parameters not set correctly, or connection not established correctly.
+
+and doctors  
+
+read somthin 
+
+memoru rainig 
+
+couple exercices 
+
+	 assignment 1 : 
+		& book a week 
+		
+		measure it 
+			brean hack 
+	    read for 60 sec count the number lines  
+		
+		best rate 
+		
+		25 % 50% 
+		
+		reading speed readinf comprehension 
+		
+		skil to develop 
+		
+		class about reading 
+		
+		training  
+		
+	lack of focus
+		faster readers have best comprehension because of focus
+		thinking of another thing
+		reading as a sedative
+	power of memory 
+	
+		information + empotion =>  Long term memory 
+		
+		visual peacer 
+		
+			childre use it organically 
+			
+			eyes attacted by then motion 
+			
+			how your nervous syqtem is set up 
+			
+			more in touch with their reading 
+			
+pleasure reading 
+			creativity 
+			imagination
+			empathy
+
+	Reading first
+	 
+	not when you have time 
+	
+		state when reading is important, not sedative 
+		
+	all learnign is state dependant  
+
+I  put myself in a state to be more receptive 
+
+1 % of mass
+20 % of nutriments
+
+ repetition is important 
+ 
+ 
+
+
+
+		
+		
+		
+	
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
+		

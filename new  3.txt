@@ -1,0 +1,151 @@
+Public PConnection As ADODB.Connection
+Public Const BaseDeDonnees As String = "BONUS"   'variables constantes du serveur  et de la base
+Public Const SServeur As String = "MENTAT-PC\PRIMAIRE"
+Public CMD  As ADODB.Command
+Function RcDonnees(SRequete As String) As ADODB.Recordset
+'====================================================================================================================================================================================================================================================================================================================
+' Se connecte a la base et retourne un jeu d'enregistrement
+'=======================================================================================================================================================================================
+Dim rs As ADODB.Recordset
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+    Set rs = New ADODB.Recordset
+    Set rs = PConnection.Execute(SRequete)
+    Set RcDonnees = rs
+End Function
+ Public Sub executer_Procedure(COMMANDE As ADODB.Command, SRequete As String)
+'====================================================================================================================================================================================================================================================================================================================
+' Se connecte a la base et execute une procedure
+'=======================================================================================================================================================================================
+    COMMANDE.CommandType = adCmdText
+    COMMANDE.CommandText = SRequete
+    COMMANDE.Execute
+End Sub
+Function Connection(serveur As String, BaseDeDonnees As String) As ADODB.Connection
+'====================================================================================================================================================================================================================================================================================================================
+'permet de se connecter a une  base de donnees sur un serveur et retourne la connection en question
+'=======================================================================================================================================================================================
+Dim VConnection As ADODB.Connection
+Dim sConnectionString As String
+
+    '  on cree la chaine de connexion
+    sConnectionString = "Provider=SQLOLEDB;" & _
+    " Data Source=" & serveur & ";" & _
+    "Initial Catalog=" & BaseDeDonnees & ";" & _
+    "Integrated Security=SSPI;"
+    ' on cree la connection
+    Set VConnection = New ADODB.Connection
+    VConnection.Open sConnectionString
+    Set Connection = VConnection
+ 
+End Function
+Public Function fn_DerniereLigne() As Integer
+'====================================================================================================================================================================================================================================================================================================================
+'retourne l'index de la derniere ligne d'un tableau
+'=======================================================================================================================================================================================
+    fn_DerniereLigne = ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Row
+End Function
+Public Function fn_DerniereColonne() As String
+'====================================================================================================================================================================================================================================================================================================================
+'retourne l'index de la derniere colonne d'un tableau
+'=======================================================================================================================================================================================
+    fn_DerniereColonne = ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Column
+End Function
+Public Function EcritureTable() As Boolean
+
+    Dim StrRequeteSql As String
+    Dim IntLigne As Integer
+    Dim IntDerniereLigne As Integer
+    
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+    Set CMD = New ADODB.Command
+    CMD.ActiveConnection = PConnection
+
+
+    intdernierligne = fn_DerniereLigne()
+    Call executer_Procedure(CMD, "communication.SPW_VIDER_TEMPO")
+    IntDerniereLigne = fn_DerniereLigne()
+    For IntLigne = 3 To IntDerniereLigne
+        StrRequeteSql = "exec COMMUNICATION.[SPW_INSERTION_PERSONNEL] " & _
+        "@XMAT =                '" & Replace(ActiveSheet.Cells(IntLigne, 1), "'", "''") & "'      ," & _
+        "@EMPLOYEUR =           '" & Replace(ActiveSheet.Cells(IntLigne, 2), "'", "''") & "'      ," & _
+        "@RAISONSOCIALE=        '" & Replace(ActiveSheet.Cells(IntLigne, 3), "'", "''") & "'      ," & _
+        "@CODEREST=             '" & Replace(ActiveSheet.Cells(IntLigne, 4), "'", "''") & "'     ," & _
+        "@ETBSIRETNOM=          '" & Replace(ActiveSheet.Cells(IntLigne, 5), "'", "''") & "'      ," & _
+        "@NOMSALAR   =          '" & Replace(ActiveSheet.Cells(IntLigne, 6), "'", "''") & "'     ," & _
+        "@PRENOMSALAR=          '" & Replace(ActiveSheet.Cells(IntLigne, 7), "'", "''") & "'     ," & _
+        "@EMPLOI =              '" & Replace(ActiveSheet.Cells(IntLigne, 8), "'", "''") & "'     ," & _
+        "@NIVEAU =              '" & Replace(ActiveSheet.Cells(IntLigne, 9), "'", "''") & "'     ," & _
+        "@ECHELON=              '" & Replace(ActiveSheet.Cells(IntLigne, 10), "'", "''") & "'     ," & _
+        "@XEMPLOI=              '" & Replace(ActiveSheet.Cells(IntLigne, 11), "'", "''") & "'      "
+
+        Call executer_Procedure(CMD, StrRequeteSql)
+    Next IntLigne
+    Call executer_Procedure(CMD, "[COMMUNICATION].SPW_FUSION_PERSONNEL")
+
+    PConnection.Close
+    Set PConnection = Nothing
+End Function
+
+
+Public Sub X()
+
+Dim IntLigne As Integer                 'la ligne dans le tableur lors de l'ajout des criteres
+Dim IntColonne  As Integer              'la colonne  dans le tableur lors de l'ajout des criteres
+Dim IntDerniereLigne As Integer         'la derniere ligne du tableur ou il y a  des donnees
+Dim LibelleQSP As String                'le nom du critere qsp
+Dim IntNombreQSP As Integer             'le nombre de criteres qsp dans le tableau
+Dim IntLigneQSP As Integer              'indice de ligne de recherche des criteres qsp
+Dim IntColonneQSP As Integer            'indice de colonne  de recherche des criteres qsp
+Dim StrRequeteSql As String             ' instruction sql
+Dim IntIdQSP() As Integer               'tableau des id des criteres qsp
+Dim IntIndiceQSP As Integer
+
+    IntLigneQSP = 5
+    IntColonneQSP = 7
+    'on compte le nombre de criteres qsp pour dimensionner le tableau
+    ' UCase(Left( permet davancer dans le tableau meme si la cellule contient OBJ ou obj(%)
+    While UCase(Left(ActiveSheet.Cells(IntLigneQSP + 1, IntColonneQSP), 3)) = "OBJ"
+        IntNombreQSP = IntNombreQSP + 1
+        IntColonneQSP = IntColonneQSP + 2
+    Wend
+    ReDim IntIdQSP(IntNombreQSP)
+    IntIndiceQSP = 1
+    IntLigneQSP = 5
+    IntColonneQSP = 7
+    While IntIndiceQSP <= IntNombreQSP
+        LibelleQSP = ActiveSheet.Cells(IntLigneQSP, IntColonneQSP)
+        IntIdQSP(IntIndiceQSP) = Chercher("CRSP_ID", "RFA_CRITERE_QSP", "CREE_LIBELLE_NM", LibelleQSP)
+        Debug.Print LibelleQSP & " " & IntIdQSP(IntIndiceQSP)
+    
+        IntIndiceQSP = IntIndiceQSP + 1
+        IntColonneQSP = IntColonneQSP + 2
+    Wend
+    
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+    Set CMD = New ADODB.Command
+    CMD.ActiveConnection = PConnection
+    
+    IntColonneQSP = 7
+    IntDerniereLigne = fn_DerniereLigne
+    For IntLigne = 7 To IntDerniereLigne
+        For IntIndiceQSP = 1 To IntNombreQSP
+            StrRequeteSql = "insert into rfu_parametre_qsp_TEMPO (TPRSP_CRSP_ID,TPRSP_OBJECTIF_RT,TPRSP_RSNT_CODE_CD) " & _
+            " values (" & IntIdQSP(IntIndiceQSP) & "," & Format(ActiveSheet.Cells(IntLigne, IntColonneQSP), "0.00") & ",'" & ActiveSheet.Cells(IntLigne, 1) & "')"
+            Debug.Print StrRequeteSql
+            Call executer_Procedure(CMD, StrRequeteSql)
+            IntColonneQSP = IntColonneQSP + 2
+            Debug.Print StrRequeteSql
+        Next IntIndiceQSP
+    Next IntLigne
+
+End Sub
+
+Public Function Chercher(sChamp As String, sTable As String, schamprecherche As String, svaleur As String)
+   Dim Rst As ADODB.Recordset
+   Dim req As String
+   
+   req = "select  " & sChamp & " from " & sTable & "  where " & schamprecherche & " = '" & svaleur & "'"
+   Set Rst = RcDonnees(req)
+   Chercher = Rst.Fields(0).Value
+
+End Function

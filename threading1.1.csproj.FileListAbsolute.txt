@@ -1,0 +1,7 @@
+D:\Scripts\C#\70483\threading1.1\threading1.1\bin\Debug\threading1.1.exe.config
+D:\Scripts\C#\70483\threading1.1\threading1.1\bin\Debug\threading1.1.exe
+D:\Scripts\C#\70483\threading1.1\threading1.1\bin\Debug\threading1.1.pdb
+D:\Scripts\C#\70483\threading1.1\threading1.1\obj\Debug\threading1.1.csprojAssemblyReference.cache
+D:\Scripts\C#\70483\threading1.1\threading1.1\obj\Debug\threading1.1.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\70483\threading1.1\threading1.1\obj\Debug\threading1.1.exe
+D:\Scripts\C#\70483\threading1.1\threading1.1\obj\Debug\threading1.1.pdb

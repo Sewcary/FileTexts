@@ -1,0 +1,8 @@
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\bin\Debug\netcoreapp2.1\InvoiceDetail.Data.deps.json
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\bin\Debug\netcoreapp2.1\InvoiceDetail.Data.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\bin\Debug\netcoreapp2.1\InvoiceDetail.Data.pdb
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\obj\Debug\netcoreapp2.1\InvoiceDetail.Data.csprojAssemblyReference.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\obj\Debug\netcoreapp2.1\InvoiceDetail.Data.AssemblyInfoInputs.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\obj\Debug\netcoreapp2.1\InvoiceDetail.Data.AssemblyInfo.cs
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\obj\Debug\netcoreapp2.1\InvoiceDetail.Data.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Data\obj\Debug\netcoreapp2.1\InvoiceDetail.Data.pdb

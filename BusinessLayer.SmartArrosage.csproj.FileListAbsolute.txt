@@ -1,0 +1,11 @@
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\obj\Debug\BusinessLayer.SmartArrosage.csproj.CoreCompileInputs.cache
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartArrosage.dll
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartArrosage.pdb
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\bin\Debug\Datacache.Commons.Lib.BusinessLib.dll
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\bin\Debug\Datacache.Commons.Lib.DataLib.dll
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\bin\Debug\Datacache.Commons.Lib.ServiceLib.dll
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\bin\Debug\Newtonsoft.Json.dll
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\obj\Debug\BusinessLayer.SmartArrosage.csproj.CopyComplete
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\obj\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartArrosage.dll
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\obj\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartArrosage.pdb
+D:\LIGHTBERG\WS\SmartArrosage\BusinessLayer.SmartArrosage\obj\Debug\BusinessLayer.SmartArrosage.csprojAssemblyReference.cache

@@ -1,0 +1,15 @@
+What are the four parts of the computer system	ALU
+Registers
+Controller
+Internal Memory
+What does a controller do	Directs the flow of instructions and data within the CPU
+What does the registers do	Fast and temporary storage
+What does internal memory do	Data and instructions held that are not actively used
+What does the ALU do	Deals with using the data e.g. performing calculations
+What are the three buses	Data bus
+Control bus
+Address bus
+What does the data bus carry	The data to be stored or retrieved from memory
+What does the control bus carry	Commands to control the actions of devices
+What does the address bus carry	The location in memory where data can be stored to or retrieved from
+What cycle is used to move data around the computer system	Fetch-decode-execute cycle

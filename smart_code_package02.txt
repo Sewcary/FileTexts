@@ -1,0 +1,244 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using Newtonsoft.Json;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Net;
+using System.IO;
+
+namespace ConsoleApp22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string connectionString = "Server=LENOVO\\SQLEXPRESS;Database=ODS_FRONT_SMART_ARROSAGE;Trusted_Connection=true";
+            string token = "vucIqncZuLGU7J8CHwZKLVjzoF76PU6oHex1lVP2yk1MgCXE7F7TEgM26e4hDsDEjOJt6Obr7gN6Y4fWvUkdYBi0WIoo7S1GQYoTnI4iCKalQLuqaeKLEcPwRP2e5bRZRx5r77NuZQ9idFWBKnS76KT7PusPt7KyFcT5G4pjBC7rkBSLhKnWK4YX3VifZWxAGdmAeN31gpiB4MqIiaeRK7JZpBWiKPwiY3nyvShnukGKAz9teGACfn0S0fQC74Rk";
+            using (SqlConnection sqlConn = new SqlConnection(connectionString))
+            {
+                sqlConn.Open();
+                using (SqlCommand sqlCommand = new SqlCommand("get_config_synchro", sqlConn))
+                {
+                    sqlCommand.CommandType = CommandType.StoredProcedure;
+                    var readerConfig= sqlCommand.ExecuteReader();
+                    readerConfig.Read();
+                    while (readerConfig.Read())
+                    {
+                         
+                        #region Lier arroseur
+                        string linkModuleUrl = "https://staging.mysolem.com/api/input" + "/" + readerConfig["InputLrFl"].ToString() + "/link";
+                        string json = "{\"modules\" :[\"" + readerConfig["LrIpId"].ToString() + "\"]}";
+                        string streamReader = GetRequestFromUrlToStreamReader(linkModuleUrl, token, WebRequestMethods.Http.Post, "text/data", json);
+                        #endregion
+
+                        #region Lier sonde Humidite
+                         linkModuleUrl = "https://staging.mysolem.com/api/input" + "/" + readerConfig["InputLrMs"].ToString() + "/link";
+                         json = "{\"modules\" :[\"" + readerConfig["LrIpId"].ToString() + "\"]}";
+                         streamReader = GetRequestFromUrlToStreamReader(linkModuleUrl, token, WebRequestMethods.Http.Post, "text/data", json);
+                        #endregion
+
+                        #region Mettre a jour limite arroseur
+                        string updateInputUrl = "https://staging.mysolem.com/api/updateInput";// Variables.UpdateInputUrl;
+                        json = "{ \"inputs\" :[{\"id\" : \"" + readerConfig["InputLrFl"].ToString() + "\",\"highThreshold\": " + (Math.Round(double.Parse(readerConfig["ConsommationTheorique"].ToString()) + Math.Round(double.Parse(readerConfig["ConsommationTheorique"].ToString()) * double.Parse(readerConfig["SeuilAlerteConsommation"].ToString()) / 100.0))).ToString().Replace(",", ".") + ",\"actionWhenHighDailyThresholdExceeded\" : 2}]}";
+                        string retour = GetRequestFromUrlToStreamReader(updateInputUrl, token, WebRequestMethods.Http.Post, "application/json", json);
+                        #endregion
+
+                        #region Mettre a jour limite sonde Humidite   limite haute
+                         updateInputUrl = "https://staging.mysolem.com/api/updateInput";// Variables.UpdateInputUrl;
+                        json = "{ \"inputs\" :[{\"id\" : \"" + readerConfig["InputLrMs"].ToString() + "\",\"highThreshold\": " + (Math.Round(double.Parse(readerConfig["SeuilHumidite"].ToString())).ToString().Replace(",", ".") + ",\"actionWhenHighDailyThresholdExceeded\" : 2}]}");
+                         retour = GetRequestFromUrlToStreamReader(updateInputUrl, token, WebRequestMethods.Http.Post, "application/json", json);
+                        #endregion
+
+
+                        #region Mettre a jour Json programme 
+                        string getModuleProgramsUrl = "https://staging.mysolem.com/api/getModulePrograms";
+
+                        getModuleProgramsUrl += "?id=" + readerConfig["LrIpId"].ToString();
+
+
+                        string stringJson = GetRequestFromUrlToStreamReader(getModuleProgramsUrl, token, WebRequestMethods.Http.Get, null, null);
+
+                        List<Programme> programs = JsonConvert.DeserializeObject<List<Programme>>(stringJson);
+                        foreach (Programme program in programs)
+                        {
+                            if (program.id == readerConfig["ProgrammeId"].ToString())
+                            {
+                                program.name = readerConfig["NomProgramme"].ToString() == null ? "Undefined" + new Random().Next(1, 13).ToString() : readerConfig["NomProgramme"].ToString();
+                                program.timeBetweenStations = Int32.Parse(readerConfig["TempsEntreVanne"].ToString());
+                                program.weekDays = Int32.Parse(readerConfig["JoursSemaine"].ToString());
+                                program.module = readerConfig["ModuleProgrammeID"].ToString();
+                                program.realyUpdatedAt = DateTime.Now;
+                                program.sentAt = DateTime.Now;
+
+                                program.startTimes = new List<int>();
+                                using (SqlConnection Conn = new SqlConnection(connectionString))
+                                {
+                                    Conn.Open();
+                                    using (SqlCommand command = new SqlCommand("CreateCycles", Conn))
+                                    {
+                                        command.Parameters.Add("@ProgrammeId", SqlDbType.NVarChar).Value = readerConfig["ProgrammeId"].ToString();
+                                        command.CommandType = CommandType.StoredProcedure;
+                                        var readerCycles = command.ExecuteReader();
+                                        while (readerCycles.Read())
+                                        {
+                                            program.startTimes.Add(Int32.Parse(readerCycles["heure"].ToString()));
+                                        }
+                                    }
+                                    Conn.Close();
+                                }
+
+                                program.stationsDuration = new List<int>();
+                                using (SqlConnection Conn = new SqlConnection(connectionString))
+                                {
+                                    Conn.Open();
+                                    using (SqlCommand command = new SqlCommand("StationsDuration", Conn))
+                                    {
+                                        command.Parameters.Add("@ProgrammeId", SqlDbType.NVarChar).Value = readerConfig["ProgrammeId"].ToString();
+                                        command.CommandType = CommandType.StoredProcedure;
+                                        var readerStationsDuration = command.ExecuteReader();
+                                        while (readerStationsDuration.Read())
+                                        {
+                                            program.stationsDuration.Add(Int32.Parse(readerStationsDuration["DureeStation"].ToString()));
+                                        }
+                                    }
+                                    Conn.Close();
+                                }
+
+                            }
+                            else   // ON vide les programmes qui ne seront pas utilises 
+                            {
+                                program.startTimes = new List<int>();
+                                for (int ind = 0; ind < 8; ind++)
+                                {
+                                    program.startTimes.Add(-1);
+                                }
+                                program.stationsDuration = new List<int>();
+                                for (int ind = 0; ind < 4; ind++)
+                                {
+                                    program.stationsDuration.Add(0);
+                                }
+
+
+                            }
+                            #endregion
+
+                            
+
+                         
+
+                          
+
+                        }
+
+                        #region Envoi requete programmation  vers api Solem
+                        json = JsonConvert.SerializeObject(programs);
+                        string setModuleProgramsUrl = "https://staging.mysolem.com/api/setModulePrograms";
+                        setModuleProgramsUrl += "?id=" + readerConfig["ModuleProgrammeID"].ToString();
+                        string setModuleProgramsUrlResponse = GetRequestFromUrlToStreamReader(setModuleProgramsUrl, token, WebRequestMethods.Http.Post, "text/data", json);
+                        #endregion
+
+                        #region Envoi requete arret force true / false  vers api Solem
+                        if (readerConfig["ArretForce"].ToString() == "True")
+                        {
+                            string setManualCommandToSendUrl = "https://staging.mysolem.com/api/setManualCommandToSend";
+                            json = "{ \"id\": \"" + readerConfig["ModuleId"].ToString() + "\",	\"command\": 	{ \"watering\": 		{ \"state\": 0         }} }";
+                            string setManualCommandToSendResponse = GetRequestFromUrlToStreamReader(setManualCommandToSendUrl, token, WebRequestMethods.Http.Post, "text/data", json);
+                        }
+                        if (readerConfig["ArretForce"].ToString() == "False")
+                        {
+                            string setManualCommandToSendUrl = "https://staging.mysolem.com/api/setManualCommandToSend";
+                            json = "{ \"id\": \"" + readerConfig["ModuleId"].ToString() + "\",	\"command\": 	{ \"watering\": 		{ \"state\": 1         }} }";
+                            string setManualCommandToSendResponse = GetRequestFromUrlToStreamReader(setManualCommandToSendUrl, token, WebRequestMethods.Http.Post, "text/data", json);
+                        }
+                        #endregion
+                    }
+                }
+                sqlConn.Close();
+            }
+
+        }
+        public static string  GetRequestFromUrlToStreamReader(string url, string token, string method, string contentType = null, string json = null)
+        {
+
+            StreamReader streamReader = null;
+            string stringJson = null;
+          HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
+            if (method == WebRequestMethods.Http.Get)
+                httpWebRequest.Method = WebRequestMethods.Http.Get;
+            else if (method == WebRequestMethods.Http.Post)
+                httpWebRequest.Method = WebRequestMethods.Http.Post;
+            if (contentType != null)
+                httpWebRequest.ContentType = contentType;
+            if (json != null)
+            {
+                Encoding utf8WithBom = new UTF8Encoding(true);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    var sw = new StreamWriter(stream, utf8WithBom);
+                    sw.WriteLine(json);
+                    sw.Flush();
+                    stream.Seek(0, SeekOrigin.Begin);
+                    using (Stream requestStream = httpWebRequest.GetRequestStream())
+                    {
+                        byte[] buffer = null;
+                        buffer = new byte[stream.Length];
+                        stream.Read(buffer, 0, (int)stream.Length);
+                        requestStream.Write(buffer, 0, (int)stream.Length);
+                    }
+
+                }
+            }
+            try
+            {
+                HttpWebResponse response = (HttpWebResponse)httpWebRequest.GetResponse();
+                streamReader = new StreamReader(response.GetResponseStream());
+                 stringJson = streamReader.ReadToEnd();
+                response.Close();
+
+            }
+            catch (Exception e)
+            {
+                //  System.Diagnostics.EventLog.WriteEntry("DATACACHE", "GetRequestFromUrlToStreamReader exception :  "  +
+                Console.WriteLine ( e.Message.ToString() );
+                return null;
+
+            }
+
+            return stringJson;
+        }
+    }
+    public class Programme
+    {
+        public ProgramCharacteristics programCharacteristics { get; set; }
+        public string name { get; set; }
+        public int waterBudget { get; set; }
+        public int timeBetweenStations { get; set; }
+        public int cycle { get; set; }
+        public int weekDays { get; set; }
+        public int numberOfDays { get; set; }
+        public int synchroDay { get; set; }
+        public List<int> startTimes { get; set; }
+        public List<int> stationsDuration { get; set; }
+        public string module { get; set; }
+        public bool template { get; set; }
+        public List<int> startTimesCycles { get; set; }
+        public int mistingTimeOn { get; set; }
+        public int mistingTimeOff { get; set; }
+        public DateTime createdAt { get; set; }
+        public DateTime updatedAt { get; set; }
+        public DateTime realyUpdatedAt { get; set; }
+        public DateTime sentAt { get; set; }
+        public string id { get; set; }
+    }
+    public class ProgramCharacteristics
+    {
+        public int programType { get; set; }
+        public bool isRandom { get; set; }
+        public bool isUsingButton { get; set; }
+    }
+
+}

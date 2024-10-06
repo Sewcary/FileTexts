@@ -1,0 +1,889 @@
+Option Explicit
+
+
+Const StrChaineConnection As String = "Provider=SQLOLEDB;Data Source=PC-FARA\PRIMAIRE;Initial Catalog=Bonus;Integrated Security=SSPI;"
+Public MaConnection As ADODB.Connection
+Public PConnection As ADODB.Connection
+Public Const BaseDeDonnees As String = "BONUS"   'variables constantes du serveur  et de la base
+Public Const SServeur As String = "PC-FARA\PRIMAIRE"
+Public CMD  As ADODB.Command
+
+Public IntGblLigne As Integer
+Public IntGblColonne As Integer
+Function Connection(serveur As String, BaseDeDonnees As String) As ADODB.Connection
+'====================================================================================================================================================================================================================================================================================================================
+'permet de se connecter a une  base de donnees sur un serveur et retourne la connection en question
+'=======================================================================================================================================================================================
+Dim VConnection As ADODB.Connection
+Dim sConnectionString As String
+
+    '  on cree la chaine de connexion
+    sConnectionString = "Provider=SQLOLEDB;" & _
+    " Data Source=" & serveur & ";" & _
+    "Initial Catalog=" & BaseDeDonnees & ";" & _
+    "Integrated Security=SSPI;"
+    ' on cree la connection
+    Set VConnection = New ADODB.Connection
+    VConnection.Open sConnectionString
+    Set Connection = VConnection
+ 
+End Function
+
+ Public Sub executer_Procedure(COMMANDE As ADODB.Command, SRequete As String)
+'====================================================================================================================================================================================================================================================================================================================
+' Se connecte a la base et execute une procedure
+'=======================================================================================================================================================================================
+    COMMANDE.CommandType = adCmdText
+    COMMANDE.CommandText = SRequete
+    COMMANDE.Execute
+End Sub
+
+Public Function fn_DerniereLigne() As Integer
+'====================================================================================================================================================================================================================================================================================================================
+'retourne l'index de la derniere ligne d'un tableau
+'=======================================================================================================================================================================================
+    fn_DerniereLigne = ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Row
+End Function
+Public Function fn_DerniereColonne() As String
+'====================================================================================================================================================================================================================================================================================================================
+'retourne l'index de la derniere colonne d'un tableau
+'=======================================================================================================================================================================================
+    fn_DerniereColonne = ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Column
+End Function
+Public Function EcritureTable() As Boolean
+
+    Dim StrRequeteSql As String
+    Dim intligne As Integer
+    Dim intDerniereLigne As Integer
+    
+    Call ConnecterCommande
+
+    intdernierligne = fn_DerniereLigne()
+    Call executer_Procedure(CMD, "communication.SPW_VIDER_TEMPO")
+    intDerniereLigne = fn_DerniereLigne()
+    For intligne = 3 To intDerniereLigne
+        StrRequeteSql = "exec COMMUNICATION.[SPW_INSERTION_PERSONNEL] " & _
+        "@XMAT =                '" & Replace(ActiveSheet.Cells(intligne, 1), "'", "''") & "'      ," & _
+        "@EMPLOYEUR =           '" & Replace(ActiveSheet.Cells(intligne, 2), "'", "''") & "'      ," & _
+        "@RAISONSOCIALE=        '" & Replace(ActiveSheet.Cells(intligne, 3), "'", "''") & "'      ," & _
+        "@CODEREST=             '" & Replace(ActiveSheet.Cells(intligne, 4), "'", "''") & "'     ," & _
+        "@ETBSIRETNOM=          '" & Replace(ActiveSheet.Cells(intligne, 5), "'", "''") & "'      ," & _
+        "@NOMSALAR   =          '" & Replace(ActiveSheet.Cells(intligne, 6), "'", "''") & "'     ," & _
+        "@PRENOMSALAR=          '" & Replace(ActiveSheet.Cells(intligne, 7), "'", "''") & "'     ," & _
+        "@EMPLOI =              '" & Replace(ActiveSheet.Cells(intligne, 8), "'", "''") & "'     ," & _
+        "@NIVEAU =              '" & Replace(ActiveSheet.Cells(intligne, 9), "'", "''") & "'     ," & _
+        "@ECHELON=              '" & Replace(ActiveSheet.Cells(intligne, 10), "'", "''") & "'     ," & _
+        "@XEMPLOI=              '" & Replace(ActiveSheet.Cells(intligne, 11), "'", "''") & "'      "
+
+        Call executer_Procedure(CMD, StrRequeteSql)
+    Next intligne
+    Call executer_Procedure(CMD, "[COMMUNICATION].SPW_FUSION_PERSONNEL")
+
+   Call FermerCommande
+End Function
+Function RcDonnees(SRequete As String) As ADODB.Recordset
+'====================================================================================================================================================================================================================================================================================================================
+' Se connecte a la base et retourne un jeu d'enregistrement
+'=======================================================================================================================================================================================
+Dim rs As ADODB.Recordset
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+    Set rs = New ADODB.Recordset
+    Set rs = PConnection.Execute(SRequete)
+    Set RcDonnees = rs
+    
+    
+End Function
+Function SetByProc(StrProcedure As String, cnConnection As ADODB.Connection) As ADODB.Recordset
+'===============================================================================================================================================================================================================================================
+'                   RETOURNE UN JEU D 'ENREGISTREMENTS A PARTIR D'UNE PROCEDURE
+'=================================================================================================================================================================================================================================================================================================================================
+    Dim lcmd             As New ADODB.Command
+    Dim lrs              As New ADODB.Recordset
+    ' Récupération des informations :
+    With lcmd
+        Set .ActiveConnection = PConnection
+        .CommandType = adCmdText
+        .CommandText = StrProcedure
+       Set lrs = .Execute
+    End With
+   Set SetByProc = lrs
+    Set lcmd = Nothing
+End Function
+Public Function Chercher(sChamp As String, sTable As String, schamprecherche As String, svaleur As String)
+   Dim rst As ADODB.Recordset
+   Dim req As String
+   
+   req = "exec Communication.recherche   '" & svaleur & "',N'" & sChamp & "',N'" & sTable & "',N'" & schamprecherche & "'"
+   Set rst = SetByProc(req, PConnection)
+   Chercher = rst.Fields(0).Value
+    rst.Close
+    Set rst = Nothing
+End Function
+Sub x()
+        Dim lrs              As New ADODB.Recordset
+ 
+        Set PConnection = Connection(SServeur, BaseDeDonnees)
+        
+        Set lrs = SetByProc("exec RECHERCHE 'ANALYSES',N'CRSP_ID',N'RFA_CRITERE_QSP',N'CREE_LIBELLE_NM'", PConnection)
+        
+        Debug.Print lrs.Fields(0)
+End Sub
+
+Public Function xV() As Integer()
+  ' ReDim IntIdQSP(IntNo mbreQSP)
+    IntIndiceQSP = 1
+    IntLigneQSP = 5
+    IntColonneQSP = 7 'PREMIERE COLONNE DES QSP
+    While IntIndiceQSP <= IntNombreQSP
+        LibelleQSP = ActiveSheet.Cells(IntLigneQSP, IntColonneQSP)
+        IntIdQSP(IntIndiceQSP) = Chercher("CRSP_ID", "RFA_CRITERE_QSP", "CREE_LIBELLE_NM", LibelleQSP)
+        IntIndiceQSP = IntIndiceQSP + 1
+        IntColonneQSP = IntColonneQSP + 2
+    Wend
+End Function
+
+Public Sub ChercherValeurTableau(IntNombreElements As Integer, _
+                    IntLigneRecherche As Integer, _
+                    IntColonneRecherche As Integer, _
+                    IncrementColonne As Integer, _
+                    Champ As String, _
+                    Table As String, _
+                    ChampRecherche As String, _
+                    ByRef Tableau() As Integer)
+
+Dim IntIndiceParcours As Integer
+Dim StrValeurRecherche As String
+    IntIndiceParcours = 1
+    While IntIndiceParcours <= IntNombreElements
+        StrValeurRecherche = ActiveSheet.Cells(IntLigneRecherche, IntColonneRecherche)
+        Tableau(IntIndiceParcours) = Chercher(Champ, Table, ChampRecherche, StrValeurRecherche)
+        IntIndiceParcours = IntIndiceParcours + 1
+        IntColonneRecherche = IntColonneRecherche + IncrementColonne
+    Wend
+    
+End Sub
+Sub z()
+
+    Dim TB(10) As Integer, I As Integer
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+
+    Call y(10, 5, 7, 2, "CRSP_ID", "RFA_CRITERE_QSP", "CREE_LIBELLE_NM", TB)
+    For I = 1 To 10
+        Debug.Print TB(I)
+    Next I
+End Sub
+Public Sub RecupererQSPBonus()
+
+Dim intligne As Integer                 'la ligne dans le tableur lors de l'ajout des criteres
+Dim intcolonne  As Integer              'la colonne  dans le tableur lors de l'ajout des criteres
+Dim intDerniereLigne As Integer         'la derniere ligne du tableur ou il y a  des donnees
+Dim LibelleQSP As String                'le nom du critere qsp
+Dim LibellePoste As String
+Dim LibelleCritere As String
+Dim CurBonus As Currency
+Dim StrRequeteSql As String
+Dim IntLongueurChaine
+
+    LibelleSociete = ActiveSheet.Name
+    IntLongueurChaine = Len(LibelleSociete)
+    LibelleSociete = Right(ActiveSheet.Name, IntLongueurChaine - 5)
+    intligne = 1
+    intcolonne = 2
+    LibelleQSP = ActiveSheet.Cells(intligne, intcolonne)
+    intDerniereLigne = fn_DerniereLigne
+    While Left(LibelleQSP, 11) <> "1er Critère"
+        intligne = intligne + 1
+        While (intligne <= intDerniereLigne)
+            LibellePoste = ActiveSheet.Cells(intligne, 1)
+            CurBonus = ActiveSheet.Cells(intligne, intcolonne)
+            StrRequeteSql = "EXEC COMMUNICATION.SPW_INSERTION_PARAMETRE_QSP_BONUS '" & LibelleQSP & "','" & LibellePoste & "'," & Replace(CurBonus, ",", ".") & ",'" & LibelleSociete & "'"
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+        Wend
+        intligne = 1
+        intcolonne = intcolonne + 1
+        LibelleQSP = ActiveSheet.Cells(intligne, intcolonne)
+    
+    Wend
+
+End Sub
+Public Sub RemplirToutQSP()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+
+    Call ConnecterCommande
+    Call executer_Procedure(CMD, "EXEC communication.SPW_VIDER_PARAMETRE_QSP")
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "PARAM" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "----" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "UTIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 6)) <> "GRILLE" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "FEUIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 7)) <> "XEMPLOI" Then
+            'Debug.Print Sheets(intIndexSheet).Name
+            Sheets(intIndexSheet).Activate
+            Call RecupererQSP
+        End If
+    Next intIndexSheet
+    
+       Call executer_Procedure(CMD, " EXEC COMMUNICATION.SPW_FUSION_QSP")
+
+    Call FermerCommande
+End Sub
+
+Public Sub RecupererQSP()
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim intDerniereLigne As Integer
+Dim LibelleQSP As String
+Dim LibelleRestaurant As String
+Dim LibelleCritere As String
+Dim CurBonus As Currency
+Dim StrRequeteSql As String
+
+   
+    intligne = 5
+    intcolonne = 7
+    LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    intDerniereLigne = fn_DerniereLigne
+    
+    While UCase(Left(LibelleQSP, 10)) <> "VENTES (%)"
+        intligne = intligne + 2
+        While (intligne <= intDerniereLigne)
+            LibelleRestaurant = ActiveSheet.Cells(intligne, 1)
+            CurBonus = ActiveSheet.Cells(intligne, intcolonne)
+            StrRequeteSql = "EXEC COMMUNICATION.SPW_INSERTION_PARAMETRE_QSP '" & LibelleQSP & "'," & Replace(CurBonus, ",", ".") & ",'" & LibelleRestaurant & "'"
+           ' Debug.Print StrRequeteSql
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+        Wend
+        intligne = 5
+        intcolonne = intcolonne + 2
+        LibelleQSP = ActiveSheet.Cells(intligne, intcolonne)
+    
+    Wend
+
+End Sub
+
+Public Sub RemplirToutQSPBonus()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+    
+    Call ConnecterCommande
+    Call executer_Procedure(CMD, "EXEC communication.SPW_VIDER_PARAMETRE_QSP_BONUS")
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 5)) = "PARAM" Then
+            'Debug.Print Sheets(intIndexSheet).Name
+            Sheets(intIndexSheet).Activate
+            Call RecupererQSPBonus
+        End If
+    Next intIndexSheet
+    
+     '  Call executer_Procedure(CMD, " EXEC COMMUNICATION.SPW_FUSION_QSP")
+
+   Call FermerCommande
+End Sub
+
+Public Sub RemplirPalier()
+Dim intDerniereLigne As Integer
+Dim StrRequeteSql As String
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim StrBorneSuperieure As String, StrPourcentage As String, CurBonus As Currency
+
+   
+    intligne = 2
+    Call ConnecterCommande
+    intDerniereLigne = fn_DerniereLigne
+    Call executer_Procedure(CMD, "exec [COMMUNICATION].[SPW_VIDER_PALIER]")
+     
+
+        While (intligne <= intDerniereLigne)
+            StrBorneSuperieure = ActiveSheet.Cells(intligne, 1)
+            StrPourcentage = ActiveSheet.Cells(intligne, 3)
+            CurBonus = ActiveSheet.Cells(intligne, 4)
+            StrRequeteSql = "EXEC COMMUNICATION.SPW_INSERTION_PALIER '" & _
+            StrBorneSuperieure & "','" & StrPourcentage & "'," & CurBonus
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+        Wend
+        Call executer_Procedure(CMD, "exec communication.spw_fusion_palier")
+    Call FermerCommande
+End Sub
+
+Public Sub ConnecterCommande()
+    
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+    Set CMD = New ADODB.Command
+    CMD.ActiveConnection = PConnection
+
+End Sub
+Public Sub FermerCommande()
+    PConnection.Close
+    Set PConnection = Nothing
+
+End Sub
+
+Public Sub RecupererChiffreAffaire()
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim intDerniereLigne As Integer
+Dim LibelleRestaurant As String
+Dim StrRequeteSql As String
+Dim StrColonneCA As String
+Dim StrCA As String
+Dim StrAnnee As String
+   
+    Call ConnecterCommande
+    Call executer_Procedure(CMD, "EXEC COMMUNICATION.SPW_VIDE_CHIFFRE_AFFAIRE")
+    intligne = 1
+    intcolonne = 3
+  '  LibelleRestaurant = ActiveSheet.Cells(IntLigne, 1)
+    
+    intDerniereLigne = fn_DerniereLigne
+    StrColonneCA = ActiveSheet.Cells(intligne, 3)
+    StrAnnee = Right(StrColonneCA, 4)
+    While UCase(Left(StrColonneCA, 2)) = "CA"
+            intligne = intligne + 1
+
+        While (intligne <= intDerniereLigne)
+           If Not WorksheetFunction.IsNA(ActiveSheet.Cells(intligne, intcolonne)) Then
+             LibelleRestaurant = ActiveSheet.Cells(intligne, 1)
+             StrCA = ActiveSheet.Cells(intligne, intcolonne)
+             StrRequeteSql = "EXEC COMMUNICATION.SPW_INSERTION_CHIFFRE_AFFAIRE '" & StrCA & "','" & StrAnnee & "','" & LibelleRestaurant & "'"
+            ' Debug.Print StrRequeteSql
+             Call executer_Procedure(CMD, StrRequeteSql)
+            End If
+            intligne = intligne + 1
+        Wend
+        intligne = 1
+        intcolonne = intcolonne + 2
+        StrColonneCA = ActiveSheet.Cells(intligne, intcolonne)
+        StrAnnee = Right(StrColonneCA, 4)
+        
+     '   LibelleQSP = ActiveSheet.Cells(IntLigne, IntColonne)
+    
+    Wend
+    Call executer_Procedure(CMD, "EXEC COMMUNICATION.SPW_FUSION_CHIFFRE_AFFAIRE")
+    FermerCommande
+End Sub
+Public Sub RecupererBonusVPac()
+Dim intligne As Integer
+Dim intcolonne As Integer
+Dim strPoste As String
+Dim strbonus  As String
+Dim intPac As Integer
+Dim intVente As Integer
+Dim intLignePoste As Integer
+Dim StrRequeteSql As String
+Dim IntLongueurChaine
+Dim LibelleSociete As String
+
+    LibelleSociete = ActiveSheet.Name
+    IntLongueurChaine = Len(LibelleSociete)
+    LibelleSociete = Right(ActiveSheet.Name, IntLongueurChaine - 6)
+ 
+    intligne = 1
+    intcolonne = 1
+        
+    strPoste = ActiveSheet.Cells(intligne, intcolonne)
+         
+    While strPoste <> "" And strPoste <> "(=XEmploi!#REF!)"
+        If strPoste <> "(=XEmploi!#REF!)" Then
+                intLignePoste = intligne
+                intligne = intligne + 4
+                intcolonne = intcolonne + 4
+                strbonus = ActiveSheet.Cells(intligne, intcolonne)
+                intVente = ActiveSheet.Cells(intligne - 1, intcolonne)
+                While strbonus <> ""
+                    intPac = ActiveSheet.Cells(intligne, 4)
+                    
+                    While strbonus <> ""
+                        StrRequeteSql = "exec [COMMUNICATION].[SPW_INSERTION_PARAM_VENTE_PROFIT_BONUS] '" & strPoste & "','" & strbonus & "'," & intVente & "," & intPac & ",'" & LibelleSociete & "'"
+                        Call executer_Procedure(CMD, StrRequeteSql)
+                        intligne = intligne + 1
+                        intPac = ActiveSheet.Cells(intligne, 4)
+                        strbonus = ActiveSheet.Cells(intligne, intcolonne)
+        
+                    Wend
+                    intligne = intLignePoste
+                    intligne = intligne + 4
+                    intcolonne = intcolonne + 1
+                    intPac = ActiveSheet.Cells(intligne, 4)
+                    strbonus = ActiveSheet.Cells(intligne, intcolonne)
+                    intVente = ActiveSheet.Cells(intligne - 1, intcolonne)
+                Wend
+            End If
+            intligne = intLignePoste
+            intcolonne = 1
+            intligne = intligne + 10
+            strPoste = ActiveSheet.Cells(intligne, intcolonne)
+        
+    Wend
+    Call executer_Procedure(CMD, "COMMUNICATION.SPW_FUSION_PARAM_VENTE_PROFIT_BONUS")
+   
+End Sub
+
+     
+Public Sub RecupererToutBonusVPac()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+
+    Call ConnecterCommande
+    Call executer_Procedure(CMD, "COMMUNICATION.SPW_VIDER__PARAM_VENTE_PROFIT_BONUS")
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 6)) = "GRILLE" Then
+            Sheets(intIndexSheet).Activate
+            Call RecupererBonusVPac
+        End If
+    Next intIndexSheet
+    
+  '     Call executer_Procedure(CMD, " EXEC COMMUNICATION.SPW_FUSION_QSP")
+
+    Call FermerCommande
+
+End Sub
+
+Public Sub SaisirToutQSP()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+
+    Call ConnecterCommande
+    Call executer_Procedure(CMD, "EXEC communication.SPW_VIDER_PARAMETRE_QSP")
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "PARAM" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "----" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "UTIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 6)) <> "GRILLE" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "FEUIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 7)) <> "XEMPLOI" Then
+            'Debug.Print Sheets(intIndexSheet).Name
+            Sheets(intIndexSheet).Activate
+            Call SaisirQSP
+        End If
+    Next intIndexSheet
+    
+       Call executer_Procedure(CMD, " EXEC COMMUNICATION.SPW_FUSION_QSP")
+
+    Call FermerCommande
+End Sub
+
+Public Sub SaisirQSP()
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim intDerniereLigne As Integer
+Dim LibelleQSP As String
+Dim LibelleRestaurant As String
+Dim LibelleCritere As String
+Dim CurBonus As Currency
+Dim StrRequeteSql As String
+Dim StrTrimestre As String
+   
+    
+    intligne = 5
+    intcolonne = 7
+    LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    intDerniereLigne = fn_DerniereLigne
+    StrTrimestre = Mid(ActiveWorkbook.Name, 19, 4)
+    StrTrimestre = StrTrimestre & "0" & Mid(ActiveWorkbook.Name, InStr(ActiveWorkbook.Name, ".") - 1, 1)
+    
+    While UCase(Left(LibelleQSP, 10)) <> "VENTES (%)"
+        intligne = intligne + 2
+        While (intligne <= intDerniereLigne)
+            LibelleRestaurant = ActiveSheet.Cells(intligne, 1)
+            CurBonus = ActiveSheet.Cells(intligne, intcolonne + 1)
+            StrRequeteSql = "EXEC COMMUNICATION.[MAJ_RSNT_QSP_PAR_CRITERE] '" & LibelleQSP & "'," & Replace(CurBonus, ",", ".") & ",'" & LibelleRestaurant & "','" & StrTrimestre & "'"
+            Debug.Print StrRequeteSql
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+        Wend
+        intligne = 5
+        intcolonne = intcolonne + 2
+        LibelleQSP = ActiveSheet.Cells(intligne, intcolonne)
+    
+
+    Wend
+
+End Sub
+Public Sub SaisirToutVPAC()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+
+    Call ConnecterCommande
+    Call executer_Procedure(CMD, "EXEC communication.SPW_VIDER_PARAMETRE_QSP")
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "PARAM" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "----" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "UTIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 6)) <> "GRILLE" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "FEUIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 7)) <> "XEMPLOI" Then
+            Debug.Print Sheets(intIndexSheet).Name
+            Sheets(intIndexSheet).Activate
+            Call SaisirVpac
+        End If
+    Next intIndexSheet
+    
+     '  Call executer_Procedure(CMD, " EXEC COMMUNICATION.SPW_FUSION_QSP")
+
+    Call FermerCommande
+End Sub
+Public Sub SaisirVpac()
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim intDerniereLigne As Integer
+Dim LibelleQSP As String
+Dim LibelleRestaurant As String
+Dim LibelleCritere As String
+Dim CurReelVentes As Currency
+Dim CurReelPac As Currency
+
+Dim StrRequeteSql As String
+Dim StrTrimestre As String
+   
+    
+    intligne = 5
+    intcolonne = 7
+    LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    intDerniereLigne = fn_DerniereLigne
+    StrTrimestre = Mid(ActiveWorkbook.Name, 19, 4)
+    StrTrimestre = StrTrimestre & "0" & Mid(ActiveWorkbook.Name, InStr(ActiveWorkbook.Name, ".") - 1, 1)
+    While UCase(Left(LibelleQSP, 10)) <> "VENTES (%)"
+        intcolonne = intcolonne + 1
+        LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+
+    Wend
+    intligne = intligne + 2
+        While (intligne <= intDerniereLigne)
+            LibelleRestaurant = ActiveSheet.Cells(intligne, 1)
+            CurReelVentes = ActiveSheet.Cells(intligne, intcolonne)
+            CurReelPac = ActiveSheet.Cells(intligne, intcolonne + 2)
+
+            StrRequeteSql = "EXEC [TEST].[MAJ_RSNT_VPAC_TRRE] " & CurReelVentes & "," & CurReelPac & ",'" & LibelleRestaurant & "','" & StrTrimestre & "'"
+            Debug.Print StrRequeteSql
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+            
+        Wend
+
+
+End Sub
+
+
+Public Sub SaisirCritereEntreeValeur()
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim intDerniereLigne As Integer
+Dim LibelleQSP As String
+Dim LibelleRestaurant As String
+Dim LibelleCritere As String
+Dim CurReelVentes As Currency
+Dim CurReelPac As Currency
+Dim StrRequeteSql As String
+Dim StrTrimestre As String
+Dim StrCritereEntreeValeur As String
+Dim rstCritereEntreeValeur As ADODB.Recordset
+Dim CurValeurCritere As Currency
+Dim IntCritere As Integer
+    
+    intligne = 5
+    intcolonne = 7
+    LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    intDerniereLigne = fn_DerniereLigne
+    StrTrimestre = Mid(ActiveWorkbook.Name, 19, 4)
+    StrTrimestre = StrTrimestre & "0" & Mid(ActiveWorkbook.Name, InStr(ActiveWorkbook.Name, ".") - 1, 1)
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+
+    Set rstCritereEntreeValeur = SetByProc("exec COMMUNICATION.SPR_CONSULTATION_CRITERE_ENTREE_VALEUR", PConnection)
+    
+    StrCritereEntreeValeur = rstCritereEntreeValeur.Fields(1).Value
+    While Not rstCritereEntreeValeur.EOF
+            intligne = 5
+            intcolonne = 7
+            LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+            IntCritere = rstCritereEntreeValeur.Fields(0).Value
+        While UCase(LibelleQSP) <> UCase(StrCritereEntreeValeur)
+            intcolonne = intcolonne + 1
+            LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    
+        Wend
+    
+        intligne = intligne + 2
+        While (intligne <= intDerniereLigne)
+            LibelleRestaurant = ActiveSheet.Cells(intligne, 1)
+            CurValeurCritere = ActiveSheet.Cells(intligne, intcolonne)
+            StrRequeteSql = "EXEC [TEST].[MAJ_CRRE_ENEE_VLR] " & "'" & LibelleRestaurant & "'," & Replace(CurValeurCritere, ",", ".") & ",'" & StrTrimestre & "'," & IntCritere
+            Debug.Print StrRequeteSql
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+        Wend
+        rstCritereEntreeValeur.MoveNext
+        If Not rstCritereEntreeValeur.EOF Then
+            StrCritereEntreeValeur = rstCritereEntreeValeur.Fields(0).Value
+        End If
+
+    Wend
+
+End Sub
+
+Public Sub SaisirToutCritereEntreeValeur()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+
+    Call ConnecterCommande
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "PARAM" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "----" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "UTIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 6)) <> "GRILLE" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "FEUIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 7)) <> "XEMPLOI" Then
+            Debug.Print Sheets(intIndexSheet).Name
+            Sheets(intIndexSheet).Activate
+            Call SaisirCritereEntreeValeur
+        End If
+    Next intIndexSheet
+    
+
+    Call FermerCommande
+End Sub
+
+Public Sub SaisirCritereEntree()
+Dim intligne As Integer
+Dim intcolonne  As Integer
+Dim intDerniereLigne As Integer
+Dim LibelleQSP As String
+Dim LibelleRestaurant As String
+Dim LibelleCritere As String
+Dim CurReelVentes As Currency
+Dim CurReelPac As Currency
+Dim StrRequeteSql As String
+Dim StrTrimestre As String
+Dim StrCritereEntree As String
+Dim rstCritereEntree As ADODB.Recordset
+Dim BlnRespect
+Dim IntCritere As Integer
+    
+    intligne = 5
+    intcolonne = 7
+    LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    intDerniereLigne = fn_DerniereLigne
+    StrTrimestre = Mid(ActiveWorkbook.Name, 19, 4)
+    StrTrimestre = StrTrimestre & "0" & Mid(ActiveWorkbook.Name, InStr(ActiveWorkbook.Name, ".") - 1, 1)
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+
+    Set rstCritereEntree = SetByProc("exec COMMUNICATION.SPR_CONSULTATION_CRITERE_ENTREE", PConnection)
+    
+    StrCritereEntree = rstCritereEntree.Fields(1).Value
+    While Not rstCritereEntree.EOF
+            intligne = 5
+            intcolonne = 7
+            LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+            IntCritere = rstCritereEntree.Fields(0).Value
+        While UCase(LibelleQSP) <> UCase(StrCritereEntree)
+            intcolonne = intcolonne + 1
+            LibelleQSP = UCase(ActiveSheet.Cells(intligne, intcolonne))
+    
+        Wend
+    
+        intligne = intligne + 2
+        While (intligne <= intDerniereLigne)
+            LibelleRestaurant = ActiveSheet.Cells(intligne, 1)
+            If ActiveSheet.Cells(intligne, intcolonne) = "OUI" Then
+                BlnRespect = 1
+            Else
+                BlnRespect = 0
+            End If
+           ' BlnRespect = ActiveSheet.Cells(intLigne, intColonne)
+            StrRequeteSql = "EXEC [TEST].[MAJ_CRRE_ENEE] " & "'" & LibelleRestaurant & "'," & BlnRespect & ",'" & StrTrimestre & "'," & IntCritere
+            Debug.Print StrRequeteSql
+            Call executer_Procedure(CMD, StrRequeteSql)
+            intligne = intligne + 1
+        Wend
+        rstCritereEntree.MoveNext
+        If Not rstCritereEntree.EOF Then
+            StrCritereEntree = rstCritereEntree.Fields(0).Value
+        End If
+
+    Wend
+
+End Sub
+
+Public Sub SaisirToutCritereEntree()
+    Dim intIndexSheet As Integer
+    Dim intNbrSheets As Integer
+
+    Call ConnecterCommande
+
+    
+    intNbrSheets = ThisWorkbook.Sheets.Count ' nombre de feuilles du classeur
+    For intIndexSheet = 1 To intNbrSheets
+        If UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "PARAM" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "----" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 4)) <> "UTIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 6)) <> "GRILLE" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 5)) <> "FEUIL" _
+            And UCase(Left(Sheets(intIndexSheet).Name, 7)) <> "XEMPLOI" Then
+            Debug.Print Sheets(intIndexSheet).Name
+            Sheets(intIndexSheet).Activate
+            Call SaisirCritereEntree
+        End If
+    Next intIndexSheet
+    
+
+    Call FermerCommande
+End Sub
+
+Public Function Cellule(Valeur As String, Sens As String, DebutLigne As Integer, DebutColonne As Integer) As Boolean
+Dim intligne As Integer
+Dim intcolonne As Integer
+Dim intDerniereLigne As Integer
+Dim intDerniereColonne As Integer
+
+        intligne = DebutLigne
+        intcolonne = DebutColonne
+        Cellule = False
+        intDerniereColonne = fn_DerniereColonne
+        intDerniereLigne = fn_DerniereLigne
+
+    If Sens = "horizontal" Then
+        While (UCase(ActiveSheet.Cells(intligne, intcolonne)) <> UCase(Valeur) And intcolonne <> intDerniereColonne)
+             Debug.Print ActiveSheet.Cells(intligne, intcolonne)
+           
+            intcolonne = intcolonne + 1
+       '     Debug.Print ActiveSheet.Cells(intLigne, intColonne)
+        Wend
+            If UCase(ActiveSheet.Cells(intligne, intcolonne)) = UCase(Valeur) Then
+                Cellule = True
+            End If
+            
+
+    Else
+    
+        
+        While (ActiveSheet.Cells(intligne, intcolonne) <> Valeur And intligne <> intDerniereLigne)
+            intligne = intligne + 1
+        Wend
+        If ActiveSheet.Cells(intligne, intcolonne) = Valeur Then
+                Cellule = True
+                
+        End If
+
+    End If
+    If Cellule = True Then
+        IntGblLigne = intligne
+        IntGblColonne = intcolonne
+
+    Else
+        IntGblLigne = DebutLigne
+        IntGblColonne = DebutColonne
+
+    End If
+        
+        
+
+
+End Function
+Sub testcellule()
+Dim rstCritereQsp As ADODB.Recordset
+Dim strLibelle As String
+Dim strPoste As String
+Dim strRestaurant As String
+Dim curMontant As Currency
+Dim strSociete As String
+Dim intligne As Integer
+Dim intcolonne As Integer
+On Error Resume Next
+    Set PConnection = Connection(SServeur, BaseDeDonnees)
+curMontant = 0
+    Set rstCritereQsp = SetByProc("exec COMMUNICATION.spw_consultation_critere_qsp '201504'", PConnection)
+    While Not rstCritereQsp.EOF
+        strLibelle = rstCritereQsp.Fields(0).Value
+        strPoste = rstCritereQsp.Fields(1).Value
+        strRestaurant = rstCritereQsp.Fields(2).Value
+        curMontant = Replace(rstCritereQsp.Fields(3).Value, "", 0)
+        strSociete = rstCritereQsp.Fields(4).Value
+        If RechercherFeuille(strSociete) Then
+        
+            If Cellule(strPoste, "horizontal", 3, 1) = True Then
+                If Cellule(strLibelle, "horizontal", IntGblLigne + 2, IntGblColonne) = True Then
+                    intcolonne = IntGblColonne
+                    If Cellule(strRestaurant, "vertical", 1, 1) Then
+                        intligne = IntGblLigne
+                        ActiveSheet.Cells(intligne, intcolonne) = curMontant
+                        
+                    End If
+                End If
+            End If
+            
+        End If
+        Debug.Print strLibelle
+        Debug.Print strPoste
+        Debug.Print strRestaurant
+        Debug.Print curMontant
+        rstCritereQsp.MoveNext
+      Wend
+        Call Cellule("Directeur(trice)", "horizontal", 3, 1)
+   
+    
+   ' [CREE_LIBELLE_NM] , TYTE_LIBELLE_NM, TYUS_RSNT_CODE_CD, TYUS_MONTANT_MN
+    
+End Sub
+
+Public Function RechercherFeuille(NomFeuille As String) As Boolean
+Dim intIndexSheetDebut As Integer
+Dim intNbrSheets As Integer
+Dim intIndex As Integer
+
+    intIndexSheetDebut = ActiveSheet.Index
+    intNbrSheets = ThisWorkbook.Sheets.Count
+    intIndex = intIndexSheetDebut
+    
+    If Sheets(intIndex).Name <> NomFeuille Then
+        intIndex = intIndex + 1
+        While Sheets(intIndex).Name <> NomFeuille And intIndex <> intNbrSheets
+            intIndex = intIndex + 1
+        Wend
+        If intIndex <> intNbrSheets Then
+            Sheets(intIndex).Activate
+            RechercherFeuille = True
+        Else
+            intIndex = 1
+            While Sheets(intIndex).Name <> NomFeuille And intIndex <> intIndexSheetDebut
+                intIndex = intIndex + 1
+            Wend
+            If Sheets(intIndex).Name = NomFeuille Then
+                Sheets(intIndex).Activate
+                RechercherFeuille = True
+
+            Else
+               RechercherFeuille = False
+            End If
+        End If
+    Else
+        Sheets(intIndex).Activate
+        RechercherFeuille = True
+
+    End If
+
+End Function
+
+

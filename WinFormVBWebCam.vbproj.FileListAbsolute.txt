@@ -1,0 +1,5 @@
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WinFormVBWebCam\obj\Debug\WinFormVBWebCam.vbprojAssemblyReference.cache
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WinFormVBWebCam\obj\Debug\WinFormVBWebCam.mainWinForm.resources
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WinFormVBWebCam\obj\Debug\WinFormVBWebCam.Resources.resources
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WinFormVBWebCam\obj\Debug\WinFormVBWebCam.vbproj.GenerateResource.cache
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WinFormVBWebCam\obj\Debug\WinFormVBWebCam.vbproj.CoreCompileInputs.cache

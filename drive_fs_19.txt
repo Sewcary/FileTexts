@@ -1,0 +1,328 @@
+-------------------------------------
+drive_fs log started
+version: 55.0.3.0
+changelist 424159341 with baseline 420341591 in a mint client based on //depot/branches/drive_fs_release_branch/420341591.1/google3
+-------------------------------------
+2022-02-10T17:29:54.227ZI [5632:log_writer_thread] instrumentation.cc:111:OpenLogFileInDirectory Logging to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\drive_fs.txt
+2022-02-10T17:29:54.227ZI [19320:NonCelloThread] drive_fs_main.cc:154:LogExistingCrashReports No existing crash reports found.
+2022-02-10T17:29:54.227ZI [19320:NonCelloThread] drive_fs_main.cc:356:PrintCommandLine C:\Program Files\Google\Drive File Stream\55.0.3.0\GoogleDriveFS.exe --crash_handler_token=\\.\pipe\crashpad_20128_HGXOATHETVUPBFLT --parent_version=54.0.3.0 --startup_mode 
+2022-02-10T17:29:54.231ZI [19320:NonCelloThread] drive_fs_main.cc:137:InitializeLanguage Initializing with detected language: fr-FR
+2022-02-10T17:29:54.231ZI [19320:NonCelloThread] i18n.cc:311:InitializeI18n I18n initialized with fr
+2022-02-10T17:29:54.341ZI [19320:NonCelloThread] drive_fs.cc:527:RunDriveFS Options: argv_0: "C:\\Program Files\\Google\\Drive File Stream\\55.0.3.0\\GoogleDriveFS.exe"
+base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary"
+shell_ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary_shell"
+crash_handler_token: "\\\\.\\pipe\\crashpad_20128_HGXOATHETVUPBFLT"
+enable_tracing: false
+enable_ui: true
+enable_file_dances: true
+use_fake_cello_fs: false
+enable_poll_for_changes: true
+drive_create_options {
+  use_fake_cloud_store: false
+  authorize_new_user: false
+  refresh_token: ""
+  user_email: ""
+  token_uri: ""
+  auth_uri: ""
+  metadata_server_auth_uri: ""
+  user_id: ""
+}
+enable_field_event_recording: true
+open_gdoc_path: ""
+started_by_installer: false
+locale: ""
+force_onboarding: false
+log_connection_details: false
+use_intranet_connectivity_to_check_online: false
+crash_handler_init_status: SUCCESS
+cello_options {
+  drive_api_options {
+    apiary_trace_token: ""
+    apiary_trace_regex: ""
+    dapper_trace_regex: ""
+    functional_tests_dir_path: ""
+  }
+}
+open_gdocs_root: false
+open_gsheets_root: false
+open_gslides_root: false
+crash_on_core_start: false
+use_curl_logging_scribe: false
+force_case_sensitivity: false
+new_gsuite_file: ""
+account_settings_from_file_path: ""
+parent_version: "54.0.3.0"
+open_all_dialogs: false
+startup_mode: true
+fake_multiaccount_ui: false
+feature_config_override {
+  global {
+  }
+  account {
+  }
+}
+fake_migration_file_viewer_data: false
+global_feature_config {
+}
+photos_scope: ""
+disable_add_account: true
+show_sign_in_dialog_if_no_user: true
+show_preferences_dialog_debug_menu: false
+crash_in_execution_context: false
+enable_physical_http_logging: false
+
+2022-02-10T17:29:54.342ZI [19320:NonCelloThread] drive_fs.cc:155:LogSystemConfig OS: Windows/10.0.19043
+2022-02-10T17:29:54.342ZI [19320:NonCelloThread] drive_fs.cc:162:LogSystemConfig Architecture: x86_64
+2022-02-10T17:29:54.342ZI [19320:NonCelloThread] drive_fs.cc:170:LogSystemConfig Total RAM: 7.89 GiB
+2022-02-10T17:29:54.342ZI [19320:NonCelloThread] drive_fs.cc:186:LogSystemConfig Disk space: 12.77 GB free / 126.70 GB total
+2022-02-10T17:29:54.429ZI [19320:NonCelloThread] drive_fs.cc:193:LogSystemConfig Timezone: UTC+0000 (UTC)
+2022-02-10T17:29:54.431ZI [19320:NonCelloThread] preferences_manager.cc:107:GetUserPreferences user_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  trusted_root_certs_file_path: "C:\\Program Files\\Google\\Drive File Stream\\55.0.3.0\\config\\roots.pem"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  force_browser_auth: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+}
+}
+2022-02-10T17:29:54.432ZI [19320:NonCelloThread] preferences_manager.cc:138:GetEffectivePreferences effective_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  trusted_root_certs_file_path: "C:\\Program Files\\Google\\Drive File Stream\\55.0.3.0\\config\\roots.pem"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  force_browser_auth: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+}
+}
+2022-02-10T17:29:54.432ZI [19320:NonCelloThread] migration.cc:537:ShouldRun Migration is not enabled, skipping.
+2022-02-10T17:29:54.433ZI [14520:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-02-10T17:29:54.489ZI [19320:NonCelloThread] registry_win.cc:304:VerifyRegistryValue Value for registry key [SOFTWARE\Classes\GoogleDriveFS.gdoc\DefaultIcon, ] is incorrect: expected "C:\Program Files\Google\Drive File Stream\55.0.3.0\GoogleDriveFS.exe",-3, got "C:\Program Files\Google\Drive File Stream\54.0.3.0\GoogleDriveFS.exe",-3
+2022-02-10T17:29:54.519ZI [19320:NonCelloThread] app.cc:595:RegisterOutlookAddInHelper Google Drive Outlook Add-in: Outlook add-in already unregistered.
+2022-02-10T17:29:54.519ZI [19320:NonCelloThread] app.cc:595:RegisterOutlookAddInHelper Google Meet Outlook Add-in: Outlook add-in already unregistered.
+2022-02-10T17:29:54.519ZI [19320:NonCelloThread] app.cc:925:CleanupGoogleSyncShortcuts Google Drive Sync client is installed
+2022-02-10T17:29:55.015ZI [19320:NonCelloThread] dialog.cc:78:ResetViewViaDifferencer Resetting UpdateViewDifferencer.
+2022-02-10T17:29:55.022ZI [14520:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-02-10T17:29:55.023ZI [19320:NonCelloThread] curl_api.cc:1291:Create SSL verification with CAcerts path: C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T17:29:55.125ZI [19320:NonCelloThread] client.cc:519:LogWindowsFilterDrivers Nonstandard filter drivers present: aswmonflt.sys (3188c405245b897) aswsnx.sys (ad69d796f12e9187) aswsp.sys (c6fb502385312a16) bindflt.sys (556d9232df19b942) iastorafs.sys (6e2e912e8f9bad00) trufos.sys (e2f458114162c984)
+2022-02-10T17:29:55.125ZI [19320:NonCelloThread] client.cc:524:LogWindowsFilterDrivers Nonstandard filter driver combo hash: ab181887fa90b9fd
+2022-02-10T17:29:55.130ZI [19320:NonCelloThread] uiext.cc:68:SaveFlagsToRegistry Set Explorer extension keys.
+2022-02-10T17:29:55.399ZI [16772:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-02-10T17:29:55.402ZI [16772:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-02-10T17:29:55.402ZI [16772:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-02-10T17:29:55.403ZI [16772:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-02-10T17:31:25.073ZI [22620:CurlWorker0] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T17:31:25.088ZI [2040:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-02-10T17:46:25.233ZI [19152:CurlWorker1] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T18:31:25.529ZI [21564:CurlWorker2] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T19:31:25.889ZI [16304:CurlWorker3] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T20:31:26.264ZI [13368:CurlWorker4] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T21:31:26.592ZI [15576:CurlWorker5] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T22:31:27.036ZI [19096:CurlWorker6] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-10T23:31:27.330ZI [24928:CurlWorker7] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T00:31:27.649ZI [10764:CurlWorker8] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T01:31:28.077ZI [988:CurlWorker9] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T02:31:28.459ZI [10680:CurlWorker10] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T03:31:28.754ZI [19628:CurlWorker11] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T04:31:29.092ZI [16828:CurlWorker12] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T05:31:29.458ZI [19140:CurlWorker13] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T06:31:29.794ZI [24960:CurlWorker14] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T07:31:30.182ZI [11036:CurlWorker15] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T08:31:30.547ZI [19748:CurlWorker16] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T09:31:30.947ZI [23812:CurlWorker17] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T10:31:31.299ZI [22896:CurlWorker18] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T11:31:31.838ZI [17860:CurlWorker19] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T12:31:32.193ZI [24900:CurlWorker20] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T13:31:32.466ZI [2440:CurlWorker21] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T14:31:32.788ZI [7144:CurlWorker22] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T15:31:33.104ZI [18764:CurlWorker23] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T16:31:33.497ZI [21316:CurlWorker24] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T17:31:33.871ZI [17184:CurlWorker25] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T17:46:33.981ZI [6936:CurlWorker26] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T18:31:34.279ZI [17272:CurlWorker27] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T19:31:34.629ZI [13416:CurlWorker28] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T20:31:34.992ZI [10840:CurlWorker29] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T21:31:35.367ZI [21000:CurlWorker30] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T22:31:35.768ZI [15664:CurlWorker31] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-11T23:31:36.126ZI [3288:CurlWorker32] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T00:31:36.465ZI [4400:CurlWorker33] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T01:31:36.785ZI [16276:CurlWorker34] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T02:31:37.161ZI [22852:CurlWorker35] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T03:31:37.526ZI [10684:CurlWorker36] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T04:31:37.944ZI [15300:CurlWorker37] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T05:31:38.286ZI [24544:CurlWorker38] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T06:31:38.681ZI [23948:CurlWorker39] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T07:31:39.028ZI [10192:CurlWorker40] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T08:31:39.409ZI [18656:CurlWorker41] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T09:31:39.831ZI [19684:CurlWorker42] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T10:31:40.138ZI [6128:CurlWorker43] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T11:31:40.557ZI [19196:CurlWorker44] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T12:31:41.588ZI [15416:CurlWorker45] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T13:31:42.153ZI [18220:CurlWorker46] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T14:31:42.616ZI [14656:CurlWorker47] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T15:31:43.002ZI [9440:CurlWorker48] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T16:31:43.382ZI [7028:CurlWorker49] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T17:31:43.748ZI [14464:CurlWorker50] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T17:46:43.857ZI [18780:CurlWorker51] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T18:31:44.253ZI [20400:CurlWorker52] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T19:31:45.232ZI [11580:CurlWorker53] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T20:31:48.210ZI [22768:CurlWorker54] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T21:31:48.523ZI [25092:CurlWorker55] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T22:31:48.869ZI [21456:CurlWorker56] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-12T23:31:49.197ZI [24084:CurlWorker57] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T00:31:49.520ZI [16940:CurlWorker58] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T01:31:49.818ZI [11280:CurlWorker59] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T02:31:50.124ZI [13472:CurlWorker60] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T03:31:50.464ZI [15596:CurlWorker61] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T04:31:50.783ZI [18516:CurlWorker62] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T05:31:51.110ZI [1876:CurlWorker63] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T06:31:51.417ZI [23348:CurlWorker64] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T07:31:51.805ZI [18264:CurlWorker65] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T08:31:52.170ZI [25596:CurlWorker66] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T09:31:52.550ZI [14632:CurlWorker67] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T10:31:52.911ZI [10744:CurlWorker68] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T11:31:53.278ZI [7888:CurlWorker69] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T12:31:53.611ZI [7204:CurlWorker70] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T13:31:53.934ZI [5044:CurlWorker71] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T14:31:54.249ZI [11880:CurlWorker72] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T15:31:54.588ZI [8700:CurlWorker73] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T15:49:11.419ZI [19320:NonCelloThread] drive_fs.cc:379:operator() Startup tracing disabled
+2022-02-13T15:49:11.798ZI [20384:trace_writer_thread] instrumentation.cc:579:operator() Writing Chrome Trace to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\startup_trace_2022-02-13T15_49_11.json
+2022-02-13T15:49:12.263ZI [20384:trace_writer_thread] instrumentation.cc:581:operator() Trace successfully written
+2022-02-13T16:31:55.036ZI [14108:CurlWorker74] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T17:31:55.471ZI [2580:CurlWorker75] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T17:46:55.913ZI [22632:CurlWorker76] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T18:31:56.547ZI [17384:CurlWorker77] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T19:31:57.021ZI [24772:CurlWorker78] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T20:31:57.632ZI [17584:CurlWorker79] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T21:31:58.084ZI [2840:CurlWorker80] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T22:31:58.430ZI [20272:CurlWorker81] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-13T23:31:58.906ZI [11696:CurlWorker82] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T00:31:59.457ZI [23440:CurlWorker83] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T01:31:59.969ZI [21652:CurlWorker84] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T02:32:00.446ZI [17356:CurlWorker85] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T03:32:00.861ZI [22976:CurlWorker86] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T04:32:01.263ZI [24168:CurlWorker87] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T05:32:01.678ZI [3604:CurlWorker88] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T06:32:02.004ZI [18532:CurlWorker89] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T07:32:02.630ZI [19652:CurlWorker90] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T08:33:33.287ZI [19384:CurlWorker91] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T09:33:33.639ZI [7908:CurlWorker92] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T10:33:33.974ZI [14856:CurlWorker93] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T11:33:34.297ZI [8648:CurlWorker94] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T12:33:34.991ZI [23376:CurlWorker95] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T13:33:35.424ZI [1316:CurlWorker96] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T14:33:35.865ZI [25824:CurlWorker97] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T15:33:36.510ZI [26380:CurlWorker98] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T16:33:37.103ZI [23584:CurlWorker99] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T17:32:07.558ZI [9068:CurlWorker100] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T17:47:08.024ZI [16272:CurlWorker101] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T18:33:38.271ZI [25920:CurlWorker102] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T19:33:38.597ZI [27472:CurlWorker103] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T20:33:39.052ZI [26216:CurlWorker104] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T21:33:39.468ZI [6176:CurlWorker105] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T22:33:39.764ZI [15108:CurlWorker106] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-14T23:33:40.184ZI [25156:CurlWorker107] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T00:33:40.498ZI [22928:CurlWorker108] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T01:33:40.790ZI [23676:CurlWorker109] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T02:33:41.122ZI [19916:CurlWorker110] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T03:33:41.609ZI [26848:CurlWorker111] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T04:33:42.070ZI [17200:CurlWorker112] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T05:33:42.392ZI [21296:CurlWorker113] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T06:33:42.682ZI [20476:CurlWorker114] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T07:33:43.029ZI [16888:CurlWorker115] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T08:33:43.652ZI [25048:CurlWorker116] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T09:33:44.195ZI [16932:CurlWorker117] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T10:33:44.597ZI [24624:CurlWorker118] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T11:33:45.066ZI [27632:CurlWorker119] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T12:33:45.474ZI [10188:CurlWorker120] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T13:33:47.250ZI [6148:CurlWorker121] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T14:33:47.744ZI [15228:CurlWorker122] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T15:33:48.322ZI [15116:CurlWorker123] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T16:33:48.775ZI [6392:CurlWorker124] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T17:32:19.265ZI [15504:CurlWorker125] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T17:47:19.413ZI [2520:CurlWorker126] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T18:33:49.747ZI [25004:CurlWorker127] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T19:33:50.273ZI [5588:CurlWorker128] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T20:33:50.795ZI [27228:CurlWorker129] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T21:33:52.503ZI [29444:CurlWorker130] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T22:33:52.859ZI [9596:CurlWorker131] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-15T23:33:53.524ZI [11412:CurlWorker132] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T00:33:53.878ZI [25888:CurlWorker133] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T01:33:54.257ZI [28344:CurlWorker134] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T02:33:54.645ZI [26716:CurlWorker135] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T03:33:55.015ZI [28108:CurlWorker136] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T04:33:55.396ZI [28808:CurlWorker137] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T05:33:55.849ZI [6508:CurlWorker138] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T06:33:56.240ZI [11060:CurlWorker139] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T07:33:56.565ZI [15544:CurlWorker140] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T08:33:56.958ZI [24392:CurlWorker141] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T09:33:57.382ZI [22200:CurlWorker142] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T10:33:57.778ZI [11072:CurlWorker143] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem
+2022-02-16T11:33:58.208ZI [14092:CurlWorker144] curl_api.cc:418:Init Using cacerts from C:\Program Files\Google\Drive File Stream\55.0.3.0\config\roots.pem

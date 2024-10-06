@@ -1,0 +1,686 @@
+imùpacct dun mauvais modele sur la suite 
+on va voir conceps 
+gros exercices qui reprend toute les eapes de la modelissation des données
+
+retour sur aspect echniques les regles de lart 
+
+propietes acid 
+
+contraintes a respecter ou pas  
+
+fromes normales permet de verifier de maniere objective notre travail 
+est ce que mon modele passe premiere forme normale
+
+ce sont des regles qui peremttent de coder dans les ergels de lart
+
+la repartiotn des traitemens assez complexe 
+
+avec quells outils
+
+outils de perf 
+
+	avec le gros pavé les index pas tres long mais a comprendre 
+	
+les vues 
+
+la busines intelligence
+
+dans son sens stric on parle de schehma relationnel
+
+dans un spectre plus large au mome ou on reflechi sinscrit dans une demarche projet 
+
+qui dit donneees dit traitement
+
+architecture 
+
+question pourkoi annlyse des besoins 
+
+inscrire ses besoins dans une demarche projet globale jusqua  la production 
+
+il faut une demarche chronoogique 
+quel questions a se poser zen ayant lexhaustivite des donnees par exemple 
+
+il faut ocnnaitre le perimetre de mon systemem 
+
+a quelles questions  mon systeme doit repondre
+
+
+
+expression des besoins : document realise par le clietn qui va dire ce  dont il abesoin 
+ cest general et ouvert en ne parlant que dans une approche fonctionneelle 
+document ouvert aux differentes solutions proppese par la suite 
+cahirer des charges apres lexpresion eds besoins
+
+c le doc contractuel qui oblige les prest de svc a repondr le maximum poss sur les dem du cahier de charges 
+
+ex : pas plus de 10s pr louvert des page
+
+
+les prestataires rpeonde sur la base du cahier des charges aide par un tiers
+
+il est finance ; tel mmodule avec tel outil et ca coute tant 
+
+la presentations des solutions et des choix
+
+
+dans les petites entrprise lexpression de besoin sert aussi de cahier de charges
+il yaura des arbitrages fait par le chef dentreprise
+
+il ne reste que ce qui est imprtant 
+
+des fois un projet ne va pas plus loin 
+
+faite entrer le projet dans une phase de conception 
+
+un prestataier est choisi on signe le contrat 
+
+il ya deux acterus le client et le prestatairre de services 
+
+
+choix de l exhautauvie des foncitions maquette 
+on se met daccord sur lem ode de fonctionnement regles de gestion (fonctionnel)
+
+le cleitna deja une existant commetn le logiciel s integer
+specifications techniques ou  fonctionnelles 
+
+diffrence etn fonctionnele t technique theoriquemen c diff 
+
+fonctionnel on ne arle que du metier pour ses foncionnalites finales ses objectifs
+
+qquels foncitons le logiciel va realiser
+
+quels sont les outils logiciles pour relaise les fonctilnnalites du meitre 
+
+architecture reseua implementation ouitls logiciles
+un des gros problemes que tend a resouder merise  uml c de trouver un langage de comprehension commun aux deux spheres 
+jai des besoins fonctionnel je repons avec des outils techniques 
+
+la conception 
+
+   elle est deivisee e, plusieurd 
+   
+   c lem oment ou on va commencer a refl su la relaisation du modeles final c la kon aprel du modele de donnes 
+   
+	mcd modele conceptuuel de données 
+	
+	algorithme pour les traitements  
+	
+	relaisation du logiciel code final 
+	
+il ay differentes maniers daller de lanalyse a la mise en production 
+
+tres tres vite on peu avoir une partie de l application 
+versionning  ver 1 ver 2 ver 3 etc 
+
+une fois quon a le dioc des donnees : one peu apsser a la conception rassemblesr les donnees de maniere cohere,tes pour faire apparaitre des entites de reltaions  
+
+aprec le mcd on a le mld 
+
+je vais voir quellles sont les tables qui vont decouler realisation puis model physique 
+
+oblige de passe par ces differtes etapes quelle que soit la casquette que vous ayez 
+
+le role du chef de projet dans cette demarche il va decider de al politique pour arriver le plus rapidement a la mise en production 
+
+role tres important
+
+quand on est pas sur de soi dans lanlyse : on veut mettre rapidememnt  en production pour avoir le retour du client 
+
+test grandeu nature demarche en escargot 
+
+on peu decider de faire que des go no goo si on n a pas confiance dans le client et de faire des actes de validations et faires des livrables 
+
+sans validation on ne passe ppsa a letape suivante 
+
+projets plus longs ett plus surs 
+
+livrable contractuels on peut pas remettre en cause des choses vu dans les etapes precedentes 
+
+avat la mise en production il ya toujour un go no go 
+
+	reponse du client par rappport a ce que lon afit on lapppel la recettele clietn faitts ses test il valide ou non 
+
+   c au moment de la recet tee onfait les tests de peroformances 
+
+ne jamais mettre en production le lunid matin si on met vendredi matin on a le week end pour reparer 
+
+tout ce quon va faire c amettre dans cette perpective de chronologie 
+
+quand on a un log afaire tout seul ou a 5 0 personnes 
+nomralement ilf audrait tout comprendre pr choisir les outils (sql server oracle) pour pouvoir devellopper par ce uqe c louitl qui repond le mieux au problemes sauf qu il son choisit au moment du cahier de charges souci pour le prestataires
+
+migration mysql oracle 
+ou access sql server arrive souvent
+
+la technologie flash back pour recupere une bdd  en plein milieude journée (tres cher ) 
+
+en gal se mettent dans la douleur 
+
+on a du mal a bien dimensionner au debut 
+
+probleme  : resistance au changement  c klkechos qui nous accompagne 
+
+(mme michu archetype de la dame quia toujours ca petiite appli depuis trene ans :caricature) 
+
+D IL YA DE LA RESITANCE ON EMET TOUT DE SUITE QUELCHOSE DE SIMPLE EN PRODUCTION PARTIE REFERENTIEL SANS FAIRE DE TRANSACITON 
+
+toujours faire attention faire ce genre de choses au mometnde la conceptionpeut on avoir un contact avec la luitisateu 
+   
+
+
+cycle de vie lineaire le cleitn aovit  la fin de la realisation  a la rectte ou certification
+boite noire le cleitn ne voit rien 
+
+pour eviter ce probleme cycle de vie en v on valide a chaque etape test croisé
+
+quand on met en production ca marche c le plus utilisé on met le minimum nécessaire den employés (économique ) .
+
+le prototypage ou escargot c comme si on faisiat pluusieurs projets dans les projets objectifso, ser enc compte ikl aya differents modules autonome sanson fait le modul achat une foois fini elle soccupe du module ventes on fait tout en parrallèel 
+plusieurs anlakys en meme tpems etc on met en produciton par étapes
+
+on met en produciton rappidememtn  garcae au specification des clients on peut mofifire des choses rapidememnt
+
+contrainte plusieurs equipes 
+
+2emem contrainte  : une visibiltè minime sur la duree des projets 
+
+modelde de donnes compliqué grosse organisation 
+
+patch niveua des migration dun logiciel 
+
+ne jamias nommer ces projets avec une date  : 
+
+composatn 
+
+hot fix patch version
+
+
+le contenu de la formation semble  legerement different pplus eclectique du fait que concepts et trois ssytememes de base de donnees 
+administr devellopement 
+ce qui se comprend il faut de serieuse bases de develloppement pour faire de ladministration
+
+develpooepeur de bases de données annoce de type grands comptes application de gestion grosse base de donnees derriere 
+
+frocement develpeur sql orient big data ou bi 
+
+cela nempeche as de reponndre a ces annonces 
+
+avoir des compètences sql 
+
+deux porteurs et un populaire 
+
+
+coté admin plutot mesuré 
+
+ca semble pretentieux admin junior oui 
+
+admin de bases de données 
+
+le contenu est correct 
+
+pour pouvoir avoir les connaissances requiqde necessite de l experience 
+
+admiinstrateur competences 
+
+debouche en oracle 
+metier sensible il faut des references  
+
+il faut de lexperience avant davoir le titre 
+
+
+certification bon moyen 
+
+certif microsoft certif oracle 
+
+on pose des questions avec votre avis 
+
+ca doit  etre correlle corroboré
+
+chez oracle la frontière est mince entre develloppeur et administrateur 
+pas chez sql server outils plus graphiques 
+
+corte dev super larfe 
+admin plus restreint 
+admin juniou dev voulant de l experience 
+
+plus de facilite qu un dev pour du dev 
+
+accenture filiales filles low cost 
+
+candidature spontanees 
+
+accenture cap gemini ibm altran atem 
+xteria sopra steria
+
+ 
+
+succursales inconnues 
+
+c est le poitn de depart merise permet de comprendre l expr des besoin et sait la transformer en sol inofrmatiqu
+
+avec un metal langasge ou protocole  qui peut etre compris par tout le monde 
+
+merise et un langage et une mèthode . avec merise on reocnnait les etpaes du projet grace a des documetn qui en deroulant correctment la mèthode si on a des problemems cest qu on a fait une erreur dans l' etape d 'avant .
+
+on peut pas depasser les methodes . 
+
+avant 70 en france inofrmatique 0 ila  falu prendre le train en marceh inofrmatisation des sytemes de l etat .. 
+
+relation a lordianteur lontaine 
+
+contrainyes utilisateur reseau ordinateurs non efficaece bok ou de chose a egrer
+
+
+letat francai a mis en route une methode de conception elles sest diffusee par la sphere privee 
+
+ona apprend les concept de modelissations 
+
+merise trois principes fondamentaux 
+
+la notion de syteme ou la systemique fait dapprehneder un n probleme en considerant tous les processus tous les acteurs tout va etre en inter relation 
+
+les taches les objectifs 
+
+cett notion de comprendre ce kon demande 
+
+c une notionnqui supporte la bstraction
+
+niveauu de zoom 
+
+mon systeme le logiciel aceteurs internes exterens 
+
+
+on peut sinteresser aux modules 
+
+crm mo, syteme 
+
+se poser les bonnes questions 
+
+ou ya un sysmee et je le considère en premier 
+
+chaque document est considère come un système 
+
+dans uns système merisien on essaie de detecter par rapport aux acteur qui dirige qui execute la  tahce qui control 
+
+
+quleques oit le niveauu qui dirige qui execute qui control 
+
+nomralmeent en info on dooit toujours avoirs ces choses 
+
+organisime de decision execution controle 
+
+on ne reflechit que en commencant par le laboration du sytème 
+
+une base de don est uns sytemme 
+ne serait il pas interessant  davoir des scripts qui verifi controle mon system pour veriifere les propriete acid 
+
+
+---la deuxime chose tre impor 
+
+separation des données et des traitement 
+
+ cest original totalememnt a lencontre dautre lanfgages ou on ne separe les donnness e traitements langage objet 
+
+
+ca veut dire que des lanalyde ,je identifie ce qui est de lordres des traitement et ce qui est de lordres  des inofrmations : informations brutes
+
+dans le cadre de ce cours on va voir ce qui concerne  les données 
+
+avori une base de donnes coherente 
+
+les traitements seront traites dans la repartition des traitementd en terme de methodologie on va separer les traitementd 
+
+
+la dernier des chose c lapproche par niveaux 
+
+en meris semanitque propre 
+
+lunivers du discours comprendre son langage ,contrainte 
+
+conception 
+
+logique : dune conception premetn theorique on commence a reflechir a ce que ca induit dans la solution informatique 
+
+ex le schema EA 
+
+en modele logique on decide de ce que devient la relation aimer 
+
+apres on est dans le physique  typage , create table 
+
+nb 
+meris etant ne dans les annees 70 ,il ya des parties s de merise qui  sont obsolète 
+
+comme le MOT modele operationnel des traitements devenu comptletemetn obsolète 
+
+comment orgnzider les traitmeents dans al base dun syteme lourd
+
+la partie traitements est en perte de vitess 
+
+les donnnees sont toujours dactualité 
+
+on  a jamais trouve quelqueschose de plus puissant pour connaitre les specifités  dun modèle de données 
+
+
+il ya des choses interessantes dautre s moins 
+
+savoir recupere des donnes dinofrmation est moins pregnant 
+
+univ du disc dico des donnees :  ananlyse
+
+comment faire pour interviewver les gens 
+
+voir la doc
+
+ce uqi es important c des saoir quon peut pas modeliser sans l exhaustivite des données 
+
+partie extrememnt importante mais plus simple parce que les inof sont inofrmatisseees
+
+les iinfos doivent etre brutes , non secable 
+
+cas typique :l' adresse num rue,nom rue , ville code postale etc : donnée composée 
+
+on parle de donnée atomique 
+
+imaginon de devoir faire refreerence a un numero de rue 
+
+il faut faire la différence entre les donnees numerisées et les données calculess 
+
+ trs important , dans le modele de donnnes il ne rest que  des inofrmations brutes 
+ 
+ si on peut avoir une inof a parit de donnness ; qi on memeorise cette ino calculéé , reoddndance si je modifie une des donnees de dpart on doit refaire le calcull
+ 
+ dns un modele ft ds les regles de lart on ne trouve pas de donnnes dont la valeur ets le reulsta de calculs dautre donnée 
+ 
+ en realite  , dans le monde reeel c différent 
+ 
+ c quelquechose que lon voit souvent , par exemple parce quqe le calcul est long 
+
+on peut denormarliser mais on assume
+
+il es important de savoir les donnees enregistrees et les donnees calculés apès on bascule dans les traitememtns
+
+identifier toute les taches ici aussi il ya le cycle dattrzction 
+
+les doc merise supporte labstracion c devenu leremetn useless 
+
+mais cest encore une methode qui focntionne tre biens  ...
+
+APPROCHE APR 
+
+EN PLUS DETRE UN LANGAGE C UNE METHODE POUR TRAVAILLER 
+
+
+MERISE EST ASSEZ RIGIDE : o nivo logik on peut verifier si on a un rpebleme c kil ya un probleme au nivo physik 
+
+le modele de donnes ces la ou  on comprend 
+
+quest ce qu one me demande de faire avec le dico de donnees 
+ 
+ grace a lexpression des besoin 
+ 
+ lexpression des besoins est lisible sur le mcd 
+ 
+ nivauru organisaironnel organisation des traite ment ou qui quand 
+ 
+ le niveau logique : tout est dans le mcd le modelde logique decoul du modele conceptuel 
+ 
+ on se rapproche du modele physique 
+ 
+ le niveau physique , je sais exactemtn faire a vec mes tables 
+ 
+ creat table pri key for key 
+ 
+ 
+ il faut mettre des outils en theorie 
+ 
+ ---audit de volumétrie 
+
+la memthode d e traitement meris e nest plus trop utilsee ou alors modele logi or g et phyique presk sorti de la normale
+mct encore utilisé dans le cadre des audits 
+
+un chef dentreprise fait de la vente par correpondance il sapercoit qu il est moin s rapide que se  conc 
+en 2 jour  c envoy" 
+lui cj + 4 
+
+dans ce cadere la o moyen des diagramme des flux ya une solutionn 
+
+elle permet de voir des redondances et comprendre que la methode mete 4 jours 
+
+il ya meme des outils qui savent un modele physique de donnees meris et qui cree le code pareil pour les traitemenbtd
+
+se referer a cette matrice 
+cycle dabstaction separation modeles traitemetn et modeles que ca a induit 
+
+ce quie est comparable a lexpression des donnees on les donnnes les relations la mecanique des processsu entre les infromation savoir qune commande et relie avac le bon de livraison 
+
+dans le msd on vra cette mecanisue 
+
+c une source pour le mcd 
+
+le dico des données 
+
+le fromaliseme nes t pas dans la norme ces dans lanalyse fonctioneel et la nalye technneiqe
+
+nom de la donnnee sourece donnee calculee ou pas 
+source de calcul 
+donne le xhaustivite des deonnees de llapplication 
+le dico des donnnees qui existe actuelllement rien ne dit que dans lapplication on ne va pas le modifier plus les donneees odnt on ara besoi n 
+
+il est souvent deja existant 
+
+ce qui interessant dans merise c toutes les methodes pour acquerir on peut passer par un etl 
+
+ectact transform et load 
+
+extrire des donnees de bdd hetreogenes de tout systemem numerique pour mettre a un meem endorit pour tout normalisere
+
+le mcd 
+
+
+regele de gestion cas typique statut 
+le statut de la facture regel de gestion valide paye annule 
+
+quelle est la mecaniqued de ce champ 
+
+
+ex : capacite> 50 exemple avions 
+
+c tr iprtnt on va le garder jusko mpd onv a le traduire en contrainte (check ) 
+
+document  : document source 
+
+ona les pptes ou les proriete 
+ona ces propriete qui sont dans des entites une propriete est particuliaire identifiant unique 
+jai mon dco d e donnnees et jais devoir toutes ces donnees trouver lidentifiant pour mettre toutes ces donneees reliees sur cette identifian qui seront ma relation
+
+il ya lautre type l association qui est une relation entre neties  
+
+sil me reste une donnee  elementaire seule alors ce nest pas termminee 
+ 
+ les donnees calculees se retrouvent dans le mct 
+ 
+ on peut decider quune donnee calclee integre le mcd pour des raisons de facilite 
+ 
+ comprehension 
+ rapdite des requetes  
+ 
+ un choix kil faur assumer 
+ 
+ on fait des traitement sur la base de donnees traiements supplememntaires
+  
+critère commun identifiant si on la tant mieux 
+si on en trouve pas on peut alimenter dune donnne dont on aura besoin par exmeple code client 
+
+dans les regles de gestion seriat par exemple 3 premieres lettres du nom plus increment 
+
+on lajout dans le mcd donc on lajoute dans le dico des données 
+
+on fait marche arriere on mododfoe le dico de donnees DDD
+
+E entite 
+A assoicaiotn
+R relation 
+
+dans le mcd on a des pROPRIETE AU QUELLE ON  PEU AJOUTER DES P ;on sssures que toute les P sont ds des E ou obj 
+
+on a les R ou associations A 
+
+et dernieres choses on a les cardianletes C  
+
+
+on les detecte une fois quon a les entite elles vont nous donner la emcanique de comprehension des relation les une vis a vis des autre
+
+al relation entre duex entites se traduiie tpar un verbe c toujour une action  .
+
+tarifs  tarifs est lasssociaition entre bieres et bars on vrra que ce ne st pas si simple 
+
+on peut modifier ele nom dune realton entre le c d  et le mld 
+
+il se peut kune propriete soit dans une rlation et pas dans une assoication 
+
+exemples
+ 
+ 
+ merise 2 sinsoire de libertes prises par eles utilisateurs qui se sont formalisee ainsi que la pproceh objet 
+ 
+ normaliser toutes les differentes manieres de gerer certains aspect de a modelisation des aasoications 
+ 
+ ds n mcd on aau moins letnite et lidentifiant on peut ne pas mettre les proprietes .le mcd au complet soit ocntrenir toute sles propietes de so, model de données 
+ 
+ les cardinalités : c la la magie de Merise c la kon sparcoit on peur presque rtote lespresiion de donnees 
+ 
+ dans le contecxte de lapplicaiton si ej e sui pas mere je peux ne pas etre dans lentit"
+ o,n aprel de hieravhci 
+ 
+ ile st possible detre une perosnne dznd etre merla caridnalite peremt de definit v koie tre uen mere si jse suis un nfznt 
+ 
+1;9 est une carindalitéo, pourrait le mettre mais concepltuelleement  
+
+si je suis client ca veut dire que jai commande au mmoins un article et que je peux en commeander plusieur 
+
+un clietn va commander 1 ou plusieurs articles 
+
+sil na jamais commande il peu ene pas exister ma defioniton dans ce cas est une definitotion restrictives 
+
+le cllavec cete definiyion ,on rrerdieint .quand i=o, decide
+
+le direceteur peut ne pas avori fait une analyse aussi profonde 
+
+un client ce que cest depend de la ^politique de lentrprise
+ 
+ 1..n 
+ 
+ il faut avoir une commande pour etre considerree comme clietn 
+ 
+ apres la question ce s une commande vlidee ou pas 
+ 
+ commader ne veut aps dire facturer
+ il ne faut pas sous entendre les cardinalite permettent de lever les malentendus
+  
+  
+  un article il, peutt participer a combien de relations 0   ..n 
+  
+
+convention une table est au pluriels les propiretes au singulier
+ 
+ 
+
+dans la convention toute les proprietes doivent etre dans la meme langue 
+
+ial rrive dans les projets internationaux que des proprietes soient dans des langues diffe 
+  projet anglais modifie par des develloppeurs francais 
+  
+  
+  juste parce qu une cle etrangere doit porter lememe nom que la cle primaire qu elle refernce 
+  
+ sil ay pas de nromùe apres avec le jeu des relation ca deviejnt nimportequoi 
+ 
+ 
+ par eexmeple les table ssont prefixees par T
+ 
+ une cle etrangere c forcment la cle primaire dune autre table 
+ 
+ on peut appeller une cle etrangere par un autre nom c juste une convention 
+ 
+ 
+ cle primaire ccomposeee de trois et duex  
+ 
+ si elle en ralaiiton aevc une relation 
+ 
+ la cle primaire de l association yen aura 5 
+ 
+ capacité dineterroger des gens qui sont pas votre metier
+ ces metieres on une semantique ya de temres didffernts 
+ 
+ des incomprehension qu on peut realiser beaucoup top tard  
+ 
+ selon le contexte ou lon est cest la ou les problemems surviennent
+
+le fait de mettre 1 ou n dun cote ddune realtion permet de redefinir eventuellement la relation qu il ya en face  
+
+c est le contraire de classe de uml 
+
+relation porteuse de données  poru commande et client 
+
+qte taux tva 
+
+toute sles proireete qui non de sens que dans la rencontre de relation 
+ex : dans les bieres une des aassociation etait porteuse de données 
+ 
+ dans une association au niveau des  donnees il nya pas didentifiant
+
+relation reflexive 
+
+employe
+
+dans une g electronique de document 
+
+livrable  :  doc contractuel 
+
+il faut de la tracabilité versionning  
+
+une ged permet de gerer tous ces documents
+ 
+
+notion des lieux rep appprten a des repertoires app aa des rep 
+
+dans une ged on met une hierarichiede systme de fichiers pour pouvoir retrouver ces fichiers 
+
+les relations reflexives traduisnt une hierarchie 
+
+
+uen chsoe teres importante 
+
+pour pal suire pour le modele lohgique c tres simple
+
+la notion dentite frote entite faible 
+
+c le principe de voir zu une entite a lascendatn ssu rune aute lune est forte et lautre est dite faible les occurences de lentite faible depende de le xistence de s occurences de lentite fortr
+
+
+l entite dossier service doit son existence de la presence de entite service et employe
+
+si on a 11 et 0n on a une entite frote et une entite faible 1.. 0...1 0....n 1..n  de lautre coté 
+
+constattion utile pour la suite des evenements  
+
+par voie de conseq lorsquon est en presence defai entiforet il en decoule presque tout le temps des problemems de coherence parce que lune doit son existnce a lautrre
+
+c du cote 1.. . 0.. 1 on nepeut pas avoir dordianter sans salle
+
+contrante de coherence 
+quand une requete en sql envoie un et un suel resuaktat ca donne le doit de faire certaines choses 
+
+contrainte de coherence  - > entite forte entite faible
+ 
+entite forte entite faible  - >  contrainte de coherence 
+
+(->) : la plupart du temps 
+
+apres cest mecanique 
+
+
+
+ 
+ 
+ 

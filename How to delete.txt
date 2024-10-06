@@ -1,0 +1,10 @@
+﻿This directory is an implementation cache. The files here are made read-only using file system permissions. This prevents them from being deleted normally.
+
+If you wish to delete a single implementation you can use this command-line:
+0install store remove IMPLEMENTATION-ID
+
+If you wish to delete this entire directory you can use this command-line:
+0install store purge C:\Users\Sewcary\AppData\Local\0install.net\implementations
+
+If you wish to delete this entire directory without using Zero Install you can use this command-line:
+icacls C:\Users\Sewcary\AppData\Local\0install.net\implementations /t /q /c /reset; rm -Recurse C:\Users\Sewcary\AppData\Local\0install.net\implementations

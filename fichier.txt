@@ -1,0 +1,16 @@
+{
+  "parent": {
+    "database_id": "ed793a4deba24f2eab4917ba3ebb34a6"
+  },
+  "properties": {
+    "Nom": {
+      "title": [
+        {
+          "text": {
+            "content": "Ton nom"
+          }
+        }
+      ]
+    }
+  }
+}

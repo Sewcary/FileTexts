@@ -1,0 +1,92 @@
+Option Explicit
+Const StrChaineConnection As String = "Provider=SQLOLEDB;Data Source=PC-FARA\PRIMAIRE;Initial Catalog=Bonus;Integrated Security=SSPI;"
+Public MaConnection As ADODB.Connection
+
+
+
+
+
+Public Function fn_DerniereLigne() As Integer
+    
+  fn_DerniereLigne = ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Row
+
+End Function
+Public Function fn_DerniereColonne() As String
+    
+  fn_DerniereColonne = ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Column
+
+End Function
+Public Function EcritureTable() As Boolean
+
+    Dim objCommand As ADODB.Command
+    Dim StrRequeteSql As String
+    Dim IntLigne As Integer
+    Dim IntDerniereLigne As Integer
+    
+    Set MaConnection = New ADODB.Connection
+    MaConnection.Open StrChaineConnection
+    
+    Set objCommand = New ADODB.Command
+    objCommand.ActiveConnection = MaConnection
+    objCommand.CommandType = adCmdText
+    
+    intdernierligne = fn_DerniereLigne()
+    
+    For IntLigne = 3 To fn_DerniereLigne()
+        StrRequeteSql = "INSERT INTO tempo  ( " & _
+        "PREL_XMAT_CD,SCTE_CODE_CD,SCTE_RAISON_SOCIALE_NM,RSNT_CODE_CD,RSNT_ETB_SIRET_NOM_NM,PREL_NOM_NM,PREL_PRENOM_NM,TYTE_LIBELLE_NM,PSTE_NIVEAU_CD,PSTE_ECHELON_CD) " & _
+        " VALUES (" & _
+        "'" & ActiveSheet.Cells(LROW, 1) & "', " & _
+        "'" & ActiveSheet.Cells(LROW, 2) & "', " & _
+        "'" & ActiveSheet.Cells(LROW, 3) & "', " & _
+        "'" & Replace(ActiveSheet.Cells(LROW, 4), "'", "''") & "', " & _
+        "'" & Replace(ActiveSheet.Cells(LROW, 5), "'", "''") & "', " & _
+        "'" & Replace(ActiveSheet.Cells(LROW, 6), "'", "''") & "', " & _
+        "'" & Replace(ActiveSheet.Cells(LROW, 7), "'", "''") & "', " & _
+        "'" & ActiveSheet.Cells(LROW, 8) & "', " & _
+        "'" & ActiveSheet.Cells(LROW, 9) & "', " & _
+        "'" & ActiveSheet.Cells(LROW, 10) & "')"
+        objCommand.CommandText = StrRequeteSql
+        objCommand.Execute
+    Next LROW
+    MaConnection.Close
+    Set MaConnection = Nothing
+
+End Function
+
+Sub MonDeuxiemeTableau()
+    
+    Dim NomTableau() As String
+    Dim i As Integer, j As Integer
+    
+    i = 2
+    'Définit la taille du tableau
+    ReDim NomTableau(i)
+    
+    'Alimente les éléments du tableau
+    For j = 0 To UBound(NomTableau)
+        NomTableau(j) = Chr(65 + j)
+    Next j
+    
+   'Boucle sur les éléments du tableau
+    For j = 0 To UBound(NomTableau)
+        MsgBox NomTableau(j)
+    Next j
+    
+End Sub
+
+
+ Public Function fAverageNumbers(ParamArray varNumbers()) As String
+Dim varX As String, varY As String
+ 
+ 
+For Each varX In varNumbers
+  If Not IsNull(varNumbers) Then
+        Set fAverageNumbers = varY & varX
+    Else
+   End If
+Next
+
+End Function
+     
+

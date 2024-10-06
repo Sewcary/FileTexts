@@ -1,0 +1,37 @@
+Démarrer avec WampServer
+
+
+Comme vous allez le voir, WampServer s’installe facilement et son utilisation très intuitive permet de le configurer très rapidement (sans toucher aux fichiers de configuration).
+
+
+
+Installation
+Double-cliquez sur le fichier téléchargé et laissez vous guider. Tout est géré par l’installeur de WampServer. Par défaut, WampServer est livré avec les toutes dernières versions de Apache, MySQL et PHP.
+
+Une fois installé, vous  pourrez  ajouter  manuellement  des  versions supplémentaires  d’Apache,  PHP ou MySQL (Uniquement compilées VC9, VC10 ou  VC11).  Les  explications  pour  le faire vous seront données sur le forum.
+
+Chaque version de Apache, MySQL et PHP dispose de sa propre configuration et de ses propres fichiers (données pour MySQL).
+
+Utilisez WampServer :
+Création automatique d’un répertoire « www » lors de l’installation (typiquement c:\wamp\www).
+Créez un sous répertoire pour votre projet et déposez-y vos fichiers PHP
+Cliquez sur le lien « Localhost » du menu de WampServer ou ouvrez votre navigateur préféré, et allez à l’adresse http://localhost
+
+
+
+
+Fonctionnalités
+
+WampServer dispose également d’un « TrayIcon » vous permettant de gérer et configurer simplement vos serveurs, sans toucher aux fichiers de configuration.
+
+Clic gauche sur l’icône de WampServer, vous pouvez notamment :
+Gérer les services de Apache et MySQL
+passer en mode online/offline (accessible à tous ou limité à localhost)
+Installer et changer de version de Apache, MySQL et PHP
+Gérer les paramètres de configuration de vos serveurs
+Accéder à vos logs
+Accéder aux fichiers de configuration
+Créer des alias..et bien plus encore
+
+Clic droit :
+Changer la langue du menu de WampServer et accéder directement à cette page

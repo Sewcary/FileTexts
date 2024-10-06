@@ -1,0 +1,7 @@
+D:\Scripts\C#\70483\Drives\Drives\bin\Debug\Drives.exe.config
+D:\Scripts\C#\70483\Drives\Drives\bin\Debug\Drives.exe
+D:\Scripts\C#\70483\Drives\Drives\bin\Debug\Drives.pdb
+D:\Scripts\C#\70483\Drives\Drives\obj\Debug\Drives.csprojAssemblyReference.cache
+D:\Scripts\C#\70483\Drives\Drives\obj\Debug\Drives.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\70483\Drives\Drives\obj\Debug\Drives.exe
+D:\Scripts\C#\70483\Drives\Drives\obj\Debug\Drives.pdb

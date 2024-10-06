@@ -1,0 +1,2672 @@
+-------------------------------------
+drive_fs log started
+version: 64.0.4.0
+changelist 476243425 with baseline 471860380 in a mint client based on //depot/branches/drive_fs_release_branch/471860380.1/google3
+-------------------------------------
+2022-10-07T20:25:37.968ZI [19348:log_writer_thread] instrumentation.cc:113:OpenLogFileInDirectory Logging to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\drive_fs.txt
+2022-10-07T20:25:37.970ZI [19312:NonCelloThread] drive_fs_main.cc:152:LogExistingCrashReports No existing crash reports found.
+2022-10-07T20:25:37.970ZI [19312:NonCelloThread] drive_fs_main.cc:397:PrintCommandLine C:\Program Files\Google\Drive File Stream\64.0.4.0\GoogleDriveFS.exe --crash_handler_token=\\.\pipe\crashpad_15932_UCMOXUDKBNQTXAWO --parent_version=64.0.4.0 --startup_mode 
+2022-10-07T20:25:37.972ZI [19312:NonCelloThread] drive_fs_main.cc:135:InitializeLanguage Initializing with detected language: fr-FR
+2022-10-07T20:25:37.972ZI [19312:NonCelloThread] i18n.cc:311:InitializeI18n I18n initialized with fr
+2022-10-07T20:25:38.042ZI [19312:NonCelloThread] drive_fs.cc:571:RunDriveFS Options: argv_0: "C:\\Program Files\\Google\\Drive File Stream\\64.0.4.0\\GoogleDriveFS.exe"
+base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary"
+shell_ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary_shell"
+crash_handler_token: "\\\\.\\pipe\\crashpad_15932_UCMOXUDKBNQTXAWO"
+enable_tracing: false
+enable_ui: true
+enable_file_dances: true
+use_fake_cello_fs: false
+enable_poll_for_changes: true
+drive_create_options {
+  use_fake_cloud_store: false
+  authorize_new_user: false
+  refresh_token: ""
+  user_email: ""
+  token_uri: ""
+  auth_uri: ""
+  metadata_server_auth_uri: ""
+  user_id: ""
+}
+enable_field_event_recording: true
+open_gdoc_path: ""
+started_by_installer: false
+locale: ""
+force_onboarding: false
+log_connection_details: false
+use_intranet_connectivity_to_check_online: false
+crash_handler_init_status: SUCCESS
+cello_options {
+  drive_api_options {
+    apiary_trace_token: ""
+    apiary_trace_regex: ""
+    dapper_trace_regex: ""
+    functional_tests_dir_path: ""
+  }
+}
+open_gdocs_root: false
+open_gsheets_root: false
+open_gslides_root: false
+crash_on_core_start: false
+use_curl_logging_scribe: false
+force_case_sensitivity: false
+new_gsuite_file: ""
+account_settings_from_file_path: ""
+parent_version: "64.0.4.0"
+open_all_dialogs: false
+startup_mode: true
+fake_multiaccount_ui: false
+feature_config_override {
+  account {
+  }
+}
+global_feature_config {
+  drive_dot: true
+  share_dialog: true
+  pause_syncing_option: true
+  bandwidth_throttling: true
+  structured_logging: true
+  context_menu_force_refresh_folder: true
+  status_window_click_show_file_in_file_manager: true
+  outlook_addin: false
+  autostart_preference: true
+  gui_autostart_option: true
+  mojave_overlays_fix: false
+  curl_proxy_authentication: true
+  gui_reset_preferences_menu_option: true
+  force_refresh_folder_normal_menu: false
+  structured_log_max_file_size_kbytes: 2048
+  ask_to_copy_files_for_pending_uploads: true
+  inform_users_of_pending_uploads: true
+  same_content_dedupe_interval_ms: 600000
+  dedupe_interval_ms: 2000
+  support_status_notification: true
+  deprecation_date: "2099-12-31"
+  deprecation_warning_threshold: 30
+  min_supported_os_version: "0.0.0"
+  crash_oom_threshold_mb: 1048576
+  allow_search: true
+  finish_syncing_files_option: true
+  osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+  osxfuse_lock_abort_test: false
+  osxfuse_sched_flags_offset_override: 4294967295
+  enforce_single_parent: true
+  add_shortcut_menu: true
+  meet_outlook_addin: false
+  spotlight_timestamp_fsctl_support: true
+  mac_disk_arbitration_unmount: true
+  current_drive_fs_version: "64.0.4.0"
+  file_revisions_virtual_folder: true
+  unlocked_mac_buf_unmap: true
+  use_mac_fileprovider: false
+  trim_parents_during_cloud_merge: true
+  trim_parents_during_commit: true
+  create_gsuite_file: true
+  switchblade: true
+  file_provider_quick_access_polling_interval_sec: 43200
+  show_quick_access_in_search_dialog: true
+  include_user_email_in_feedback: true
+  mac_smb_port: 0
+  fileprovider_signal_debounce_ms: 250
+  osxfuse_sched_flags_offset_override_arm: 4294967295
+  current_os_version: "Windows/10.0.19044"
+  cancel_com_calls: true
+  enable_file_provider_migration: true
+  logging_on_cello_thread_startup: false
+  mac_smb_dialect_mode: 10
+  dokan_set_internal_file_index: true
+  context_menu_create_editor_files: false
+  file_revisions_file_provider: true
+  mac_smb_nobrowse: true
+  special_folder_change_notification: true
+  repair_kext_management_directory: true
+  soon_to_be_min_supported_os_version: "0.0.0"
+  instrument_http_client: true
+  show_offline_files_menu_option: true
+  enable_mirror_roots_context: true
+  com_api_thread_stuck_threshold_sec: 0
+  num_metrics_batches_per_request: 70
+  max_metrics_per_event_code_per_batch: 200
+  encrypt_and_upload: false
+  show_non_running_accounts: false
+  mac_smb_mount_by_ip: true
+  enable_mount_in_sidebar_setting: true
+  allow_multiple_smb_connections: false
+  persistent_smb_port_auto_selection: true
+  file_provider_disabled_notification_interval_mins: 0
+  enable_mount_as_folder_setting: true
+  enable_modern_feature_flags: true
+  enable_search_hot_key: true
+  file_provider_failover_for_home_dir_fs_type: true
+  file_provider_mirror_switch_unpinned_item_batch_size: 2000
+  file_provider_enable_ipc_root_symlink: true
+  file_provider_pause_syncing_option: true
+  file_provider_create_existing_dir_id_succeeds: false
+  file_provider_create_existing_file_id_succeeds: false
+  file_provider_notify_mount_point_changed_with_mirror: false
+  file_provider_show_migration_notification_based_on_volume: true
+  file_provider_handle_exact_existing_create_as_reimport: true
+  file_provider_min_partial_read_size: 4294967296
+  file_provider_enable_read_ahead: false
+  switchblade_on_websockets: false
+  mac_smb_nodatacache: true
+  file_provider_force_extension_startup: false
+  replace_local_id_with_cloud_id_when_pushing_update: true
+}
+photos_scope: ""
+show_sign_in_dialog_if_no_user: true
+show_preferences_dialog_debug_menu: false
+crash_in_execution_context: false
+enable_physical_http_logging: false
+
+2022-10-07T20:25:38.043ZI [19312:NonCelloThread] drive_fs.cc:159:LogSystemConfig OS: Windows/10.0.19044
+2022-10-07T20:25:38.043ZI [19312:NonCelloThread] drive_fs.cc:166:LogSystemConfig Architecture: x86_64
+2022-10-07T20:25:38.043ZI [19312:NonCelloThread] drive_fs.cc:174:LogSystemConfig Total RAM: 7.89 GiB
+2022-10-07T20:25:38.043ZI [19312:NonCelloThread] drive_fs.cc:190:LogSystemConfig Disk space: 13.17 GB free / 126.70 GB total
+2022-10-07T20:25:38.043ZI [19312:NonCelloThread] drive_fs.cc:197:LogSystemConfig Timezone: UTC+0000 (UTC)
+2022-10-07T20:25:38.048ZI [19312:NonCelloThread] preferences_manager.cc:109:GetUserPreferences user_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-10-07T20:25:38.048ZI [19312:NonCelloThread] preferences_manager.cc:312:GetEffectivePreferences effective_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-10-07T20:25:38.054ZI [17956:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-10-07T20:25:38.087ZI [19312:NonCelloThread] app.cc:439:RegisterHotKeys Started listening for hot key ...
+2022-10-07T20:25:38.090ZI [19312:NonCelloThread] app.cc:635:RegisterOutlookAddInHelper Google Drive Outlook Add-in: Outlook add-in already unregistered.
+2022-10-07T20:25:38.090ZI [19312:NonCelloThread] app.cc:635:RegisterOutlookAddInHelper Google Meet Outlook Add-in: Outlook add-in already unregistered.
+2022-10-07T20:25:38.149ZI [19312:NonCelloThread] dialog.cc:78:ResetViewViaDifferencer Resetting UpdateViewDifferencer.
+2022-10-07T20:25:38.232ZI [12092:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{179eb58f-e4d3-49b6-a7f3-1e5146eceb4e}\ description. name: LENOVO, uuid: 179eb58f-e4d3-49b6-a7f3-1e5146eceb4e, device_number: 2263365625, mount_point: D:\, fs_type: NTFS, device_type: Internal
+2022-10-07T20:25:38.251ZI [8808:MediaManagerThread] device_status_service.cc:318:AddMediaInternal Media was added [Media: media_id="179eb58f-e4d3-49b6-a7f3-1e5146eceb4e" name="LENOVO" file_system="NTFS" mount_point(raw)="D:\" device_type="Internal" device_number=2263365625 writable="true"]
+2022-10-07T20:25:38.253ZI [12092:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{41afd6a5-6119-4157-9b7a-627c51ba4fdb}\ description. name: Windows, uuid: 41afd6a5-6119-4157-9b7a-627c51ba4fdb, device_number: 3399157150, mount_point: C:\, fs_type: NTFS, device_type: Internal
+2022-10-07T20:25:38.266ZI [8808:MediaManagerThread] device_status_service.cc:318:AddMediaInternal Media was added [Media: media_id="41afd6a5-6119-4157-9b7a-627c51ba4fdb" name="Windows" file_system="NTFS" mount_point(raw)="C:\" device_type="Internal" device_number=3399157150 writable="true"]
+2022-10-07T20:25:38.267ZI [12092:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{f15cad22-6387-424a-92fe-4bb4ab546b07}\ description. name: WINRE_DRV, uuid: f15cad22-6387-424a-92fe-4bb4ab546b07, device_number: 1251722332, mount_point: , fs_type: NTFS, device_type: Internal
+2022-10-07T20:25:38.268ZE [12092:VolumeListenerThread] volume_listener_win.cc:455:GetVolumeFromGuidPath \\?\Volume{f15cad22-6387-424a-92fe-4bb4ab546b07}\ has no mount point.
+2022-10-07T20:25:38.268ZI [12092:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{e8982033-0d56-44e9-a6e6-d674017ea338}\ description. name: SYSTEM_DRV, uuid: e8982033-0d56-44e9-a6e6-d674017ea338, device_number: 2325393711, mount_point: , fs_type: FAT, device_type: Internal
+2022-10-07T20:25:38.268ZE [12092:VolumeListenerThread] volume_listener_win.cc:455:GetVolumeFromGuidPath \\?\Volume{e8982033-0d56-44e9-a6e6-d674017ea338}\ has no mount point.
+2022-10-07T20:25:38.268ZI [17956:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-10-07T20:25:38.269ZI [19312:NonCelloThread] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.270ZI [19312:NonCelloThread] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.279ZI [19312:NonCelloThread] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.279ZI [19312:NonCelloThread] play/games/portablephenotype/portable_phenotype_client_impl.cc:89:UNKNOWN Registering configuration package drive_fs_ph with version 476243425
+2022-10-07T20:25:38.279ZI [19312:NonCelloThread] play/games/portablephenotype/portable_phenotype_client_impl.cc:115:UNKNOWN Successfully registered configuration package: drive_fs_ph (0 ms)
+2022-10-07T20:25:38.288ZI [17040:SwitchbladeDelegateImpl] switchblade_installer.cc:78:InstallSwitchblade Switchblade Chrome extension is already installed.
+2022-10-07T20:25:38.288ZI [17040:SwitchbladeDelegateImpl] switchblade_installer_win.cc:52:InstallSwitchbladeNativeHostManifest Installing Switchblade native host manifest...
+2022-10-07T20:25:38.289ZI [17040:SwitchbladeDelegateImpl] switchblade_installer_win.cc:67:InstallSwitchbladeNativeHostManifest Switchblade native host manifest written to C:\Users\Sewcary\AppData\Local\Google\DriveFS\com.google.drive.nativeproxy.json
+2022-10-07T20:25:38.289ZI [17040:SwitchbladeDelegateImpl] switchblade_installer_win.cc:86:InstallSwitchbladeNativeHostManifest Switchblade native host manifest written to C:\Users\Sewcary\AppData\Local\Google\DriveFS\com.google.drive.nativeproxy.json and configured in registry
+2022-10-07T20:25:38.350ZI [19312:NonCelloThread] client.cc:535:LogWindowsFilterDrivers Nonstandard filter drivers present: aswmonflt.sys (3188c405245b897) aswsnx.sys (ad69d796f12e9187) aswsp.sys (c6fb502385312a16) bindflt.sys (556d9232df19b942) iastorafs.sys (6e2e912e8f9bad00) trufos.sys (e2f458114162c984)
+2022-10-07T20:25:38.350ZI [19312:NonCelloThread] client.cc:540:LogWindowsFilterDrivers Nonstandard filter driver combo hash: ab181887fa90b9fd
+2022-10-07T20:25:38.353ZI [19312:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] global_features_manager.cc:343:CompositeAll Compositing global features based on 1 accounts
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] global_features_manager.cc:359:CompositeAll Composited global features *WITHOUT* overrides: drive_dot: true
+share_dialog: true
+pause_syncing_option: true
+bandwidth_throttling: true
+structured_logging: true
+context_menu_force_refresh_folder: true
+status_window_click_show_file_in_file_manager: true
+outlook_addin: false
+autostart_preference: true
+gui_autostart_option: true
+mojave_overlays_fix: false
+curl_proxy_authentication: true
+gui_reset_preferences_menu_option: true
+force_refresh_folder_normal_menu: false
+structured_log_max_file_size_kbytes: 2048
+ask_to_copy_files_for_pending_uploads: true
+inform_users_of_pending_uploads: true
+same_content_dedupe_interval_ms: 600000
+dedupe_interval_ms: 2000
+support_status_notification: true
+deprecation_date: "2099-12-31"
+deprecation_warning_threshold: 30
+min_supported_os_version: "0.0.0"
+crash_oom_threshold_mb: 1048576
+allow_search: true
+finish_syncing_files_option: true
+osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+osxfuse_lock_abort_test: false
+osxfuse_sched_flags_offset_override: 4294967295
+enforce_single_parent: true
+add_shortcut_menu: true
+meet_outlook_addin: false
+spotlight_timestamp_fsctl_support: true
+mac_disk_arbitration_unmount: true
+current_drive_fs_version: "64.0.4.0"
+file_revisions_virtual_folder: true
+unlocked_mac_buf_unmap: true
+use_mac_fileprovider: false
+trim_parents_during_cloud_merge: true
+trim_parents_during_commit: true
+create_gsuite_file: true
+switchblade: true
+file_provider_quick_access_polling_interval_sec: 43200
+show_quick_access_in_search_dialog: true
+include_user_email_in_feedback: true
+mac_smb_port: 0
+fileprovider_signal_debounce_ms: 250
+osxfuse_sched_flags_offset_override_arm: 4294967295
+current_os_version: "Windows/10.0.19044"
+cancel_com_calls: true
+enable_file_provider_migration: true
+logging_on_cello_thread_startup: false
+mac_smb_dialect_mode: 10
+dokan_set_internal_file_index: true
+context_menu_create_editor_files: false
+file_revisions_file_provider: true
+mac_smb_nobrowse: true
+special_folder_change_notification: true
+repair_kext_management_directory: true
+soon_to_be_min_supported_os_version: "0.0.0"
+instrument_http_client: true
+show_offline_files_menu_option: true
+enable_mirror_roots_context: true
+com_api_thread_stuck_threshold_sec: 0
+num_metrics_batches_per_request: 70
+max_metrics_per_event_code_per_batch: 200
+encrypt_and_upload: false
+show_non_running_accounts: false
+mac_smb_mount_by_ip: true
+enable_mount_in_sidebar_setting: true
+allow_multiple_smb_connections: false
+persistent_smb_port_auto_selection: true
+file_provider_disabled_notification_interval_mins: 0
+enable_mount_as_folder_setting: true
+enable_modern_feature_flags: true
+enable_search_hot_key: true
+file_provider_failover_for_home_dir_fs_type: true
+file_provider_mirror_switch_unpinned_item_batch_size: 2000
+file_provider_enable_ipc_root_symlink: true
+file_provider_pause_syncing_option: true
+file_provider_create_existing_dir_id_succeeds: false
+file_provider_create_existing_file_id_succeeds: false
+file_provider_notify_mount_point_changed_with_mirror: false
+file_provider_show_migration_notification_based_on_volume: true
+file_provider_handle_exact_existing_create_as_reimport: true
+file_provider_min_partial_read_size: 4294967296
+file_provider_enable_read_ahead: false
+switchblade_on_websockets: false
+mac_smb_nodatacache: true
+file_provider_force_extension_startup: false
+replace_local_id_with_cloud_id_when_pushing_update: true
+
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] preferences.cc:93:UpgradeLegacyAccountPreferences UpgradeLegacyAccountPreferences declining
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] preferences_manager.cc:109:GetUserPreferences user_preferences for 104407529297066504359: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] preferences_manager.cc:312:GetEffectivePreferences effective_preferences for 104407529297066504359: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] client.cc:4469:MaybeStartupOptionsForSavedAccount Returning options set for token: [AccountToken: persistable_token="104407529297066504359"]
+2022-10-07T20:25:38.366ZI [19312:NonCelloThread] client.cc:4481:MaybeStartupOptionsForSavedAccount AccountFeatureConfig for 104407529297066504359 loaded from disk: thumbnails: true
+deprecated: false
+metadata_cache_reset_counter: 5
+spotlight: true
+max_operation_batch_size: 15
+temporary_items_virtual_folder: true
+local_disk_aware_get_free_space: true
+max_parallel_background_cloud_queries: 3
+relocatable_content_cache: true
+content_cache_max_kbytes: 1000000000
+fcm_token_generation: 1
+content_download_http_416_workaround: true
+crash_on_failed_thread_checker_assert: true
+allow_windows_system_user_access: false
+dokan_oplocks: true
+max_parallel_downloads_per_file: 5
+two_level_folder_prefetch: false
+max_parallel_push_task_instances: 15
+emm_support: false
+fetch_content_bytes_before_cancel_percent_multiplier: 500
+min_bytes_saved_to_split_request: 9223372036854775807
+reset_account_after_fatal_local_store_failure: true
+detect_stable_id_reuse: true
+supply_json_gdoc_content: false
+dokan_dispatch_monitor_check_ms: 10000
+dokan_dispatch_monitor_warn_ms: 60000
+sqlite_normal_transaction_sync: true
+finder_process_names: "DesktopServicesHelper"
+reset_account_after_local_largest_change_id_corrupt: true
+emm_secondary_identifier: false
+crash_on_cello_assert: false
+force_cloud_recreate_order: true
+allow_subscription_task: true
+resubscribe_retry_interval_msec: 14400000
+account_backup_manager: true
+account_backup_preservation_days: 30
+content_cache_reset_evictable_files_counter: 0
+allowed_new_gdoc_file_name_pattern: ".*Google Docs.*\\.gdoc|.*Google Sheets.*\\.gsheet|.*Google Slides.*\\.gslides"
+reset_file_content_on_revert_flow: true
+finder_create_file_handler_timeout_ms: 600000
+content_cache_reset_pinned_counter: 0
+repair_stable_id_reuse: true
+fuse_symlink_to_shortcut_support: true
+fuse_symlink_create_support: true
+fuse_symlink_read_support: true
+account_update_sec: 86400
+test_value_0: 0
+test_value_1: 0
+test_value_2: 0
+test_value_3: 0
+test_value_4: 0
+test_value_5: 0
+test_value_9: 5
+dokan_allow_optimistic_release: true
+max_parallel_resumable_uploads: 1
+dokan_driver_request_batching: true
+handle_unauthorized_resumable_uploads: true
+content_cache_capacity_heuristic: EXCLUDE_NONEVICTABLE
+dokan_fcb_garbage_collection_interval_ms: 2000
+photos_extensions: "jpg,jpeg,jpe,png,gif,heif,heic,tif,tiff,webp,bmp,dib,ico,jp2,j2c,jpf,j2k,jpx,dng,raw,arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,rdc,rw2,srf,srw,sr2,x3f,3fr"
+videos_extensions: "3g2,3gp,asf,avi,divx,flv,m2t,m2ts,m4v,mkv,mmv,mng,mod,mov,mp4,mpe,mpg,mpeg,mts,ogv,qt,tod,webm,wmv"
+disable_spotlight_permission_preheat: true
+photos_debounce_edit_time_ms: 1800000
+empty_file_with_open_handle_upload_delay_ms: 600000
+enable_photo_min_size_filtering: true
+support_local_create_shared_drives: false
+subscription_task_throttle_time_ms: 300000
+subscription_task_max_operations: 50
+emm_get_serial_via_wmi_on_windows: true
+max_bytes_per_fetch_content_request: 268435456
+is_dasher_user: false
+lookup_spam_detection_time_unit_ms: 1000
+lookup_spam_detection_min_number_of_events: 100
+lookup_spam_detection_duration_ms: 600000
+open_spam_detection_time_unit_ms: 1000
+open_spam_detection_min_number_of_events: 100
+open_spam_detection_duration_ms: 600000
+photos_max_simultaneous_uploads: 3
+photos_hq_charged_expectation: true
+enable_cse: false
+disable_security_update_enabled_cloud_change: true
+dokan_use_fsctl_events: true
+photos_extensions_to_ignore: "crdownload"
+metadata_cache_update_counter: 1
+mdcu_max_item_count_per_request: 1000
+emm_send_device_encryption_status: false
+emm_send_device_screen_lock_status: false
+dokan_disable_file_network_physical_name_info: true
+file_provider_cache_reset_counter: 0
+content_cache_entry_cache_implementation: ARC
+enable_dynamic_list_changes_page_sizing: true
+dynamic_page_sizing_min_page_size: 1
+dynamic_page_sizing_min_capacity_reached_count: 5
+dynamic_page_sizing_increase_frequency_threshold_ms: 600000
+dynamic_page_sizing_decrease_frequency_threshold_ms: 300000
+min_operation_batch_size: 2
+enable_smb_spotlight_rpc: true
+throttled_qps_for_spamming_process: 50
+send_mtime_updates_to_drive: false
+send_atime_updates_to_drive: false
+file_provider_list_batch_size_multiplier: 10
+file_provider_update_batch_size_multiplier: 10
+smb_unmount_with_diskutil: false
+dokan_pull_event_ahead: true
+dokan_fcb_avl_table: true
+min_spamming_process_throttling_time_ms: 600000
+max_spamming_process_throttling_time_ms: 18000000
+use_modern_feature_flags: LAUNCH_DARKLAUNCH
+enable_actual_spam_throttling: false
+disable_spam_throttling_on_write_duration_ms: 600000
+file_provider_disabled_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_mount_point_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_migration_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_evict_on_content_change: false
+file_provider_activation_max_retry_backoff_duration_ms: 120000
+file_provider_retry_on_wait_for_domain_init_failure: true
+file_provider_disable_cse_cleanup_batch_size: 2000
+use_retry_manager: false
+photos_disable_debouncer_for_apl: false
+
+2022-10-07T20:25:38.367ZI [19312:NonCelloThread] client.cc:4301:operator() Started 0 of 1 core(s).
+2022-10-07T20:25:38.367ZI [19312:NonCelloThread] client.cc:4469:MaybeStartupOptionsForSavedAccount Returning options set for token: [AccountToken: persistable_token="104407529297066504359"]
+2022-10-07T20:25:38.367ZI [19312:NonCelloThread] client.cc:4481:MaybeStartupOptionsForSavedAccount AccountFeatureConfig for 104407529297066504359 loaded from disk: thumbnails: true
+deprecated: false
+metadata_cache_reset_counter: 5
+spotlight: true
+max_operation_batch_size: 15
+temporary_items_virtual_folder: true
+local_disk_aware_get_free_space: true
+max_parallel_background_cloud_queries: 3
+relocatable_content_cache: true
+content_cache_max_kbytes: 1000000000
+fcm_token_generation: 1
+content_download_http_416_workaround: true
+crash_on_failed_thread_checker_assert: true
+allow_windows_system_user_access: false
+dokan_oplocks: true
+max_parallel_downloads_per_file: 5
+two_level_folder_prefetch: false
+max_parallel_push_task_instances: 15
+emm_support: false
+fetch_content_bytes_before_cancel_percent_multiplier: 500
+min_bytes_saved_to_split_request: 9223372036854775807
+reset_account_after_fatal_local_store_failure: true
+detect_stable_id_reuse: true
+supply_json_gdoc_content: false
+dokan_dispatch_monitor_check_ms: 10000
+dokan_dispatch_monitor_warn_ms: 60000
+sqlite_normal_transaction_sync: true
+finder_process_names: "DesktopServicesHelper"
+reset_account_after_local_largest_change_id_corrupt: true
+emm_secondary_identifier: false
+crash_on_cello_assert: false
+force_cloud_recreate_order: true
+allow_subscription_task: true
+resubscribe_retry_interval_msec: 14400000
+account_backup_manager: true
+account_backup_preservation_days: 30
+content_cache_reset_evictable_files_counter: 0
+allowed_new_gdoc_file_name_pattern: ".*Google Docs.*\\.gdoc|.*Google Sheets.*\\.gsheet|.*Google Slides.*\\.gslides"
+reset_file_content_on_revert_flow: true
+finder_create_file_handler_timeout_ms: 600000
+content_cache_reset_pinned_counter: 0
+repair_stable_id_reuse: true
+fuse_symlink_to_shortcut_support: true
+fuse_symlink_create_support: true
+fuse_symlink_read_support: true
+account_update_sec: 86400
+test_value_0: 0
+test_value_1: 0
+test_value_2: 0
+test_value_3: 0
+test_value_4: 0
+test_value_5: 0
+test_value_9: 5
+dokan_allow_optimistic_release: true
+max_parallel_resumable_uploads: 1
+dokan_driver_request_batching: true
+handle_unauthorized_resumable_uploads: true
+content_cache_capacity_heuristic: EXCLUDE_NONEVICTABLE
+dokan_fcb_garbage_collection_interval_ms: 2000
+photos_extensions: "jpg,jpeg,jpe,png,gif,heif,heic,tif,tiff,webp,bmp,dib,ico,jp2,j2c,jpf,j2k,jpx,dng,raw,arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,rdc,rw2,srf,srw,sr2,x3f,3fr"
+videos_extensions: "3g2,3gp,asf,avi,divx,flv,m2t,m2ts,m4v,mkv,mmv,mng,mod,mov,mp4,mpe,mpg,mpeg,mts,ogv,qt,tod,webm,wmv"
+disable_spotlight_permission_preheat: true
+photos_debounce_edit_time_ms: 1800000
+empty_file_with_open_handle_upload_delay_ms: 600000
+enable_photo_min_size_filtering: true
+support_local_create_shared_drives: false
+subscription_task_throttle_time_ms: 300000
+subscription_task_max_operations: 50
+emm_get_serial_via_wmi_on_windows: true
+max_bytes_per_fetch_content_request: 268435456
+is_dasher_user: false
+lookup_spam_detection_time_unit_ms: 1000
+lookup_spam_detection_min_number_of_events: 100
+lookup_spam_detection_duration_ms: 600000
+open_spam_detection_time_unit_ms: 1000
+open_spam_detection_min_number_of_events: 100
+open_spam_detection_duration_ms: 600000
+photos_max_simultaneous_uploads: 3
+photos_hq_charged_expectation: true
+enable_cse: false
+disable_security_update_enabled_cloud_change: true
+dokan_use_fsctl_events: true
+photos_extensions_to_ignore: "crdownload"
+metadata_cache_update_counter: 1
+mdcu_max_item_count_per_request: 1000
+emm_send_device_encryption_status: false
+emm_send_device_screen_lock_status: false
+dokan_disable_file_network_physical_name_info: true
+file_provider_cache_reset_counter: 0
+content_cache_entry_cache_implementation: ARC
+enable_dynamic_list_changes_page_sizing: true
+dynamic_page_sizing_min_page_size: 1
+dynamic_page_sizing_min_capacity_reached_count: 5
+dynamic_page_sizing_increase_frequency_threshold_ms: 600000
+dynamic_page_sizing_decrease_frequency_threshold_ms: 300000
+min_operation_batch_size: 2
+enable_smb_spotlight_rpc: true
+throttled_qps_for_spamming_process: 50
+send_mtime_updates_to_drive: false
+send_atime_updates_to_drive: false
+file_provider_list_batch_size_multiplier: 10
+file_provider_update_batch_size_multiplier: 10
+smb_unmount_with_diskutil: false
+dokan_pull_event_ahead: true
+dokan_fcb_avl_table: true
+min_spamming_process_throttling_time_ms: 600000
+max_spamming_process_throttling_time_ms: 18000000
+use_modern_feature_flags: LAUNCH_DARKLAUNCH
+enable_actual_spam_throttling: false
+disable_spam_throttling_on_write_duration_ms: 600000
+file_provider_disabled_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_mount_point_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_migration_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_evict_on_content_change: false
+file_provider_activation_max_retry_backoff_duration_ms: 120000
+file_provider_retry_on_wait_for_domain_init_failure: true
+file_provider_disable_cse_cleanup_batch_size: 2000
+use_retry_manager: false
+photos_disable_debouncer_for_apl: false
+
+2022-10-07T20:25:38.376ZE [15772:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-10-07T20:25:38.376ZI [15772:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.378ZI [19312:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-10-07T20:25:38.379ZI [15772:core_104407529297066504359] account_context.cc:347:CreateCredential Restored credential with user ID: 104407529297066504359
+2022-10-07T20:25:38.379ZI [15772:core_104407529297066504359] drive_cloud_store_provider.cc:37:CreateDriveCloudStore Using Drive API v2
+2022-10-07T20:25:38.379ZI [15772:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.379ZI [15772:core_104407529297066504359] account_context.cc:557:operator() Missing scopes mask: 0x0
+2022-10-07T20:25:38.380ZI [19312:NonCelloThread] client.cc:3929:StartAccountAuthComplete Authorized as niang.fara@gmail.com (104407529297066504359)
+2022-10-07T20:25:38.380ZI [19312:NonCelloThread] client.cc:4469:MaybeStartupOptionsForSavedAccount Returning options set for token: [AccountToken: persistable_token="104407529297066504359"]
+2022-10-07T20:25:38.381ZI [19312:NonCelloThread] client.cc:4481:MaybeStartupOptionsForSavedAccount AccountFeatureConfig for 104407529297066504359 loaded from disk: thumbnails: true
+deprecated: false
+metadata_cache_reset_counter: 5
+spotlight: true
+max_operation_batch_size: 15
+temporary_items_virtual_folder: true
+local_disk_aware_get_free_space: true
+max_parallel_background_cloud_queries: 3
+relocatable_content_cache: true
+content_cache_max_kbytes: 1000000000
+fcm_token_generation: 1
+content_download_http_416_workaround: true
+crash_on_failed_thread_checker_assert: true
+allow_windows_system_user_access: false
+dokan_oplocks: true
+max_parallel_downloads_per_file: 5
+two_level_folder_prefetch: false
+max_parallel_push_task_instances: 15
+emm_support: false
+fetch_content_bytes_before_cancel_percent_multiplier: 500
+min_bytes_saved_to_split_request: 9223372036854775807
+reset_account_after_fatal_local_store_failure: true
+detect_stable_id_reuse: true
+supply_json_gdoc_content: false
+dokan_dispatch_monitor_check_ms: 10000
+dokan_dispatch_monitor_warn_ms: 60000
+sqlite_normal_transaction_sync: true
+finder_process_names: "DesktopServicesHelper"
+reset_account_after_local_largest_change_id_corrupt: true
+emm_secondary_identifier: false
+crash_on_cello_assert: false
+force_cloud_recreate_order: true
+allow_subscription_task: true
+resubscribe_retry_interval_msec: 14400000
+account_backup_manager: true
+account_backup_preservation_days: 30
+content_cache_reset_evictable_files_counter: 0
+allowed_new_gdoc_file_name_pattern: ".*Google Docs.*\\.gdoc|.*Google Sheets.*\\.gsheet|.*Google Slides.*\\.gslides"
+reset_file_content_on_revert_flow: true
+finder_create_file_handler_timeout_ms: 600000
+content_cache_reset_pinned_counter: 0
+repair_stable_id_reuse: true
+fuse_symlink_to_shortcut_support: true
+fuse_symlink_create_support: true
+fuse_symlink_read_support: true
+account_update_sec: 86400
+test_value_0: 0
+test_value_1: 0
+test_value_2: 0
+test_value_3: 0
+test_value_4: 0
+test_value_5: 0
+test_value_9: 5
+dokan_allow_optimistic_release: true
+max_parallel_resumable_uploads: 1
+dokan_driver_request_batching: true
+handle_unauthorized_resumable_uploads: true
+content_cache_capacity_heuristic: EXCLUDE_NONEVICTABLE
+dokan_fcb_garbage_collection_interval_ms: 2000
+photos_extensions: "jpg,jpeg,jpe,png,gif,heif,heic,tif,tiff,webp,bmp,dib,ico,jp2,j2c,jpf,j2k,jpx,dng,raw,arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,rdc,rw2,srf,srw,sr2,x3f,3fr"
+videos_extensions: "3g2,3gp,asf,avi,divx,flv,m2t,m2ts,m4v,mkv,mmv,mng,mod,mov,mp4,mpe,mpg,mpeg,mts,ogv,qt,tod,webm,wmv"
+disable_spotlight_permission_preheat: true
+photos_debounce_edit_time_ms: 1800000
+empty_file_with_open_handle_upload_delay_ms: 600000
+enable_photo_min_size_filtering: true
+support_local_create_shared_drives: false
+subscription_task_throttle_time_ms: 300000
+subscription_task_max_operations: 50
+emm_get_serial_via_wmi_on_windows: true
+max_bytes_per_fetch_content_request: 268435456
+is_dasher_user: false
+lookup_spam_detection_time_unit_ms: 1000
+lookup_spam_detection_min_number_of_events: 100
+lookup_spam_detection_duration_ms: 600000
+open_spam_detection_time_unit_ms: 1000
+open_spam_detection_min_number_of_events: 100
+open_spam_detection_duration_ms: 600000
+photos_max_simultaneous_uploads: 3
+photos_hq_charged_expectation: true
+enable_cse: false
+disable_security_update_enabled_cloud_change: true
+dokan_use_fsctl_events: true
+photos_extensions_to_ignore: "crdownload"
+metadata_cache_update_counter: 1
+mdcu_max_item_count_per_request: 1000
+emm_send_device_encryption_status: false
+emm_send_device_screen_lock_status: false
+dokan_disable_file_network_physical_name_info: true
+file_provider_cache_reset_counter: 0
+content_cache_entry_cache_implementation: ARC
+enable_dynamic_list_changes_page_sizing: true
+dynamic_page_sizing_min_page_size: 1
+dynamic_page_sizing_min_capacity_reached_count: 5
+dynamic_page_sizing_increase_frequency_threshold_ms: 600000
+dynamic_page_sizing_decrease_frequency_threshold_ms: 300000
+min_operation_batch_size: 2
+enable_smb_spotlight_rpc: true
+throttled_qps_for_spamming_process: 50
+send_mtime_updates_to_drive: false
+send_atime_updates_to_drive: false
+file_provider_list_batch_size_multiplier: 10
+file_provider_update_batch_size_multiplier: 10
+smb_unmount_with_diskutil: false
+dokan_pull_event_ahead: true
+dokan_fcb_avl_table: true
+min_spamming_process_throttling_time_ms: 600000
+max_spamming_process_throttling_time_ms: 18000000
+use_modern_feature_flags: LAUNCH_DARKLAUNCH
+enable_actual_spam_throttling: false
+disable_spam_throttling_on_write_duration_ms: 600000
+file_provider_disabled_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_mount_point_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_migration_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_evict_on_content_change: false
+file_provider_activation_max_retry_backoff_duration_ms: 120000
+file_provider_retry_on_wait_for_domain_init_failure: true
+file_provider_disable_cse_cleanup_batch_size: 2000
+use_retry_manager: false
+photos_disable_debouncer_for_apl: false
+
+2022-10-07T20:25:38.385ZI [19312:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-10-07T20:25:38.387ZE [8808:MediaManagerThread] root_preference_manager.cc:1719:PushRoots Pushing MirrorRoots had a non-success status: Status::UNSUPPORTED
+2022-10-07T20:25:38.442ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T20:25:38.443ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T20:25:38.474ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T20:25:38.478ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T20:25:38.478ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T20:25:38.481ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T20:25:38.482ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-10-07T20:25:38.483ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-10-07T20:25:38.521ZI [17096:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-10-07T20:25:38.567ZI [15772:core_104407529297066504359] shared_config_win.cc:128:RefreshExplorerPids New explorer PIDs 1: 12240
+2022-10-07T20:25:38.569ZI [15772:core_104407529297066504359] stream.cc:615:InitCelloFS new_user=false
+2022-10-07T20:25:38.569ZI [15772:core_104407529297066504359] platform.cc:218:SetLocalTitleCaseSensitive Local filenames are set to be case insensitive.
+2022-10-07T20:25:38.569ZI [15772:core_104407529297066504359] cello_fs.cc:391:InitInternal Content cache at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\content_cache
+2022-10-07T20:25:38.569ZI [15772:core_104407529297066504359] cello_fs.cc:396:InitInternal Thumbnail cache at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\thumbnails_cache
+2022-10-07T20:25:38.569ZI [15772:core_104407529297066504359] cello_fs.cc:413:InitInternal Sqlite DB at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\metadata_sqlite_db
+2022-10-07T20:25:38.569ZE [15772:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-10-07T20:25:38.569ZI [15872:MetricsTransportThread] legacy_metrics_transport.cc:388:ProcessRequestsOnBackgroundThread Metrics failed to send, Status::TEMPORARILY_UNAVAILABLE
+2022-10-07T20:25:38.594ZI [15772:core_104407529297066504359] file_system_change_replayer.cc:95:operator() Cloud change replayer client ID: 19308
+2022-10-07T20:25:38.594ZI [15772:core_104407529297066504359] network_status_listener_win.cc:143:ListenForNetworkStatusChange Callback registered.
+2022-10-07T20:25:38.594ZI [15772:core_104407529297066504359][STRM] content_cache.cc:276:Initialize Content cache capacity (bytes): 4611686018427386880
+2022-10-07T20:25:38.594ZI [15772:core_104407529297066504359][STRM] content_cache.cc:294:Initialize Sparse files supported: true
+2022-10-07T20:25:38.626ZI [17948:Blocking Disk IO] content_cache.cc:407:InitializeOnIOThread Cache index at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\content_cache\chunks.db
+2022-10-07T20:25:38.631ZI [15772:core_104407529297066504359][STRM] content_cache.cc:276:Initialize Content cache capacity (bytes): 104857600
+2022-10-07T20:25:38.631ZI [15772:core_104407529297066504359][STRM] content_cache.cc:294:Initialize Sparse files supported: true
+2022-10-07T20:25:38.631ZI [17948:Blocking Disk IO] content_cache.cc:407:InitializeOnIOThread Cache index at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\thumbnails_cache\chunks.db
+2022-10-07T20:25:38.651ZI [15772:core_104407529297066504359][STRM] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 300, with each request requiring 10 tokens
+2022-10-07T20:25:38.651ZI [15772:core_104407529297066504359][STRM] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 300, with each request requiring 10 tokens
+2022-10-07T20:25:38.651ZI [15772:core_104407529297066504359][STRM] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 1000, with each request requiring 10 tokens
+2022-10-07T20:25:38.653ZI [15772:core_104407529297066504359][STRM] metrics_delegate.h:261:RecordInitializeLatencies KBytes read from disk during startup: 266
+2022-10-07T20:25:38.657ZI [15772:core_104407529297066504359] metadata_update_manager.cc:373:UpdateInternal (stream) All MDCU batches are completed.
+2022-10-07T20:25:38.657ZI [15772:core_104407529297066504359] sync_engine.cc:1869:MaybeStartRepeatingPushTaskTimer Starting repeating push task timer with interval 30000ms
+2022-10-07T20:25:38.657ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+
+2022-10-07T20:25:38.661ZI [15772:core_104407529297066504359] virtual_folders.cc:176:Init Local folders at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\local_folders
+2022-10-07T20:25:38.667ZE [15772:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-10-07T20:25:38.672ZI [15772:core_104407529297066504359][STRM] fetch_task.cc:578:RunInternal Largest local change id for My Drive at startup: 428225
+2022-10-07T20:25:38.700ZI [15772:core_104407529297066504359] network_status_listener_win.cc:143:ListenForNetworkStatusChange Callback registered.
+2022-10-07T20:25:38.712ZI [15772:core_104407529297066504359][MIRR] metrics_delegate.h:261:RecordInitializeLatencies KBytes read from disk during startup: 202
+2022-10-07T20:25:38.713ZI [15772:core_104407529297066504359] metadata_update_manager.cc:373:UpdateInternal (mirror) All MDCU batches are completed.
+2022-10-07T20:25:38.713ZI [15772:core_104407529297066504359] sync_engine.cc:1869:MaybeStartRepeatingPushTaskTimer Starting repeating push task timer with interval 30000ms
+2022-10-07T20:25:38.713ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+
+2022-10-07T20:25:38.714ZI [15772:core_104407529297066504359] experiments/phenotype/cpp/phenotype_impl.cc:475:UNKNOWN ShouldSync: Last sync was only 6 seconds ago
+2022-10-07T20:25:38.714ZI [15772:core_104407529297066504359] experiments/phenotype/cpp/phenotype_impl.cc:756:UNKNOWN PerformSync: No reason to sync. Returning kOk
+2022-10-07T20:25:38.714ZI [15772:core_104407529297066504359] feature_config.cc:224:ShouldRefetchFeatureConfig Time since last update is too small or within 14400000 ms: 5912 milliseconds.
+2022-10-07T20:25:38.714ZI [15772:core_104407529297066504359] core.cc:956:CheckFeatureConfig Ignoring cloud feature flags
+2022-10-07T20:25:38.720ZI [15772:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:210:Mount Mounting file system with requested mount point: G
+2022-10-07T20:25:38.721ZI [15772:core_104407529297066504359] third_party/dokan/src/dokancc/device.cc:42:OpenGlobalDevice Opened global dokan device: \\.\GoogleDriveFS_3758
+2022-10-07T20:25:38.730ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T20:25:38.739ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T20:25:38.750ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T20:25:38.752ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-10-07T20:25:38.824ZI [15772:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:264:Mount Successfully mounted device name: \Volume{0946a5b5-f5ea-3949-be9f-060c193265ca} with mount point: G:
+2022-10-07T20:25:38.824ZI [15772:core_104407529297066504359] dispatch_monitor.cc:41:Mounted Starting dispatch monitor.
+2022-10-07T20:25:38.824ZI [15772:core_104407529297066504359] operation_monitor.cc:75:Start Starting operation monitor with poll interval 4000 and slow operation threshold 20000
+2022-10-07T20:25:38.824ZI [15772:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:272:Mount Mounted callback returned.
+2022-10-07T20:25:38.824ZI [15772:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:418:ReceiveIo The file system is now safe to access.
+2022-10-07T20:25:38.824ZI [15772:core_104407529297066504359] cello_fs.cc:3974:OnMountpointReady FileProvider mounted: false
+2022-10-07T20:25:38.827ZE [19312:NonCelloThread] preferences_manager.cc:592:UpdateAccountPreferences Called with empty account data which was also missing from store
+2022-10-07T20:25:38.827ZI [15772:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.827ZI [15772:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-10-07T20:25:38.827ZE [15772:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-10-07T20:25:38.827ZI [15772:core_104407529297066504359] push_notification_manager.cc:102:PushNotificationManager Jitter introduced to backoff start, using 1961ms.
+2022-10-07T20:25:38.827ZI [15772:core_104407529297066504359] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 1, with each request requiring 11.1111 tokens
+2022-10-07T20:25:38.828ZE [15772:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-10-07T20:25:38.828ZI [15772:core_104407529297066504359] core.cc:292:operator() InitInternalSync completed with status Status::SUCCESS
+2022-10-07T20:25:38.832ZE [1340:NonCelloThread] trash_folder.cc:237:RegisterRecycleBinSize Failed to RegOpenKeyEx for Recycle Bin size: 0x2
+2022-10-07T20:25:38.832ZI [19312:NonCelloThread] controller_win.cc:252:Start Starting Dot controller.
+2022-10-07T20:25:38.832ZI [19312:NonCelloThread] presence_tracker.cc:550:NotifyPauseSyncing Syncing is on
+2022-10-07T20:25:38.833ZE [2056:PhotosSlurpTransporter] photos_slurp_transporter.cc:198:operator() Attempt to pause/resume before successful init
+2022-10-07T20:25:38.834ZI [19312:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-10-07T20:25:38.836ZI [19312:NonCelloThread] client.cc:4096:operator() Started core successfully for account [AccountToken: persistable_token="104407529297066504359"]
+2022-10-07T20:25:38.836ZI [19312:NonCelloThread] client.cc:4301:operator() Started 1 of 1 core(s).
+2022-10-07T20:25:38.836ZI [19312:NonCelloThread] drive_fs.cc:414:operator() Startup tracing disabled
+2022-10-07T20:25:38.838ZI [19312:NonCelloThread] sidebar_utils_win.cc:41:CreateFavorite Favorites are obsolete for Windows 10 and later
+2022-10-07T20:25:38.839ZI [19312:NonCelloThread] client.cc:3618:NotifyIfDeprecated Verifying deprecation status to notify the user.
+2022-10-07T20:25:38.839ZI [19312:NonCelloThread] support_status.cc:98:IsCurrentOSGreaterOrEqual Current OS Version 10.0.19044.
+2022-10-07T20:25:38.840ZI [19312:NonCelloThread] support_status.cc:55:GetCurrentSupportStatus OS supported: Yes
+2022-10-07T20:25:38.840ZI [19312:NonCelloThread] support_status.cc:56:GetCurrentSupportStatus Days left to deprecate: 28209
+2022-10-07T20:25:38.840ZI [19312:NonCelloThread] support_status.cc:98:IsCurrentOSGreaterOrEqual Current OS Version 10.0.19044.
+2022-10-07T20:25:38.840ZI [19312:NonCelloThread] client.cc:971:NotifyIfMountPointChanged Account [AccountToken: persistable_token="104407529297066504359"] mounted at 'G:'
+2022-10-07T20:25:38.840ZI [18692:trace_writer_thread] instrumentation.cc:587:operator() Writing Chrome Trace to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\startup_trace_2022-10-07T20_25_38.json
+2022-10-07T20:25:38.842ZI [19312:NonCelloThread] status_dialog.cc:443:OnAccountsChanged A new account was added
+2022-10-07T20:25:38.844ZI [15772:core_104407529297066504359] slurp.cc:168:operator() Drive Slurp: Received new SyncRoots: [
+]
+2022-10-07T20:25:38.844ZI [15772:core_104407529297066504359] slurp.cc:102:GetSlurpRootsDiff Generated Diff with roots_to_slurp: 0 roots_to_purge: 0 roots_to_stop: 0 disconnected_roots: 0 roots_to_forget: 0
+2022-10-07T20:25:38.844ZI [15772:core_104407529297066504359] slurp.cc:168:operator() Photos Slurp: Received new SyncRoots: [
+]
+2022-10-07T20:25:38.844ZI [15772:core_104407529297066504359] slurp.cc:102:GetSlurpRootsDiff Generated Diff with roots_to_slurp: 0 roots_to_purge: 0 roots_to_stop: 0 disconnected_roots: 0 roots_to_forget: 0
+2022-10-07T20:25:38.845ZI [19312:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-10-07T20:25:38.845ZI [18940:mirror_104407529297066504359_COM] mirror.cc:314:MirrorRoots Received new mirror roots: []
+2022-10-07T20:25:38.850ZI [18692:trace_writer_thread] instrumentation.cc:589:operator() Trace successfully written
+2022-10-07T20:25:38.869ZI [16448:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-10-07T20:25:39.006ZI [12092:VolumeListenerThread] volume_listener_win.cc:335:VolumeAdded Volume added: G:\
+2022-10-07T20:25:39.009ZI [12092:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{6703a780-4576-11ed-9401-b2fc361cc597}\ description. name: Google Drive, uuid: 6703a780-4576-11ed-9401-b2fc361cc597, device_number: 428019990, mount_point: G:\, fs_type: DriveFS, device_type: Internal
+2022-10-07T20:25:39.010ZI [8808:MediaManagerThread] device_status_service.cc:318:AddMediaInternal Media was added [Media: media_id="6703a780-4576-11ed-9401-b2fc361cc597" name="Google Drive" file_system="DriveFS" mount_point(raw)="G:\" device_type="Internal" device_number=428019990 writable="true"]
+2022-10-07T20:25:39.014ZI [15772:core_104407529297066504359] slurp.cc:168:operator() Drive Slurp: Received new SyncRoots: [
+]
+2022-10-07T20:25:39.014ZI [15772:core_104407529297066504359] slurp.cc:102:GetSlurpRootsDiff Generated Diff with roots_to_slurp: 0 roots_to_purge: 0 roots_to_stop: 0 disconnected_roots: 0 roots_to_forget: 0
+2022-10-07T20:25:39.014ZI [15772:core_104407529297066504359] slurp.cc:168:operator() Photos Slurp: Received new SyncRoots: [
+]
+2022-10-07T20:25:39.014ZI [15772:core_104407529297066504359] slurp.cc:102:GetSlurpRootsDiff Generated Diff with roots_to_slurp: 0 roots_to_purge: 0 roots_to_stop: 0 disconnected_roots: 0 roots_to_forget: 0
+2022-10-07T20:25:39.015ZI [19312:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-10-07T20:25:39.015ZI [18940:mirror_104407529297066504359_COM] mirror.cc:314:MirrorRoots Received new mirror roots: []
+2022-10-07T20:25:39.026ZI [19076:NonCelloThread] third_party/dokan/src/dokancc/file_system.cc:393:PostStart PostStart completed.
+2022-10-07T20:25:39.724ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Entered event start.
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Finding mount entry; lockGlobal = 0; mount point = \DosDevices\G:.
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log No mount entry found.
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Creating disk device; mount point = G; mount ID = 1l
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Set volume security descriptor successfully.
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log disk device name: "\Device\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}"; symbolic link name: "
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log \DosDevices\Global\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}"; mount point: "\DosDevices\G:"
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log ; type: 8
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log SymbolicLink: "\DosDevices\Global\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}" -> "\Device\Vol
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log ume{0946a5b5-f5ea-3949-be9f-060c193265ca}" created
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Inserted new mount entry.
+2022-10-07T20:25:39.725ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Event start using mount ID: 1; device name: \Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}.
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mounting volume using MountPoint "\DosDevices\G:" device "\Device\Volume{0946a5b5-f5ea-3949-be9
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log f-060c193265ca}"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Finding mount entry; lockGlobal = 1; mount point = .
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Found entry with matching device name: \Device\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mount entry found: \DosDevices\G: -> \Device\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mount manager is querying for desired drive letter. ForceDriveLetterAutoAssignment = 0
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Returning suggested name: "\DosDevices\G:"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Starting FCB garbage collector with 2000 ms interval.
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Link created: "\??\Volume{6703a780-4576-11ed-9401-b2fc361cc597}"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Link created: "\DosDevices\G:"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Link name matches the current one.
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mounting successfully done.
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Returning actual mount point G
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Finished event start with status 1 and flags: 0
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\## aswSnx private storage"
+2022-10-07T20:25:39.726ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\## aswSnx private storage"
+2022-10-07T20:25:39.727ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\## aswSnx private storage"
+2022-10-07T20:25:39.727ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Opened file with user mode dispatch blocked: "\__drive_fs_keepalive"
+2022-10-07T20:25:39.727ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Opened keepalive file from process 19308.
+2022-10-07T20:25:39.727ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Activating keepalive handle from process 19308.
+2022-10-07T20:25:39.951ZI [18940:mirror_104407529297066504359_COM] cloud_subsystem.cc:181:OnChangeNotificationReceived Generated 5 download events from 5 changelog entries
+2022-10-07T20:25:39.951ZI [15772:core_104407529297066504359][MIRR] fetch_task.cc:578:RunInternal Largest local change id for My Drive at startup: 428258
+2022-10-07T20:25:40.202ZI [15772:core_104407529297066504359] fcm_connection.cc:396:Initialize FcmConnection checkin credentials already set.
+2022-10-07T20:25:41.066ZI [19428:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Opened file with user mode dispatch blocked: "\drive_fs_notification"
+2022-10-07T20:25:41.715ZI [15772:core_104407529297066504359] gcm.cc:312:operator() GCM successfully initiated.
+2022-10-07T20:25:41.715ZI [15772:core_104407529297066504359] push_notification_manager.cc:208:operator() Successfully initialized PushNotificationManager.
+2022-10-07T20:25:41.905ZI [15772:core_104407529297066504359] gcm.cc:356:operator() GCM successfully connected.
+2022-10-07T20:25:41.905ZI [15772:core_104407529297066504359] push_notification_manager.cc:241:operator() Successfully connected PushNotificationManager.
+2022-10-07T20:25:52.842ZI [15772:core_104407529297066504359] push_notification_manager.cc:348:OnChangeSubscription subscribed to My Drive
+2022-10-07T20:26:38.286ZE [17384:stderr_thread] stderr: I0000 00:00:1665174398.286804   18088 portable_clearcut_uploader.cc:70] Calling SendToClearcutAsync
+2022-10-07T20:26:38.286ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:70:UNKNOWN Calling SendToClearcutAsync
+2022-10-07T20:26:38.287ZE [17384:stderr_thread] stderr: I0000 00:00:1665174398.287032   18088 portable_clearcut_uploader.cc:121] Returning future status
+2022-10-07T20:26:38.287ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:121:UNKNOWN Returning future status
+2022-10-07T20:26:38.609ZE [17384:stderr_thread] stderr: I0000 00:00:1665174398.609788   19312 portable_clearcut_uploader.cc:147] Successfully sending LogRequest to clearcut backend
+2022-10-07T20:26:38.609ZI [19312:NonCelloThread] portable_clearcut_uploader.cc:147:UNKNOWN Successfully sending LogRequest to clearcut backend
+2022-10-07T20:27:38.823ZI [15772:core_104407529297066504359] cello_fs.cc:5742:UpdateContentCacheCapacity Changing content cache capacity to 2586 MBytes
+2022-10-07T20:27:38.824ZI [15772:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-10-07T20:27:38.824ZI [15772:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 5%
+2022-10-07T20:27:38.824ZI [15772:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 12931 MiB
+2022-10-07T20:27:38.824ZI [15772:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 5%
+2022-10-07T20:45:38.673ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T20:45:38.733ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T21:05:38.681ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T21:05:38.745ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T21:25:38.692ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T21:25:38.757ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T21:27:09.219ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-07T21:27:09.229ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:808::200a:443...
+2022-10-07T21:27:09.236ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:808::200a) port 443 (#0)
+2022-10-07T21:27:09.236ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-07T21:27:09.269ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-07T21:27:09.281ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-07T21:27:09.281ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-07T21:27:09.281ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-07T21:27:09.281ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-07T21:27:09.281ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-07T21:27:09.281ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-07T21:27:09.284ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-07T21:27:09.326ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-07T21:27:09.362ZI [16940:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-07T21:27:09.371ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-07T21:45:38.699ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T21:45:38.758ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T22:05:38.711ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T22:05:38.766ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T22:25:38.722ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T22:25:38.778ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T22:27:10.047ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-07T22:27:10.088ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:819::200a:443...
+2022-10-07T22:27:10.104ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:819::200a) port 443 (#0)
+2022-10-07T22:27:10.104ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-07T22:27:10.128ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-07T22:27:10.142ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-07T22:27:10.142ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-07T22:27:10.142ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-07T22:27:10.142ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-07T22:27:10.142ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-07T22:27:10.142ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-07T22:27:10.145ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-07T22:27:10.194ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-07T22:27:10.211ZI [4064:CurlWorker1] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-07T22:27:10.218ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-07T22:45:38.729ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T22:45:38.794ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:05:38.736ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:05:38.796ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:06:36.320ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T23:06:36.320ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T23:06:36.320ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T23:06:36.321ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T23:06:36.321ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T23:06:36.321ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T23:06:36.321ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T23:06:36.321ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T23:06:36.321ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T23:06:36.321ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-10-07T23:06:36.321ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-10-07T23:06:36.321ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-10-07T23:06:38.877ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T23:06:38.877ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T23:06:38.879ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T23:06:38.879ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T23:06:38.880ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T23:06:38.880ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T23:06:38.880ZI [17100:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-10-07T23:06:38.880ZI [15752:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-10-07T23:06:38.882ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-10-07T23:06:38.887ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-10-07T23:06:38.888ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-10-07T23:06:38.889ZI [18952:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-10-07T23:25:38.746ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:25:38.809ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:27:10.945ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-07T23:27:10.959ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:817::200a:443...
+2022-10-07T23:27:10.968ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:817::200a) port 443 (#0)
+2022-10-07T23:27:10.968ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-07T23:27:10.992ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-07T23:27:11.004ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-07T23:27:11.004ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-07T23:27:11.004ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-07T23:27:11.004ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-07T23:27:11.004ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-07T23:27:11.004ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-07T23:27:11.007ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-07T23:27:11.078ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-07T23:27:11.083ZI [1588:CurlWorker2] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-07T23:27:11.090ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-07T23:45:38.756ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:45:38.819ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-07T23:54:47.727ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:475:UNKNOWN ShouldSync: Last sync was only 12555 seconds ago
+2022-10-07T23:54:47.727ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:756:UNKNOWN PerformSync: No reason to sync. Returning kOk
+2022-10-07T23:54:47.727ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_scheduler_impl.cc:34:UNKNOWN PhenotypeScheduler: successfully synced
+2022-10-08T00:05:38.770ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T00:05:38.832ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T00:25:38.729ZI [15772:core_104407529297066504359] core.cc:1010:GetFeatureConfig Polling latest feature flags
+2022-10-08T00:25:38.730ZI [936:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:471:UNKNOWN ShouldSync: More than four hours since last sync.
+2022-10-08T00:25:38.735ZI [936:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:859:UNKNOWN PerformSync: Removed orphaned data.
+2022-10-08T00:25:38.737ZI [936:Experiments] play/games/portablephenotype/portable_phenotype_client_impl.cc:242:UNKNOWN Successfully fetched latest configuration for package: drive_fs_ph (1 ms)
+2022-10-08T00:25:38.772ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T00:25:38.834ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T00:25:39.096ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_onboarding, value=true
+2022-10-08T00:25:39.096ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=multi_account_preferences, value=true
+2022-10-08T00:25:39.096ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=generate_diagnostic_info, value=true
+2022-10-08T00:25:39.096ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_modern_metrics_implementation, value=true
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_hqpc_exemptions, value=false
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=switchblade_open_files_via_shortcut, value=true
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_osxfuse_read_blacklist, value=false
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_kernel_based_change_replayer, value=true
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=changelog_download_throttle_time_ms, value=16000
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_fileprovider_for_migrated_users, value=false
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_multiple_merges_per_fetch_task, value=false
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=raw_photos_extension, value=arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,raw,rdc,rw2,srf,srw,sr2,x3f,3fr
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=dokan_suppress_file_name_in_event_context, value=true
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_goose_mode, value=false
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=bns_migration_window_closed, value=true
+2022-10-08T00:25:39.097ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=test_feature_flag_with_escape, value=New Google Docs\.gdoc|New Google Sheets\.gsheet|New Google Slides\.gslides
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirror_merge_folder_warning, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_fst, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=gui_bandwidth_throttling_control, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_photos, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_storage_saver_strings, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=macos_copy_resource_to_config_dir, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_support, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=hidden_attr_support, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fcm_implementation_type, value=2
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=default_ui_theme, value=1
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_concurrent_merged_read_optimization, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=attach_logs_to_feedback_option, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_unique_user_id, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=migration_local_scan_fatal_statuses_mac, value=
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_send_scopes, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_apl_upload, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_switchblade, value=false
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_content_bytes_before_cancel_multiplier, value=1
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_migration_to_user_id_directory, value=true
+2022-10-08T00:25:39.098ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_auto_enable_domains, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=metadata_db_vacuum, value=false
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=unlocked_mac_getxattr, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirrored_my_drive, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_context_menu_via_ipc, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=max_slow_operation_minidump_count, value=0
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=apiary_free_mode, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_read_backwards_heuristics, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=debounce_ms, value=200
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=quicklook_thumbnails, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=purge_non_system_apl_photos_roots, value=false
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shell_ipc, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=mirror_sync, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_nas_to_photos, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=async_dokan_bridge, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=block_mac_antivirus, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_photos, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=preferences_dialog, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=rescue_accounts, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_links_use_item_id, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=onboarding, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_migration, value=false
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_noop_test_feature_2, value=false
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_detect_user_enable_change_by_notification, value=false
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_shared_drives_api, value=true
+2022-10-08T00:25:39.099ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=local_machine_override_preferences, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=sync_client_migration, value=false
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=cancel_upload_option, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=migrate_to_account_directories, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_multi_account, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_spork_notifications, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=ignore_item_in_delete_changelog, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_shell_ipc_based_progress, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=computers_virtual_folder, value=true
+2022-10-08T00:25:39.100ZI [15772:core_104407529297066504359] proto_util.cc:29:DeserializeEnum Failed to convert LAUNCH_DARKLAUNCH to int32 for enum, falling back on name
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_redirect_for_editor_files, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_drive, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_win7_patch_required_notification, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_projector_for_office_files, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_rename_td_notification, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=request_team_drive_customer_id, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=emm_fully_qualified_hostname, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link_notification, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_file_organizer_capabilities, value=true
+2022-10-08T00:25:39.100ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=customer_type, value=CONSUMER
+2022-10-08T00:25:39.100ZI [15772:core_104407529297066504359] core.cc:924:TestConfigDifferences Modern config snapshot: 0 added, 0 removed, 6 changed, 374 matched
+2022-10-08T00:25:39.100ZI [19312:NonCelloThread] global_features_manager.cc:310:SetGlobalFeatures Set global features for account 104407529297066504359
+2022-10-08T00:25:39.100ZI [19312:NonCelloThread] global_features_manager.cc:343:CompositeAll Compositing global features based on 1 accounts
+2022-10-08T00:25:39.100ZI [19312:NonCelloThread] global_features_manager.cc:359:CompositeAll Composited global features *WITHOUT* overrides: drive_dot: true
+share_dialog: true
+pause_syncing_option: true
+bandwidth_throttling: true
+structured_logging: true
+context_menu_force_refresh_folder: true
+status_window_click_show_file_in_file_manager: true
+outlook_addin: false
+autostart_preference: true
+gui_autostart_option: true
+mojave_overlays_fix: false
+curl_proxy_authentication: true
+gui_reset_preferences_menu_option: true
+force_refresh_folder_normal_menu: false
+structured_log_max_file_size_kbytes: 2048
+ask_to_copy_files_for_pending_uploads: true
+inform_users_of_pending_uploads: true
+same_content_dedupe_interval_ms: 600000
+dedupe_interval_ms: 2000
+support_status_notification: true
+deprecation_date: "2099-12-31"
+deprecation_warning_threshold: 30
+min_supported_os_version: "0.0.0"
+crash_oom_threshold_mb: 1048576
+allow_search: true
+finish_syncing_files_option: true
+osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+osxfuse_lock_abort_test: false
+osxfuse_sched_flags_offset_override: 4294967295
+enforce_single_parent: true
+add_shortcut_menu: true
+meet_outlook_addin: false
+spotlight_timestamp_fsctl_support: true
+mac_disk_arbitration_unmount: true
+current_drive_fs_version: "64.0.4.0"
+file_revisions_virtual_folder: true
+unlocked_mac_buf_unmap: true
+use_mac_fileprovider: false
+trim_parents_during_cloud_merge: true
+trim_parents_during_commit: true
+create_gsuite_file: true
+switchblade: true
+file_provider_quick_access_polling_interval_sec: 43200
+show_quick_access_in_search_dialog: true
+include_user_email_in_feedback: true
+mac_smb_port: 0
+fileprovider_signal_debounce_ms: 250
+osxfuse_sched_flags_offset_override_arm: 4294967295
+current_os_version: "Windows/10.0.19044"
+cancel_com_calls: true
+enable_file_provider_migration: true
+logging_on_cello_thread_startup: false
+mac_smb_dialect_mode: 10
+dokan_set_internal_file_index: true
+context_menu_create_editor_files: false
+file_revisions_file_provider: true
+mac_smb_nobrowse: true
+special_folder_change_notification: true
+repair_kext_management_directory: true
+soon_to_be_min_supported_os_version: "0.0.0"
+instrument_http_client: true
+show_offline_files_menu_option: true
+enable_mirror_roots_context: true
+com_api_thread_stuck_threshold_sec: 0
+num_metrics_batches_per_request: 70
+max_metrics_per_event_code_per_batch: 200
+encrypt_and_upload: false
+show_non_running_accounts: false
+mac_smb_mount_by_ip: true
+enable_mount_in_sidebar_setting: true
+allow_multiple_smb_connections: false
+persistent_smb_port_auto_selection: true
+file_provider_disabled_notification_interval_mins: 0
+enable_mount_as_folder_setting: true
+enable_modern_feature_flags: true
+enable_search_hot_key: true
+file_provider_failover_for_home_dir_fs_type: true
+file_provider_mirror_switch_unpinned_item_batch_size: 2000
+file_provider_enable_ipc_root_symlink: true
+file_provider_pause_syncing_option: true
+file_provider_create_existing_dir_id_succeeds: false
+file_provider_create_existing_file_id_succeeds: false
+file_provider_notify_mount_point_changed_with_mirror: false
+file_provider_show_migration_notification_based_on_volume: true
+file_provider_handle_exact_existing_create_as_reimport: true
+file_provider_min_partial_read_size: 4294967296
+file_provider_enable_read_ahead: false
+switchblade_on_websockets: false
+mac_smb_nodatacache: true
+file_provider_force_extension_startup: false
+replace_local_id_with_cloud_id_when_pushing_update: true
+
+2022-10-08T00:25:39.100ZI [15772:core_104407529297066504359] core.cc:694:ApplyFeatureConfigChange No changes to account features or admin settings or security settings.
+2022-10-08T00:26:38.922ZE [17384:stderr_thread] stderr: I0000 00:00:1665188798.922403   18088 portable_clearcut_uploader.cc:70] Calling SendToClearcutAsync
+2022-10-08T00:26:38.922ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:70:UNKNOWN Calling SendToClearcutAsync
+2022-10-08T00:26:38.922ZE [17384:stderr_thread] stderr: I0000 00:00:1665188798.922726   18088 portable_clearcut_uploader.cc:121] Returning future status
+2022-10-08T00:26:38.922ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:121:UNKNOWN Returning future status
+2022-10-08T00:26:39.033ZE [17384:stderr_thread] stderr: I0000 00:00:1665188799.033103   19312 portable_clearcut_uploader.cc:147] Successfully sending LogRequest to clearcut backend
+2022-10-08T00:26:39.033ZI [19312:NonCelloThread] portable_clearcut_uploader.cc:147:UNKNOWN Successfully sending LogRequest to clearcut backend
+2022-10-08T00:27:13.176ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T00:27:13.177ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:805::200a:443...
+2022-10-08T00:27:13.204ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:805::200a) port 443 (#0)
+2022-10-08T00:27:13.204ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T00:27:13.222ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T00:27:13.234ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T00:27:13.234ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T00:27:13.234ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T00:27:13.234ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T00:27:13.234ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T00:27:13.234ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T00:27:13.237ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T00:27:13.281ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T00:27:13.282ZI [4576:CurlWorker3] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T00:27:13.291ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T00:45:38.799ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T00:45:38.846ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T01:05:38.812ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T01:05:38.859ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T01:25:38.819ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T01:25:38.866ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T01:27:13.732ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T01:27:13.750ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:806::200a:443...
+2022-10-08T01:27:13.764ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:806::200a) port 443 (#0)
+2022-10-08T01:27:13.764ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T01:27:13.813ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T01:27:13.822ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T01:27:13.822ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T01:27:13.822ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T01:27:13.822ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T01:27:13.822ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T01:27:13.822ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T01:27:13.825ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T01:27:13.869ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T01:27:13.872ZI [11528:CurlWorker4] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T01:27:13.879ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T01:45:38.832ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T01:45:38.879ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:05:38.842ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:05:38.889ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:25:38.846ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:25:38.894ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:27:14.465ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T02:27:14.488ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:813::200a:443...
+2022-10-08T02:27:14.496ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:813::200a) port 443 (#0)
+2022-10-08T02:27:14.496ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T02:27:14.539ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T02:27:14.550ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T02:27:14.550ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T02:27:14.550ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T02:27:14.551ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T02:27:14.551ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T02:27:14.551ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T02:27:14.553ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T02:27:14.596ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T02:27:14.597ZI [12824:CurlWorker5] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T02:27:14.604ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T02:45:38.847ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:45:38.909ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T02:54:01.740ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:475:UNKNOWN ShouldSync: Last sync was only 8903 seconds ago
+2022-10-08T02:54:01.740ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:756:UNKNOWN PerformSync: No reason to sync. Returning kOk
+2022-10-08T02:54:01.740ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_scheduler_impl.cc:34:UNKNOWN PhenotypeScheduler: successfully synced
+2022-10-08T03:05:38.856ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T03:05:38.915ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T03:25:38.857ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T03:25:38.920ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T03:27:15.110ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T03:27:15.118ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:806::200a:443...
+2022-10-08T03:27:15.125ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:806::200a) port 443 (#0)
+2022-10-08T03:27:15.126ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T03:27:15.145ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T03:27:15.160ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T03:27:15.161ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T03:27:15.161ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T03:27:15.161ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T03:27:15.161ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T03:27:15.161ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T03:27:15.164ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T03:27:15.205ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T03:27:15.205ZI [19596:CurlWorker6] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T03:27:15.212ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T03:45:38.861ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T03:45:38.923ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T04:05:38.875ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T04:05:38.938ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T04:25:38.734ZI [15772:core_104407529297066504359] feature_config.cc:224:ShouldRefetchFeatureConfig Time since last update is too small or within 14400000 ms: 14399644 milliseconds.
+2022-10-08T04:25:38.734ZI [15772:core_104407529297066504359] core.cc:956:CheckFeatureConfig Ignoring cloud feature flags
+2022-10-08T04:25:38.890ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T04:25:38.952ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T04:27:15.701ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T04:27:15.710ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:813::200a:443...
+2022-10-08T04:27:15.717ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:813::200a) port 443 (#0)
+2022-10-08T04:27:15.717ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T04:27:15.740ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T04:27:15.754ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T04:27:15.754ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T04:27:15.754ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T04:27:15.754ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T04:27:15.754ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T04:27:15.754ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T04:27:15.757ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T04:27:15.809ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T04:27:15.828ZI [20236:CurlWorker7] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T04:27:15.836ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T04:45:38.903ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T04:45:38.965ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T05:05:38.903ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T05:05:38.972ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T05:25:38.912ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T05:25:38.982ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T05:27:16.302ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T05:27:16.333ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:80b::200a:443...
+2022-10-08T05:27:16.353ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:80b::200a) port 443 (#0)
+2022-10-08T05:27:16.353ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T05:27:16.413ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T05:27:16.425ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T05:27:16.425ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T05:27:16.425ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T05:27:16.425ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T05:27:16.425ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T05:27:16.425ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T05:27:16.428ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T05:27:16.481ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T05:27:16.481ZI [16016:CurlWorker8] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T05:27:16.491ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T05:45:38.915ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T05:45:38.999ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:05:38.918ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:05:39.002ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:25:38.932ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:25:39.016ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:27:17.053ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T06:27:17.074ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:805::200a:443...
+2022-10-08T06:27:17.081ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:805::200a) port 443 (#0)
+2022-10-08T06:27:17.081ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T06:27:17.112ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T06:27:17.120ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T06:27:17.120ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T06:27:17.120ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T06:27:17.120ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T06:27:17.120ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T06:27:17.120ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T06:27:17.123ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T06:27:17.167ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T06:27:17.167ZI [17520:CurlWorker9] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T06:27:17.176ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T06:45:38.939ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:45:39.023ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T06:54:01.751ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:471:UNKNOWN ShouldSync: More than four hours since last sync.
+2022-10-08T06:54:01.871ZE [18176:client_io_thread_COM] experiments/phenotype/cpp/phenotype_impl.cc:820:UNKNOWN Sync: Failed to sync response has status 401
+2022-10-08T06:54:01.871ZE [18176:client_io_thread_COM] experiments/phenotype/cpp/phenotype_scheduler_impl.cc:31:UNKNOWN ProcessSyncResponse: error in response from Heterodyne
+2022-10-08T06:55:01.878ZE [17384:stderr_thread] stderr: I0000 00:00:1665212101.878005   18088 portable_clearcut_uploader.cc:70] Calling SendToClearcutAsync
+2022-10-08T06:55:01.878ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:70:UNKNOWN Calling SendToClearcutAsync
+2022-10-08T06:55:01.878ZE [17384:stderr_thread] stderr: I0000 00:00:1665212101.878257   18088 portable_clearcut_uploader.cc:121] Returning future status
+2022-10-08T06:55:01.878ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:121:UNKNOWN Returning future status
+2022-10-08T06:55:01.996ZE [17384:stderr_thread] stderr: I0000 00:00:1665212101.996097   19312 portable_clearcut_uploader.cc:147] Successfully sending LogRequest to clearcut backend
+2022-10-08T06:55:01.996ZI [19312:NonCelloThread] portable_clearcut_uploader.cc:147:UNKNOWN Successfully sending LogRequest to clearcut backend
+2022-10-08T07:05:38.953ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T07:05:39.037ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T07:25:38.953ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T07:25:39.037ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T07:27:17.672ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T07:27:17.689ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:81a::200a:443...
+2022-10-08T07:27:17.700ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:81a::200a) port 443 (#0)
+2022-10-08T07:27:17.700ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T07:27:17.737ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T07:27:17.748ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T07:27:17.749ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T07:27:17.749ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T07:27:17.749ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T07:27:17.749ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T07:27:17.749ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T07:27:17.751ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T07:27:17.797ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T07:27:17.798ZI [18984:CurlWorker10] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T07:27:17.807ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T07:45:38.963ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T07:45:39.047ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T08:05:38.974ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T08:05:39.057ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T08:25:38.740ZI [15772:core_104407529297066504359] core.cc:1010:GetFeatureConfig Polling latest feature flags
+2022-10-08T08:25:38.741ZI [936:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:471:UNKNOWN ShouldSync: More than four hours since last sync.
+2022-10-08T08:25:38.743ZI [936:Experiments] play/games/portablephenotype/portable_phenotype_client_impl.cc:242:UNKNOWN Successfully fetched latest configuration for package: drive_fs_ph (0 ms)
+2022-10-08T08:25:38.975ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T08:25:39.058ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_onboarding, value=true
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=multi_account_preferences, value=true
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=generate_diagnostic_info, value=true
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_modern_metrics_implementation, value=true
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_hqpc_exemptions, value=false
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=switchblade_open_files_via_shortcut, value=true
+2022-10-08T08:25:39.132ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_osxfuse_read_blacklist, value=false
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_kernel_based_change_replayer, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=changelog_download_throttle_time_ms, value=16000
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_fileprovider_for_migrated_users, value=false
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_multiple_merges_per_fetch_task, value=false
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=raw_photos_extension, value=arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,raw,rdc,rw2,srf,srw,sr2,x3f,3fr
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=dokan_suppress_file_name_in_event_context, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_goose_mode, value=false
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=bns_migration_window_closed, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=test_feature_flag_with_escape, value=New Google Docs\.gdoc|New Google Sheets\.gsheet|New Google Slides\.gslides
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirror_merge_folder_warning, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_fst, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=gui_bandwidth_throttling_control, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_photos, value=true
+2022-10-08T08:25:39.133ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_storage_saver_strings, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=macos_copy_resource_to_config_dir, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_support, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=hidden_attr_support, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fcm_implementation_type, value=2
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=default_ui_theme, value=1
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_concurrent_merged_read_optimization, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=attach_logs_to_feedback_option, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_unique_user_id, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=migration_local_scan_fatal_statuses_mac, value=
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_send_scopes, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_apl_upload, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_switchblade, value=false
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_content_bytes_before_cancel_multiplier, value=1
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_migration_to_user_id_directory, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_auto_enable_domains, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=metadata_db_vacuum, value=false
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=unlocked_mac_getxattr, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirrored_my_drive, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_context_menu_via_ipc, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=max_slow_operation_minidump_count, value=0
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=apiary_free_mode, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_read_backwards_heuristics, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=debounce_ms, value=200
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=quicklook_thumbnails, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=purge_non_system_apl_photos_roots, value=false
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shell_ipc, value=true
+2022-10-08T08:25:39.134ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=mirror_sync, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_nas_to_photos, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=async_dokan_bridge, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=block_mac_antivirus, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_photos, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=preferences_dialog, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=rescue_accounts, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_links_use_item_id, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=onboarding, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_migration, value=false
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_noop_test_feature_2, value=false
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_detect_user_enable_change_by_notification, value=false
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_shared_drives_api, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=local_machine_override_preferences, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=sync_client_migration, value=false
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=cancel_upload_option, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=migrate_to_account_directories, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_multi_account, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_spork_notifications, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=ignore_item_in_delete_changelog, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_shell_ipc_based_progress, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=computers_virtual_folder, value=true
+2022-10-08T08:25:39.135ZI [15772:core_104407529297066504359] proto_util.cc:29:DeserializeEnum Failed to convert LAUNCH_DARKLAUNCH to int32 for enum, falling back on name
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_redirect_for_editor_files, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_drive, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_win7_patch_required_notification, value=true
+2022-10-08T08:25:39.135ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_projector_for_office_files, value=true
+2022-10-08T08:25:39.136ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_rename_td_notification, value=true
+2022-10-08T08:25:39.136ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=request_team_drive_customer_id, value=true
+2022-10-08T08:25:39.136ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=emm_fully_qualified_hostname, value=true
+2022-10-08T08:25:39.136ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link_notification, value=true
+2022-10-08T08:25:39.136ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_file_organizer_capabilities, value=true
+2022-10-08T08:25:39.136ZE [15772:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=customer_type, value=CONSUMER
+2022-10-08T08:25:39.136ZI [15772:core_104407529297066504359] core.cc:924:TestConfigDifferences Modern config snapshot: 0 added, 0 removed, 6 changed, 374 matched
+2022-10-08T08:25:39.136ZI [15772:core_104407529297066504359] core.cc:694:ApplyFeatureConfigChange No changes to account features or admin settings or security settings.
+2022-10-08T08:25:39.136ZI [19312:NonCelloThread] global_features_manager.cc:310:SetGlobalFeatures Set global features for account 104407529297066504359
+2022-10-08T08:25:39.136ZI [19312:NonCelloThread] global_features_manager.cc:343:CompositeAll Compositing global features based on 1 accounts
+2022-10-08T08:25:39.136ZI [19312:NonCelloThread] global_features_manager.cc:359:CompositeAll Composited global features *WITHOUT* overrides: drive_dot: true
+share_dialog: true
+pause_syncing_option: true
+bandwidth_throttling: true
+structured_logging: true
+context_menu_force_refresh_folder: true
+status_window_click_show_file_in_file_manager: true
+outlook_addin: false
+autostart_preference: true
+gui_autostart_option: true
+mojave_overlays_fix: false
+curl_proxy_authentication: true
+gui_reset_preferences_menu_option: true
+force_refresh_folder_normal_menu: false
+structured_log_max_file_size_kbytes: 2048
+ask_to_copy_files_for_pending_uploads: true
+inform_users_of_pending_uploads: true
+same_content_dedupe_interval_ms: 600000
+dedupe_interval_ms: 2000
+support_status_notification: true
+deprecation_date: "2099-12-31"
+deprecation_warning_threshold: 30
+min_supported_os_version: "0.0.0"
+crash_oom_threshold_mb: 1048576
+allow_search: true
+finish_syncing_files_option: true
+osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+osxfuse_lock_abort_test: false
+osxfuse_sched_flags_offset_override: 4294967295
+enforce_single_parent: true
+add_shortcut_menu: true
+meet_outlook_addin: false
+spotlight_timestamp_fsctl_support: true
+mac_disk_arbitration_unmount: true
+current_drive_fs_version: "64.0.4.0"
+file_revisions_virtual_folder: true
+unlocked_mac_buf_unmap: true
+use_mac_fileprovider: false
+trim_parents_during_cloud_merge: true
+trim_parents_during_commit: true
+create_gsuite_file: true
+switchblade: true
+file_provider_quick_access_polling_interval_sec: 43200
+show_quick_access_in_search_dialog: true
+include_user_email_in_feedback: true
+mac_smb_port: 0
+fileprovider_signal_debounce_ms: 250
+osxfuse_sched_flags_offset_override_arm: 4294967295
+current_os_version: "Windows/10.0.19044"
+cancel_com_calls: true
+enable_file_provider_migration: true
+logging_on_cello_thread_startup: false
+mac_smb_dialect_mode: 10
+dokan_set_internal_file_index: true
+context_menu_create_editor_files: false
+file_revisions_file_provider: true
+mac_smb_nobrowse: true
+special_folder_change_notification: true
+repair_kext_management_directory: true
+soon_to_be_min_supported_os_version: "0.0.0"
+instrument_http_client: true
+show_offline_files_menu_option: true
+enable_mirror_roots_context: true
+com_api_thread_stuck_threshold_sec: 0
+num_metrics_batches_per_request: 70
+max_metrics_per_event_code_per_batch: 200
+encrypt_and_upload: false
+show_non_running_accounts: false
+mac_smb_mount_by_ip: true
+enable_mount_in_sidebar_setting: true
+allow_multiple_smb_connections: false
+persistent_smb_port_auto_selection: true
+file_provider_disabled_notification_interval_mins: 0
+enable_mount_as_folder_setting: true
+enable_modern_feature_flags: true
+enable_search_hot_key: true
+file_provider_failover_for_home_dir_fs_type: true
+file_provider_mirror_switch_unpinned_item_batch_size: 2000
+file_provider_enable_ipc_root_symlink: true
+file_provider_pause_syncing_option: true
+file_provider_create_existing_dir_id_succeeds: false
+file_provider_create_existing_file_id_succeeds: false
+file_provider_notify_mount_point_changed_with_mirror: false
+file_provider_show_migration_notification_based_on_volume: true
+file_provider_handle_exact_existing_create_as_reimport: true
+file_provider_min_partial_read_size: 4294967296
+file_provider_enable_read_ahead: false
+switchblade_on_websockets: false
+mac_smb_nodatacache: true
+file_provider_force_extension_startup: false
+replace_local_id_with_cloud_id_when_pushing_update: true
+
+2022-10-08T08:26:38.914ZE [17384:stderr_thread] stderr: I0000 00:00:1665217598.914659   18088 portable_clearcut_uploader.cc:70] Calling SendToClearcutAsync
+2022-10-08T08:26:38.914ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:70:UNKNOWN Calling SendToClearcutAsync
+2022-10-08T08:26:38.915ZE [17384:stderr_thread] stderr: I0000 00:00:1665217598.915020   18088 portable_clearcut_uploader.cc:121] Returning future status
+2022-10-08T08:26:38.915ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:121:UNKNOWN Returning future status
+2022-10-08T08:26:39.000ZE [17384:stderr_thread] stderr: I0000 00:00:1665217599.000311   19312 portable_clearcut_uploader.cc:147] Successfully sending LogRequest to clearcut backend
+2022-10-08T08:26:39.000ZI [19312:NonCelloThread] portable_clearcut_uploader.cc:147:UNKNOWN Successfully sending LogRequest to clearcut backend
+2022-10-08T08:27:18.390ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T08:27:18.391ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:80b::200a:443...
+2022-10-08T08:27:18.397ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:80b::200a) port 443 (#0)
+2022-10-08T08:27:18.397ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T08:27:18.416ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T08:27:18.427ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T08:27:18.427ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T08:27:18.428ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T08:27:18.428ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T08:27:18.428ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T08:27:18.428ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T08:27:18.430ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T08:27:18.476ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T08:27:18.476ZI [14120:CurlWorker11] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T08:27:18.483ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T08:45:38.990ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T08:45:39.058ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T09:05:39.010ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T09:05:39.072ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T09:25:39.012ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T09:25:39.074ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T09:27:18.929ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T09:27:18.946ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:818::200a:443...
+2022-10-08T09:27:18.951ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:818::200a) port 443 (#0)
+2022-10-08T09:27:18.951ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T09:27:18.979ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T09:27:18.991ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T09:27:18.991ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T09:27:18.991ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T09:27:18.991ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T09:27:18.991ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T09:27:18.991ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T09:27:18.994ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T09:27:19.035ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T09:27:19.040ZI [10040:CurlWorker12] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T09:27:19.047ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T09:45:39.013ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T09:45:39.076ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T10:05:39.013ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T10:05:39.075ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T10:11:35.748ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:475:UNKNOWN ShouldSync: Last sync was only 6357 seconds ago
+2022-10-08T10:11:35.748ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:756:UNKNOWN PerformSync: No reason to sync. Returning kOk
+2022-10-08T10:11:35.748ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_scheduler_impl.cc:34:UNKNOWN PhenotypeScheduler: successfully synced
+2022-10-08T10:25:39.017ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T10:25:39.079ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T10:27:19.564ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T10:27:19.590ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:80f::200a:443...
+2022-10-08T10:27:19.598ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:80f::200a) port 443 (#0)
+2022-10-08T10:27:19.598ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T10:27:19.619ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T10:27:19.630ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T10:27:19.630ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T10:27:19.630ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T10:27:19.630ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T10:27:19.630ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T10:27:19.630ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T10:27:19.633ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T10:27:19.675ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T10:27:19.679ZI [5284:CurlWorker13] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T10:27:19.690ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T10:45:39.021ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T10:45:39.083ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T11:05:39.028ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T11:05:39.090ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T11:25:39.031ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T11:25:39.093ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T11:27:20.289ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T11:27:20.308ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:813::200a:443...
+2022-10-08T11:27:20.322ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:813::200a) port 443 (#0)
+2022-10-08T11:27:20.322ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T11:27:20.351ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T11:27:20.359ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T11:27:20.359ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T11:27:20.360ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T11:27:20.360ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T11:27:20.360ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T11:27:20.360ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T11:27:20.362ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T11:27:20.413ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T11:27:20.420ZI [14432:CurlWorker14] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T11:27:20.428ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T11:45:39.043ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T11:45:39.106ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T12:05:39.055ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T12:05:39.118ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T12:25:38.747ZI [15772:core_104407529297066504359] feature_config.cc:224:ShouldRefetchFeatureConfig Time since last update is too small or within 14400000 ms: 14399627 milliseconds.
+2022-10-08T12:25:38.748ZI [15772:core_104407529297066504359] core.cc:956:CheckFeatureConfig Ignoring cloud feature flags
+2022-10-08T12:25:39.069ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T12:25:39.132ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T12:27:21.282ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T12:27:21.306ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:818::200a:443...
+2022-10-08T12:27:21.312ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:818::200a) port 443 (#0)
+2022-10-08T12:27:21.312ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T12:27:21.342ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T12:27:21.372ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T12:27:21.372ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T12:27:21.372ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T12:27:21.372ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T12:27:21.372ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T12:27:21.372ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T12:27:21.378ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T12:27:21.412ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T12:27:21.415ZI [3268:CurlWorker15] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T12:27:21.427ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T12:45:39.069ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T12:45:39.132ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T13:05:39.070ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T13:05:39.148ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T13:25:39.071ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T13:25:39.153ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T13:27:22.341ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T13:27:22.356ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:813::200a:443...
+2022-10-08T13:27:22.362ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:813::200a) port 443 (#0)
+2022-10-08T13:27:22.363ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T13:27:22.389ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T13:27:22.426ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T13:27:22.426ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T13:27:22.426ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T13:27:22.426ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T13:27:22.427ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T13:27:22.427ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T13:27:22.435ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T13:27:22.475ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T13:27:22.476ZI [1888:CurlWorker16] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T13:27:22.500ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T13:45:39.074ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T13:45:39.154ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T14:05:39.076ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T14:05:39.157ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T14:11:36.067ZI [18088:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:471:UNKNOWN ShouldSync: More than four hours since last sync.
+2022-10-08T14:11:36.221ZE [18176:client_io_thread_COM] experiments/phenotype/cpp/phenotype_impl.cc:820:UNKNOWN Sync: Failed to sync response has status 401
+2022-10-08T14:11:36.221ZE [18176:client_io_thread_COM] experiments/phenotype/cpp/phenotype_scheduler_impl.cc:31:UNKNOWN ProcessSyncResponse: error in response from Heterodyne
+2022-10-08T14:12:36.232ZE [17384:stderr_thread] stderr: I0000 00:00:1665238356.231930   18088 portable_clearcut_uploader.cc:70] Calling SendToClearcutAsync
+2022-10-08T14:12:36.231ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:70:UNKNOWN Calling SendToClearcutAsync
+2022-10-08T14:12:36.233ZE [17384:stderr_thread] stderr: I0000 00:00:1665238356.232621   18088 portable_clearcut_uploader.cc:121] Returning future status
+2022-10-08T14:12:36.232ZI [18088:NonCelloThread] portable_clearcut_uploader.cc:121:UNKNOWN Returning future status
+2022-10-08T14:12:36.396ZE [17384:stderr_thread] stderr: I0000 00:00:1665238356.396388   19312 portable_clearcut_uploader.cc:147] Successfully sending LogRequest to clearcut backend
+2022-10-08T14:12:36.396ZI [19312:NonCelloThread] portable_clearcut_uploader.cc:147:UNKNOWN Successfully sending LogRequest to clearcut backend
+2022-10-08T14:25:39.077ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T14:25:39.168ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T14:27:23.394ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T14:27:23.404ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:806::200a:443...
+2022-10-08T14:27:23.411ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:806::200a) port 443 (#0)
+2022-10-08T14:27:23.411ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T14:27:23.451ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T14:27:23.485ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T14:27:23.485ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T14:27:23.485ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T14:27:23.485ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T14:27:23.486ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T14:27:23.486ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T14:27:23.491ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T14:27:23.525ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T14:27:23.526ZI [14468:CurlWorker17] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T14:27:23.549ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T14:45:39.099ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T14:45:39.175ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T15:05:39.101ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T15:05:39.178ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T15:25:39.115ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T15:25:39.193ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T15:27:24.285ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-10-08T15:27:24.304ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:808::200a:443...
+2022-10-08T15:27:24.310ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:808::200a) port 443 (#0)
+2022-10-08T15:27:24.310ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-10-08T15:27:24.340ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-10-08T15:27:24.368ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-10-08T15:27:24.368ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-10-08T15:27:24.368ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-10-08T15:27:24.368ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-10-08T15:27:24.368ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-10-08T15:27:24.368ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-10-08T15:27:24.374ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-10-08T15:27:24.425ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-10-08T15:27:24.426ZI [4624:CurlWorker18] curl_api.cc:1027:LogCurlInfo == Info: Connection #0 to host www.googleapis.com left intact
+2022-10-08T15:27:24.443ZI [15772:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-10-08T15:45:39.120ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+
+2022-10-08T15:45:39.198ZI [15772:core_104407529297066504359] sync_engine.cc:1835:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428258
+fetching_changes: false
+

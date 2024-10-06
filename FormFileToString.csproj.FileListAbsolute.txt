@@ -1,0 +1,6 @@
+D:\Scripts\C#\Learning\FormFileToString\bin\Debug\FormFileToString.exe.config
+D:\Scripts\C#\Learning\FormFileToString\bin\Debug\FormFileToString.exe
+D:\Scripts\C#\Learning\FormFileToString\bin\Debug\FormFileToString.pdb
+D:\Scripts\C#\Learning\FormFileToString\obj\Debug\FormFileToString.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\Learning\FormFileToString\obj\Debug\FormFileToString.exe
+D:\Scripts\C#\Learning\FormFileToString\obj\Debug\FormFileToString.pdb

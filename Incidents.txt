@@ -1,0 +1,4 @@
+Region,Vol,Incident,ville_depart,heure_depart,ville_arrivee,heure_arrivee,commentaires
+France,Nice (NCE) : AF6243/06Nov,Aircraft change,Nice (NCE),19:45,Paris Orly (ORY),21:15,Aircraft unavailability.
+France,Nice (NCE) : AF7313/05Nov,Delay,Nice (NCE),05:00,Paris Charles de Gaulle (CDG),06:35,Delay of 02h35. Due to airport constraints (contaminated runway) in NCE.
+France,Toulouse (TLS) : AF7401/05Nov,Aircraft change,Toulouse (TLS),08:35,Paris Charles de Gaulle (CDG),10:05,Delay of 00h11. Aircraft unavailability.

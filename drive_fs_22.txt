@@ -1,0 +1,299 @@
+-------------------------------------
+drive_fs log started
+version: 55.0.3.0
+changelist 424159341 with baseline 420341591 in a mint client based on //depot/branches/drive_fs_release_branch/420341591.1/google3
+-------------------------------------
+2022-03-03T00:59:13.626ZI [8256:log_writer_thread] instrumentation.cc:111:OpenLogFileInDirectory Logging to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\drive_fs.txt
+2022-03-03T00:59:13.627ZI [16892:NonCelloThread] drive_fs_main.cc:154:LogExistingCrashReports No existing crash reports found.
+2022-03-03T00:59:13.627ZI [16892:NonCelloThread] drive_fs_main.cc:356:PrintCommandLine C:\Program Files\Google\Drive File Stream\55.0.3.0\GoogleDriveFS.exe --crash_handler_token=\\.\pipe\crashpad_14204_FTYLZUQQXYBWMKIN --parent_version=55.0.3.0 --startup_mode 
+2022-03-03T00:59:13.630ZI [16892:NonCelloThread] drive_fs_main.cc:137:InitializeLanguage Initializing with detected language: fr-FR
+2022-03-03T00:59:13.630ZI [16892:NonCelloThread] i18n.cc:311:InitializeI18n I18n initialized with fr
+2022-03-03T00:59:13.723ZI [16892:NonCelloThread] drive_fs.cc:527:RunDriveFS Options: argv_0: "C:\\Program Files\\Google\\Drive File Stream\\55.0.3.0\\GoogleDriveFS.exe"
+base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary"
+shell_ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary_shell"
+crash_handler_token: "\\\\.\\pipe\\crashpad_14204_FTYLZUQQXYBWMKIN"
+enable_tracing: false
+enable_ui: true
+enable_file_dances: true
+use_fake_cello_fs: false
+enable_poll_for_changes: true
+drive_create_options {
+  use_fake_cloud_store: false
+  authorize_new_user: false
+  refresh_token: ""
+  user_email: ""
+  token_uri: ""
+  auth_uri: ""
+  metadata_server_auth_uri: ""
+  user_id: ""
+}
+enable_field_event_recording: true
+open_gdoc_path: ""
+started_by_installer: false
+locale: ""
+force_onboarding: false
+log_connection_details: false
+use_intranet_connectivity_to_check_online: false
+crash_handler_init_status: SUCCESS
+cello_options {
+  drive_api_options {
+    apiary_trace_token: ""
+    apiary_trace_regex: ""
+    dapper_trace_regex: ""
+    functional_tests_dir_path: ""
+  }
+}
+open_gdocs_root: false
+open_gsheets_root: false
+open_gslides_root: false
+crash_on_core_start: false
+use_curl_logging_scribe: false
+force_case_sensitivity: false
+new_gsuite_file: ""
+account_settings_from_file_path: ""
+parent_version: "55.0.3.0"
+open_all_dialogs: false
+startup_mode: true
+fake_multiaccount_ui: false
+feature_config_override {
+  global {
+  }
+  account {
+  }
+}
+fake_migration_file_viewer_data: false
+global_feature_config {
+  drive_dot: true
+  share_dialog: true
+  shell_ipc: true
+  pause_syncing_option: true
+  bandwidth_throttling: true
+  structured_logging: true
+  context_menu_force_refresh_folder: true
+  status_window_click_show_file_in_file_manager: true
+  outlook_addin: false
+  autostart_preference: true
+  gui_autostart_option: true
+  mojave_overlays_fix: false
+  curl_proxy_authentication: true
+  gui_reset_preferences_menu_option: true
+  cancel_upload_option: true
+  force_refresh_folder_normal_menu: false
+  structured_log_max_file_size_kbytes: 2048
+  ask_to_copy_files_for_pending_uploads: true
+  inform_users_of_pending_uploads: true
+  same_content_dedupe_interval_ms: 600000
+  dedupe_interval_ms: 2000
+  support_status_notification: true
+  deprecation_date: "2099-12-31"
+  min_supported_os_version: "0.0.0"
+  crash_oom_threshold_mb: 1048576
+  allow_search: true
+  finish_syncing_files_option: true
+  osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+  mirror_sync: true
+  enable_photos: true
+  osxfuse_lock_abort_test: false
+  osxfuse_sched_flags_offset_override: 4294967295
+  enforce_single_parent: true
+  add_shortcut_menu: true
+  meet_outlook_addin: false
+  hidden_attr_support: true
+  spotlight_timestamp_fsctl_support: true
+  mac_disk_arbitration_unmount: true
+  current_drive_fs_version: "55.0.3.0"
+  enable_goose_mode: false
+  file_revisions_virtual_folder: true
+  unlocked_mac_buf_unmap: true
+  spork_migration: true
+  enable_apl_upload: true
+  enable_mirrored_my_drive: true
+  slurp_devices_to_drive: true
+  slurp_devices_to_photos: true
+  enable_nas_to_photos: true
+  use_mac_fileprovider: false
+  trim_parents_during_cloud_merge: true
+  trim_parents_during_commit: true
+  create_gsuite_file: true
+  enable_multi_account: true
+  switchblade: true
+  switchblade_open_files_via_shortcut: true
+  file_provider_quick_access_polling_interval_sec: 43200
+  show_quick_access_in_search_dialog: true
+  use_spork_notifications: true
+  include_user_email_in_feedback: true
+  spork_onboarding: true
+  mac_smb_port: 0
+  osxfuse_sched_flags_offset_override_arm: 4294967295
+  current_os_version: "Windows/10.0.19043"
+  cancel_com_calls: true
+  enable_skip_redirect_for_editor_files: true
+  enable_file_provider_migration: true
+  show_download_link: false
+  logging_on_cello_thread_startup: false
+  enable_mirror_merge_folder_warning: true
+  mac_smb_dialect_mode: 10
+  dokan_set_internal_file_index: true
+  context_menu_create_editor_files: false
+  allow_fileprovider_for_migrated_users: false
+  file_revisions_file_provider: true
+  mac_smb_nobrowse: true
+  disable_jsoncpp: false
+  special_folder_change_notification: true
+  file_provider_auto_enable_domains: true
+  enable_fst: false
+  repair_kext_management_directory: true
+  purge_non_system_apl_photos_roots: false
+  instrument_http_client: false
+  enable_mirror_roots_context: false
+  com_api_thread_stuck_threshold_sec: 0
+  num_metrics_batches_per_request: 70
+  max_metrics_per_event_code_per_batch: 200
+  bns_migration_window_closed: true
+}
+photos_scope: ""
+disable_add_account: true
+show_sign_in_dialog_if_no_user: true
+show_preferences_dialog_debug_menu: false
+crash_in_execution_context: false
+enable_physical_http_logging: false
+
+2022-03-03T00:59:13.723ZI [16892:NonCelloThread] drive_fs.cc:155:LogSystemConfig OS: Windows/10.0.19043
+2022-03-03T00:59:13.723ZI [16892:NonCelloThread] drive_fs.cc:162:LogSystemConfig Architecture: x86_64
+2022-03-03T00:59:13.723ZI [16892:NonCelloThread] drive_fs.cc:170:LogSystemConfig Total RAM: 7.89 GiB
+2022-03-03T00:59:13.723ZI [16892:NonCelloThread] drive_fs.cc:186:LogSystemConfig Disk space: 8.32 GB free / 126.70 GB total
+2022-03-03T00:59:13.723ZI [16892:NonCelloThread] drive_fs.cc:193:LogSystemConfig Timezone: UTC+0000 (UTC)
+2022-03-03T00:59:13.725ZI [16892:NonCelloThread] preferences_manager.cc:107:GetUserPreferences user_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  trusted_root_certs_file_path: "C:\\Program Files\\Google\\Drive File Stream\\55.0.3.0\\config\\roots.pem"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  force_browser_auth: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+    spork_tour_notification: true
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+}
+}
+2022-03-03T00:59:13.725ZI [16892:NonCelloThread] preferences_manager.cc:138:GetEffectivePreferences effective_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  trusted_root_certs_file_path: "C:\\Program Files\\Google\\Drive File Stream\\55.0.3.0\\config\\roots.pem"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  force_browser_auth: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+    spork_tour_notification: true
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+}
+}
+2022-03-03T00:59:13.726ZI [10028:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-03-03T00:59:13.895ZI [16892:NonCelloThread] dialog.cc:72:UpdateViewViaDifferencer [UpdateViewDiff: additions="common {
+  language: "fr"
+  is_rtl: false
+  google_drive_fs_logo_alt_text: "Logo Google\302\240Drive"
+  dark_mode: false
+}
+migration_dialog {
+  resources {
+    migration_feedback_title: "Envoyer des commentaires \303\240 Google"
+    migration_feedback_cancel_button_label: "Annuler"
+    migration_feedback_submit_button_label: "Envoyer"
+    migration_feedback_close_button_label: "Fermer"
+    migration_feedback_attach_logs_checkbox_label: "Inclure les <a id=\"attach-logs\">journaux de diagnostic</a>"
+    migration_feedback_text_field_floating_label: "Vos commentaires"
+    migration_ui_initialized_title: "Chargement du contenu"
+  }
+  snackbar_view {
+  }
+}
+"
+modifications=""
+deletions=""]
+2022-03-03T00:59:13.902ZI [25236:MigrationThread_COM] backup_and_sync.cc:1029:CreateAccounts Found Backup and Sync account: niang.fara@gmail.com
+2022-03-03T00:59:13.960ZI [8428:VolumeListenerThread] volume_listener_win.cc:390:GetVolumeFromGuidPath \\?\Volume{179eb58f-e4d3-49b6-a7f3-1e5146eceb4e}\ description. name: LENOVO, uuid: 179eb58f-e4d3-49b6-a7f3-1e5146eceb4e, device_number: 2263365625, mount_point: D:\, fs_type: NTFS, device_type: Internal
+2022-03-03T00:59:13.969ZI [5572:MediaManagerThread] media_manager.cc:909:AddMediaInternal Media was added [Media: media_id="179eb58f-e4d3-49b6-a7f3-1e5146eceb4e" name="LENOVO" file_system="NTFS" mount_point(raw)="D:\" device_type="Internal" device_number=2263365625 writable="true"]
+2022-03-03T00:59:13.970ZI [8428:VolumeListenerThread] volume_listener_win.cc:390:GetVolumeFromGuidPath \\?\Volume{41afd6a5-6119-4157-9b7a-627c51ba4fdb}\ description. name: Windows, uuid: 41afd6a5-6119-4157-9b7a-627c51ba4fdb, device_number: 3399157150, mount_point: C:\, fs_type: NTFS, device_type: Internal
+2022-03-03T00:59:13.975ZI [5572:MediaManagerThread] media_manager.cc:909:AddMediaInternal Media was added [Media: media_id="41afd6a5-6119-4157-9b7a-627c51ba4fdb" name="Windows" file_system="NTFS" mount_point(raw)="C:\" device_type="Internal" device_number=3399157150 writable="true"]
+2022-03-03T00:59:13.976ZI [8428:VolumeListenerThread] volume_listener_win.cc:390:GetVolumeFromGuidPath \\?\Volume{f15cad22-6387-424a-92fe-4bb4ab546b07}\ description. name: WINRE_DRV, uuid: f15cad22-6387-424a-92fe-4bb4ab546b07, device_number: 1251722332, mount_point: , fs_type: NTFS, device_type: Internal
+2022-03-03T00:59:13.976ZE [8428:VolumeListenerThread] volume_listener_win.cc:397:GetVolumeFromGuidPath \\?\Volume{f15cad22-6387-424a-92fe-4bb4ab546b07}\ has no mount point.
+2022-03-03T00:59:13.976ZI [8428:VolumeListenerThread] volume_listener_win.cc:390:GetVolumeFromGuidPath \\?\Volume{e8982033-0d56-44e9-a6e6-d674017ea338}\ description. name: SYSTEM_DRV, uuid: e8982033-0d56-44e9-a6e6-d674017ea338, device_number: 2325393711, mount_point: , fs_type: FAT, device_type: Internal
+2022-03-03T00:59:13.976ZE [8428:VolumeListenerThread] volume_listener_win.cc:397:GetVolumeFromGuidPath \\?\Volume{e8982033-0d56-44e9-a6e6-d674017ea338}\ has no mount point.
+2022-03-07T11:58:31.359ZE [16892:NonCelloThread] chrome_webview.cc:530:OnQuery View not set.
+2022-03-07T11:58:31.621ZI [25236:MigrationThread_COM] uninstall_win.cc:128:UninstallBackupAndSync Uninstalling {696895F7-52C7-4C9E-998B-C7E0CC907092}
+2022-03-07T11:58:31.622ZI [25236:MigrationThread_COM] uninstall_win.cc:99:ConfigMsiLogging Logging to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\BnS-uninstall-{696895F7-52C7-4C9E-998B-C7E0CC907092}.log
+2022-03-07T11:59:51.374ZI [25236:MigrationThread_COM] uninstall_win.cc:133:UninstallBackupAndSync Successfully uninstalled B&S {696895F7-52C7-4C9E-998B-C7E0CC907092}
+2022-03-07T11:59:51.375ZI [25236:MigrationThread_COM] uninstall_win.cc:163:CleanupBackupAndSyncSettings Deleting B&S config from the registry.
+2022-03-07T11:59:51.375ZI [25236:MigrationThread_COM] migration.cc:793:StartInternal Cleaning up Backup and Sync got Status::SUCCESS
+2022-03-07T11:59:51.376ZI [25236:MigrationThread_COM] migration.cc:2351:QuitInternal Migration quit initiated from "migration.cc:797:StartInternal", with exit code: 0x00010002 (Status::SUCCESS, SUCCESSFUL_EXIT, UNKNOWN_PANE, INITIALIZED)
+2022-03-07T11:59:51.376ZI [25236:MigrationThread_COM] migration.cc:2445:QuitInternal Migration was successfully completed, requesting restart into normal app.
+2022-03-07T11:59:54.940ZI [16892:NonCelloThread] ipc_server_manager.cc:37:~IpcServerManager Quitting the IPC thread
+2022-03-07T11:59:54.941ZI [16892:NonCelloThread] ipc_server_manager.cc:40:~IpcServerManager IPC thread destroyed.
+2022-03-07T11:59:54.941ZI [16892:NonCelloThread] drive_fs.cc:623:RunDriveFS Return code: APP_RESTART_REQUESTED
+2022-03-07T11:59:54.942ZI [16892:NonCelloThread] ipc_server_manager.cc:37:~IpcServerManager Quitting the IPC thread
+2022-03-07T11:59:54.942ZI [16892:NonCelloThread] ipc_server_manager.cc:40:~IpcServerManager IPC thread destroyed.
+2022-03-07T11:59:55.030ZI [11668:trace_writer_thread] instrumentation.cc:579:operator() Writing Chrome Trace to C:\Users\Sewcary\AppData\Local\Temp\drive_fs_trace
+2022-03-07T12:00:01.645ZI [11668:trace_writer_thread] instrumentation.cc:581:operator() Trace successfully written

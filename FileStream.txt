@@ -1,0 +1,6 @@
+C:\Background_ForwardDirection_DeskScale.jpg
+C:\Background_Cliffhouse.jpg    using (FileStream fs = new FileStream(@"d:\temp\test2.txt",FileMode.Create))
+            {
+                byte[] bytes = Encoding.UTF8.GetBytes("Hello éeeééè&ç World");
+
+                fs.Write(bytes,0,bytes.Length);

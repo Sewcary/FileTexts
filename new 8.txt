@@ -1,0 +1,71 @@
+USE [FRONT]
+GO
+
+/****** Object:  Table [dbo].[InterventionReseau_TSMS_Test]    Script Date: 4/22/2020 3:39:18 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[InterventionReseau_TSMS_Test](
+	[applicationOriginIntervention] [nvarchar](100) NULL,
+	[idOriginIntervention] [nvarchar](256) NULL,
+	[idIntervention] [nvarchar](81) NULL,
+	[creationDate] [datetime2](7) NULL,
+	[idContract] [nvarchar](100) NULL,
+	[wordingContractDomain] [nvarchar](100) NULL,
+	[idClient] [nvarchar](20) NULL,
+	[idDomain] [nvarchar](50) NULL,
+	[wordingDomain] [nvarchar](50) NULL,
+	[idSubDomain] [nvarchar](50) NULL,
+	[wordingSubDomain] [nvarchar](50) NULL,
+	[status] [nvarchar](50) NULL,
+	[priority] [nvarchar](50) NULL,
+	[streetNumber] [nvarchar](20) NULL,
+	[streetName] [nvarchar](255) NULL,
+	[addressComplement] [nvarchar](255) NULL,
+	[townName] [nvarchar](255) NULL,
+	[idInsee] [nvarchar](5) NULL,
+	[postalCode] [nvarchar](5) NULL,
+	[comment] [nvarchar](4000) NULL,
+	[forecastedIdTypeIntervention] [nvarchar](5) NULL,
+	[forecastedWordingTypeIntervention] [nvarchar](100) NULL,
+	[forecastedWordingTypeInterventionCRT] [nvarchar](100) NULL,
+	[realizedIdTypeIntervention] [nvarchar](5) NULL,
+	[realizedWordingTypeIntervention] [nvarchar](100) NULL,
+	[realizedWordingTypeInterventionCRT] [nvarchar](100) NULL,
+	[forecastedStartDate] [datetime2](7) NULL,
+	[forecastedEndDate] [datetime2](7) NULL,
+	[realizedStartDate] [datetime2](7) NULL,
+	[realizedEndDate] [datetime2](7) NULL,
+	[IsStreetClosed] [bit] NULL,
+	[IsWaterSupplyStopped] [bit] NULL,
+	[consequenceForCustomer] [nvarchar](50) NULL,
+	[geoLatitude] [float] NULL,
+	[geoLongitude] [float] NULL,
+	[geoAccuracy] [nvarchar](50) NULL,
+	[charge] [nvarchar](50) NULL,
+	[idInterventionG2] [numeric](18, 0) NOT NULL,
+	[codeCrG2] [numeric](18, 0) NOT NULL,
+	[dateModifG2] [datetime2](7) NULL,
+	[wordingContractName] [nvarchar](255) NULL,
+	[PrenomNomClient] [nvarchar](100) NULL,
+	[referenceDemandeG2] [nvarchar](81) NULL,
+	[commentAgent] [nvarchar](max) NULL,
+	[AncienStatus] [nvarchar](50) NULL,
+	[ZL_Classement] [nvarchar](100) NULL,
+	[updatedStatusDate] [datetime2](7) NULL,
+	[Date_Upsert] [datetime2](7) NULL,
+	[Source] [nvarchar](20) NULL,
+	[startDate] [datetime2](7) NULL,
+	[endDate] [datetime2](7) NULL,
+ CONSTRAINT [PK_InterventionReseau_TSMS_Test] PRIMARY KEY NONCLUSTERED 
+(
+	[codeCrG2] ASC,
+	[idInterventionG2] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [FRONT_INDEX]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+
+

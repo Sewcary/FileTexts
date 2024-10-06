@@ -1,0 +1,8 @@
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\Window1.baml
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\Window1.g.vb
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\Application.g.vb
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\WPFVBWebCam_MarkupCompile.cache
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\WPFVBWebCam.g.resources
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\WPFVBWebCam.Resources.resources
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\WPFVBWebCam.vbproj.GenerateResource.cache
+D:\Downloads\easywebcam\sourceCode\sourceCode\EasyWebCam\WPFVBWebCam\obj\Debug\WPFVBWebCam.vbproj.CoreCompileInputs.cache

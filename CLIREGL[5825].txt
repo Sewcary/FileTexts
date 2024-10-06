@@ -1,0 +1,21 @@
+CREATE TABLE "obi"."cl_dbrglt" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_cl" "t_cd" NOT NULL,
+	"no_int_cl_dbrglt" integer NOT NULL,
+	"cd_reg" "t_cd" NOT NULL,
+	"mnt_inf_cnd_reg" "t_mnt" NULL DEFAULT 0,
+	"mnt_sup_cnd_reg" "t_mnt" NULL DEFAULT 0,
+	"aut_modif" char(7) NULL DEFAULT current user,
+	"dte_hre_crea" timestamp NULL DEFAULT current timestamp,
+	"dte_hre_modif" timestamp NULL DEFAULT current timestamp,
+	"nb_reg" integer NULL,
+	PRIMARY KEY ( "no_ste", "cd_cl", "no_int_cl_dbrglt" )
+);
+COMMENT ON TABLE "obi"."cl_dbrglt" IS 'Conditions réglement du client';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."no_ste" IS 'Numéro de la société';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."no_int_cl_dbrglt" IS 'No interne bon règlement client';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."cd_reg" IS 'Code règlement';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."mnt_inf_cnd_reg" IS 'Montant inférieur de la fourchette';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."mnt_sup_cnd_reg" IS 'Montant supérieur de la fourchette';
+COMMENT ON COLUMN "obi"."cl_dbrglt"."nb_reg" IS 'Nombre de reglements';

@@ -1,0 +1,321 @@
+USE [FRONT]
+GO
+/****** Object:  StoredProcedure [dbo].[Seve_Intervention_Detail_Read_Restrict]    Script Date: 4/22/2020 3:42:20 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+
+ALTER PROCEDURE [dbo].[Seve_Intervention_Detail_Read_Restrict]
+    @minDate varchar(max),
+	@maxDate varchar(max) ,
+	@statutList varchar(max) ,
+	@criterionSortsOut varchar(100) ,
+	@orderSortsOut  varchar(100) ,
+	@MaxResult  varchar(10) ,
+	@numberResultsByPage varchar(10) ,
+	@pageStartIndex varchar(10) ,	
+	@idInseeList varchar(max) ,
+	@idContractsList varchar(max) ,
+	@idDomainList varchar(max) ,
+	@idOriginInterventionList varchar(max) ,
+	@idInterventionList  varchar(max) ,
+	@idTypeInterventionList varchar(max),
+	@classementList varchar(max) =null,
+	@inseeDomainTable [InseeDomainItem] READONLY, 						
+	@inseeRestrictionTable [InseeRestrictionTable] READONLY
+
+AS
+  Set NoCount ON
+    /* Variable Declaration */
+	 Declare @SQLQuery AS NVarchar(4000)
+	 Declare @ParamDefinition AS NVarchar(2000) 
+	 Declare @CharDelimiter AS Varchar(1) 
+	 set @CharDelimiter = ',';
+
+	DECLARE @statutTable ParamListTable
+
+	If @statutList IS NOT NULL
+		INSERT INTO @statutTable (Data) SELECT [Data] FROM dbo.function_Split_String(@statutList, @CharDelimiter)
+
+	DECLARE @idInseeTable ParamListTable
+
+	If @idInseeList IS NOT NULL
+		INSERT INTO @idInseeTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idInseeList, @CharDelimiter)
+
+	DECLARE @idContractsTable ParamListTable
+
+	If @idContractsList IS NOT NULL
+		INSERT INTO @idContractsTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idContractsList, @CharDelimiter)
+
+	DECLARE @idDomainTable ParamListTable
+
+	If @idDomainList IS NOT NULL
+		INSERT INTO @idDomainTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idDomainList, @CharDelimiter)
+
+	DECLARE @idOriginInterventionTable ParamListTable
+
+	If @idOriginInterventionList IS NOT NULL
+		INSERT INTO @idOriginInterventionTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idOriginInterventionList, @CharDelimiter)
+
+	DECLARE @idInterventionTable ParamListTable
+
+	If @idInterventionList IS NOT NULL
+		INSERT INTO @idInterventionTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idInterventionList, @CharDelimiter)
+
+	DECLARE @idTypeInterventionTable ParamListTable
+
+	If @idTypeInterventionList IS NOT NULL
+		INSERT INTO @idTypeInterventionTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idTypeInterventionList, @CharDelimiter)
+	
+	DECLARE @classementTable ParamListTable
+
+	If @classementList IS NOT NULL
+		INSERT INTO @classementTable (Data) SELECT [Data] FROM dbo.function_Split_String(@classementList, @CharDelimiter)
+	
+
+    If ((@numberResultsByPage Is Not Null) and (@pageStartIndex Is Not Null) )
+		Set @SQLQuery =  'SELECT applicationOriginIntervention ';
+	Else
+		Set @SQLQuery =  'SELECT TOP (CAST(@MaxResult as integer)) applicationOriginIntervention ';
+    Set @SQLQuery =  @SQLQuery + ',idOriginIntervention ';
+	Set @SQLQuery =  @SQLQuery + ',ReferenceDemandeG2 ';   
+	Set @SQLQuery =  @SQLQuery + ',ZL_CLASSEMENT ';   
+    Set @SQLQuery =  @SQLQuery + ',idIntervention ';
+    Set @SQLQuery =  @SQLQuery + ',creationDate ';
+    Set @SQLQuery =  @SQLQuery + ',idContract ';
+	Set @SQLQuery =  @SQLQuery + ',wordingContractName ';	
+	Set @SQLQuery =  @SQLQuery + ',wordingContractDomain ';	
+    Set @SQLQuery =  @SQLQuery + ',idClient ';
+    Set @SQLQuery =  @SQLQuery + ',idDomain ';
+    Set @SQLQuery =  @SQLQuery + ',wordingDomain ';
+    Set @SQLQuery =  @SQLQuery + ',idSubDomain ';
+    Set @SQLQuery =  @SQLQuery + ',wordingSubDomain ';
+    Set @SQLQuery =  @SQLQuery + ',status ';
+    Set @SQLQuery =  @SQLQuery + ',priority ';
+    Set @SQLQuery =  @SQLQuery + ',streetNumber ';
+    Set @SQLQuery =  @SQLQuery + ',streetName ';
+    Set @SQLQuery =  @SQLQuery + ',addressComplement';
+    Set @SQLQuery =  @SQLQuery + ',townName ';
+    Set @SQLQuery =  @SQLQuery + ',idInsee ';
+	Set @SQLQuery =  @SQLQuery + ',postalCode ';	
+    Set @SQLQuery =  @SQLQuery + ',comment ';
+	Set @SQLQuery =  @SQLQuery + ',commentAgent ';
+    Set @SQLQuery =  @SQLQuery + ',forecastedIdTypeIntervention ';
+    Set @SQLQuery =  @SQLQuery + ',forecastedWordingTypeIntervention ';
+	Set @SQLQuery =  @SQLQuery + ',forecastedWordingTypeInterventionCRT ';	
+    Set @SQLQuery =  @SQLQuery + ',realizedIdTypeIntervention ';
+    Set @SQLQuery =  @SQLQuery + ',realizedWordingTypeIntervention ';
+	Set @SQLQuery =  @SQLQuery + ',realizedWordingTypeInterventionCRT ';	
+    Set @SQLQuery =  @SQLQuery + ',forecastedStartDate ';
+    Set @SQLQuery =  @SQLQuery + ',forecastedEndDate';
+    Set @SQLQuery =  @SQLQuery + ',realizedStartDate';
+    Set @SQLQuery =  @SQLQuery + ',realizedEndDate';
+    Set @SQLQuery =  @SQLQuery + ',dateModifG2 as updateDate';
+    Set @SQLQuery =  @SQLQuery + ',IsStreetClosed ';
+    Set @SQLQuery =  @SQLQuery + ',IsWaterSupplyStopped ';
+    Set @SQLQuery =  @SQLQuery + ',consequenceForCustomer ';
+    Set @SQLQuery =  @SQLQuery + ',geoLatitude ';
+    Set @SQLQuery =  @SQLQuery + ',geoLongitude ';
+    Set @SQLQuery =  @SQLQuery + ',geoAccuracy ';    
+	Set @SQLQuery =  @SQLQuery + ',prenomNomClient '; 
+	SET @SQLQuery =  @SQLQuery + ' ,ISNULL(CONVERT (NVARCHAR(50),(IIF( realizedStartDate IS NOT NULL AND realizedEndDate IS NOT NULL,realizedStartDate,forecastedStartDate)),127),''1901-01-01T00:00:00'') StartDate'
+	SET @SQLQuery =  @SQLQuery + ',ISNULL(CONVERT (NVARCHAR(50),(IIF(realizedStartDate is not null and realizedEndDate is not null, realizedendDate,  forecastedEndDate)),127),''1901-01-01T00:00:00'') EndDate'
+    Set @SQLQuery =  @SQLQuery + ' FROM [dbo].[InterventionReseau_TSMS] as SEVEITV';
+	Set @SQLQuery = @SQLQuery  + ' WHERE (1= 1) '    
+
+	IF (@minDate IS NOT NULL AND @maxDate IS NULL)
+	BEGIN
+		SET @SQLQuery = @SQLQuery  + ' AND (realizedStartDate >= cast(@minDate as datetime) OR forecastedStartDate >= cast(@minDate as datetime)) '		
+	END
+
+	IF (@maxDate IS NOT NULL AND @minDate IS NULL)
+	BEGIN
+		SET @SQLQuery = @SQLQuery  + ' AND (realizedEndDate  <= cast(@maxDate AS datetime) OR forecastedEndDate <= cast(@maxDate AS datetime)) ' 		
+	END
+		
+	if (@minDate IS NOT NULL AND @maxDate IS NOT NULL)
+	BEGIN
+		SET @SQLQuery = @SQLQuery  + ' AND ((realizedStartDate >= cast(@minDate as datetime) AND realizedEndDate <= cast(@maxDate as datetime)) '
+		SET @SQLQuery = @SQLQuery  + ' OR (forecastedStartDate >= cast(@minDate AS datetime) AND forecastedEndDate <= cast(@maxDate AS datetime))) ' 		
+	END
+	
+	if @statutList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND status IN (SELECT [Data] FROM @statutTable) '
+	
+	If @idOriginInterventionList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idOriginIntervention IN (SELECT [Data] FROM @idOriginInterventionTable) '
+		
+	If @idInseeList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idInsee IN (SELECT [Data] FROM @idInseeTable) '
+		
+	If @idDomainList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idDomain IN (SELECT [Data] FROM @idDomainTable) '
+
+	If @idInterventionList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idIntervention IN (SELECT [Data] FROM @idInterventionTable) '
+		
+	If @idTypeInterventionList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND (forecastedIdTypeIntervention IN (SELECT [Data] FROM @idTypeInterventionTable) OR realizedIdTypeIntervention IN (SELECT [Data] FROM @idTypeInterventionTable)) '				
+
+	If @classementList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND (ZL_Classement  IN (SELECT [Data] FROM @classementTable)) '				
+
+
+	If (SELECT COUNT(*) FROM @inseeDomainTable) > 0
+	BEGIN
+
+		SET @SQLQuery = @SQLQuery + ' AND ( (1!=1) '
+
+		DECLARE @insee nvarchar(50)
+		DECLARE @domain nvarchar(50)
+
+		DECLARE InseeDomain_cursor CURSOR FOR 
+
+		SELECT Insee, ContractDomain FROM @inseeDomainTable
+
+		OPEN InseeDomain_cursor
+		FETCH NEXT FROM InseeDomain_cursor INTO @insee, @domain
+
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+
+			SET @SQLQuery = @SQLQuery + ' OR ( idInsee = '''+ @insee +''' '
+			IF (@domain IS NOT NULL and @domain != '') 
+				SET @SQLQuery = @SQLQuery + ' AND wordingContractDomain = ''' + @domain +''' '
+			SET @SQLQuery = @SQLQuery + ' ) '
+
+			FETCH NEXT FROM InseeDomain_cursor INTO @insee, @domain
+		END
+
+		CLOSE InseeDomain_cursor
+		DEALLOCATE InseeDomain_cursor
+
+		SET @SQLQuery = @SQLQuery + ' ) '
+
+	END
+	ELSE
+		If @idContractsList IS NOT NULL 
+			SET @SQLQuery = @SQLQuery + ' AND idContract IN (SELECT [Data] FROM @idContractsTable) '
+
+
+	If (SELECT COUNT(*) FROM @inseeRestrictionTable) > 0
+	BEGIN
+
+		SET @SQLQuery = @SQLQuery + ' AND ( (1!=1) '
+
+		DECLARE @RestrictionIdContract nvarchar(50)
+		DECLARE @RestrictionInseeList nvarchar(4000)
+
+		DECLARE InseeRestriction_cursor CURSOR FOR 
+
+		SELECT [IdContract], [InseeList] FROM @inseeRestrictionTable
+
+		OPEN InseeRestriction_cursor
+		FETCH NEXT FROM InseeRestriction_cursor INTO @RestrictionIdContract, @RestrictionInseeList
+
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+
+			DECLARE @RestrictionInseeTable ParamListTable
+			print @RestrictionInseeList
+			If @RestrictionInseeList IS NOT NULL
+				INSERT INTO @RestrictionInseeTable (Data) SELECT [Data] FROM dbo.function_Split_String(@RestrictionInseeList, @CharDelimiter)
+
+			SET @SQLQuery += ' OR ( idContract = '''+ @RestrictionIdContract +''' '
+
+			If (SELECT COUNT(*) FROM @RestrictionInseeTable) > 0
+			BEGIN
+				SET @SQLQuery += ' AND ( (1!=1)	'
+
+				DECLARE @RestrictionInsee nvarchar(50)
+				DECLARE InseeRestrictionTable_cursor CURSOR FOR 
+
+				SELECT [Data] FROM @RestrictionInseeTable
+
+				OPEN InseeRestrictionTable_cursor
+				FETCH NEXT FROM InseeRestrictionTable_cursor INTO @RestrictionInsee
+
+				WHILE @@FETCH_STATUS = 0
+				BEGIN
+				print @RestrictionInsee
+					SET @SQLQuery += ' OR idInsee = '''+ @RestrictionInsee +''' '
+
+					FETCH NEXT FROM InseeRestrictionTable_cursor INTO @RestrictionInsee
+				END
+
+				CLOSE InseeRestrictionTable_cursor
+				DEALLOCATE InseeRestrictionTable_cursor
+
+				DELETE FROM @RestrictionInseeTable
+
+				SET @SQLQuery += ' ) '
+			END
+
+			SET @SQLQuery = @SQLQuery + ' ) '
+
+			FETCH NEXT FROM InseeRestriction_cursor INTO @RestrictionIdContract, @RestrictionInseeList
+		END
+
+		CLOSE InseeRestriction_cursor
+		DEALLOCATE InseeRestriction_cursor
+
+		SET @SQLQuery = @SQLQuery + ' ) '
+
+	END
+
+
+	If @criterionSortsOut IS NOT Null
+		SET @SQLQuery = @SQLQuery + ' ORDER BY ' + @criterionSortsOut + SPACE(1) + @orderSortsOut						
+	
+	If ((@numberResultsByPage Is Not Null) and (@pageStartIndex Is Not Null) )
+		BEGIN
+			SET @SQLQuery = @SQLQuery + ' OFFSET ' + @pageStartIndex + SPACE(1) + ' ROWS ' ;
+			SET @SQLQuery = @SQLQuery + ' FETCH NEXT ' + @numberResultsByPage + SPACE(1) + ' ROWS ONLY ' ;
+		END
+	
+    Set @ParamDefinition =  '@minDate varchar(max),
+							@maxDate varchar(max),
+							@CharDelimiter Varchar(1), 
+							@criterionSortsOut varchar(100),
+							@orderSortsOut  varchar(100),
+							@numberResultsByPage varchar(100),
+							@pageStartIndex varchar(100),
+							@statutTable ParamListTable READONLY,
+							@idInseeTable ParamListTable READONLY,
+							@idOriginInterventionTable ParamListTable READONLY,
+							@idDomainTable ParamListTable READONLY,
+							@idContractsTable ParamListTable READONLY,
+							@idInterventionTable ParamListTable READONLY,
+							@classementTable  ParamListTable READONLY,
+							@idTypeInterventionTable ParamListTable READONLY';
+
+PRINT(@SQLQuery);
+    	
+	Execute sp_Executesql    @SQLQuery,
+							 @ParamDefinition,
+							 @minDate,
+							 @maxDate,
+							 @CharDelimiter,
+							 @criterionSortsOut,
+							 @orderSortsOut,
+							 @numberResultsByPage,
+							 @pageStartIndex,
+							 @statutTable,
+							 @idInseeTable,
+							 @idOriginInterventionTable,
+							 @idDomainTable,
+							 @idContractsTable,
+							 @idInterventionTable,
+							 @classementTable,
+							 @idTypeInterventionTable
+                
+If @@ERROR <> 0 GoTo ErrorHandler
+    Set NoCount OFF
+   /*SELECT @@IDENTITY*/
+    Return(0)
+  
+ErrorHandler:
+    Return(@@ERROR)

@@ -1,0 +1,16 @@
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.dll.config
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.BusinessLib.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.DataLib.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.BusinessLib.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.DataLib.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\obj\Debug\DataLayer.SmartCoach.csprojResolveAssemblyReference.cache
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\DataLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.pdb
+D:\Downloads\SmartCoach\DataLayer.SmartCoach\obj\Debug\DataLayer.SmartCoach.csprojAssemblyReference.cache
+D:\Downloads\SmartCoach\DataLayer.SmartCoach\obj\Debug\DataLayer.SmartCoach.csproj.CoreCompileInputs.cache
+D:\Downloads\SmartCoach\DataLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.dll
+D:\Downloads\SmartCoach\DataLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.DataLayer.SmartCoach.pdb

@@ -1,0 +1,60 @@
+Verifier que la version du slave est superieure a la version du master .
+
+Au niveau du serveur maitre créer un utilisateur : 
+
+grant replication slave on *.*  to 'replication'@'localhost' identified by 'nourou' ;
+flush privileges ; 
+flush tables with read lock ;
+
+dans le fichier my.ini du master verifier 
+
+# Replication Master Server (default)
+# binary logging is required for replication
+log-bin=mysql-bin
+
+
+# required unique id between 1 and 2^32 - 1
+# defaults to 1 if master-host is not set
+# but will not function as a master if omitted
+
+server-id	= 1
+
+executer : show master status ;
+
+faire le dump du serveur maitre vers l'esclave : import export dans workbench 
+
+aller sur l' esclave 
+
+verifier sur le my.ini 
+
+# Server Id.
+server-id=2 
+log-bin=mysql-bin
+
+si vous avez changé le my.ini redemarrer le serveur slave .
+
+Une fois redemarré tapez : 
+
+stop slave;
+
+change master to master_host='localhost', master_user='replication' ,
+master_password='nourou',master_log_file = 'mysql-bin.000002' ,master_log_pos =206 ;
+start slave;
+
+
+master logpos est recupre au niveau du maitre , c est le numero qui permet de syncronyser les deux serveurs 
+
+pour verifier faire : 
+show slave status; au niveau du slave 
+
+et show master status au niveau du maitre …
+
+a partir de la toutes les modifs sur le master  sont repercutees sur le slave
+
+
+
+
+
+
+
+

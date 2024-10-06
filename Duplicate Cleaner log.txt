@@ -1,0 +1,74 @@
+06/10/2019 15:38:38
+Duplicate Cleaner Free 4.1.2 installed.
+06/10/2019 15:39:24
+Comparaison...: Mode standard
+- Même contenu (MD5)
+- Même date de création
+- Même date de modification
+- Fichiers de même nom
+- Même extensions de fichier
+
+Inclus: *
+D:\
+
+06/10/2019 15:41:04
+Hidden/System/Protected folder ignored: D:\$RECYCLE.BIN
+Hidden/System/Protected folder ignored: D:\msdownld.tmp
+Hidden/System/Protected folder ignored: D:\Recovery
+Hidden/System/Protected folder ignored: D:\System Volume Information
+Can't read folder: \\?\D:\WindowsApps\
+Hidden/System/Protected folder ignored: D:\Downloads\Contacts\.vs
+Hidden/System/Protected folder ignored: D:\Downloads\SmartArrosage\.vs
+Hidden/System/Protected folder ignored: D:\Downloads\SmartCoach\.vs
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\SmartArrosage\$tf
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\SmartArrosage\.vs
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\FRONT\SMART_ARROSAGE\.vs
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\FRONT\SynchroSmartArrosage\.vs
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\WS\SmartArrosage\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\Classes\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\Learning\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\Memoring\.vs
+Can't read folder: \\?\D:\SQLSERVER2017Media\data\AdventureWorks2016CTP3_mod\
+Can't read folder: \\?\D:\SQLSERVER2017Media\data\xtp\
+Hidden/System/Protected folder ignored: D:\Downloads\NET Framework 4 Formatting Utility\C# and VB\C#,VB\.vs
+Hidden/System/Protected folder ignored: D:\Downloads\oauth-apps-for-windows-master\oauth-apps-for-windows-master\OAuthConsoleApp\.vs
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\Nouveau dossier\DWH\SmartArrosage\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\ConsoleApp1\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\ConsoleApp2\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\ConsoleApp3\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\ConsoleApp4\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\Drives\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\Listing1.46\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\repertories\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\70483\threading1.1\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\WriteFs\WriteFS\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\WriteFs2\ConsoleApp1\.vs
+Hidden/System/Protected folder ignored: D:\Scripts\C#\WriteFs2\ConsoleApp2\.vs
+Can't read folder: \\?\D:\Apps\SQLServer\MSSQL14.SQLEXPRESS\MSSQL\DATA\
+Can't read folder: \\?\D:\Apps\SQLServer\MSSQL14.SQLEXPRESS\MSSQL\JOBS\
+Can't read folder: \\?\D:\Apps\SQLServer\MSSQL14.SQLEXPRESS\MSSQL\Log\
+Hidden/System/Protected folder ignored: D:\Formation\10777A\Demofiles\Mod04\DataFlowDemo\.vs
+Hidden/System/Protected folder ignored: D:\Formation\10777A\Demofiles\Mod04\Monitoring\.vs
+Hidden/System/Protected folder ignored: D:\Formation\10777A\Labfiles\Lab01\Starter\.vs
+Hidden/System/Protected folder ignored: D:\LIGHTBERG\back\SMARTWATERING_WEATHERFORECAST\SmartWatering_WeatherForecast\MeteoBlue\.vs
+Can't read folder: \\?\D:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Backup\
+Can't read folder: \\?\D:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\JOBS\
+Can't read folder: \\?\D:\Program Files\Microsoft SQL Server\MSSQL11.MSSQLSERVER\MSSQL\Log\
+Hidden/System/Protected folder ignored: D:\Users\Sewcary\source\repos\ConsoleApp1\.vs
+Hidden/System/Protected folder ignored: D:\Users\Sewcary\source\repos\ConsoleApp2\.vs
+Hidden/System/Protected folder ignored: D:\Users\Sewcary\source\repos\LINQ1\.vs
+Hidden/System/Protected folder ignored: D:\WpSystem\S-1-5-21-882094991-3828730943-2433852559-1001\AppData\Local\Packages\Microsoft.ForzaMotorsport7Demo_8wekyb3d8bbwe\AC\INetCache
+Hidden/System/Protected folder ignored: D:\WpSystem\S-1-5-21-882094991-3828730943-2433852559-1001\AppData\Local\Packages\Microsoft.ForzaMotorsport7Demo_8wekyb3d8bbwe\AC\INetCookies
+Hidden/System/Protected folder ignored: D:\WpSystem\S-1-5-21-882094991-3828730943-2433852559-1001\AppData\Local\Packages\Microsoft.ForzaMotorsport7Demo_8wekyb3d8bbwe\AC\INetHistory
+Hidden/System/Protected folder ignored: D:\WpSystem\S-1-5-21-882094991-3828730943-2433852559-1001\AppData\Local\Packages\Microsoft.ForzaMotorsport7Demo_8wekyb3d8bbwe\AC\Microsoft
+
+06/10/2019 15:42:51
+Analyse terminée
+Temps total écoulé: 00:03:26
+83901/83901 fichiers analysés (144 GB)
+1403 groupes de doublons
+4054 fichiers ont des doublons(1,10 GB)
+Hashes calculated: 3921
+Quick Hashes calculated: 3699
+Useful Quick Hashes: 3770
+

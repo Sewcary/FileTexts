@@ -1,0 +1,7 @@
+D:\Scripts\C#\Learning\writefS\bin\Debug\writefS.exe.config
+D:\Scripts\C#\Learning\writefS\bin\Debug\writefS.exe
+D:\Scripts\C#\Learning\writefS\bin\Debug\writefS.pdb
+D:\Scripts\C#\Learning\writefS\obj\Debug\writefS.csprojAssemblyReference.cache
+D:\Scripts\C#\Learning\writefS\obj\Debug\writefS.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\Learning\writefS\obj\Debug\writefS.exe
+D:\Scripts\C#\Learning\writefS\obj\Debug\writefS.pdb

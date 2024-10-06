@@ -1,0 +1,8 @@
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\bin\Datacache.Services.Customs.Ws.HostingLayer.HostingLayer.SmartArrosage.dll.config
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\bin\Datacache.Services.Customs.Ws.HostingLayer.HostingLayer.SmartArrosage.XML
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\bin\Datacache.Services.Customs.Ws.HostingLayer.HostingLayer.SmartArrosage.dll
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\bin\Datacache.Services.Customs.Ws.HostingLayer.HostingLayer.SmartArrosage.pdb
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\obj\Debug\HostingLayer.SmartArrosage.csproj.CoreCompileInputs.cache
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\obj\Debug\Datacache.Services.Customs.Ws.HostingLayer.HostingLayer.SmartArrosage.dll
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\obj\Debug\Datacache.Services.Customs.Ws.HostingLayer.HostingLayer.SmartArrosage.pdb
+D:\LIGHTBERG\WS\SmartArrosage\HostingLayer.SmartArrosage\obj\Debug\HostingLayer.SmartArrosage.csprojAssemblyReference.cache

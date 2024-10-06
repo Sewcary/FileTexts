@@ -1,0 +1,17 @@
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.BusinessLib.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.BusinessLib.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.DataLib.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.ServiceLib.dll
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.DataLib.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Commons.Lib.ServiceLib.pdb
+D:\Source\ZT5549\VS2015\DATACache\Services\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\BusinessLayer.SmartCoach.csprojResolveAssemblyReference.cache
+D:\Downloads\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.dll
+D:\Downloads\SmartCoach\BusinessLayer.SmartCoach\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.pdb
+D:\Downloads\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\BusinessLayer.SmartCoach.csproj.CoreCompileInputs.cache
+D:\Downloads\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\BusinessLayer.SmartCoach.csproj.CopyComplete
+D:\Downloads\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.dll
+D:\Downloads\SmartCoach\BusinessLayer.SmartCoach\obj\Debug\Datacache.Services.Customs.Ws.BusinessLayer.SmartCoach.pdb

@@ -1,0 +1,202 @@
+#region Namespaces
+using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Net;
+using System.Text;
+#endregion
+
+namespace ST_07418eb8ebdd42f3b7e3f27980fb6864
+{
+	[Microsoft.SqlServer.Dts.Tasks.ScriptTask.SSISScriptTaskEntryPointAttribute]
+	public partial class ScriptMain : Microsoft.SqlServer.Dts.Tasks.ScriptTask.VSTARTScriptObjectModelBase
+	{
+		public void Main()
+		{
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+            //Lister les ventes  
+            string str = RequestFromUrlToString(@"https://api.airtable.com/v0/appsI1GQAjvXPMCFn/Ventes?maxRecords=20&view=Grid%20view", "keyceLBcIYyRjIRdZ", "GET", "application/json", "{\"records\":[{\"id\": \"rec2h3uSCLXUQtmXg\",\"fields\":{\"Field 7\":{\"text\": \"002\",\"type\": \"qr\"},\"prix\":\"20\"}}]}");
+            RootObject rootObject = JsonConvert.DeserializeObject<RootObject>(str);
+            double total = 0.0;
+            foreach (Record record in rootObject.records)
+            {
+                double prix = 0.0; double quantite = 1.0;
+                if (Double.TryParse(record.fields.prix, out quantite))
+                {
+                    if (record.fields.prix != "0")
+                    {
+                        if (Double.TryParse(record.fields.prix, out prix))
+                        {
+                            total = total + prix * quantite;
+                            RootObject2 rootObject2 = new RootObject2(); 
+                            Record2 record2 = new Record2();
+                            record2.fields.Reference.text = "002";                            
+                            record2.fields.Reference.type = "qr";
+                            record2.fields.Montantover = total;
+                            rootObject2.records.Add(record2);
+                            string json = JsonConvert.SerializeObject(rootObject2, Formatting.Indented);
+                            //json  =json.Replace('', ',')
+                        }
+                    }
+                }
+
+            }
+            //Pour chaque ligne 
+            //Aller chercher le prix unitaire si la colonne Prix n'est pas renseignée => Signifie que l'article est vendu  au prix normal 
+            //Ajouter le montant au montant total
+            // faire     decroitre le stock
+            // string str = RequestFromUrlToString(@"https://api.airtable.com/v0/appsI1GQAjvXPMCFn/Ventes", "keyceLBcIYyRjIRdZ", "PUT" , "application/json", "{\"records\":[{\"id\": \"rec2h3uSCLXUQtmXg\",\"fields\":{\"Field 7\":{\"text\": \"002\",\"type\": \"qr\"},\"prix\":\"20\"}}]}");
+            Dts.TaskResult = (int)ScriptResults.Success;
+        }
+
+        public static string RequestFromUrlToString(string url, string token, string method, string contentType = null, string json = null)
+        {
+            StreamReader streamReader = null;
+            string stringJson = null;
+            HttpWebRequest httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            httpWebRequest.Headers.Add("Authorization", "Bearer " + token);
+            if (method == WebRequestMethods.Http.Get)
+                httpWebRequest.Method = WebRequestMethods.Http.Get;
+            else if (method == WebRequestMethods.Http.Post)
+                httpWebRequest.Method = WebRequestMethods.Http.Post;
+            else if (method == WebRequestMethods.Http.Put)
+                httpWebRequest.Method = WebRequestMethods.Http.Put;
+            if (contentType != null)
+                httpWebRequest.ContentType = contentType;
+            if (json != null)
+            {
+                Encoding utf8WithBom = new UTF8Encoding(true);
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    var sw = new StreamWriter(stream, utf8WithBom);
+                    sw.WriteLine(json);
+                    sw.Flush();
+                    stream.Seek(0, SeekOrigin.Begin);
+                    using (Stream requestStream = httpWebRequest.GetRequestStream())
+                    {
+                        byte[] buffer = null;
+                        buffer = new byte[stream.Length];
+                        stream.Read(buffer, 0, (int)stream.Length);
+                        requestStream.Write(buffer, 0, (int)stream.Length);
+                    }
+
+                }
+            }
+            try
+            {
+                HttpWebResponse response = (HttpWebResponse)httpWebRequest.GetResponse();
+                streamReader = new StreamReader(response.GetResponseStream());
+                stringJson = streamReader.ReadToEnd();
+                response.Close();
+
+            }
+            catch (Exception e)
+            {
+                System.Diagnostics.EventLog.WriteEntry("DATACACHE", "RequestFromUrlToString exception :  " + e.Message.ToString());
+                return null;
+            }
+
+            return stringJson;
+        }
+
+        #region ScriptResults declaration
+        /// <summary>
+        /// This enum provides a convenient shorthand within the scope of this class for setting the
+        /// result of the script.
+        /// 
+        /// This code was generated automatically.
+        /// </summary>
+        enum ScriptResults
+        {
+            Success = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Success,
+            Failure = Microsoft.SqlServer.Dts.Runtime.DTSExecResult.Failure
+        };
+        #endregion
+
+	}
+
+    public class Reference
+    {
+        public string text { get; set; }
+        public string type { get; set; }
+    }
+
+    public class Small
+    {
+        public string url { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+    }
+
+    public class Large
+    {
+        public string url { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+    }
+
+    public class Full
+    {
+        public string url { get; set; }
+        public int width { get; set; }
+        public int height { get; set; }
+    }
+
+    public class Thumbnails
+    {
+        public Small small { get; set; }
+        public Large large { get; set; }
+        public Full full { get; set; }
+    }
+
+    public class Colori
+    {
+        public string id { get; set; }
+        public string url { get; set; }
+        public string filename { get; set; }
+        public int size { get; set; }
+        public string type { get; set; }
+        public Thumbnails thumbnails { get; set; }
+    }
+
+    public class Fields
+    {
+        public string prix { get; set; }
+        public Reference Reference { get; set; }
+        public int Name { get; set; }
+        public DateTime DateAjout { get; set; }
+        public string Quantite { get; set; }
+        public List<Colori> Coloris { get; set; }
+    }
+
+    public class Record
+    {
+        public string id { get; set; }
+        public Fields fields { get; set; }
+        public DateTime createdTime { get; set; }
+    }
+
+    public class RootObject
+    {
+        public List<Record> records { get; set; }
+    }
+
+    
+    public class Fields2
+    {
+        public Reference Reference { get; set; }
+        public double Montantover { get; set; }
+    }
+
+    public class Record2
+    {
+        public string id { get; set; }
+        public Fields2 fields { get; set; }
+    }
+
+    public class RootObject2
+    {
+        public List<Record2> records { get; set; }
+    }
+}

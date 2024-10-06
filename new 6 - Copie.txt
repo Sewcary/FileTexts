@@ -1,0 +1,454 @@
+USE [FRONT]
+GO
+/****** Object:  StoredProcedure [dbo].[Seve_Intervention_Demande_Read_Test]    Script Date: 4/22/2020 3:38:18 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+
+ALTER     PROCEDURE [dbo].[Seve_Intervention_Demande_Read_Test]
+    @minDate varchar(max),
+	@maxDate varchar(max),
+	@statutList varchar(max),
+	@criterionSortsOut varchar(100),
+	@orderSortsOut  varchar(100),
+	@MaxResult  varchar(10),
+	@numberResultsByPage varchar(10),
+	@pageStartIndex varchar(10),	
+	@idInseeList varchar(max),
+	@idContractsList varchar(max),
+	@idDomainList varchar(max),
+	@idOriginInterventionList varchar(max),
+	@idInterventionList  varchar(max),
+	@idTypeInterventionList varchar(max),
+	@InseeDomainTable [InseeDomainItem] READONLY						
+
+AS
+
+BEGIN 
+ -- Set NoCount ON
+    /* Variable Declaration */
+	 Declare @SQLQuery AS NVarchar(4000)
+	 Declare @ParamDefinition AS NVarchar(2000) 
+	 Declare @CharDelimiter AS Varchar(1) 
+	 Declare @MaxResultDefault AS Integer
+	 Declare @minDated as datetime2(7);
+	 Declare @maxDated as datetime2(7); 
+
+	 SET @minDated =  cast(@minDate as datetime2(7))  ;
+	 SET @maxDated =  cast(@maxDate as datetime2(7))  ;
+
+	 set @CharDelimiter = ',';
+	 set @MaxResultDefault = 1000;
+	 DECLARE @statutTable ParamListTable
+
+	IF @statutList IS NOT NULL
+		INSERT INTO @statutTable (Data) SELECT [Data] FROM dbo.function_Split_String(@statutList, @CharDelimiter)
+
+	DECLARE @idInseeTable ParamListTable
+
+	IF @idInseeList IS NOT NULL
+	begin
+		INSERT INTO @idInseeTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idInseeList, @CharDelimiter)
+	--	select  * into tempo from @idInseeTable
+	end 
+	DECLARE @idContractsTable ParamListTable
+
+	IF @idContractsList IS NOT NULL
+	BEGIN
+		INSERT INTO @idContractsTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idContractsList, @CharDelimiter)
+		
+	END 
+
+	DECLARE @idDomainTable ParamListTable
+	IF @idDomainList IS NOT NULL
+		INSERT INTO @idDomainTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idDomainList, @CharDelimiter)
+
+	DECLARE @idOriginInterventionTable ParamListTable
+	
+	IF @idOriginInterventionList IS NOT NULL
+		INSERT INTO @idOriginInterventionTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idOriginInterventionList, @CharDelimiter)
+
+	DECLARE @idInterventionTable ParamListTable
+
+	IF @idInterventionList IS NOT NULL
+		INSERT INTO @idInterventionTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idInterventionList, @CharDelimiter)
+
+	DECLARE @idTypeInterventionTable ParamListTable
+
+	IF @idTypeInterventionList IS NOT NULL
+		INSERT INTO @idTypeInterventionTable (Data) SELECT [Data] FROM dbo.function_Split_String(@idTypeInterventionList, @CharDelimiter) WHERE [Data] IS NOT NULL
+
+	if @MaxResult IS NULL
+		SET @MaxResult = @MaxResultDefault;
+
+--SET @SQLQuery =				'SELECT DEMANDE.applicationOriginIntervention,' 
+--SET @SQLQuery =  @SQLQuery + 'DEMANDE.wordingContractName,' 
+--Set @SQLQuery =  @SQLQuery + 'CONVERT(NVARCHAR(50),CONVERT(DATETIME2(7),Demande.creationDate),127) CreationDate,';
+--SET @SQLQuery =  @SQLQuery + 'DEMANDE.idDomain,' 
+--SET @SQLQuery =  @SQLQuery + 'DEMANDE.IdSubDomain,' 
+--SET @SQLQuery =  @SQLQuery + 'DEMANDE.CodeCrg2,' 
+--SET @SQLQuery =  @SQLQuery + 'DEMANDE.idOriginIntervention,'
+--SET @SQLQuery =  @SQLQuery + 'D.idIntervention,'
+--SET @SQLQuery =  @SQLQuery + 'isnull (D.prenomNomClient,'''') prenomNomClient,'
+--SET @SQLQuery =  @SQLQuery + 'ISNULL(CONVERT (NVARCHAR(50),(IIF( D.realizedStartDate IS NOT NULL AND D.realizedEndDate IS NOT NULL,D.realizedStartDate,D.forecastedStartDate)),127),''1901-01-01T00:00:00'') StartDate,'
+--SET @SQLQuery =  @SQLQuery + 'ISNULL(CONVERT (NVARCHAR(50),(IIF(D.realizedStartDate is not null and D.realizedEndDate is not null, D.realizedendDate,  D.forecastedEndDate)),127),''1901-01-01T00:00:00'') EndDate,'
+--SET @SQLQuery =  @SQLQuery + 'D.idContract,'
+--SET @SQLQuery =  @SQLQuery + 'D.wordingContractDomain,'
+--SET @SQLQuery =  @SQLQuery + 'D.idClient,'
+--SET @SQLQuery =  @SQLQuery + 'D.wordingDomain,'
+--SET @SQLQuery =  @SQLQuery + 'D.wordingSubDomain,'
+--SET @SQLQuery =  @SQLQuery + 'D.status,'
+--SET @SQLQuery =  @SQLQuery + 'D.priority,'
+--SET @SQLQuery =  @SQLQuery + 'iif(try_convert(int,streetNumber)is not null,streetNumber,0) streetNumber,'
+--SET @SQLQuery =  @SQLQuery + 'D.streetName,'
+--SET @SQLQuery =  @SQLQuery + 'D.addressComplement,'
+--SET @SQLQuery =  @SQLQuery + 'D.townName,'
+--SET @SQLQuery =  @SQLQuery + 'D.idInsee,'
+--SET @SQLQuery =  @SQLQuery + 'D.postalCode,'
+--SET @SQLQuery =  @SQLQuery + 'D.comment,'
+--SET @SQLQuery =  @SQLQuery + 'D.commentAgent,'
+--SET @SQLQuery =  @SQLQuery + 'D.forecastedIdTypeIntervention,'
+--SET @SQLQuery =  @SQLQuery + 'D.forecastedWordingTypeIntervention,'
+--SET @SQLQuery =  @SQLQuery + 'D.forecastedWordingTypeInterventionCRT,'
+--SET @SQLQuery =  @SQLQuery + 'D.realizedIdTypeIntervention,'
+--SET @SQLQuery =  @SQLQuery + 'D.realizedWordingTypeIntervention,'
+--SET @SQLQuery =  @SQLQuery + 'D.realizedWordingTypeInterventionCRT,'
+--SET @SQLQuery =  @SQLQuery + 'isnull (convert (nvarchar(50),D.forecastedStartDate,127),''1901-01-01T00:00:00'') forecastedStartDate,'
+--SET @SQLQuery =  @SQLQuery + 'isnull (convert (nvarchar(50),D.forecastedEndDate,127),''1901-01-01T00:00:00'') forecastedEndDate,'
+--SET @SQLQuery =  @SQLQuery + 'isnull (convert (nvarchar(50),D.realizedStartDate,127),''1901-01-01T00:00:00'') realizedStartDate,'
+--SET @SQLQuery =  @SQLQuery + 'isnull (convert (nvarchar(50),D.realizedEndDate,127),''1901-01-01T00:00:00'') realizedEndDate,'
+--SET @SQLQuery =  @SQLQuery + 'ISNULL(convert (nvarchar(50),D.dateModifG2,127),''1901-01-01T00:00:00'') updateDate,'
+--SET @SQLQuery =  @SQLQuery + 'D.IsStreetClosed,'
+--SET @SQLQuery =  @SQLQuery + 'D.IsWaterSupplyStopped,'
+--SET @SQLQuery =  @SQLQuery + 'D.consequenceForCustomer,'
+--SET @SQLQuery =  @SQLQuery + 'D.geoLatitude,'
+--SET @SQLQuery =  @SQLQuery + 'D.geoLongitude,'
+--SET @SQLQuery =  @SQLQuery + 'D.geoAccuracy,'
+--SET @SQLQuery =  @SQLQuery + 'D.CodeCrg2,'
+--SET @SQLQuery =  @SQLQuery + 'D.REFERENCEDEMANDEG2 '
+--SET @SQLQuery =  @SQLQuery +'FROM ('
+--	Set @SQLQuery  =  @SQLQuery + 'SELECT TOP (CAST(@MaxResult as integer)) applicationOriginIntervention';
+--	Set @SQLQuery =  @SQLQuery + ',wordingContractName';	
+--	Set @SQLQuery =  @SQLQuery + ',replace  (iif (idIntervention is not null, left  (idIntervention,charindex (''/'',idIntervention)  ) ,'''' ),''/'','''') referenceDemandeg2';	
+--	Set @SQLQuery =  @SQLQuery + ',creationDate';
+--	Set @SQLQuery =  @SQLQuery + ',idDomain';
+--	Set @SQLQuery =  @SQLQuery + ',IdSubDomain';
+--	Set @SQLQuery =  @SQLQuery + ',CodeCrg2';
+--	Set @SQLQuery =  @SQLQuery + ',idOriginIntervention ,idInsee ';
+--    Set @SQLQuery =  @SQLQuery + ' FROM [dbo].[InterventionReseau_TSMS] as SEVEITV';
+--	Set @SQLQuery = @SQLQuery  + ' WHERE (1= 1)  and CodeCrg2 is not null';
+	
+
+--	IF (@minDate IS NOT NULL AND @maxDate IS NULL)
+--	BEGIN
+--		SET @SQLQuery = @SQLQuery  + ' AND (realizedStartDate >= cast(@minDate as datetime) OR forecastedStartDate >= cast(@minDate as datetime)) '		
+--		SET @SQLQuery = @SQLQuery  + ' AND (realizedStartDate >= @minDated OR forecastedStartDate >= @minDated)'
+--	END
+
+--	IF (@maxDate IS NOT NULL AND @minDate IS NULL)
+--	BEGIN
+--		SET @SQLQuery = @SQLQuery  + ' AND (realizedEndDate  <= @maxDated OR forecastedEndDate <= @maxDated)' 		
+--	END
+		
+--	if (@minDate IS NOT NULL AND @maxDate IS NOT NULL)
+--	BEGIN
+--		SET @SQLQuery = @SQLQuery  + ' AND ((realizedStartDate >=@minDated AND realizedEndDate <= @maxDated ) '
+--		SET @SQLQuery = @SQLQuery  + ' OR (forecastedStartDate >= @minDated AND forecastedEndDate <= @maxDated)) ' 		
+--	END
+	
+--	if @statutList IS NOT NULL
+--		SET @SQLQuery = @SQLQuery + ' AND status IN (SELECT [Data] FROM @statutTable)'
+	
+--	If @idOriginInterventionList IS NOT NULL
+--		SET @SQLQuery = @SQLQuery + ' AND  exists (SELECT data FROM @idOriginInterventionTable where data = SEVEITV.idOriginIntervention) ' 	
+		
+--	If @idInseeList IS NOT NULL
+--		SET @SQLQuery = @SQLQuery + ' AND  exists (SELECT data FROM @idInseeTable where data = SEVEITV.idInsee) '
+		
+--	If @idDomainList IS NOT NULL
+--		SET @SQLQuery = @SQLQuery + ' AND idDomain IN (SELECT Data FROM @idDomainTable ) '
+		
+--	If @idContractsList IS NOT NULL 
+--		SET @SQLQuery = @SQLQuery + 'AND  exists (SELECT data FROM @idContractsTable where data = SEVEITV.idContract)' 
+	
+--	If @idInterventionList IS NOT NULL
+--		SET @SQLQuery = @SQLQuery + ' AND  exists (SELECT data FROM @idInterventionTable where data = SEVEITV.idIntervention)' 		
+--	If @idTypeInterventionList IS NOT NULL
+--	--	SET @SQLQuery = @SQLQuery + ' AND (CASE WHEN (realizedIdTypeIntervention != '''' OR realizedIdTypeIntervention IS NOT NULL) THEN realizedIdTypeIntervention ELSE forecastedIdTypeIntervention END) IN (SELECT * FROM dbo.function_Split_String(@idTypeInterventionList, '','')) '
+--	SET @SQLQuery = @SQLQuery + ' AND (exists (SELECT data FROM @idTypeInterventionTable where data = SEVEITV.idIntervention) or exists (SELECT data FROM @idTypeInterventionTable where data = SEVEITV.realizedIdTypeIntervention) )'
+
+--	--(forecastedIdTypeIntervention IN (SELECT [Data] FROM  @idTypeInterventionTable ) OR realizedIdTypeIntervention IN ( SELECT [Data] FROM  @idTypeInterventionTable) ) '				
+
+--	If (SELECT COUNT(*) FROM @InseeDomainTable) > 0
+--	BEGIN
+
+--		SET @SQLQuery = @SQLQuery + ' AND ( (1!=1) '
+
+--		DECLARE @insee nvarchar(50)
+--		DECLARE @domain nvarchar(50)
+
+--		DECLARE InseeDomain_cursor CURSOR FOR 
+
+--		SELECT Insee, ContractDomain FROM @InseeDomainTable
+
+--		OPEN InseeDomain_cursor
+--		FETCH NEXT FROM InseeDomain_cursor INTO @insee, @domain
+
+--		WHILE @@FETCH_STATUS = 0
+--		BEGIN
+
+--			SET @SQLQuery = @SQLQuery + ' OR ( idInsee = '''+ @insee +''' '
+--			IF (@domain IS NOT NULL and @domain != '') 
+--				SET @SQLQuery = @SQLQuery + ' AND wordingContractDomain=''' + @domain +''' '
+--			SET @SQLQuery = @SQLQuery + ' ) '
+
+--			FETCH NEXT FROM InseeDomain_cursor INTO @insee, @domain
+--		END
+
+--		CLOSE InseeDomain_cursor
+--		DEALLOCATE InseeDomain_cursor
+
+--		SET @SQLQuery = @SQLQuery + ' ) '
+
+--	SET @SQLQuery = @SQLQuery + '	GROUP BY applicationoriginintervention,Wordingcontractname,referencedemandeg2,Creationdate,Iddomain,Idsubdomain,Codecrg2,Idoriginintervention'
+--	END
+	
+--	SET @SQLQuery = @SQLQuery+  ') AS DEMANDE '
+--	Set @SQLQuery += ' INNER JOIN '
+--Set @SQLQuery += '('
+--Set @SQLQuery += 'SELECT idIntervention,prenomNomClient '
+--Set @SQLQuery =  @SQLQuery + ',convert (nvarchar(50), (iif (realizedStartDate is not null and realizedEndDate is not null ,realizedStartDate, forecastedStartDate)),127) as [StartDate]'
+
+--Set @SQLQuery =  @SQLQuery + ',convert (nvarchar(50),(iif (realizedStartDate is not null and realizedEndDate is not null ,realizedendDate, forecastedEndDate)),127) AS [EndDate]'
+
+--Set @SQLQuery += ',idContract'
+--Set @SQLQuery += ',wordingContractDomain'
+--Set @SQLQuery += ',idClient'
+--Set @SQLQuery += ',wordingDomain'
+--Set @SQLQuery += ',wordingSubDomain '
+--Set @SQLQuery += ',status '
+--Set @SQLQuery += ',priority '
+--Set @SQLQuery += ',replace(streetNumber,''*'',''0'') streetNumber'
+--Set @SQLQuery += ',streetName'
+--Set @SQLQuery += ',addressComplement'
+--Set @SQLQuery += ',townName'
+--Set @SQLQuery += ',idInsee'
+--Set @SQLQuery += ',postalCode'
+--Set @SQLQuery += ',comment'
+--Set @SQLQuery += ',commentAgent'
+--Set @SQLQuery += ',forecastedIdTypeIntervention'
+--Set @SQLQuery += ',forecastedWordingTypeIntervention'
+--Set @SQLQuery += ',forecastedWordingTypeInterventionCRT'
+--Set @SQLQuery += ',realizedIdTypeIntervention'
+--Set @SQLQuery += ',realizedWordingTypeIntervention'
+--Set @SQLQuery += ',realizedWordingTypeInterventionCRT'
+--Set @SQLQuery += ',forecastedStartDate'
+--Set @SQLQuery +=',forecastedEndDate'
+--Set @SQLQuery +=',realizedStartDate'
+--Set @SQLQuery +=',realizedEndDate'
+--Set @SQLQuery +=',dateModifG2'
+--Set @SQLQuery +=',IsStreetClosed'
+--Set @SQLQuery +=',IsWaterSupplyStopped'
+--Set @SQLQuery +=',consequenceForCustomer' 
+--Set @SQLQuery +=',geoLatitude'
+--Set @SQLQuery +=',geoLongitude'
+--Set @SQLQuery +=',geoAccuracy' 
+--Set @SQLQuery +=',CodeCrg2' 
+--Set @SQLQuery =  @SQLQuery + ',replace(iif(idIntervention is not null,left(idIntervention,charindex (''/'',idIntervention)) ,''''),''/'','''') REFERENCEDEMANDEG2';	
+--Set @SQLQuery +=' FROM [dbo].[InterventionReseau_TSMS] as SEVEITV where 1=1  and CodeCrg2 is not null'
+--Set @SQLQuery +=') D ON D.CodeCrg2=DEMANDE.CodeCrg2 AND D.REFERENCEDEMANDEG2 = DEMANDE.REFERENCEDEMANDEG2 '
+--If @criterionSortsOut IS NOT Null
+--		SET @SQLQuery = @SQLQuery + ' ORDER BY ' + @criterionSortsOut + SPACE(1) + @orderSortsOut						
+	
+--	If ((@numberResultsByPage Is Not Null) and (@pageStartIndex Is Not Null) )
+--		BEGIN
+--			SET @SQLQuery = @SQLQuery + ' OFFSET ' + @pageStartIndex + SPACE(1) + ' ROWS' ;
+--			SET @SQLQuery = @SQLQuery + ' FETCH NEXT ' + @numberResultsByPage + SPACE(1) + ' ROWS ONLY' ;
+--		END
+
+
+	SET @SqlQuery = ' SELECT D.applicationOriginIntervention, '
+	SET @SqlQuery += ' D.wordingContractName, '
+	SET @SqlQuery += ' CONVERT(NVARCHAR(50),CONVERT(DATETIME2(7),D.creationDate),127) CreationDate, '
+	SET @SqlQuery += ' D.idDomain, '
+	SET @SqlQuery += ' D.IdSubDomain, '
+	SET @SqlQuery += ' D.CodeCrg2, '
+	SET @SqlQuery += ' D.idOriginIntervention, '
+	SET @SqlQuery += ' D.idIntervention, '
+	SET @SqlQuery += ' ISNULL (D.prenomNomClient,'''') prenomNomClient, '
+	SET @SqlQuery += ' StartDate, '
+	SET @SqlQuery += '  EndDate, '
+	SET @SqlQuery += ' D.idContract, '
+	SET @SqlQuery += ' D.wordingContractDomain, '
+	SET @SqlQuery += ' D.idClient, '
+	SET @SqlQuery += ' D.wordingDomain, '
+	SET @SqlQuery += ' D.wordingSubDomain, '
+	SET @SqlQuery += ' D.status, '
+	SET @SqlQuery += ' D.priority, '
+	SET @SqlQuery += ' iif(try_convert(int,streetNumber)is not null,streetNumber,0) streetNumber, '
+	SET @SqlQuery += ' D.streetName, '
+	SET @SqlQuery += ' D.addressComplement, '
+	SET @SqlQuery += ' D.townName, '
+	SET @SqlQuery += ' D.idInsee, '
+	SET @SqlQuery += ' D.postalCode, '
+	SET @SqlQuery += ' D.comment, '
+	SET @SqlQuery += ' D.commentAgent, '
+	SET @SqlQuery += ' D.forecastedIdTypeIntervention, '
+	SET @SqlQuery += ' D.forecastedWordingTypeIntervention, '
+	SET @SqlQuery += ' D.forecastedWordingTypeInterventionCRT, '
+	SET @SqlQuery += ' D.realizedIdTypeIntervention, '
+	SET @SqlQuery += ' D.realizedWordingTypeIntervention, '
+	SET @SqlQuery += ' D.realizedWordingTypeInterventionCRT, '
+	SET @SqlQuery += ' isnull (convert (nvarchar(50),D.forecastedStartDate,127),''1901-01-01T00:00:00'') forecastedStartDate, '
+	SET @SqlQuery += ' isnull (convert (nvarchar(50),D.forecastedEndDate,127),''1901-01-01T00:00:00'') forecastedEndDate, '
+	SET @SqlQuery += ' isnull (convert (nvarchar(50),D.realizedStartDate,127),''1901-01-01T00:00:00'') realizedStartDate,isnull (convert (nvarchar(50),D.realizedEndDate,127),''1901-01-01T00:00:00'') realizedEndDate, '
+	SET @SqlQuery += ' ISNULL(convert (nvarchar(50),D.dateModifG2,127),''1901-01-01T00:00:00'') updateDate, '
+	SET @SqlQuery += ' D.IsStreetClosed, '
+	SET @SqlQuery += ' D.IsWaterSupplyStopped, '
+	SET @SqlQuery += ' D.consequenceForCustomer, '
+	SET @SqlQuery += ' D.geoLatitude, '
+	SET @SqlQuery += ' D.geoLongitude, '
+	SET @SqlQuery += ' D.geoAccuracy, '
+	SET @SqlQuery += ' D.CodeCrg2, '
+	SET @SqlQuery += ' D.REFERENCEDEMANDEG2 '
+
+	SET @SqlQuery += ' FROM InterventionReseau_TSMS_Test D '
+	SET @SqlQuery += ' INNER JOIN ( '
+	SET @SqlQuery += ' 		SELECT referenceDemandeg2, CodeCrg2 '
+	SET @SqlQuery += ' 		FROM [dbo].[InterventionReseau_TSMS_Test] as SEVEITV  '
+	SET @SqlQuery += ' 		WHERE (1= 1) '
+	SET @SqlQuery += ' 		and CodeCrg2 is not null '
+
+	IF (@minDate IS NOT NULL AND @maxDate IS NULL)
+	BEGIN
+		SET @SQLQuery = @SQLQuery  + ' AND (realizedStartDate >= cast(@minDate as datetime) OR forecastedStartDate >= cast(@minDate as datetime)) '		
+		SET @SQLQuery = @SQLQuery  + ' AND (realizedStartDate >= @minDated OR forecastedStartDate >= @minDated)'
+	END
+
+	IF (@maxDate IS NOT NULL AND @minDate IS NULL)
+	BEGIN
+		SET @SQLQuery = @SQLQuery  + ' AND (realizedEndDate  <= @maxDated OR forecastedEndDate <= @maxDated)' 		
+	END
+		
+	if (@minDate IS NOT NULL AND @maxDate IS NOT NULL)
+	BEGIN
+		SET @SQLQuery = @SQLQuery  + ' AND ((realizedStartDate >=@minDated AND realizedEndDate <= @maxDated ) '
+		SET @SQLQuery = @SQLQuery  + ' OR (forecastedStartDate >= @minDated AND forecastedEndDate <= @maxDated)) ' 		
+	END
+	
+	if @statutList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND status IN (SELECT [Data] FROM @statutTable)'
+	
+	If @idOriginInterventionList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idOriginIntervention IN (SELECT data FROM @idOriginInterventionTable) ' 	
+		
+	If @idInseeList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idInsee IN (SELECT data FROM @idInseeTable) '
+		
+	If @idDomainList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idDomain IN (SELECT Data FROM @idDomainTable ) '
+		
+	If @idContractsList IS NOT NULL 
+		SET @SQLQuery = @SQLQuery + ' AND idContract IN (SELECT data FROM @idContractsTable)' 
+	
+	If @idInterventionList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND idIntervention IN (SELECT data FROM @idInterventionTable)' 		
+
+	If @idTypeInterventionList IS NOT NULL
+		SET @SQLQuery = @SQLQuery + ' AND (forecastedWordingTypeIntervention IN (SELECT data FROM @idTypeInterventionTable) OR realizedIdTypeIntervention IN (SELECT data FROM @idTypeInterventionTable) )'
+
+	If (SELECT COUNT(*) FROM @InseeDomainTable) > 0
+	BEGIN
+
+		SET @SQLQuery = @SQLQuery + ' AND ( (1!=1) '
+
+		DECLARE @insee nvarchar(50)
+		DECLARE @domain nvarchar(50)
+
+		DECLARE InseeDomain_cursor CURSOR FOR 
+
+		SELECT Insee, ContractDomain FROM @InseeDomainTable
+
+		OPEN InseeDomain_cursor
+		FETCH NEXT FROM InseeDomain_cursor INTO @insee, @domain
+
+		WHILE @@FETCH_STATUS = 0
+		BEGIN
+
+			SET @SQLQuery = @SQLQuery + ' OR ( idInsee = '''+ @insee +''' '
+			IF (@domain IS NOT NULL and @domain != '') 
+				SET @SQLQuery = @SQLQuery + ' AND wordingContractDomain=''' + @domain +''' '
+			SET @SQLQuery = @SQLQuery + ' ) '
+
+			FETCH NEXT FROM InseeDomain_cursor INTO @insee, @domain
+		END
+
+		CLOSE InseeDomain_cursor
+		DEALLOCATE InseeDomain_cursor
+	END 
+
+	SET @SqlQuery += ' 		GROUP BY referenceDemandeg2, CodeCrg2 '
+	SET @SqlQuery += ' 		ORDER BY referenceDemandeg2 ASC  '
+	SET @SqlQuery += ' 		OFFSET ' + @pageStartIndex + SPACE(1) + ' ROWS' ;
+	SET @SqlQuery += ' 		FETCH NEXT ' + @numberResultsByPage + SPACE(1) + ' ROWS ONLY' ;
+	SET @SqlQuery += ' 	) AS DEMANDE ON D.CodeCrg2=DEMANDE.CodeCrg2 AND D.REFERENCEDEMANDEG2 = DEMANDE.REFERENCEDEMANDEG2  '
+
+    SET @ParamDefinition =  '@minDated datetime2(7),
+					@maxDated datetime2(7),
+				    @statutList varchar(max),					
+					@idInseeList varchar(max),
+					@idOriginInterventionList varchar(max),
+					@idDomainList varchar(max),
+					@idContractsList varchar(max),
+					@idInterventionList varchar(max),
+					@idTypeInterventionList varchar(max),
+					@CharDelimiter Varchar(1), 
+					@MaxResult  varchar(10),
+					@criterionSortsOut varchar(100),
+					@orderSortsOut  varchar(100),
+					@numberResultsByPage varchar(100),
+					@pageStartIndex varchar(100),
+					@statutTable ParamListTable READONLY,
+					@idContractsTable ParamListTable READONLY,
+					@idOriginInterventionTable ParamListTable READONLY ,
+					@idInterventionTable ParamListTable READONLY ,
+					@idTypeInterventionTable ParamListTable READONLY ,
+					@idInseeTable ParamListTable READONLY  ';
+
+	--PRINT(@SqlQuery);
+    	
+	Execute sp_Executesql     @SQLQuery,
+	 @ParamDefinition,
+	 @minDated,
+	 @maxDated,
+	 @statutList,
+	 @idInseeList,
+	 @idOriginInterventionList,
+	 @idDomainList,
+	 @idContractsList,
+	 @idInterventionList,
+	 @idTypeInterventionList,
+	 @CharDelimiter,
+	 @MaxResult,
+	 @criterionSortsOut,
+	 @orderSortsOut,
+	 @numberResultsByPage,
+	 @pageStartIndex,
+	 @statutTable,
+	 @idContractsTable,
+	 @idOriginInterventionTable,
+	 @idInterventionTable,
+	 @idTypeInterventionTable,
+	 @idInseeTable	
+                
+If @@ERROR <> 0 GoTo ErrorHandler
+    Set NoCount OFF
+   /*SELECT @@IDENTITY*/
+    Return(0)
+  
+ErrorHandler:
+    Return(@@ERROR)
+
+END

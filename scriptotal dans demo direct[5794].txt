@@ -1,0 +1,118 @@
+insert into  dba.art_px_vte_demo
+(	no_ste,
+	no_int_art_pxvte,
+	no_int_art,
+	no_int_art_cl,
+	no_int_art_ctl,
+	cd_ctl,
+	cd_proc,
+	no_int_cl_dmd,
+	no_int_cl_dmd_lig,
+	cd_vti,
+	typ_art_vte,
+	qte,
+	aut_modif,
+	dte_hre_crea,
+	dte_hre_modif,
+	coef_unit_qte,
+	typ_prise_cpte,
+	typ_px_fact,
+	typ_sais_tf,
+	pt_imp,
+	no_int_tf,
+
+	pt_forf,
+	qte_frs,
+	des_tf,
+	coef
+)
+SELECT 	
+	NoSte ,
+	NumIntArtPxVte ,
+	NumIntArt,
+	NumIntArtcl,
+	NumIntArtctl,
+	CdCtl,
+	CdProc,
+	noIntClDmd,
+	noIntClDmdlig,
+	CdVti,
+	TypArtVte,
+	qte,
+	AutModif ,
+	DteHreCrea,
+	DteHreModif,
+	CoefUnitQte,
+	TypePriseCpte,
+	TypPxFact,
+	TypSaisTf,
+	ptimp,
+numinttf,
+	pt_forf,
+	 
+	qte_frs,
+    destf,
+	Coef
+FROM rddTarifArtPrxVte 
+where piece = '4135910370'
+
+
+insert into  OBI.art_pxvte
+(	no_ste,
+	no_int_art_pxvte,
+	no_int_art,
+	no_int_art_cl,
+	no_int_art_ctl,
+	cd_ctl,
+	cd_proc,
+	no_int_cl_dmd,
+	no_int_cl_dmd_lig,
+	cd_vti,
+	typ_art_vte,
+	qte,
+	aut_modif,
+	dte_hre_crea,
+	dte_hre_modif,
+	coef_unit_qte,
+	typ_prise_cpte,
+	typ_px_fact,
+	typ_sais_tf,
+	pt_imp,
+	no_int_tf,
+
+	pt_forf,
+	qte_frs,
+	des_tf,
+	coef
+)
+SELECT 	
+	NoSte ,
+	NumIntArtPxVte ,
+	NumIntArt,
+	NumIntArtcl,
+	NumIntArtctl,
+	CdCtl,
+	CdProc,
+	noIntClDmd,
+	noIntClDmdlig,
+	CdVti,
+	TypArtVte,
+	qte,
+	AutModif ,
+	DteHreCrea,
+	DteHreModif,
+	CoefUnitQte,
+	TypePriseCpte,
+	TypPxFact,
+	TypSaisTf,
+	ptimp,
+numinttf,
+	pt_forf,
+	 
+	qte_frs,
+    destf,
+	Coef
+FROM rddTarifArtPrxVte 
+where piece = '4135910370'
+-----------------------------
+

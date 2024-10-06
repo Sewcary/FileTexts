@@ -1,0 +1,7 @@
+D:\Scripts\C#\70483\repertories\repertories\bin\Debug\repertories.exe.config
+D:\Scripts\C#\70483\repertories\repertories\bin\Debug\repertories.exe
+D:\Scripts\C#\70483\repertories\repertories\bin\Debug\repertories.pdb
+D:\Scripts\C#\70483\repertories\repertories\obj\Debug\repertories.csprojAssemblyReference.cache
+D:\Scripts\C#\70483\repertories\repertories\obj\Debug\repertories.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\70483\repertories\repertories\obj\Debug\repertories.exe
+D:\Scripts\C#\70483\repertories\repertories\obj\Debug\repertories.pdb

@@ -1,0 +1,7 @@
+D:\Scripts\C#\Memoring\Memoring\bin\Debug\Memoring.exe.config
+D:\Scripts\C#\Memoring\Memoring\bin\Debug\Memoring.exe
+D:\Scripts\C#\Memoring\Memoring\bin\Debug\Memoring.pdb
+D:\Scripts\C#\Memoring\Memoring\obj\Debug\Memoring.csprojAssemblyReference.cache
+D:\Scripts\C#\Memoring\Memoring\obj\Debug\Memoring.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\Memoring\Memoring\obj\Debug\Memoring.exe
+D:\Scripts\C#\Memoring\Memoring\obj\Debug\Memoring.pdb

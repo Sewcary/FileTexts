@@ -1,0 +1,99 @@
+USE [Bonus]
+GO
+/****** Object:  StoredProcedure [COMMUNICATION].[SPW_INSERTION_PARAMETRE_QSP_BONUS]    Script Date: 08/01/2016 00:55:31 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER   PROCEDURE [COMMUNICATION].[SPW_INSERTION_PARAMETRE_QSP_BONUS]
+@crsp VARCHAR(50),@type_poste VARCHAR(50),@bonus  MONEY ,@societe varchar(10) 
+AS 
+BEGIN 
+	insert into COMMUNICATION.[RFU_PARAMETRE_QSP_BONUS_TEMPO]
+		(
+			TPRQS_CRSP_ID ,
+			TPRQS_TYTE_ID ,
+			TPRQS_BONUS_MN ,
+			TPRQS_SCTE_CODE_CD 
+		) 
+     values 
+		(
+			@crsp,
+			@type_poste,
+			@bonus,
+			@societe
+		)
+END
+USE [Bonus]
+GO
+/****** Object:  StoredProcedure [COMMUNICATION].[SPW_INSERTION_PARAMETRE_QSP]    Script Date: 08/01/2016 00:55:58 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+ALTER PROCEDURE [COMMUNICATION].[SPW_INSERTION_PARAMETRE_QSP]
+@crsp varchar(50),@objectif MONEY ,@restaurant varchar(10)
+AS 
+BEGIN 
+	insert into COMMUNICATION.rfu_parametre_qsp_TEMPO (
+					TPRSP_CRSP_ID,
+					TPRSP_OBJECTIF_RT,
+					TPRSP_RSNT_CODE_CD
+					) 
+             values (
+					@crsp,
+					@objectif,
+					@restaurant )
+END
+USE [Bonus]
+GO
+
+/****** Object:  Table [COMMUNICATION].[RFU_PARAMETRE_QSP_BONUS_TEMPO]    Script Date: 08/01/2016 00:56:29 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [COMMUNICATION].[RFU_PARAMETRE_QSP_BONUS_TEMPO](
+	[TPRQS_ID] [int] IDENTITY(1,1) NOT NULL,
+	[TPRQS_CRSP_ID] [varchar](50) NULL,
+	[TPRQS_TYTE_ID] [varchar](50) NULL,
+	[TPRQS_BONUS_MN] [money] NULL,
+	[TPRQS_SCTE_CODE_CD] [varchar](10) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+USE [Bonus]
+GO
+
+/****** Object:  Table [COMMUNICATION].[RFU_PARAMETRE_QSP_TEMPO]    Script Date: 08/01/2016 00:56:50 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [COMMUNICATION].[RFU_PARAMETRE_QSP_TEMPO](
+	[TPRSP_CRSP_ID] [varchar](50) NULL,
+	[TPRSP_OBJECTIF_RT] [money] NULL,
+	[TPRSP_RSNT_CODE_CD] [varchar](20) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+

@@ -1,0 +1,146 @@
+Hi.
+I'm Nick Parlante at Stanford University and this is CS101.
+CS101 is about the basic features of how computers work.
+And I don't want you to think about the
+computer as some sort of magic box that you
+kind of, you know, interact with everyday but you're a
+little iffy about, yeah what's going on in there.
+Because really, the basics of how
+computers work are understandable by anyone.
+so, in CS101, we're going to really look inside the
+computer and, and get a feel for how it works.
+And indeed, play a little bit with how computers work.
+And ultimately, I would like you to then understand
+what computers can do and what they can't do.
+How they, how they fit into the world.
+I just say that, no computer background at all is require for this course.
+This just assumes nothing beyond the ability to use
+a browser and we're just going to, like, work through it.
+so, if you're curious about computers, you know, this is
+a good next stop, this is the right class room.
+Just a, a brief format note for every video segment like
+this, there's actually a companion doc,
+written document with diagrams and explanations.
+And that's always going to be available for review, even you could
+pause in the middle of the video and look at it
+or maybe later if you were curious about something you could
+always go look at that as another way of getting the information.
+So, I'm going to say that the, the fundamental equation of computers that has
+sort of their essence is, that computers
+are both extremely powerful and profoundly stupid.
+They're powerful in that, a computer can do billions of operations per second.
+It can just rip through data at just an inconceivable speed.
+That's the powerful part.
+But, the computer is very stupid in that, the operations that it can do so quickly.
+Are really very simple.
+So, maybe add two numbers to get a third number, or check if a number is zero.
+So not only are those operations simple, but they're nothing
+like what you would describe as, as insight or understanding, right?
+Just add two numbers.
+Insight and understanding are really human qualities.
+And I want to highlight how the computer
+world is really this mechanical world, and then
+we'll, we'll connect how it is that you can make useful features out of that.
+As was mentioned in movies computers are, they are never shown as mechanical, right?
+It's always essentially a human character that
+has emotions and gets mad or, or whatever.
+And here I have a link to the
+the famous HAL 9000 video segment that represents that.
+So we've got this funny combination, powerful and stupid.
+And I gotta say it will come through very clearly in
+later sections when we start playing with computer code a little bit.
+You will get a vivid sense for that combination.
+But
+just for today,
+well if the computer is so stupid, you know, how is
+it that so many useful features can be implemented up with computers?
+And in a way that's what CSI 101 is about.
+I want to visit the computer world and get a feel
+for this kind of powerful, mechanical world of the computer.
+And then connect that to useful features that we use
+every day and sort of understand what puts all that together.
+Ultimately you know, the goal for this class
+is that you understand how computers work, and in
+particular you're not intimidated that you understand how
+they, how they work and what they can do.
+Also I'll mention in here, I'll highlight my hidden agenda.
+Hidden agenda is that for some people
+taking this class, after we play around inside
+the world of the computer, some people may feel like, wow, that was pretty awesome.
+I really like computers and so my hope is that
+those people would consider taking more classes in computer science.
+Certainly in the Computer Science department,
+it is thought that there are just
+not enough people in the world who
+are really comfortable doing things with computers.
+There are problems we would like solved with computers,
+and there's just not enough people to do it all.
+So, I'm always happy to get more people into the club.
+So, at a high level the operation of a computer is really driven by code.
+And, for today, I'll just describe code as being made up as a series of instructions.
+So, as I mentioned before, maybe add
+two numbers or something really simple like that.
+So here, I have my little drawings.
+So, inside the computer, we've got some body of code and they're just
+a series of instructions or add these two numbers and then compare this, whatever.
+So what the computer does, really is it just has
+a series of instructions and it just does them in order.
+It does this one, and does this one, and does the
+third one, the fourth one, so on, just rips through them.
+When, when you hear the word "run" used with computers, that's what it means.
+There's a series of instructions in there, and
+it just rips through them, it just does them.
+Man.
+So yeah, it does them very quickly,
+but the individual instructions are quite simple.
+So I think this leads to a natural question.
+You're like, well, if these instructions are so simple, how
+is it that we can have like a useful feature?
+So here I'm going to use red-eye reduction as
+an example of like, oh that's a useful feature
+a computer can do or like you know,
+email or MP3 audio or, gee, you know, anything.
+So, what, what connects these two sides?
+And the answer is that's what computer programmers do.
+So, a computer programmer maybe has an idea of like oh, yeah, red eye reduction.
+That's a great idea.
+We should have red eye reduction.
+And that's an insight.
+And then the computer programmer thinks of like, well, how could we do that?
+Well we would look for the red color and maybe it's in a round shape or whatever.
+So think through how to do it. And then eventually ultimately
+the computer programmer has to break that algorithm down into simple instructions.
+In a way, sort of dumbing it down into instructions
+that are so simple that the computer can do it.
+And so whenever you've used email or you
+know SMS or some useful feature on the computer,
+it's because there was a comp, a person that
+had the insight like oh, we should do that.
+And the person structured it, sort of broke it down
+for the computer, so that the computer could do it.
+And in a way CS101 is going to, is going to look at this picture.
+Right?
+We're going to examine the left, we're going to look at what code
+looks like and what it's limitations are and what it can do.
+And then I'm going to want to formulate little computer programs
+that we can play with and that you can write
+to try and, you know, see both sides and sort
+of get a feel for how the whole picture works.
+I'm going to say that, I, I like this picture.
+I feel like this is, it's like a, it's a, it's
+a nice combination in that each side brings what it's good at.
+The computer programmer can concentrate on being creative and having
+insight and putting together you know, solving a real problem.
+And then what is the computer good at?
+Well, the computer is good at being inexpensive.
+Right? With Moore's law, which we'll study in
+a little bit, computers are just gradually getting cheaper.
+They can be more widespread, and the computer can
+be inexpensive, and just rip through its instructions very quickly.
+And so, that's great.
+Ultimately, that means we get, you know, solutions
+to many many problems, and they can be widespread.
+That's fantastic.
+So.
+In the, in the next section what I want to do is look a little more closely at code.
+And get to a point where you can start playing with code.

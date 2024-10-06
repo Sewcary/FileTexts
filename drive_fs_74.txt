@@ -1,0 +1,1657 @@
+-------------------------------------
+drive_fs log started
+version: 63.0.5.0
+changelist 469469156 with baseline 467263547 in a mint client based on //depot/branches/drive_fs_release_branch/467263547.1/google3
+-------------------------------------
+2022-09-14T16:44:34.836ZI [2220:log_writer_thread] instrumentation.cc:113:OpenLogFileInDirectory Logging to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\drive_fs.txt
+2022-09-14T16:44:34.837ZI [16764:NonCelloThread] drive_fs_main.cc:152:LogExistingCrashReports No existing crash reports found.
+2022-09-14T16:44:34.837ZI [16764:NonCelloThread] drive_fs_main.cc:397:PrintCommandLine C:\Program Files\Google\Drive File Stream\63.0.5.0\GoogleDriveFS.exe --crash_handler_token=\\.\pipe\crashpad_16640_MDWFNTJMSWOAHAWN --parent_version=63.0.5.0 --startup_mode 
+2022-09-14T16:44:34.852ZI [16764:NonCelloThread] drive_fs_main.cc:135:InitializeLanguage Initializing with detected language: fr-FR
+2022-09-14T16:44:34.858ZI [16764:NonCelloThread] i18n.cc:311:InitializeI18n I18n initialized with fr
+2022-09-14T16:44:35.237ZI [16764:NonCelloThread] drive_fs.cc:571:RunDriveFS Options: argv_0: "C:\\Program Files\\Google\\Drive File Stream\\63.0.5.0\\GoogleDriveFS.exe"
+base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary"
+shell_ipc_pipe_path: "\\\\.\\Pipe\\GoogleDriveFSPipe_Sewcary_shell"
+crash_handler_token: "\\\\.\\pipe\\crashpad_16640_MDWFNTJMSWOAHAWN"
+enable_tracing: false
+enable_ui: true
+enable_file_dances: true
+use_fake_cello_fs: false
+enable_poll_for_changes: true
+drive_create_options {
+  use_fake_cloud_store: false
+  authorize_new_user: false
+  refresh_token: ""
+  user_email: ""
+  token_uri: ""
+  auth_uri: ""
+  metadata_server_auth_uri: ""
+  user_id: ""
+}
+enable_field_event_recording: true
+open_gdoc_path: ""
+started_by_installer: false
+locale: ""
+force_onboarding: false
+log_connection_details: false
+use_intranet_connectivity_to_check_online: false
+crash_handler_init_status: SUCCESS
+cello_options {
+  drive_api_options {
+    apiary_trace_token: ""
+    apiary_trace_regex: ""
+    dapper_trace_regex: ""
+    functional_tests_dir_path: ""
+  }
+}
+open_gdocs_root: false
+open_gsheets_root: false
+open_gslides_root: false
+crash_on_core_start: false
+use_curl_logging_scribe: false
+force_case_sensitivity: false
+new_gsuite_file: ""
+account_settings_from_file_path: ""
+parent_version: "63.0.5.0"
+open_all_dialogs: false
+startup_mode: true
+fake_multiaccount_ui: false
+feature_config_override {
+  account {
+  }
+}
+fake_migration_file_viewer_data: false
+global_feature_config {
+  drive_dot: true
+  share_dialog: true
+  pause_syncing_option: true
+  bandwidth_throttling: true
+  structured_logging: true
+  context_menu_force_refresh_folder: true
+  status_window_click_show_file_in_file_manager: true
+  outlook_addin: false
+  autostart_preference: true
+  gui_autostart_option: true
+  mojave_overlays_fix: false
+  curl_proxy_authentication: true
+  gui_reset_preferences_menu_option: true
+  force_refresh_folder_normal_menu: false
+  structured_log_max_file_size_kbytes: 2048
+  ask_to_copy_files_for_pending_uploads: true
+  inform_users_of_pending_uploads: true
+  same_content_dedupe_interval_ms: 600000
+  dedupe_interval_ms: 2000
+  support_status_notification: true
+  deprecation_date: "2023-08-30"
+  deprecation_warning_threshold: 30
+  min_supported_os_version: "0.0.0"
+  crash_oom_threshold_mb: 1048576
+  allow_search: true
+  finish_syncing_files_option: true
+  osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+  osxfuse_lock_abort_test: false
+  osxfuse_sched_flags_offset_override: 4294967295
+  enforce_single_parent: true
+  add_shortcut_menu: true
+  meet_outlook_addin: false
+  spotlight_timestamp_fsctl_support: true
+  mac_disk_arbitration_unmount: true
+  current_drive_fs_version: "63.0.5.0"
+  file_revisions_virtual_folder: true
+  unlocked_mac_buf_unmap: true
+  use_mac_fileprovider: false
+  trim_parents_during_cloud_merge: true
+  trim_parents_during_commit: true
+  create_gsuite_file: true
+  switchblade: true
+  file_provider_quick_access_polling_interval_sec: 43200
+  show_quick_access_in_search_dialog: true
+  include_user_email_in_feedback: true
+  mac_smb_port: 0
+  fileprovider_signal_debounce_ms: 250
+  osxfuse_sched_flags_offset_override_arm: 4294967295
+  current_os_version: "Windows/10.0.19043"
+  cancel_com_calls: true
+  enable_file_provider_migration: true
+  logging_on_cello_thread_startup: false
+  mac_smb_dialect_mode: 10
+  dokan_set_internal_file_index: true
+  context_menu_create_editor_files: false
+  file_revisions_file_provider: true
+  mac_smb_nobrowse: true
+  special_folder_change_notification: true
+  repair_kext_management_directory: true
+  instrument_http_client: true
+  show_offline_files_menu_option: true
+  enable_mirror_roots_context: true
+  com_api_thread_stuck_threshold_sec: 0
+  num_metrics_batches_per_request: 70
+  max_metrics_per_event_code_per_batch: 200
+  bns_migration_window_closed: true
+  encrypt_and_upload: false
+  show_non_running_accounts: false
+  mac_smb_mount_by_ip: true
+  enable_mount_in_sidebar_setting: true
+  allow_multiple_smb_connections: false
+  persistent_smb_port_auto_selection: true
+  file_provider_disabled_notification_interval_mins: 0
+  enable_mount_as_folder_setting: true
+  enable_modern_feature_flags: true
+  enable_search_hot_key: true
+  file_provider_failover_for_home_dir_fs_type: true
+  file_provider_mirror_switch_unpinned_item_batch_size: 2000
+  file_provider_enable_ipc_root_symlink: true
+  file_provider_pause_syncing_option: true
+  file_provider_create_existing_dir_id_succeeds: false
+  file_provider_create_existing_file_id_succeeds: false
+  file_provider_notify_mount_point_changed_with_mirror: false
+  file_provider_show_migration_notification_based_on_volume: true
+  file_provider_handle_exact_existing_create_as_reimport: true
+  file_provider_min_partial_read_size: 4294967296
+  file_provider_enable_read_ahead: false
+  switchblade_on_websockets: false
+  mac_smb_nodatacache: false
+}
+photos_scope: ""
+show_sign_in_dialog_if_no_user: true
+show_preferences_dialog_debug_menu: false
+crash_in_execution_context: false
+enable_physical_http_logging: false
+
+2022-09-14T16:44:35.237ZI [16764:NonCelloThread] drive_fs.cc:159:LogSystemConfig OS: Windows/10.0.19044
+2022-09-14T16:44:35.237ZI [16764:NonCelloThread] drive_fs.cc:166:LogSystemConfig Architecture: x86_64
+2022-09-14T16:44:35.237ZI [16764:NonCelloThread] drive_fs.cc:174:LogSystemConfig Total RAM: 7.89 GiB
+2022-09-14T16:44:35.237ZI [16764:NonCelloThread] drive_fs.cc:190:LogSystemConfig Disk space: 9.67 GB free / 126.70 GB total
+2022-09-14T16:44:35.238ZI [16764:NonCelloThread] drive_fs.cc:197:LogSystemConfig Timezone: UTC+0000 (UTC)
+2022-09-14T16:44:35.251ZI [16764:NonCelloThread] preferences_manager.cc:109:GetUserPreferences user_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-09-14T16:44:35.251ZI [16764:NonCelloThread] preferences_manager.cc:312:GetEffectivePreferences effective_preferences for no_user: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-09-14T16:44:35.263ZI [16956:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-09-14T16:44:35.303ZI [16764:NonCelloThread] app.cc:439:RegisterHotKeys Started listening for hot key ...
+2022-09-14T16:44:35.308ZI [16764:NonCelloThread] app.cc:635:RegisterOutlookAddInHelper Google Drive Outlook Add-in: Outlook add-in already unregistered.
+2022-09-14T16:44:35.309ZI [16764:NonCelloThread] app.cc:635:RegisterOutlookAddInHelper Google Meet Outlook Add-in: Outlook add-in already unregistered.
+2022-09-14T16:44:35.611ZI [16764:NonCelloThread] dialog.cc:78:ResetViewViaDifferencer Resetting UpdateViewDifferencer.
+2022-09-14T16:44:35.722ZI [19684:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{179eb58f-e4d3-49b6-a7f3-1e5146eceb4e}\ description. name: LENOVO, uuid: 179eb58f-e4d3-49b6-a7f3-1e5146eceb4e, device_number: 2263365625, mount_point: D:\, fs_type: NTFS, device_type: Internal
+2022-09-14T16:44:35.739ZI [19644:MediaManagerThread] device_status_service.cc:318:AddMediaInternal Media was added [Media: media_id="179eb58f-e4d3-49b6-a7f3-1e5146eceb4e" name="LENOVO" file_system="NTFS" mount_point(raw)="D:\" device_type="Internal" device_number=2263365625 writable="true"]
+2022-09-14T16:44:35.744ZI [19684:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{41afd6a5-6119-4157-9b7a-627c51ba4fdb}\ description. name: Windows, uuid: 41afd6a5-6119-4157-9b7a-627c51ba4fdb, device_number: 3399157150, mount_point: C:\, fs_type: NTFS, device_type: Internal
+2022-09-14T16:44:35.769ZI [19644:MediaManagerThread] device_status_service.cc:318:AddMediaInternal Media was added [Media: media_id="41afd6a5-6119-4157-9b7a-627c51ba4fdb" name="Windows" file_system="NTFS" mount_point(raw)="C:\" device_type="Internal" device_number=3399157150 writable="true"]
+2022-09-14T16:44:35.770ZI [19684:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{f15cad22-6387-424a-92fe-4bb4ab546b07}\ description. name: WINRE_DRV, uuid: f15cad22-6387-424a-92fe-4bb4ab546b07, device_number: 1251722332, mount_point: , fs_type: NTFS, device_type: Internal
+2022-09-14T16:44:35.770ZE [19684:VolumeListenerThread] volume_listener_win.cc:455:GetVolumeFromGuidPath \\?\Volume{f15cad22-6387-424a-92fe-4bb4ab546b07}\ has no mount point.
+2022-09-14T16:44:35.770ZI [19684:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{e8982033-0d56-44e9-a6e6-d674017ea338}\ description. name: SYSTEM_DRV, uuid: e8982033-0d56-44e9-a6e6-d674017ea338, device_number: 2325393711, mount_point: , fs_type: FAT, device_type: Internal
+2022-09-14T16:44:35.771ZE [19684:VolumeListenerThread] volume_listener_win.cc:455:GetVolumeFromGuidPath \\?\Volume{e8982033-0d56-44e9-a6e6-d674017ea338}\ has no mount point.
+2022-09-14T16:44:35.774ZI [16956:ipc_thread] ipc_socket_win.cc:274:GetNextConnection Accepting next connection
+2022-09-14T16:44:35.776ZI [16764:NonCelloThread] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:35.778ZI [16764:NonCelloThread] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:35.794ZI [16764:NonCelloThread] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:35.796ZI [16764:NonCelloThread] play/games/portablephenotype/portable_phenotype_client_impl.cc:89:UNKNOWN Registering configuration package drive_fs_ph with version 469469156
+2022-09-14T16:44:35.804ZI [16764:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:717:UNKNOWN ScheduleQueuedSync: Updated fetch reason.
+2022-09-14T16:44:35.805ZI [16764:NonCelloThread] experiments/phenotype/cpp/phenotype_impl.cc:737:UNKNOWN ScheduleQueuedSync: Scheduled sync.
+2022-09-14T16:44:35.806ZI [16764:NonCelloThread] play/games/portablephenotype/portable_phenotype_client_impl.cc:115:UNKNOWN Successfully registered configuration package: drive_fs_ph (9 ms)
+2022-09-14T16:44:35.809ZI [19820:SwitchbladeDelegateImpl] switchblade_installer.cc:78:InstallSwitchblade Switchblade Chrome extension is already installed.
+2022-09-14T16:44:35.811ZI [19820:SwitchbladeDelegateImpl] switchblade_installer_win.cc:52:InstallSwitchbladeNativeHostManifest Installing Switchblade native host manifest...
+2022-09-14T16:44:35.812ZI [19820:SwitchbladeDelegateImpl] switchblade_installer_win.cc:67:InstallSwitchbladeNativeHostManifest Switchblade native host manifest written to C:\Users\Sewcary\AppData\Local\Google\DriveFS\com.google.drive.nativeproxy.json
+2022-09-14T16:44:35.812ZI [19820:SwitchbladeDelegateImpl] switchblade_installer_win.cc:86:InstallSwitchbladeNativeHostManifest Switchblade native host manifest written to C:\Users\Sewcary\AppData\Local\Google\DriveFS\com.google.drive.nativeproxy.json and configured in registry
+2022-09-14T16:44:35.831ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:44:35.834ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:44:35.834ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:44:35.834ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T16:44:35.901ZI [16764:NonCelloThread] client.cc:534:LogWindowsFilterDrivers Nonstandard filter drivers present: aswmonflt.sys (3188c405245b897) aswsnx.sys (ad69d796f12e9187) aswsp.sys (c6fb502385312a16) bindflt.sys (556d9232df19b942) iastorafs.sys (6e2e912e8f9bad00) trufos.sys (e2f458114162c984)
+2022-09-14T16:44:35.901ZI [16764:NonCelloThread] client.cc:539:LogWindowsFilterDrivers Nonstandard filter driver combo hash: ab181887fa90b9fd
+2022-09-14T16:44:35.911ZI [16764:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-09-14T16:44:35.941ZI [16764:NonCelloThread] global_features_manager.cc:343:CompositeAll Compositing global features based on 1 accounts
+2022-09-14T16:44:35.941ZI [16764:NonCelloThread] global_features_manager.cc:359:CompositeAll Composited global features *WITHOUT* overrides: drive_dot: true
+share_dialog: true
+pause_syncing_option: true
+bandwidth_throttling: true
+structured_logging: true
+context_menu_force_refresh_folder: true
+status_window_click_show_file_in_file_manager: true
+outlook_addin: false
+autostart_preference: true
+gui_autostart_option: true
+mojave_overlays_fix: false
+curl_proxy_authentication: true
+gui_reset_preferences_menu_option: true
+force_refresh_folder_normal_menu: false
+structured_log_max_file_size_kbytes: 2048
+ask_to_copy_files_for_pending_uploads: true
+inform_users_of_pending_uploads: true
+same_content_dedupe_interval_ms: 600000
+dedupe_interval_ms: 2000
+support_status_notification: true
+deprecation_date: "2023-08-30"
+deprecation_warning_threshold: 30
+min_supported_os_version: "0.0.0"
+crash_oom_threshold_mb: 1048576
+allow_search: true
+finish_syncing_files_option: true
+osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+osxfuse_lock_abort_test: false
+osxfuse_sched_flags_offset_override: 4294967295
+enforce_single_parent: true
+add_shortcut_menu: true
+meet_outlook_addin: false
+spotlight_timestamp_fsctl_support: true
+mac_disk_arbitration_unmount: true
+current_drive_fs_version: "63.0.5.0"
+file_revisions_virtual_folder: true
+unlocked_mac_buf_unmap: true
+use_mac_fileprovider: false
+trim_parents_during_cloud_merge: true
+trim_parents_during_commit: true
+create_gsuite_file: true
+switchblade: true
+file_provider_quick_access_polling_interval_sec: 43200
+show_quick_access_in_search_dialog: true
+include_user_email_in_feedback: true
+mac_smb_port: 0
+fileprovider_signal_debounce_ms: 250
+osxfuse_sched_flags_offset_override_arm: 4294967295
+current_os_version: "Windows/10.0.19043"
+cancel_com_calls: true
+enable_file_provider_migration: true
+logging_on_cello_thread_startup: false
+mac_smb_dialect_mode: 10
+dokan_set_internal_file_index: true
+context_menu_create_editor_files: false
+file_revisions_file_provider: true
+mac_smb_nobrowse: true
+special_folder_change_notification: true
+repair_kext_management_directory: true
+instrument_http_client: true
+show_offline_files_menu_option: true
+enable_mirror_roots_context: true
+com_api_thread_stuck_threshold_sec: 0
+num_metrics_batches_per_request: 70
+max_metrics_per_event_code_per_batch: 200
+bns_migration_window_closed: true
+encrypt_and_upload: false
+show_non_running_accounts: false
+mac_smb_mount_by_ip: true
+enable_mount_in_sidebar_setting: true
+allow_multiple_smb_connections: false
+persistent_smb_port_auto_selection: true
+file_provider_disabled_notification_interval_mins: 0
+enable_mount_as_folder_setting: true
+enable_modern_feature_flags: true
+enable_search_hot_key: true
+file_provider_failover_for_home_dir_fs_type: true
+file_provider_mirror_switch_unpinned_item_batch_size: 2000
+file_provider_enable_ipc_root_symlink: true
+file_provider_pause_syncing_option: true
+file_provider_create_existing_dir_id_succeeds: false
+file_provider_create_existing_file_id_succeeds: false
+file_provider_notify_mount_point_changed_with_mirror: false
+file_provider_show_migration_notification_based_on_volume: true
+file_provider_handle_exact_existing_create_as_reimport: true
+file_provider_min_partial_read_size: 4294967296
+file_provider_enable_read_ahead: false
+switchblade_on_websockets: false
+mac_smb_nodatacache: false
+
+2022-09-14T16:44:35.944ZI [16764:NonCelloThread] preferences.cc:93:UpgradeLegacyAccountPreferences UpgradeLegacyAccountPreferences declining
+2022-09-14T16:44:35.946ZI [16764:NonCelloThread] preferences_manager.cc:109:GetUserPreferences user_preferences for 104407529297066504359: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-09-14T16:44:35.946ZI [16764:NonCelloThread] preferences_manager.cc:312:GetEffectivePreferences effective_preferences for 104407529297066504359: {
+global {
+  content_cache_base_path: "C:\\Users\\Sewcary\\AppData\\Local\\Google\\DriveFS"
+  disable_ssl_validation: false
+  disable_crl_check: false
+  direct_connection: false
+  do_not_show_dialogs {
+    mount_point_changed: false
+    confirm_shared_folder_move_in: false
+    confirm_shared_folder_move_out: false
+    confirm_td_file_move_out: false
+    confirm_move_to_untrusted_td: false
+    warning_move_to_untrusted_td: false
+    warning_td_file_move_out: false
+    warning_shared_folder_move_in: false
+    warning_shared_folder_move_out: false
+  }
+  autostart_on_login: true
+  outlook_attachment_size_threshold_mbytes: 10
+  disable_outlook_plugin: false
+  disable_meet_outlook_plugin: false
+  disable_add_account: false
+  allowed_accounts_pattern: ".*"
+  stalled_progress_seconds: 5
+  open_office_files_in_docs: true
+  enable_smb: false
+  prompt_to_backup_devices: true
+  trust_system_root_certs: false
+  disable_gpu: false
+  search_hot_key: 3378005202305025
+  do_not_show_notifications {
+    entry {
+      notification_type: SPORK_TOUR_NOTIFICATION
+    }
+  }
+}
+account {
+  mount_point_path: "G"
+  disable_realtime_presence: false
+  machine_root_doc_id: ""
+  photos_upload_quality: ORIGINAL_QUALITY
+  photos_upload_screenshots: true
+  photos_upload_raw_files: true
+  old_mirrored_my_drive_path: ""
+  mirrored_my_drive_watch_path: ""
+  hide_mount_point: false
+  show_mount_point_in_sidebar: true
+  mac_smb_port: 0
+  enable_smb_spotlight: false
+}
+}
+2022-09-14T16:44:35.946ZI [16764:NonCelloThread] client.cc:4481:MaybeStartupOptionsForSavedAccount Returning options set for token: [AccountToken: persistable_token="104407529297066504359"]
+2022-09-14T16:44:35.947ZI [16764:NonCelloThread] client.cc:4493:MaybeStartupOptionsForSavedAccount AccountFeatureConfig for 104407529297066504359 loaded from disk: thumbnails: true
+deprecated: false
+metadata_cache_reset_counter: 5
+spotlight: true
+max_operation_batch_size: 15
+temporary_items_virtual_folder: true
+local_disk_aware_get_free_space: true
+max_parallel_background_cloud_queries: 3
+relocatable_content_cache: true
+content_cache_max_kbytes: 1000000000
+fcm_token_generation: 1
+content_download_http_416_workaround: true
+crash_on_failed_thread_checker_assert: true
+allow_windows_system_user_access: false
+dokan_oplocks: true
+max_parallel_downloads_per_file: 5
+two_level_folder_prefetch: false
+max_parallel_push_task_instances: 15
+emm_support: false
+fetch_content_bytes_before_cancel_percent_multiplier: 500
+min_bytes_saved_to_split_request: 9223372036854775807
+reset_account_after_fatal_local_store_failure: true
+detect_stable_id_reuse: true
+supply_json_gdoc_content: false
+dokan_dispatch_monitor_check_ms: 10000
+dokan_dispatch_monitor_warn_ms: 60000
+sqlite_normal_transaction_sync: true
+finder_process_names: "DesktopServicesHelper"
+reset_account_after_local_largest_change_id_corrupt: true
+emm_secondary_identifier: false
+crash_on_cello_assert: false
+force_cloud_recreate_order: true
+allow_subscription_task: true
+resubscribe_retry_interval_msec: 14400000
+account_backup_manager: true
+account_backup_preservation_days: 30
+content_cache_reset_evictable_files_counter: 0
+allowed_new_gdoc_file_name_pattern: ".*Google Docs.*\\.gdoc|.*Google Sheets.*\\.gsheet|.*Google Slides.*\\.gslides"
+reset_file_content_on_revert_flow: true
+finder_create_file_handler_timeout_ms: 600000
+content_cache_reset_pinned_counter: 0
+repair_stable_id_reuse: true
+fuse_symlink_to_shortcut_support: true
+fuse_symlink_create_support: true
+fuse_symlink_read_support: true
+account_update_sec: 86400
+test_value_0: 0
+test_value_1: 0
+test_value_2: 0
+test_value_3: 0
+test_value_4: 0
+test_value_5: 0
+test_value_9: 0
+dokan_allow_optimistic_release: true
+max_parallel_resumable_uploads: 1
+dokan_driver_request_batching: true
+handle_unauthorized_resumable_uploads: true
+content_cache_capacity_heuristic: EXCLUDE_NONEVICTABLE
+dokan_fcb_garbage_collection_interval_ms: 2000
+photos_extensions: "jpg,jpeg,jpe,png,gif,heif,heic,tif,tiff,webp,bmp,dib,ico,jp2,j2c,jpf,j2k,jpx,dng,raw,arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,rdc,rw2,srf,srw,sr2,x3f,3fr"
+videos_extensions: "3g2,3gp,asf,avi,divx,flv,m2t,m2ts,m4v,mkv,mmv,mng,mod,mov,mp4,mpe,mpg,mpeg,mts,ogv,qt,tod,webm,wmv"
+disable_spotlight_permission_preheat: true
+photos_debounce_edit_time_ms: 1800000
+empty_file_with_open_handle_upload_delay_ms: 600000
+enable_photo_min_size_filtering: true
+support_local_create_shared_drives: false
+subscription_task_throttle_time_ms: 300000
+subscription_task_max_operations: 50
+emm_get_serial_via_wmi_on_windows: true
+max_bytes_per_fetch_content_request: 268435456
+is_dasher_user: false
+lookup_spam_detection_time_unit_ms: 1000
+lookup_spam_detection_min_number_of_events: 100
+lookup_spam_detection_duration_ms: 600000
+open_spam_detection_time_unit_ms: 1000
+open_spam_detection_min_number_of_events: 100
+open_spam_detection_duration_ms: 600000
+photos_max_simultaneous_uploads: 3
+photos_hq_charged_expectation: true
+enable_cse: false
+disable_security_update_enabled_cloud_change: true
+dokan_use_fsctl_events: true
+photos_extensions_to_ignore: "crdownload"
+metadata_cache_update_counter: 1
+mdcu_max_item_count_per_request: 1000
+emm_send_device_encryption_status: false
+emm_send_device_screen_lock_status: false
+dokan_disable_file_network_physical_name_info: true
+file_provider_cache_reset_counter: 0
+content_cache_entry_cache_implementation: ARC
+migration_local_scan_fatal_statuses_mac: ""
+enable_dynamic_list_changes_page_sizing: true
+dynamic_page_sizing_min_page_size: 1
+dynamic_page_sizing_min_capacity_reached_count: 5
+dynamic_page_sizing_increase_frequency_threshold_ms: 600000
+dynamic_page_sizing_decrease_frequency_threshold_ms: 300000
+min_operation_batch_size: 2
+enable_smb_spotlight_rpc: true
+throttled_qps_for_spamming_process: 50
+send_mtime_updates_to_drive: false
+send_atime_updates_to_drive: false
+file_provider_list_batch_size_multiplier: 10
+file_provider_update_batch_size_multiplier: 10
+smb_unmount_with_diskutil: false
+dokan_pull_event_ahead: true
+dokan_fcb_avl_table: true
+min_spamming_process_throttling_time_ms: 600000
+max_spamming_process_throttling_time_ms: 18000000
+use_modern_feature_flags: LAUNCH_DARKLAUNCH
+enable_actual_spam_throttling: false
+disable_spam_throttling_on_write_duration_ms: 600000
+file_provider_disabled_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_mount_point_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_migration_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_evict_on_content_change: false
+file_provider_activation_max_retry_backoff_duration_ms: 120000
+file_provider_retry_on_wait_for_domain_init_failure: true
+file_provider_disable_cse_cleanup_batch_size: 0
+
+2022-09-14T16:44:35.949ZI [16764:NonCelloThread] client.cc:4313:operator() Started 0 of 1 core(s).
+2022-09-14T16:44:35.949ZI [16764:NonCelloThread] client.cc:4481:MaybeStartupOptionsForSavedAccount Returning options set for token: [AccountToken: persistable_token="104407529297066504359"]
+2022-09-14T16:44:35.949ZI [16764:NonCelloThread] client.cc:4493:MaybeStartupOptionsForSavedAccount AccountFeatureConfig for 104407529297066504359 loaded from disk: thumbnails: true
+deprecated: false
+metadata_cache_reset_counter: 5
+spotlight: true
+max_operation_batch_size: 15
+temporary_items_virtual_folder: true
+local_disk_aware_get_free_space: true
+max_parallel_background_cloud_queries: 3
+relocatable_content_cache: true
+content_cache_max_kbytes: 1000000000
+fcm_token_generation: 1
+content_download_http_416_workaround: true
+crash_on_failed_thread_checker_assert: true
+allow_windows_system_user_access: false
+dokan_oplocks: true
+max_parallel_downloads_per_file: 5
+two_level_folder_prefetch: false
+max_parallel_push_task_instances: 15
+emm_support: false
+fetch_content_bytes_before_cancel_percent_multiplier: 500
+min_bytes_saved_to_split_request: 9223372036854775807
+reset_account_after_fatal_local_store_failure: true
+detect_stable_id_reuse: true
+supply_json_gdoc_content: false
+dokan_dispatch_monitor_check_ms: 10000
+dokan_dispatch_monitor_warn_ms: 60000
+sqlite_normal_transaction_sync: true
+finder_process_names: "DesktopServicesHelper"
+reset_account_after_local_largest_change_id_corrupt: true
+emm_secondary_identifier: false
+crash_on_cello_assert: false
+force_cloud_recreate_order: true
+allow_subscription_task: true
+resubscribe_retry_interval_msec: 14400000
+account_backup_manager: true
+account_backup_preservation_days: 30
+content_cache_reset_evictable_files_counter: 0
+allowed_new_gdoc_file_name_pattern: ".*Google Docs.*\\.gdoc|.*Google Sheets.*\\.gsheet|.*Google Slides.*\\.gslides"
+reset_file_content_on_revert_flow: true
+finder_create_file_handler_timeout_ms: 600000
+content_cache_reset_pinned_counter: 0
+repair_stable_id_reuse: true
+fuse_symlink_to_shortcut_support: true
+fuse_symlink_create_support: true
+fuse_symlink_read_support: true
+account_update_sec: 86400
+test_value_0: 0
+test_value_1: 0
+test_value_2: 0
+test_value_3: 0
+test_value_4: 0
+test_value_5: 0
+test_value_9: 0
+dokan_allow_optimistic_release: true
+max_parallel_resumable_uploads: 1
+dokan_driver_request_batching: true
+handle_unauthorized_resumable_uploads: true
+content_cache_capacity_heuristic: EXCLUDE_NONEVICTABLE
+dokan_fcb_garbage_collection_interval_ms: 2000
+photos_extensions: "jpg,jpeg,jpe,png,gif,heif,heic,tif,tiff,webp,bmp,dib,ico,jp2,j2c,jpf,j2k,jpx,dng,raw,arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,rdc,rw2,srf,srw,sr2,x3f,3fr"
+videos_extensions: "3g2,3gp,asf,avi,divx,flv,m2t,m2ts,m4v,mkv,mmv,mng,mod,mov,mp4,mpe,mpg,mpeg,mts,ogv,qt,tod,webm,wmv"
+disable_spotlight_permission_preheat: true
+photos_debounce_edit_time_ms: 1800000
+empty_file_with_open_handle_upload_delay_ms: 600000
+enable_photo_min_size_filtering: true
+support_local_create_shared_drives: false
+subscription_task_throttle_time_ms: 300000
+subscription_task_max_operations: 50
+emm_get_serial_via_wmi_on_windows: true
+max_bytes_per_fetch_content_request: 268435456
+is_dasher_user: false
+lookup_spam_detection_time_unit_ms: 1000
+lookup_spam_detection_min_number_of_events: 100
+lookup_spam_detection_duration_ms: 600000
+open_spam_detection_time_unit_ms: 1000
+open_spam_detection_min_number_of_events: 100
+open_spam_detection_duration_ms: 600000
+photos_max_simultaneous_uploads: 3
+photos_hq_charged_expectation: true
+enable_cse: false
+disable_security_update_enabled_cloud_change: true
+dokan_use_fsctl_events: true
+photos_extensions_to_ignore: "crdownload"
+metadata_cache_update_counter: 1
+mdcu_max_item_count_per_request: 1000
+emm_send_device_encryption_status: false
+emm_send_device_screen_lock_status: false
+dokan_disable_file_network_physical_name_info: true
+file_provider_cache_reset_counter: 0
+content_cache_entry_cache_implementation: ARC
+migration_local_scan_fatal_statuses_mac: ""
+enable_dynamic_list_changes_page_sizing: true
+dynamic_page_sizing_min_page_size: 1
+dynamic_page_sizing_min_capacity_reached_count: 5
+dynamic_page_sizing_increase_frequency_threshold_ms: 600000
+dynamic_page_sizing_decrease_frequency_threshold_ms: 300000
+min_operation_batch_size: 2
+enable_smb_spotlight_rpc: true
+throttled_qps_for_spamming_process: 50
+send_mtime_updates_to_drive: false
+send_atime_updates_to_drive: false
+file_provider_list_batch_size_multiplier: 10
+file_provider_update_batch_size_multiplier: 10
+smb_unmount_with_diskutil: false
+dokan_pull_event_ahead: true
+dokan_fcb_avl_table: true
+min_spamming_process_throttling_time_ms: 600000
+max_spamming_process_throttling_time_ms: 18000000
+use_modern_feature_flags: LAUNCH_DARKLAUNCH
+enable_actual_spam_throttling: false
+disable_spam_throttling_on_write_duration_ms: 600000
+file_provider_disabled_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_mount_point_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_migration_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_evict_on_content_change: false
+file_provider_activation_max_retry_backoff_duration_ms: 120000
+file_provider_retry_on_wait_for_domain_init_failure: true
+file_provider_disable_cse_cleanup_batch_size: 0
+
+2022-09-14T16:44:35.953ZE [19924:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-09-14T16:44:35.959ZI [19924:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:35.961ZI [19924:core_104407529297066504359] account_context.cc:347:CreateCredential Restored credential with user ID: 104407529297066504359
+2022-09-14T16:44:35.961ZI [19924:core_104407529297066504359] drive_cloud_store_provider.cc:37:CreateDriveCloudStore Using Drive API v2
+2022-09-14T16:44:35.963ZI [19924:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:35.963ZI [19924:core_104407529297066504359] account_context.cc:557:operator() Missing scopes mask: 0x0
+2022-09-14T16:44:35.970ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:44:35.970ZI [16764:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-09-14T16:44:35.971ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:44:35.971ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:44:35.972ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T16:44:35.972ZI [16764:NonCelloThread] client.cc:3941:StartAccountAuthComplete Authorized as niang.fara@gmail.com (104407529297066504359)
+2022-09-14T16:44:35.972ZI [16764:NonCelloThread] client.cc:4481:MaybeStartupOptionsForSavedAccount Returning options set for token: [AccountToken: persistable_token="104407529297066504359"]
+2022-09-14T16:44:35.972ZI [16764:NonCelloThread] client.cc:4493:MaybeStartupOptionsForSavedAccount AccountFeatureConfig for 104407529297066504359 loaded from disk: thumbnails: true
+deprecated: false
+metadata_cache_reset_counter: 5
+spotlight: true
+max_operation_batch_size: 15
+temporary_items_virtual_folder: true
+local_disk_aware_get_free_space: true
+max_parallel_background_cloud_queries: 3
+relocatable_content_cache: true
+content_cache_max_kbytes: 1000000000
+fcm_token_generation: 1
+content_download_http_416_workaround: true
+crash_on_failed_thread_checker_assert: true
+allow_windows_system_user_access: false
+dokan_oplocks: true
+max_parallel_downloads_per_file: 5
+two_level_folder_prefetch: false
+max_parallel_push_task_instances: 15
+emm_support: false
+fetch_content_bytes_before_cancel_percent_multiplier: 500
+min_bytes_saved_to_split_request: 9223372036854775807
+reset_account_after_fatal_local_store_failure: true
+detect_stable_id_reuse: true
+supply_json_gdoc_content: false
+dokan_dispatch_monitor_check_ms: 10000
+dokan_dispatch_monitor_warn_ms: 60000
+sqlite_normal_transaction_sync: true
+finder_process_names: "DesktopServicesHelper"
+reset_account_after_local_largest_change_id_corrupt: true
+emm_secondary_identifier: false
+crash_on_cello_assert: false
+force_cloud_recreate_order: true
+allow_subscription_task: true
+resubscribe_retry_interval_msec: 14400000
+account_backup_manager: true
+account_backup_preservation_days: 30
+content_cache_reset_evictable_files_counter: 0
+allowed_new_gdoc_file_name_pattern: ".*Google Docs.*\\.gdoc|.*Google Sheets.*\\.gsheet|.*Google Slides.*\\.gslides"
+reset_file_content_on_revert_flow: true
+finder_create_file_handler_timeout_ms: 600000
+content_cache_reset_pinned_counter: 0
+repair_stable_id_reuse: true
+fuse_symlink_to_shortcut_support: true
+fuse_symlink_create_support: true
+fuse_symlink_read_support: true
+account_update_sec: 86400
+test_value_0: 0
+test_value_1: 0
+test_value_2: 0
+test_value_3: 0
+test_value_4: 0
+test_value_5: 0
+test_value_9: 0
+dokan_allow_optimistic_release: true
+max_parallel_resumable_uploads: 1
+dokan_driver_request_batching: true
+handle_unauthorized_resumable_uploads: true
+content_cache_capacity_heuristic: EXCLUDE_NONEVICTABLE
+dokan_fcb_garbage_collection_interval_ms: 2000
+photos_extensions: "jpg,jpeg,jpe,png,gif,heif,heic,tif,tiff,webp,bmp,dib,ico,jp2,j2c,jpf,j2k,jpx,dng,raw,arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,rdc,rw2,srf,srw,sr2,x3f,3fr"
+videos_extensions: "3g2,3gp,asf,avi,divx,flv,m2t,m2ts,m4v,mkv,mmv,mng,mod,mov,mp4,mpe,mpg,mpeg,mts,ogv,qt,tod,webm,wmv"
+disable_spotlight_permission_preheat: true
+photos_debounce_edit_time_ms: 1800000
+empty_file_with_open_handle_upload_delay_ms: 600000
+enable_photo_min_size_filtering: true
+support_local_create_shared_drives: false
+subscription_task_throttle_time_ms: 300000
+subscription_task_max_operations: 50
+emm_get_serial_via_wmi_on_windows: true
+max_bytes_per_fetch_content_request: 268435456
+is_dasher_user: false
+lookup_spam_detection_time_unit_ms: 1000
+lookup_spam_detection_min_number_of_events: 100
+lookup_spam_detection_duration_ms: 600000
+open_spam_detection_time_unit_ms: 1000
+open_spam_detection_min_number_of_events: 100
+open_spam_detection_duration_ms: 600000
+photos_max_simultaneous_uploads: 3
+photos_hq_charged_expectation: true
+enable_cse: false
+disable_security_update_enabled_cloud_change: true
+dokan_use_fsctl_events: true
+photos_extensions_to_ignore: "crdownload"
+metadata_cache_update_counter: 1
+mdcu_max_item_count_per_request: 1000
+emm_send_device_encryption_status: false
+emm_send_device_screen_lock_status: false
+dokan_disable_file_network_physical_name_info: true
+file_provider_cache_reset_counter: 0
+content_cache_entry_cache_implementation: ARC
+migration_local_scan_fatal_statuses_mac: ""
+enable_dynamic_list_changes_page_sizing: true
+dynamic_page_sizing_min_page_size: 1
+dynamic_page_sizing_min_capacity_reached_count: 5
+dynamic_page_sizing_increase_frequency_threshold_ms: 600000
+dynamic_page_sizing_decrease_frequency_threshold_ms: 300000
+min_operation_batch_size: 2
+enable_smb_spotlight_rpc: true
+throttled_qps_for_spamming_process: 50
+send_mtime_updates_to_drive: false
+send_atime_updates_to_drive: false
+file_provider_list_batch_size_multiplier: 10
+file_provider_update_batch_size_multiplier: 10
+smb_unmount_with_diskutil: false
+dokan_pull_event_ahead: true
+dokan_fcb_avl_table: true
+min_spamming_process_throttling_time_ms: 600000
+max_spamming_process_throttling_time_ms: 18000000
+use_modern_feature_flags: LAUNCH_DARKLAUNCH
+enable_actual_spam_throttling: false
+disable_spam_throttling_on_write_duration_ms: 600000
+file_provider_disabled_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_mount_point_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_migration_learn_more_url: "https://support.google.com/drive/answer/12178485"
+file_provider_evict_on_content_change: false
+file_provider_activation_max_retry_backoff_duration_ms: 120000
+file_provider_retry_on_wait_for_domain_init_failure: true
+file_provider_disable_cse_cleanup_batch_size: 0
+
+2022-09-14T16:44:36.014ZE [19644:MediaManagerThread] root_preference_manager.cc:1718:PushRoots Pushing SlurpRoots had a non-success status: Status::UNSUPPORTED
+2022-09-14T16:44:36.030ZI [16764:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-09-14T16:44:36.033ZE [19644:MediaManagerThread] root_preference_manager.cc:1724:PushRoots Pushing MirrorRoots had a non-success status: Status::UNSUPPORTED
+2022-09-14T16:44:36.340ZE [19924:core_104407529297066504359] shared_config_win.cc:30:IsExplorer Error getting module of process 19236: 0x12B
+2022-09-14T16:44:36.340ZE [19924:core_104407529297066504359] shared_config_win.cc:30:IsExplorer Error getting module of process 19244: 0x57
+2022-09-14T16:44:36.368ZE [19924:core_104407529297066504359] shared_config_win.cc:30:IsExplorer Error getting module of process 19916: 0x18
+2022-09-14T16:44:36.368ZI [19924:core_104407529297066504359] shared_config_win.cc:128:RefreshExplorerPids New explorer PIDs 1: 11716
+2022-09-14T16:44:36.374ZI [19924:core_104407529297066504359] stream.cc:615:InitCelloFS new_user=false
+2022-09-14T16:44:36.377ZI [19924:core_104407529297066504359] platform.cc:218:SetLocalTitleCaseSensitive Local filenames are set to be case insensitive.
+2022-09-14T16:44:36.402ZI [19928:MetricsTransportThread] legacy_metrics_transport.cc:388:ProcessRequestsOnBackgroundThread Metrics failed to send, Status::TEMPORARILY_UNAVAILABLE
+2022-09-14T16:44:36.405ZI [19924:core_104407529297066504359] cello_fs.cc:391:InitInternal Content cache at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\content_cache
+2022-09-14T16:44:36.405ZI [19924:core_104407529297066504359] cello_fs.cc:396:InitInternal Thumbnail cache at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\thumbnails_cache
+2022-09-14T16:44:36.405ZI [19924:core_104407529297066504359] cello_fs.cc:416:InitInternal Sqlite DB at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\metadata_sqlite_db
+2022-09-14T16:44:36.407ZE [19924:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-09-14T16:44:36.418ZI [19924:core_104407529297066504359] file_system_change_replayer.cc:95:operator() Cloud change replayer client ID: 16776
+2022-09-14T16:44:36.420ZI [19924:core_104407529297066504359] network_status_listener_win.cc:143:ListenForNetworkStatusChange Callback registered.
+2022-09-14T16:44:36.426ZI [19924:core_104407529297066504359][STRM] content_cache.cc:276:Initialize Content cache capacity (bytes): 4611686018427386880
+2022-09-14T16:44:36.426ZI [19924:core_104407529297066504359][STRM] content_cache.cc:294:Initialize Sparse files supported: true
+2022-09-14T16:44:36.428ZI [20136:Blocking Disk IO] content_cache.cc:407:InitializeOnIOThread Cache index at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\content_cache\chunks.db
+2022-09-14T16:44:36.442ZI [19924:core_104407529297066504359][STRM] content_cache.cc:276:Initialize Content cache capacity (bytes): 104857600
+2022-09-14T16:44:36.442ZI [19924:core_104407529297066504359][STRM] content_cache.cc:294:Initialize Sparse files supported: true
+2022-09-14T16:44:36.443ZI [20136:Blocking Disk IO] content_cache.cc:407:InitializeOnIOThread Cache index at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\thumbnails_cache\chunks.db
+2022-09-14T16:44:36.467ZI [19924:core_104407529297066504359][STRM] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 300, with each request requiring 10 tokens
+2022-09-14T16:44:36.467ZI [19924:core_104407529297066504359][STRM] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 300, with each request requiring 10 tokens
+2022-09-14T16:44:36.467ZI [19924:core_104407529297066504359][STRM] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 1000, with each request requiring 10 tokens
+2022-09-14T16:44:36.490ZI [19924:core_104407529297066504359][STRM] metrics_delegate.h:260:RecordInitializeLatencies KBytes read from disk during startup: 780
+2022-09-14T16:44:36.498ZI [19924:core_104407529297066504359] metadata_update_manager.cc:373:UpdateInternal (stream) All MDCU batches are completed.
+2022-09-14T16:44:36.498ZI [19924:core_104407529297066504359] sync_engine.cc:1839:MaybeStartRepeatingPushTaskTimer Starting repeating push task timer with interval 30000ms
+2022-09-14T16:44:36.501ZI [19924:core_104407529297066504359] sync_engine.cc:1805:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+
+2022-09-14T16:44:36.504ZI [19924:core_104407529297066504359] virtual_folders.cc:173:Init Local folders at: C:\Users\Sewcary\AppData\Local\Google\DriveFS\104407529297066504359\local_folders
+2022-09-14T16:44:36.516ZE [19924:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-09-14T16:44:36.520ZI [19924:core_104407529297066504359][STRM] fetch_task.cc:578:RunInternal Largest local change id for My Drive at startup: 428225
+2022-09-14T16:44:36.574ZI [19924:core_104407529297066504359] network_status_listener_win.cc:143:ListenForNetworkStatusChange Callback registered.
+2022-09-14T16:44:36.618ZI [19924:core_104407529297066504359][MIRR] metrics_delegate.h:260:RecordInitializeLatencies KBytes read from disk during startup: 579
+2022-09-14T16:44:36.622ZI [19924:core_104407529297066504359] metadata_update_manager.cc:373:UpdateInternal (mirror) All MDCU batches are completed.
+2022-09-14T16:44:36.622ZI [19924:core_104407529297066504359] sync_engine.cc:1839:MaybeStartRepeatingPushTaskTimer Starting repeating push task timer with interval 30000ms
+2022-09-14T16:44:36.622ZI [19924:core_104407529297066504359] sync_engine.cc:1805:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+
+2022-09-14T16:44:36.623ZI [19924:core_104407529297066504359] experiments/phenotype/cpp/phenotype_impl.cc:470:UNKNOWN ShouldSync: Last sync was only 957 seconds ago
+2022-09-14T16:44:36.626ZI [19924:core_104407529297066504359] core.cc:984:GetFeatureConfig Polling latest feature flags
+2022-09-14T16:44:36.628ZI [20096:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:470:UNKNOWN ShouldSync: Last sync was only 957 seconds ago
+2022-09-14T16:44:36.629ZI [20096:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:754:UNKNOWN PerformSync: No reason to sync. Returning kOk
+2022-09-14T16:44:36.629ZI [20096:Experiments] play/games/portablephenotype/portable_phenotype_client_impl.cc:242:UNKNOWN Successfully fetched latest configuration for package: drive_fs_ph (1 ms)
+2022-09-14T16:44:36.633ZI [19924:core_104407529297066504359][MIRR] fetch_task.cc:578:RunInternal Largest local change id for My Drive at startup: 428225
+2022-09-14T16:44:36.681ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:44:36.691ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:44:36.691ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:44:36.692ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T16:44:36.772ZI [19828:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-09-14T16:44:36.778ZI [19944:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-09-14T16:44:37.724ZI [16960:client_io_thread_COM] experiments/phenotype/cpp/phenotype_impl.cc:1307:UNKNOWN RegisterPackage: Sync completed with status Ok
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_onboarding, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=multi_account_preferences, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=generate_diagnostic_info, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_modern_metrics_implementation, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_hqpc_exemptions, value=false
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=switchblade_open_files_via_shortcut, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_osxfuse_read_blacklist, value=false
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_kernel_based_change_replayer, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=changelog_download_throttle_time_ms, value=16000
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_fileprovider_for_migrated_users, value=false
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=raw_photos_extension, value=arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,raw,rdc,rw2,srf,srw,sr2,x3f,3fr
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=dokan_suppress_file_name_in_event_context, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_goose_mode, value=false
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=test_feature_flag_with_escape, value=New Google Docs\.gdoc|New Google Sheets\.gsheet|New Google Slides\.gslides
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirror_merge_folder_warning, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_fst, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=gui_bandwidth_throttling_control, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_photos, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_storage_saver_strings, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=macos_copy_resource_to_config_dir, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_support, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=hidden_attr_support, value=true
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fcm_implementation_type, value=2
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=default_ui_theme, value=1
+2022-09-14T16:44:38.100ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_force_extension_startup, value=false
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_concurrent_merged_read_optimization, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=attach_logs_to_feedback_option, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_unique_user_id, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_send_scopes, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_apl_upload, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=photos_disable_debouncer_for_apl, value=false
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_switchblade, value=false
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_content_bytes_before_cancel_multiplier, value=1
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_migration_to_user_id_directory, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_auto_enable_domains, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=metadata_db_vacuum, value=false
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=unlocked_mac_getxattr, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirrored_my_drive, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_context_menu_via_ipc, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=max_slow_operation_minidump_count, value=0
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=apiary_free_mode, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_read_backwards_heuristics, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=debounce_ms, value=200
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=quicklook_thumbnails, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=purge_non_system_apl_photos_roots, value=false
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shell_ipc, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=mirror_sync, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_retry_manager, value=false
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_nas_to_photos, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=async_dokan_bridge, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=block_mac_antivirus, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_photos, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=preferences_dialog, value=true
+2022-09-14T16:44:38.101ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=rescue_accounts, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_links_use_item_id, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=replace_local_id_with_cloud_id_when_pushing_update, value=false
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=onboarding, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_migration, value=false
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_noop_test_feature_2, value=false
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_detect_user_enable_change_by_notification, value=false
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_shared_drives_api, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=local_machine_override_preferences, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=sync_client_migration, value=false
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=cancel_upload_option, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=migrate_to_account_directories, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_multi_account, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_spork_notifications, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_shell_ipc_based_progress, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=computers_virtual_folder, value=true
+2022-09-14T16:44:38.102ZI [19924:core_104407529297066504359] proto_util.cc:29:DeserializeEnum Failed to convert LAUNCH_DARKLAUNCH to int32 for enum, falling back on name
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_redirect_for_editor_files, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_drive, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_win7_patch_required_notification, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_projector_for_office_files, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_rename_td_notification, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=request_team_drive_customer_id, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=emm_fully_qualified_hostname, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link_notification, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_file_organizer_capabilities, value=true
+2022-09-14T16:44:38.102ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=customer_type, value=CONSUMER
+2022-09-14T16:44:38.102ZI [19924:core_104407529297066504359] core.cc:899:TestConfigDifferences Modern config snapshot: 170 added, 5 removed, 4 changed, 206 matched
+2022-09-14T16:44:38.102ZI [16764:NonCelloThread] global_features_manager.cc:310:SetGlobalFeatures Set global features for account 104407529297066504359
+2022-09-14T16:44:38.102ZI [16764:NonCelloThread] global_features_manager.cc:343:CompositeAll Compositing global features based on 1 accounts
+2022-09-14T16:44:38.102ZI [16764:NonCelloThread] global_features_manager.cc:359:CompositeAll Composited global features *WITHOUT* overrides: drive_dot: true
+share_dialog: true
+pause_syncing_option: true
+bandwidth_throttling: true
+structured_logging: true
+context_menu_force_refresh_folder: true
+status_window_click_show_file_in_file_manager: true
+outlook_addin: false
+autostart_preference: true
+gui_autostart_option: true
+mojave_overlays_fix: false
+curl_proxy_authentication: true
+gui_reset_preferences_menu_option: true
+force_refresh_folder_normal_menu: false
+structured_log_max_file_size_kbytes: 2048
+ask_to_copy_files_for_pending_uploads: true
+inform_users_of_pending_uploads: true
+same_content_dedupe_interval_ms: 600000
+dedupe_interval_ms: 2000
+support_status_notification: true
+deprecation_date: "2023-08-30"
+deprecation_warning_threshold: 30
+min_supported_os_version: "0.0.0"
+crash_oom_threshold_mb: 1048576
+allow_search: true
+finish_syncing_files_option: true
+osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+osxfuse_lock_abort_test: false
+osxfuse_sched_flags_offset_override: 4294967295
+enforce_single_parent: true
+add_shortcut_menu: true
+meet_outlook_addin: false
+spotlight_timestamp_fsctl_support: true
+mac_disk_arbitration_unmount: true
+current_drive_fs_version: "63.0.5.0"
+file_revisions_virtual_folder: true
+unlocked_mac_buf_unmap: true
+use_mac_fileprovider: false
+trim_parents_during_cloud_merge: true
+trim_parents_during_commit: true
+create_gsuite_file: true
+switchblade: true
+file_provider_quick_access_polling_interval_sec: 43200
+show_quick_access_in_search_dialog: true
+include_user_email_in_feedback: true
+mac_smb_port: 0
+fileprovider_signal_debounce_ms: 250
+osxfuse_sched_flags_offset_override_arm: 4294967295
+current_os_version: "Windows/10.0.19044"
+cancel_com_calls: true
+enable_file_provider_migration: true
+logging_on_cello_thread_startup: false
+mac_smb_dialect_mode: 10
+dokan_set_internal_file_index: true
+context_menu_create_editor_files: false
+file_revisions_file_provider: true
+mac_smb_nobrowse: true
+special_folder_change_notification: true
+repair_kext_management_directory: true
+instrument_http_client: true
+show_offline_files_menu_option: true
+enable_mirror_roots_context: true
+com_api_thread_stuck_threshold_sec: 0
+num_metrics_batches_per_request: 70
+max_metrics_per_event_code_per_batch: 200
+bns_migration_window_closed: true
+encrypt_and_upload: false
+show_non_running_accounts: false
+mac_smb_mount_by_ip: true
+enable_mount_in_sidebar_setting: true
+allow_multiple_smb_connections: false
+persistent_smb_port_auto_selection: true
+file_provider_disabled_notification_interval_mins: 0
+enable_mount_as_folder_setting: true
+enable_modern_feature_flags: true
+enable_search_hot_key: true
+file_provider_failover_for_home_dir_fs_type: true
+file_provider_mirror_switch_unpinned_item_batch_size: 2000
+file_provider_enable_ipc_root_symlink: true
+file_provider_pause_syncing_option: true
+file_provider_create_existing_dir_id_succeeds: false
+file_provider_create_existing_file_id_succeeds: false
+file_provider_notify_mount_point_changed_with_mirror: false
+file_provider_show_migration_notification_based_on_volume: true
+file_provider_handle_exact_existing_create_as_reimport: true
+file_provider_min_partial_read_size: 4294967296
+file_provider_enable_read_ahead: false
+switchblade_on_websockets: false
+mac_smb_nodatacache: false
+
+2022-09-14T16:44:38.103ZI [19924:core_104407529297066504359] core.cc:683:ApplyFeatureConfigChange No changes to account features or admin settings.
+2022-09-14T16:44:38.140ZI [19924:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:210:Mount Mounting file system with requested mount point: G
+2022-09-14T16:44:38.140ZI [19924:core_104407529297066504359] third_party/dokan/src/dokancc/device.cc:42:OpenGlobalDevice Opened global dokan device: \\.\GoogleDriveFS_3758
+2022-09-14T16:44:38.142ZI [19924:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:264:Mount Successfully mounted device name: \Volume{0946a5b5-f5ea-3949-be9f-060c193265ca} with mount point: G:
+2022-09-14T16:44:38.142ZI [19924:core_104407529297066504359] dispatch_monitor.cc:41:Mounted Starting dispatch monitor.
+2022-09-14T16:44:38.142ZI [19924:core_104407529297066504359] operation_monitor.cc:75:Start Starting operation monitor with poll interval 4000 and slow operation threshold 20000
+2022-09-14T16:44:38.143ZI [19924:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:272:Mount Mounted callback returned.
+2022-09-14T16:44:38.143ZI [19924:core_104407529297066504359] third_party/dokan/src/dokancc/file_system.cc:418:ReceiveIo The file system is now safe to access.
+2022-09-14T16:44:38.143ZI [19924:core_104407529297066504359] cello_fs.cc:3973:OnMountpointReady FileProvider mounted: false
+2022-09-14T16:44:38.148ZE [16764:NonCelloThread] preferences_manager.cc:592:UpdateAccountPreferences Called with empty account data which was also missing from store
+2022-09-14T16:44:38.149ZI [19924:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:38.150ZI [19924:core_104407529297066504359] curl_api.cc:1314:Create SSL verification with built in certificates
+2022-09-14T16:44:38.150ZE [19924:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-09-14T16:44:38.150ZI [19924:core_104407529297066504359] push_notification_manager.cc:102:PushNotificationManager Jitter introduced to backoff start, using 840ms.
+2022-09-14T16:44:38.150ZI [19924:core_104407529297066504359] token_bucket.cc:249:Create TokenBucket initialized with max_bucket_size of 1, with each request requiring 11.1111 tokens
+2022-09-14T16:44:38.151ZE [19924:core_104407529297066504359] metrics_delegate.cc:67:ParseAssertionIdFeatureFlagList Got empty (or whitespace only) assertion ids
+2022-09-14T16:44:38.151ZI [19924:core_104407529297066504359] core.cc:290:operator() InitInternalSync completed with status Status::SUCCESS
+2022-09-14T16:44:38.156ZE [8036:NonCelloThread] trash_folder.cc:237:RegisterRecycleBinSize Failed to RegOpenKeyEx for Recycle Bin size: 0x2
+2022-09-14T16:44:38.215ZI [19684:VolumeListenerThread] volume_listener_win.cc:335:VolumeAdded Volume added: G:\
+2022-09-14T16:44:38.232ZI [19684:VolumeListenerThread] volume_listener_win.cc:448:GetVolumeFromGuidPath \\?\Volume{44d190ad-344c-11ed-93fe-b0fc361cc598}\ description. name: Google Drive, uuid: 44d190ad-344c-11ed-93fe-b0fc361cc598, device_number: 428019990, mount_point: G:\, fs_type: DriveFS, device_type: Internal
+2022-09-14T16:44:38.233ZI [19644:MediaManagerThread] device_status_service.cc:318:AddMediaInternal Media was added [Media: media_id="44d190ad-344c-11ed-93fe-b0fc361cc598" name="Google Drive" file_system="DriveFS" mount_point(raw)="G:\" device_type="Internal" device_number=428019990 writable="true"]
+2022-09-14T16:44:38.240ZE [19644:MediaManagerThread] root_preference_manager.cc:1718:PushRoots Pushing SlurpRoots had a non-success status: Status::UNSUPPORTED
+2022-09-14T16:44:38.240ZI [16764:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-09-14T16:44:38.241ZE [19644:MediaManagerThread] root_preference_manager.cc:1724:PushRoots Pushing MirrorRoots had a non-success status: Status::UNSUPPORTED
+2022-09-14T16:44:38.274ZI [15220:NonCelloThread] third_party/dokan/src/dokancc/file_system.cc:393:PostStart PostStart completed.
+2022-09-14T16:44:38.644ZI [16764:NonCelloThread] controller_win.cc:252:Start Starting Dot controller.
+2022-09-14T16:44:38.646ZI [16764:NonCelloThread] presence_tracker.cc:550:NotifyPauseSyncing Syncing is on
+2022-09-14T16:44:38.646ZI [19924:core_104407529297066504359] platform.cc:186:SetIsBackgroundSyncingEnabled Background syncing has been enabled
+2022-09-14T16:44:38.646ZI [16764:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-09-14T16:44:38.646ZE [20184:PhotosSlurpTransporter] photos_slurp_transporter.cc:198:operator() Attempt to pause/resume before successful init
+2022-09-14T16:44:38.648ZI [16764:NonCelloThread] client.cc:4108:operator() Started core successfully for account [AccountToken: persistable_token="104407529297066504359"]
+2022-09-14T16:44:38.648ZI [16764:NonCelloThread] client.cc:4313:operator() Started 1 of 1 core(s).
+2022-09-14T16:44:38.648ZI [16764:NonCelloThread] drive_fs.cc:414:operator() Startup tracing disabled
+2022-09-14T16:44:38.649ZI [20436:trace_writer_thread] instrumentation.cc:587:operator() Writing Chrome Trace to C:\Users\Sewcary\AppData\Local\Google\DriveFS\Logs\startup_trace_2022-09-14T16_44_38.json
+2022-09-14T16:44:38.650ZI [16764:NonCelloThread] sidebar_utils_win.cc:41:CreateFavorite Favorites are obsolete for Windows 10 and later
+2022-09-14T16:44:38.651ZI [16764:NonCelloThread] client.cc:3630:NotifyIfDeprecated Verifying deprecation status to notify the user.
+2022-09-14T16:44:38.651ZI [16764:NonCelloThread] support_status.cc:98:IsCurrentOSGreaterOrEqual Current OS Version 10.0.19044.
+2022-09-14T16:44:38.651ZI [16764:NonCelloThread] support_status.cc:55:GetCurrentSupportStatus OS supported: Yes
+2022-09-14T16:44:38.651ZI [16764:NonCelloThread] support_status.cc:56:GetCurrentSupportStatus Days left to deprecate: 350
+2022-09-14T16:44:38.651ZI [16764:NonCelloThread] support_status.cc:98:IsCurrentOSGreaterOrEqual Current OS Version 10.0.19044.
+2022-09-14T16:44:38.651ZI [16764:NonCelloThread] client.cc:989:NotifyIfMountPointChanged Account [AccountToken: persistable_token="104407529297066504359"] mounted at 'G:'
+2022-09-14T16:44:38.654ZI [16764:NonCelloThread] status_dialog.cc:441:OnAccountsChanged A new account was added
+2022-09-14T16:44:38.665ZI [19924:core_104407529297066504359] slurp.cc:168:operator() Drive Slurp: Received new SyncRoots: [
+]
+2022-09-14T16:44:38.665ZI [19924:core_104407529297066504359] slurp.cc:102:GetSlurpRootsDiff Generated Diff with roots_to_slurp: 0 roots_to_purge: 0 roots_to_stop: 0 disconnected_roots: 0 roots_to_forget: 0
+2022-09-14T16:44:38.665ZI [19924:core_104407529297066504359] slurp.cc:168:operator() Photos Slurp: Received new SyncRoots: [
+]
+2022-09-14T16:44:38.665ZI [19924:core_104407529297066504359] slurp.cc:102:GetSlurpRootsDiff Generated Diff with roots_to_slurp: 0 roots_to_purge: 0 roots_to_stop: 0 disconnected_roots: 0 roots_to_forget: 0
+2022-09-14T16:44:38.666ZI [16764:NonCelloThread] uiext.cc:69:SaveFlagsToRegistry Set Explorer extension keys.
+2022-09-14T16:44:38.666ZI [20196:mirror_104407529297066504359_COM] mirror.cc:314:MirrorRoots Received new mirror roots: []
+2022-09-14T16:44:38.671ZI [20436:trace_writer_thread] instrumentation.cc:589:operator() Trace successfully written
+2022-09-14T16:44:39.142ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Entered event start.
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Finding mount entry; lockGlobal = 0; mount point = \DosDevices\G:.
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log No mount entry found.
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Creating disk device; mount point = G; mount ID = 1l
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Set volume security descriptor successfully.
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log disk device name: "\Device\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}"; symbolic link name: "
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log \DosDevices\Global\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}"; mount point: "\DosDevices\G:"
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log ; type: 8
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log SymbolicLink: "\DosDevices\Global\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}" -> "\Device\Vol
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log ume{0946a5b5-f5ea-3949-be9f-060c193265ca}" created
+2022-09-14T16:44:39.166ZI [20468:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Inserted new mount entry.
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Event start using mount ID: 1; device name: \Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}.
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mounting volume using MountPoint "\DosDevices\G:" device "\Device\Volume{0946a5b5-f5ea-3949-be9
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log f-060c193265ca}"
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Finding mount entry; lockGlobal = 1; mount point = .
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Found entry with matching device name: \Device\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mount entry found: \DosDevices\G: -> \Device\Volume{0946a5b5-f5ea-3949-be9f-060c193265ca}
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mount manager is querying for desired drive letter. ForceDriveLetterAutoAssignment = 0
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Returning suggested name: "\DosDevices\G:"
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Link created: "\??\Volume{44d190ad-344c-11ed-93fe-b0fc361cc598}"
+2022-09-14T16:44:39.171ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Link created: "\DosDevices\G:"
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Link name matches the current one.
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Mounting successfully done.
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Returning actual mount point G
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Finished event start with status 1 and flags: 0
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\avast! sandbox"
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\## aswSnx private storage"
+2022-09-14T16:44:39.183ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\## aswSnx private storage"
+2022-09-14T16:44:39.188ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Handle created before IOCTL_EVENT_WAIT for file "\## aswSnx private storage"
+2022-09-14T16:44:39.189ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Starting FCB garbage collector with 2000 ms interval.
+2022-09-14T16:44:39.189ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Opened file with user mode dispatch blocked: "\__drive_fs_keepalive"
+2022-09-14T16:44:39.189ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Opened keepalive file from process 16776.
+2022-09-14T16:44:39.189ZI [11756:NonCelloThread] third_party/dokan/src/dokancc/driver_log_subscriber.cc:85:Log Activating keepalive handle from process 16776.
+2022-09-14T16:44:40.174ZE [19924:core_104407529297066504359][MIRR] metrics_delegate.h:507:RecordChangesFetchedCount No histogram for unknown poll reason
+2022-09-14T16:44:49.466ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:44:49.468ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:44:49.471ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:44:49.479ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:44:49.479ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:44:49.480ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:44:49.480ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:44:49.480ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:44:49.481ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:44:49.482ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:44:49.482ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:44:49.482ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:45:00.910ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:45:00.910ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:45:00.915ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:45:00.922ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:45:00.922ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:45:00.924ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:45:00.925ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:45:00.926ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:45:00.927ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:45:00.929ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:45:00.930ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:45:00.931ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:45:01.257ZI [19924:core_104407529297066504359] push_notification_manager.cc:160:Initialize Reusing GCM auth_data
+2022-09-14T16:45:01.536ZI [19924:core_104407529297066504359] gcm.cc:355:operator() GCM successfully connected.
+2022-09-14T16:45:01.536ZI [19924:core_104407529297066504359] push_notification_manager.cc:241:operator() Successfully connected PushNotificationManager.
+2022-09-14T16:45:37.733ZE [16836:stderr_thread] stderr: I0000 00:00:1663173937.733443   19872 portable_clearcut_uploader.cc:69] Calling SendToClearcutAsync
+2022-09-14T16:45:37.733ZI [19872:NonCelloThread] portable_clearcut_uploader.cc:69:UNKNOWN Calling SendToClearcutAsync
+2022-09-14T16:45:37.735ZE [16836:stderr_thread] stderr: I0000 00:00:1663173937.735757   19872 portable_clearcut_uploader.cc:120] Returning future status
+2022-09-14T16:45:37.735ZI [19872:NonCelloThread] portable_clearcut_uploader.cc:120:UNKNOWN Returning future status
+2022-09-14T16:45:37.960ZE [16836:stderr_thread] stderr: I0000 00:00:1663173937.960433   16764 portable_clearcut_uploader.cc:146] Successfully sending LogRequest to clearcut backend
+2022-09-14T16:45:37.960ZI [16764:NonCelloThread] portable_clearcut_uploader.cc:146:UNKNOWN Successfully sending LogRequest to clearcut backend
+2022-09-14T16:46:36.622ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1860 MBytes
+2022-09-14T16:46:36.623ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T16:46:36.623ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 7%
+2022-09-14T16:46:36.623ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 9303 MiB
+2022-09-14T16:46:36.623ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 7%
+2022-09-14T16:47:30.802ZE [19924:core_104407529297066504359] cello_fs.cc:1347:GetPathByEntryId Entry doesn't have stable id.
+2022-09-14T16:47:30.802ZE [19924:core_104407529297066504359] folder_thumbnails_win.cc:346:NotifyDesktopIniChanged Can't get path by entry id: Status::UNAVAILABLE_RESOURCE.
+2022-09-14T16:47:36.641ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 2474 MBytes
+2022-09-14T16:47:36.641ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T16:47:36.641ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 5%
+2022-09-14T16:47:36.642ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 12374 MiB
+2022-09-14T16:47:36.642ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 5%
+2022-09-14T16:48:36.656ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 2599 MBytes
+2022-09-14T16:48:36.656ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T16:48:36.657ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 5%
+2022-09-14T16:48:36.657ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 12999 MiB
+2022-09-14T16:48:36.657ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 5%
+2022-09-14T16:49:50.189ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:49:50.190ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:49:50.193ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:49:50.202ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:49:50.202ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:49:50.203ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:49:50.204ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:49:50.205ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:49:50.205ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:49:50.205ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:49:50.205ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:49:50.207ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:49:50.256ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:49:50.256ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:49:50.261ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T16:49:50.268ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:49:50.268ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:49:50.269ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T16:49:50.269ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:49:50.269ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:49:50.270ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:49:50.270ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T16:49:50.270ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:49:50.272ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T16:55:06.752ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 2451 MBytes
+2022-09-14T16:55:06.752ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T16:55:06.752ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 5%
+2022-09-14T16:55:06.752ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 12257 MiB
+2022-09-14T16:55:06.752ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 5%
+2022-09-14T16:56:06.755ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 2071 MBytes
+2022-09-14T16:56:06.755ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T16:56:06.755ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 6%
+2022-09-14T16:56:06.755ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 10359 MiB
+2022-09-14T16:56:06.755ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 6%
+2022-09-14T16:56:36.766ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 2359 MBytes
+2022-09-14T16:56:36.766ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T16:56:36.766ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 5%
+2022-09-14T16:56:36.767ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 11799 MiB
+2022-09-14T16:56:36.767ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 5%
+2022-09-14T17:00:06.815ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1918 MBytes
+2022-09-14T17:00:06.815ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:00:06.815ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 7%
+2022-09-14T17:00:06.815ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 9591 MiB
+2022-09-14T17:00:06.816ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 7%
+2022-09-14T17:00:36.828ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1722 MBytes
+2022-09-14T17:00:36.828ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:00:36.828ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 7%
+2022-09-14T17:00:36.828ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 8614 MiB
+2022-09-14T17:00:36.828ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 7%
+2022-09-14T17:01:06.841ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1895 MBytes
+2022-09-14T17:01:06.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:01:06.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 7%
+2022-09-14T17:01:06.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 9478 MiB
+2022-09-14T17:01:06.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 7%
+2022-09-14T17:01:36.841ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 2032 MBytes
+2022-09-14T17:01:36.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:01:36.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 6%
+2022-09-14T17:01:36.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 10160 MiB
+2022-09-14T17:01:36.841ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 6%
+2022-09-14T17:03:36.860ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1913 MBytes
+2022-09-14T17:03:36.860ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:03:36.860ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 7%
+2022-09-14T17:03:36.861ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 9567 MiB
+2022-09-14T17:03:36.861ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 7%
+2022-09-14T17:04:36.510ZI [19924:core_104407529297066504359] sync_engine.cc:1805:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428225
+fetching_changes: false
+
+2022-09-14T17:04:36.634ZI [19924:core_104407529297066504359] sync_engine.cc:1805:operator() Sync engine activity state:
+operation_queue_size: 0
+all_downloads: 0
+operation_queue_unique_size: 0
+change_ids_up_to_date: true
+largest_local_change_id: 428225
+fetching_changes: false
+
+2022-09-14T17:05:06.888ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1430 MBytes
+2022-09-14T17:05:06.888ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:05:06.889ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 9%
+2022-09-14T17:05:06.889ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 7154 MiB
+2022-09-14T17:05:06.889ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 9%
+2022-09-14T17:05:36.894ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1277 MBytes
+2022-09-14T17:05:36.894ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:05:36.894ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 10%
+2022-09-14T17:05:36.894ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 6389 MiB
+2022-09-14T17:05:36.894ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 10%
+2022-09-14T17:06:36.901ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1463 MBytes
+2022-09-14T17:06:36.901ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:06:36.901ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 9%
+2022-09-14T17:06:36.902ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 7318 MiB
+2022-09-14T17:06:36.902ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 9%
+2022-09-14T17:07:06.903ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1632 MBytes
+2022-09-14T17:07:06.904ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:07:06.904ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 8%
+2022-09-14T17:07:06.904ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 8161 MiB
+2022-09-14T17:07:06.904ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 8%
+2022-09-14T17:07:49.528ZE [21032:CurlWorker0] curl_api.cc:136:StatusFromCurlCode Unsupported curl code 56, mapping to NETWORK_TRANSPORT_ERROR: Send failure: Connection was reset
+2022-09-14T17:07:49.531ZE [19924:core_104407529297066504359] gcm.cc:582:OnConnectError GCM connection error: Status::NETWORK_TRANSPORT_ERROR
+2022-09-14T17:07:49.531ZE [19924:core_104407529297066504359] push_notification_manager.cc:481:OnGCMConnection GCM Connection failed: Status::NETWORK_TRANSPORT_ERROR
+2022-09-14T17:07:49.531ZE [19924:core_104407529297066504359] push_notification_manager.cc:51:HandleStatus GCM connect failed with error Status::NETWORK_TRANSPORT_ERROR, schedule retry
+2022-09-14T17:07:49.741ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:49.756ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:49.768ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:07:49.771ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:49.783ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:07:49.784ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state OFFLINE
+2022-09-14T17:07:49.784ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:07:49.785ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state OFFLINE
+2022-09-14T17:07:49.785ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to offline
+2022-09-14T17:07:49.785ZI [19944:proxy_resolver_thread] proxy.cc:106:operator() Network status changed, resetting proxy to UNKNOWN
+2022-09-14T17:07:49.785ZI [20184:PhotosSlurpTransporter] closure_retry.cc:44:operator() Online status changed to false
+2022-09-14T17:07:49.787ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state OFFLINE
+2022-09-14T17:07:49.787ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to offline
+2022-09-14T17:07:50.392ZI [19944:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-09-14T17:07:50.392ZE [21032:CurlWorker0] curl_api.cc:141:StatusFromCurlCode Remapped curl code 6 to Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:50.392ZE [19924:core_104407529297066504359] gcm.cc:582:OnConnectError GCM connection error: Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:50.392ZE [19924:core_104407529297066504359] push_notification_manager.cc:481:OnGCMConnection GCM Connection failed: Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:50.392ZE [19924:core_104407529297066504359] push_notification_manager.cc:46:HandleStatus GCM connect failed with error Status::UNAVAILABLE_WHILE_OFFLINE and client is offline, schedule retry when online
+2022-09-14T17:07:56.273ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:56.309ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:56.310ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:56.314ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:256:CheckConnection This adapter is offline.
+2022-09-14T17:07:56.322ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:256:CheckConnection This adapter is offline.
+2022-09-14T17:07:56.323ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:256:CheckConnection This adapter is offline.
+2022-09-14T17:07:56.326ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:07:56.327ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:07:56.328ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:07:56.331ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value OFFLINE, so not notifying.
+2022-09-14T17:07:56.332ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value OFFLINE, so not notifying.
+2022-09-14T17:07:56.348ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value OFFLINE, so not notifying.
+2022-09-14T17:07:56.859ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:56.859ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:56.869ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:07:56.893ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:07:56.893ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:07:56.894ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:07:56.894ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:07:56.895ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:07:56.899ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:07:56.901ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T17:07:56.901ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to online
+2022-09-14T17:07:56.901ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T17:07:56.904ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T17:07:56.904ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to online
+2022-09-14T17:07:56.904ZI [19924:core_104407529297066504359] core.cc:554:operator() Polling feature flags since we are now online
+2022-09-14T17:07:56.904ZI [19924:core_104407529297066504359] core.cc:984:GetFeatureConfig Polling latest feature flags
+2022-09-14T17:07:56.904ZI [19944:proxy_resolver_thread] proxy.cc:106:operator() Network status changed, resetting proxy to UNKNOWN
+2022-09-14T17:07:56.904ZI [20184:PhotosSlurpTransporter] closure_retry.cc:44:operator() Online status changed to true
+2022-09-14T17:07:56.937ZI [19944:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-09-14T17:07:56.938ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-09-14T17:07:58.953ZE [21032:CurlWorker0] curl_api.cc:141:StatusFromCurlCode Remapped curl code 6 to Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.953ZE [19924:core_104407529297066504359] gcm.cc:582:OnConnectError GCM connection error: Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.953ZE [19924:core_104407529297066504359] push_notification_manager.cc:481:OnGCMConnection GCM Connection failed: Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.953ZE [19924:core_104407529297066504359] push_notification_manager.cc:51:HandleStatus GCM connect failed with error Status::UNAVAILABLE_WHILE_OFFLINE, schedule retry
+2022-09-14T17:07:58.953ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Could not resolve host: www.googleapis.com
+2022-09-14T17:07:58.953ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Closing connection 0
+2022-09-14T17:07:58.953ZE [19044:CurlWorker0] curl_api.cc:141:StatusFromCurlCode Remapped curl code 6 to Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.953ZE [19924:core_104407529297066504359] oauth_credential.cc:244:operator() Failed to refresh token. Transport error: Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.954ZE [19924:core_104407529297066504359] drive_v2_cloud_store.cc:5445:operator() Failed to request access token with status Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.954ZI [19924:core_104407529297066504359] token_bucket.cc:106:DecreaseCapacity BucketFiller decreased capacity to 150
+2022-09-14T17:07:58.954ZE [19924:core_104407529297066504359] drive_v2_cloud_store.cc:4303:DumpToLog Request 0000028BC5F3B760: 0 https://www.googleapis.com/drive/v2internal/settings?namespace=FEATURE_SWITCH&namespace=DRIVE_BE&namespace=UPLOADER transport: Status::TEMPORARILY_UNAVAILABLE reader: Status::SUCCESS
+2022-09-14T17:07:58.954ZE [19924:core_104407529297066504359] drive_v2_cloud_store.cc:4303:DumpToLog Response body 0000028BC5F3B760: (no response body)
+2022-09-14T17:07:58.954ZE [19924:core_104407529297066504359] core.cc:772:operator() Failed to fetch latest feature flags: Status::TEMPORARILY_UNAVAILABLE
+2022-09-14T17:07:58.954ZE [19924:core_104407529297066504359] core.cc:706:operator() Could not retrieve access token: Status::UNAVAILABLE_WHILE_OFFLINE
+2022-09-14T17:07:58.954ZE [19924:core_104407529297066504359] core.cc:1086:operator() Failed to fetch latest feature flags: Status::TEMPORARILY_UNAVAILABLE
+2022-09-14T17:07:58.954ZI [19924:core_104407529297066504359] core.cc:945:operator() Keeping Core running even though we couldn't fetch features.
+2022-09-14T17:08:00.588ZE [13084:CurlWorker1] curl_api.cc:136:StatusFromCurlCode Unsupported curl code 35, mapping to NETWORK_TRANSPORT_ERROR: schannel: failed to receive handshake, SSL/TLS connection failed
+2022-09-14T17:08:00.589ZE [19924:core_104407529297066504359] gcm.cc:582:OnConnectError GCM connection error: Status::NETWORK_TRANSPORT_ERROR
+2022-09-14T17:08:00.589ZE [19924:core_104407529297066504359] push_notification_manager.cc:481:OnGCMConnection GCM Connection failed: Status::NETWORK_TRANSPORT_ERROR
+2022-09-14T17:08:00.589ZE [19924:core_104407529297066504359] push_notification_manager.cc:51:HandleStatus GCM connect failed with error Status::NETWORK_TRANSPORT_ERROR, schedule retry
+2022-09-14T17:08:00.875ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:00.875ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:00.877ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:00.890ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:256:CheckConnection This adapter is offline.
+2022-09-14T17:08:00.890ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:256:CheckConnection This adapter is offline.
+2022-09-14T17:08:00.890ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:256:CheckConnection This adapter is offline.
+2022-09-14T17:08:00.892ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:08:00.892ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:08:00.892ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: offline
+2022-09-14T17:08:00.894ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state OFFLINE
+2022-09-14T17:08:00.895ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state OFFLINE
+2022-09-14T17:08:00.895ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to offline
+2022-09-14T17:08:00.895ZI [19944:proxy_resolver_thread] proxy.cc:106:operator() Network status changed, resetting proxy to UNKNOWN
+2022-09-14T17:08:00.895ZI [20184:PhotosSlurpTransporter] closure_retry.cc:44:operator() Online status changed to false
+2022-09-14T17:08:00.895ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state OFFLINE
+2022-09-14T17:08:00.895ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to offline
+2022-09-14T17:08:00.970ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:00.970ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:00.982ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:00.986ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:08:00.988ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:08:00.988ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:08:00.989ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:08:00.990ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:08:00.990ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T17:08:00.991ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T17:08:00.991ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to online
+2022-09-14T17:08:00.991ZI [19924:core_104407529297066504359] core.cc:554:operator() Polling feature flags since we are now online
+2022-09-14T17:08:00.991ZI [19944:proxy_resolver_thread] proxy.cc:106:operator() Network status changed, resetting proxy to UNKNOWN
+2022-09-14T17:08:00.992ZI [19924:core_104407529297066504359] core.cc:984:GetFeatureConfig Polling latest feature flags
+2022-09-14T17:08:00.992ZI [20184:PhotosSlurpTransporter] closure_retry.cc:44:operator() Online status changed to true
+2022-09-14T17:08:00.994ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:08:00.994ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:150:UpdateState Notifying of change to state ONLINE
+2022-09-14T17:08:00.995ZI [19924:core_104407529297066504359] cello.cc:473:operator() got notified of network change to online
+2022-09-14T17:08:01.027ZI [19944:proxy_resolver_thread] proxy.cc:173:GetProxyForUrlInternal Proxy type resolved to 0
+2022-09-14T17:08:01.028ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: timeout on name lookup is not supported
+2022-09-14T17:08:01.413ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info:   Trying 2a00:1450:4007:810::200a:443...
+2022-09-14T17:08:01.418ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Connected to www.googleapis.com (2a00:1450:4007:810::200a) port 443 (#1)
+2022-09-14T17:08:01.418ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: disabled automatic use of client certificate
+2022-09-14T17:08:01.438ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: added 36 certificate(s) from CA file '(memory blob)'
+2022-09-14T17:08:01.451ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (upload.video.google.com)
+2022-09-14T17:08:01.452ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.clients.google.com)
+2022-09-14T17:08:01.452ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.docs.google.com)
+2022-09-14T17:08:01.452ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.drive.google.com)
+2022-09-14T17:08:01.452ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) did not match against certificate name (*.gdata.youtube.com)
+2022-09-14T17:08:01.452ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: schannel: connection hostname (www.googleapis.com) validated against certificate name (*.googleapis.com)
+2022-09-14T17:08:01.455ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: We are completely uploaded and fine
+2022-09-14T17:08:01.505ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Mark bundle as not supporting multiuse
+2022-09-14T17:08:01.505ZI [19044:CurlWorker0] curl_api.cc:1027:LogCurlInfo == Info: Connection #1 to host www.googleapis.com left intact
+2022-09-14T17:08:01.519ZI [19924:core_104407529297066504359] oauth_credential.cc:390:Update Stored credential successfully
+2022-09-14T17:08:01.519ZI [20096:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:470:UNKNOWN ShouldSync: Last sync was only 1404 seconds ago
+2022-09-14T17:08:01.520ZI [20096:Experiments] experiments/phenotype/cpp/phenotype_impl.cc:754:UNKNOWN PerformSync: No reason to sync. Returning kOk
+2022-09-14T17:08:01.520ZI [20096:Experiments] play/games/portablephenotype/portable_phenotype_client_impl.cc:242:UNKNOWN Successfully fetched latest configuration for package: drive_fs_ph (0 ms)
+2022-09-14T17:08:02.081ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_onboarding, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=multi_account_preferences, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=generate_diagnostic_info, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_modern_metrics_implementation, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_hqpc_exemptions, value=false
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=switchblade_open_files_via_shortcut, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_osxfuse_read_blacklist, value=false
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_kernel_based_change_replayer, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=changelog_download_throttle_time_ms, value=16000
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_fileprovider_for_migrated_users, value=false
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=raw_photos_extension, value=arw,crw,cr2,cr3,dcr,dc2,erf,kc2,kdc,k25,mdc,mef,mos,mrw,nef,nrw,orf,pef,qtk,raf,raw,rdc,rw2,srf,srw,sr2,x3f,3fr
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=dokan_suppress_file_name_in_event_context, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_goose_mode, value=false
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=test_feature_flag_with_escape, value=New Google Docs\.gdoc|New Google Sheets\.gsheet|New Google Slides\.gslides
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirror_merge_folder_warning, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_fst, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=gui_bandwidth_throttling_control, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_photos, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_storage_saver_strings, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=macos_copy_resource_to_config_dir, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_support, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=hidden_attr_support, value=true
+2022-09-14T17:08:02.082ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fcm_implementation_type, value=2
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=default_ui_theme, value=1
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_force_extension_startup, value=false
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_concurrent_merged_read_optimization, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=attach_logs_to_feedback_option, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_unique_user_id, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_send_scopes, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_apl_upload, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=photos_disable_debouncer_for_apl, value=false
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_switchblade, value=false
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_content_bytes_before_cancel_multiplier, value=1
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=allow_migration_to_user_id_directory, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_auto_enable_domains, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=metadata_db_vacuum, value=false
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=unlocked_mac_getxattr, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_mirrored_my_drive, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=fetch_context_menu_via_ipc, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=max_slow_operation_minidump_count, value=0
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=apiary_free_mode, value=true
+2022-09-14T17:08:02.083ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_read_backwards_heuristics, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=debounce_ms, value=200
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=quicklook_thumbnails, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=purge_non_system_apl_photos_roots, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shell_ipc, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=mirror_sync, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_retry_manager, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_nas_to_photos, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=async_dokan_bridge, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=block_mac_antivirus, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_photos, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=preferences_dialog, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=rescue_accounts, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=shortcut_links_use_item_id, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=replace_local_id_with_cloud_id_when_pushing_update, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=onboarding, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=spork_migration, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_noop_test_feature_2, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=file_provider_detect_user_enable_change_by_notification, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_shared_drives_api, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=local_machine_override_preferences, value=true
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=sync_client_migration, value=false
+2022-09-14T17:08:02.084ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=cancel_upload_option, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=migrate_to_account_directories, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_multi_account, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_spork_notifications, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_shell_ipc_based_progress, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=computers_virtual_folder, value=true
+2022-09-14T17:08:02.085ZI [19924:core_104407529297066504359] proto_util.cc:29:DeserializeEnum Failed to convert LAUNCH_DARKLAUNCH to int32 for enum, falling back on name
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_redirect_for_editor_files, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=slurp_devices_to_drive, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_win7_patch_required_notification, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=enable_skip_projector_for_office_files, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=show_rename_td_notification, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=request_team_drive_customer_id, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=emm_fully_qualified_hostname, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=context_menu_copy_link_notification, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=use_file_organizer_capabilities, value=true
+2022-09-14T17:08:02.085ZE [19924:core_104407529297066504359] feature_config.cc:97:DeserializeFeature Ignoring feature that failed to deserialize: key=customer_type, value=CONSUMER
+2022-09-14T17:08:02.085ZI [19924:core_104407529297066504359] core.cc:899:TestConfigDifferences Modern config snapshot: 170 added, 5 removed, 4 changed, 206 matched
+2022-09-14T17:08:02.085ZI [19924:core_104407529297066504359] core.cc:683:ApplyFeatureConfigChange No changes to account features or admin settings.
+2022-09-14T17:08:02.085ZI [16764:NonCelloThread] global_features_manager.cc:310:SetGlobalFeatures Set global features for account 104407529297066504359
+2022-09-14T17:08:02.085ZI [16764:NonCelloThread] global_features_manager.cc:343:CompositeAll Compositing global features based on 1 accounts
+2022-09-14T17:08:02.085ZI [16764:NonCelloThread] global_features_manager.cc:359:CompositeAll Composited global features *WITHOUT* overrides: drive_dot: true
+share_dialog: true
+pause_syncing_option: true
+bandwidth_throttling: true
+structured_logging: true
+context_menu_force_refresh_folder: true
+status_window_click_show_file_in_file_manager: true
+outlook_addin: false
+autostart_preference: true
+gui_autostart_option: true
+mojave_overlays_fix: false
+curl_proxy_authentication: true
+gui_reset_preferences_menu_option: true
+force_refresh_folder_normal_menu: false
+structured_log_max_file_size_kbytes: 2048
+ask_to_copy_files_for_pending_uploads: true
+inform_users_of_pending_uploads: true
+same_content_dedupe_interval_ms: 600000
+dedupe_interval_ms: 2000
+support_status_notification: true
+deprecation_date: "2023-08-30"
+deprecation_warning_threshold: 30
+min_supported_os_version: "0.0.0"
+crash_oom_threshold_mb: 1048576
+allow_search: true
+finish_syncing_files_option: true
+osxfuse_process_blacklist: "esets_daemon;scep_daemon"
+osxfuse_lock_abort_test: false
+osxfuse_sched_flags_offset_override: 4294967295
+enforce_single_parent: true
+add_shortcut_menu: true
+meet_outlook_addin: false
+spotlight_timestamp_fsctl_support: true
+mac_disk_arbitration_unmount: true
+current_drive_fs_version: "63.0.5.0"
+file_revisions_virtual_folder: true
+unlocked_mac_buf_unmap: true
+use_mac_fileprovider: false
+trim_parents_during_cloud_merge: true
+trim_parents_during_commit: true
+create_gsuite_file: true
+switchblade: true
+file_provider_quick_access_polling_interval_sec: 43200
+show_quick_access_in_search_dialog: true
+include_user_email_in_feedback: true
+mac_smb_port: 0
+fileprovider_signal_debounce_ms: 250
+osxfuse_sched_flags_offset_override_arm: 4294967295
+current_os_version: "Windows/10.0.19044"
+cancel_com_calls: true
+enable_file_provider_migration: true
+logging_on_cello_thread_startup: false
+mac_smb_dialect_mode: 10
+dokan_set_internal_file_index: true
+context_menu_create_editor_files: false
+file_revisions_file_provider: true
+mac_smb_nobrowse: true
+special_folder_change_notification: true
+repair_kext_management_directory: true
+instrument_http_client: true
+show_offline_files_menu_option: true
+enable_mirror_roots_context: true
+com_api_thread_stuck_threshold_sec: 0
+num_metrics_batches_per_request: 70
+max_metrics_per_event_code_per_batch: 200
+bns_migration_window_closed: true
+encrypt_and_upload: false
+show_non_running_accounts: false
+mac_smb_mount_by_ip: true
+enable_mount_in_sidebar_setting: true
+allow_multiple_smb_connections: false
+persistent_smb_port_auto_selection: true
+file_provider_disabled_notification_interval_mins: 0
+enable_mount_as_folder_setting: true
+enable_modern_feature_flags: true
+enable_search_hot_key: true
+file_provider_failover_for_home_dir_fs_type: true
+file_provider_mirror_switch_unpinned_item_batch_size: 2000
+file_provider_enable_ipc_root_symlink: true
+file_provider_pause_syncing_option: true
+file_provider_create_existing_dir_id_succeeds: false
+file_provider_create_existing_file_id_succeeds: false
+file_provider_notify_mount_point_changed_with_mirror: false
+file_provider_show_migration_notification_based_on_volume: true
+file_provider_handle_exact_existing_create_as_reimport: true
+file_provider_min_partial_read_size: 4294967296
+file_provider_enable_read_ahead: false
+switchblade_on_websockets: false
+mac_smb_nodatacache: false
+
+2022-09-14T17:08:02.373ZI [19924:core_104407529297066504359] gcm.cc:355:operator() GCM successfully connected.
+2022-09-14T17:08:02.373ZI [19924:core_104407529297066504359] push_notification_manager.cc:241:operator() Successfully connected PushNotificationManager.
+2022-09-14T17:08:03.517ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:03.517ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:03.524ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:221:CheckConnection Checking connection state.
+2022-09-14T17:08:03.532ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:08:03.532ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:08:03.532ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:250:CheckConnection This adapter is online.
+2022-09-14T17:08:03.533ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:08:03.533ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:08:03.534ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:260:CheckConnection Result: online
+2022-09-14T17:08:03.534ZI [19940:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T17:08:03.534ZI [19824:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T17:08:03.535ZI [20200:NetworkStatusListener_COM] network_status_listener_win.cc:153:UpdateState State changed to existing value ONLINE, so not notifying.
+2022-09-14T17:08:06.919ZI [19924:core_104407529297066504359] cello_fs.cc:5738:UpdateContentCacheCapacity Changing content cache capacity to 1908 MBytes
+2022-09-14T17:08:06.919ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:241:operator() Content cache used: 137 MiB
+2022-09-14T17:08:06.919ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:249:operator() New content cache capacity used: 7%
+2022-09-14T17:08:06.919ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:256:operator() Free disk space (excluding content cache): 9541 MiB
+2022-09-14T17:08:06.919ZI [19924:core_104407529297066504359] content_cache_capacity_heuristic.cc:265:operator() Evictable amount of content cache: 7%

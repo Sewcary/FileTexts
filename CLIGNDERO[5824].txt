@@ -1,0 +1,23 @@
+CREATE TABLE "obi"."cl_dero_lig" (
+	"no_ste" char(2) NOT NULL DEFAULT '0',
+	"cd_cl" char(7) NOT NULL,
+	"no_dero" char(10) NOT NULL,
+	"dte_deb_dero" "datetime" NOT NULL,
+	"dte_fin_dero" "datetime" NULL,
+	"des" "t_des_gen" NULL,
+	"mnt_max_dero" "t_qte" NULL DEFAULT 0,
+	"mnt_fact" "t_qte" NULL DEFAULT 0,
+	"mnt_pre_fact" "t_qte" NULL DEFAULT 0,
+	"aut_modif" "t_auteur" NOT NULL,
+	"dte_hre_modif" "datetime" NOT NULL,
+	"dte_hre_crea" "datetime" NOT NULL,
+	PRIMARY KEY ( "no_ste", "cd_cl", "no_dero", "dte_deb_dero" )
+);
+COMMENT ON COLUMN "obi"."cl_dero_lig"."cd_cl" IS 'Code client';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."no_dero" IS 'Code dérogation';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."dte_deb_dero" IS 'Date début dérogation';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."dte_fin_dero" IS 'Date fin dérogation';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."des" IS 'NÝ de douane';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."mnt_max_dero" IS 'Montant autorisé';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."mnt_fact" IS 'Montant facturé';
+COMMENT ON COLUMN "obi"."cl_dero_lig"."mnt_pre_fact" IS 'Montant pré-facturé';

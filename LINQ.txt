@@ -1,0 +1,47 @@
+LINQ (Language-Integrated Query) est une nouveauté du .NET Framework 3.5 qui crée un pont entre le monde des objets et celui des données.
+
+En règle générale, les requêtes de données sont exprimées comme de simples chaînes,
+ sans vérification de type au moment de l’exécution, ni prise en charge IntelliSense. 
+ En outre, vous devez apprendre un langage de requête différent pour chaque type de source de données : 
+ bases de données SQL, 
+ documents XML, 
+ services web, etc. 
+ 
+ LINQ fait d’une requête une construction de langage de première classe en C#.
+ Vous pouvez écrire des requêtes pour des collections d’objets fortement typées à l’aide de mots clés de langage et d’opérateurs familiers.
+
+Vous pouvez écrire des requêtes LINQ en C# 
+pour des bases de données SQL Server, 
+des documents XML, des jeux de données ADO.NET 
+et toute collection d’objets prenant en charge IEnumerable ou l’interface générique IEnumerable<T>. 
+
+La prise en charge LINQ est également fournie par des tierces parties pour de nombreux services web et autres implémentations de base de données.
+
+Vous pouvez utiliser des requêtes LINQ dans de nouveaux projets, ou avec des requêtes non LINQ dans des projets existants. 
+La seule exigence est que le projet cible .NET Framework 3.5 ou version ultérieure.
+
+L’illustration suivante de Visual Studio montre une requête LINQ partiellement terminée, 
+exécutée sur une base de données SQL Server, en C# et en Visual Basic, avec un contrôle de type complet et une prise en charge IntelliSense.
+
+class IntroToLINQ
+{        
+    static void Main()
+    {
+        // The Three Parts of a LINQ Query:
+        //  1. Data source.
+        int[] numbers = new int[7] { 0, 1, 2, 3, 4, 5, 6 };
+
+        // 2. Query creation.
+        // numQuery is an IEnumerable<int>
+        var numQuery =
+            from num in numbers
+            where (num % 2) == 0
+            select num;
+
+        // 3. Query execution.
+        foreach (int num in numQuery)
+        {
+            Console.Write("{0,1} ", num);
+        }
+    }
+}

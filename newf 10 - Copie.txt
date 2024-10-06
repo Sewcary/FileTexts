@@ -1,0 +1,26 @@
+UPDATE [dbo].[DetailAnalyse]
+   SET [COD_CONTRAT] = ?
+      ,[LIB_CONTRAT] = ?
+      ,[COMMUNE] = ?
+      ,[COD_INSEE] = ?
+      ,[POSTE_SURVEILLANCE] = ?
+      ,[TYPE_EAU] = ?
+      ,[LIB_INST_DDASS] = ?
+      ,[LIB_UGE] = ?
+      ,[LIB_PPL] = ?
+      ,[DATE_PRELEVEMENT] = ?
+      ,[HEURE_PRELEV] = ?
+      ,[TYPE_CONTROLE] = ?
+      ,[ID_BULLETIN] = ?
+      ,[LIB_BULLETIN] = ?
+      ,[LIB_CLASSE] = ?
+      ,[PARAMETRE] = ?
+      ,[VALEUR] = ?
+      ,[UNITE] = ?
+      ,[ORDRE] = ?
+      ,[CONFORME] = ?
+      ,[REFERENCE] = ?
+      ,[ComposedKeyAttributeChecksum] = ?
+      ,[UpdateAttributeChecksum] = ?
+      ,[UpdateDate] = ?
+ WHERE [ID] = ?

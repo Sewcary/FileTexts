@@ -1,0 +1,6 @@
+D:\Scripts\C#\Learning\FromWsTo\bin\Debug\FromWsTo.exe.config
+D:\Scripts\C#\Learning\FromWsTo\bin\Debug\FromWsTo.exe
+D:\Scripts\C#\Learning\FromWsTo\bin\Debug\FromWsTo.pdb
+D:\Scripts\C#\Learning\FromWsTo\obj\Debug\FromWsTo.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\Learning\FromWsTo\obj\Debug\FromWsTo.exe
+D:\Scripts\C#\Learning\FromWsTo\obj\Debug\FromWsTo.pdb

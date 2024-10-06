@@ -1,0 +1,6 @@
+D:\Scripts\C#\Memoring\FromStrToFile\bin\Debug\FromStrToFile.exe.config
+D:\Scripts\C#\Memoring\FromStrToFile\bin\Debug\FromStrToFile.exe
+D:\Scripts\C#\Memoring\FromStrToFile\bin\Debug\FromStrToFile.pdb
+D:\Scripts\C#\Memoring\FromStrToFile\obj\Debug\FromStrToFile.csproj.CoreCompileInputs.cache
+D:\Scripts\C#\Memoring\FromStrToFile\obj\Debug\FromStrToFile.exe
+D:\Scripts\C#\Memoring\FromStrToFile\obj\Debug\FromStrToFile.pdb

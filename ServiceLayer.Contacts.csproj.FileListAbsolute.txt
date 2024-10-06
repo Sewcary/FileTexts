@@ -1,0 +1,17 @@
+D:\Downloads\Contacts\ServiceLayer.Contacts\obj\Debug\ServiceLayer.Contacts.csprojAssemblyReference.cache
+D:\Downloads\Contacts\ServiceLayer.Contacts\obj\Debug\ServiceLayer.Contacts.csproj.CoreCompileInputs.cache
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.ServiceLayer.Contacts.dll.config
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.ServiceLayer.Contacts.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.ServiceLayer.Contacts.pdb
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Commons.Lib.BusinessLib.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Commons.Lib.DataLib.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Commons.Lib.ServiceLib.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.Contacts.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.DataLayer.Contacts.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.DataLayer.Contacts.pdb
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.DataLayer.Contacts.dll.config
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.Contacts.pdb
+D:\Downloads\Contacts\ServiceLayer.Contacts\bin\Debug\Datacache.Services.Customs.Ws.BusinessLayer.Contacts.dll.config
+D:\Downloads\Contacts\ServiceLayer.Contacts\obj\Debug\ServiceLayer.Contacts.csproj.CopyComplete
+D:\Downloads\Contacts\ServiceLayer.Contacts\obj\Debug\Datacache.Services.Customs.Ws.ServiceLayer.Contacts.dll
+D:\Downloads\Contacts\ServiceLayer.Contacts\obj\Debug\Datacache.Services.Customs.Ws.ServiceLayer.Contacts.pdb

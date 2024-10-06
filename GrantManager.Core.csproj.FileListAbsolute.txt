@@ -1,0 +1,3 @@
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Core\obj\Debug\netcoreapp2.1\GrantManager.Core.csprojAssemblyReference.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Core\obj\Debug\netcoreapp2.1\GrantManager.Core.AssemblyInfoInputs.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\GrantManager.Core\obj\Debug\netcoreapp2.1\GrantManager.Core.AssemblyInfo.cs

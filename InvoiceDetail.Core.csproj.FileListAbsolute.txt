@@ -1,0 +1,11 @@
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\bin\Debug\netcoreapp2.1\InvoiceDetail.Core.deps.json
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\bin\Debug\netcoreapp2.1\InvoiceDetail.Core.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\bin\Debug\netcoreapp2.1\InvoiceDetail.Core.pdb
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\bin\Debug\netcoreapp2.1\InvoiceDetail.Data.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\bin\Debug\netcoreapp2.1\InvoiceDetail.Data.pdb
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\obj\Debug\netcoreapp2.1\InvoiceDetail.Core.csprojAssemblyReference.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\obj\Debug\netcoreapp2.1\InvoiceDetail.Core.AssemblyInfoInputs.cache
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\obj\Debug\netcoreapp2.1\InvoiceDetail.Core.AssemblyInfo.cs
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\obj\Debug\netcoreapp2.1\InvoiceDetail.Core.csproj.CopyComplete
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\obj\Debug\netcoreapp2.1\InvoiceDetail.Core.dll
+D:\Source\SUEZ-ECT\CLIENT\InvoiceDetail\InvoiceDetail.Core\obj\Debug\netcoreapp2.1\InvoiceDetail.Core.pdb

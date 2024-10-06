@@ -1,0 +1,10 @@
+implementation=CPython
+version=3.11
+shared=true
+abi3=false
+lib_name=python311
+lib_dir=C:\b\abs_b7f5go6r0j\croot\y-py_1683662173571\_h_env\libs
+executable=C:\b\abs_b7f5go6r0j\croot\y-py_1683662173571\_h_env\python.exe
+pointer_width=64
+build_flags=
+suppress_build_script_link_lines=false
